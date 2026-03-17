@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eufy 智能安防价格监控</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+            background: #f5f7fa;
+            padding: 20px;
+            color: #2c3e50;
+        }
+
+        .container {
+            max-width: 1800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            color: #1a1a1a;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 15px;
+        }
+
+        .filters {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+
+        .filter-section {
+            margin-bottom: 15px;
+        }
+
+        .filter-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .filter-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #666;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border: 2px solid #e0e0e0;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.2s;
+            color: #666;
+        }
+
+        .filter-btn:hover {
+            border-color: #667eea;
+            color: #667eea;
+        }
+
+        .filter-btn.active {
+            background: #667eea;
+            border-color: #667eea;
+            color: white;
+        }
+
+        .clear-filters {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .clear-filters:hover {
+            background: #ff5252;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: #888;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        /* 类别区域 */
+        .category-section {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+        }
+
+        .category-section.hidden {
+            display: none;
+        }
+
+        .category-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #f0f0f0;
+            margin-bottom: 20px;
+        }
+
+        .category-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .category-icon {
+            font-size: 32px;
+        }
+
+        .category-name {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .category-count {
+            background: #667eea;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        /* 价格区间分组 */
+        .price-band {
+            margin-bottom: 25px;
+        }
+
+        .price-band:last-child {
+            margin-bottom: 0;
+        }
+
+        .band-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #666;
+            margin-bottom: 12px;
+            padding-left: 5px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 12px;
+        }
+
+        .product-card {
+            background: #f8f9fb;
+            border-radius: 8px;
+            padding: 12px;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: 2px solid transparent;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .product-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-color: #667eea;
+        }
+
+        .product-card.eufy {
+            border-left: 3px solid #00c853;
+        }
+
+        .product-card.arlo {
+            border-left: 3px solid #2196f3;
+        }
+
+        .product-card.ring {
+            border-left: 3px solid #ff9800;
+        }
+
+        .product-card.google-nest {
+            border-left: 3px solid #f44336;
+        }
+
+        .product-card.tp-link {
+            border-left: 3px solid #9c27b0;
+        }
+
+        .product-card.yale {
+            border-left: 3px solid #795548;
+        }
+
+        .product-card.other {
+            border-left: 3px solid #9e9e9e;
+        }
+
+        .product-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            gap: 8px;
+        }
+
+        .brand-badge {
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            flex-shrink: 0;
+        }
+
+        .brand-badge.eufy {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .brand-badge.arlo {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+
+        .brand-badge.ring {
+            background: #fff3e0;
+            color: #e65100;
+        }
+
+        .brand-badge.google-nest {
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        .brand-badge.tp-link {
+            background: #f3e5f5;
+            color: #6a1b9a;
+        }
+
+        .brand-badge.yale {
+            background: #efebe9;
+            color: #4e342e;
+        }
+
+        .brand-badge.other {
+            background: #f5f5f5;
+            color: #616161;
+        }
+
+        .discount-badge {
+            background: #ff3b30;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .product-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: #2c3e50;
+            line-height: 1.4;
+            margin-bottom: 8px;
+            flex: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .product-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 8px;
+            margin-top: auto;
+        }
+
+        .product-meta {
+            font-size: 11px;
+            color: #999;
+        }
+
+        .product-prices {
+            text-align: right;
+        }
+
+        .price-was {
+            font-size: 11px;
+            color: #999;
+            text-decoration: line-through;
+            margin-bottom: 2px;
+        }
+
+        .price-current {
+            font-size: 20px;
+            font-weight: 700;
+            color: #00c853;
+        }
+
+        .price-current.no-discount {
+            color: #2c3e50;
+        }
+
+        .timestamp {
+            text-align: center;
+            color: #888;
+            margin-top: 20px;
+            font-size: 12px;
+        }
+
+        .no-data, .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            border-radius: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 eufy 智能安防价格监控 - JB Hi-Fi</h1>
+            <p class="subtitle">Security Camera · Video Doorbell · Smart Lock | eufy vs 竞品全方位价格对比</p>
+        </div>
+
+        <div class="filters">
+            <div class="filter-section">
+                <span class="filter-label">品牌筛选</span>
+                <div class="filter-buttons" id="brandFilters">
+                    <button class="filter-btn active" data-brand="all">全部品牌</button>
+                    <button class="filter-btn" data-brand="eufy">eufy</button>
+                    <button class="filter-btn" data-brand="arlo">Arlo</button>
+                    <button class="filter-btn" data-brand="ring">Ring</button>
+                    <button class="filter-btn" data-brand="google nest">Google Nest</button>
+                    <button class="filter-btn" data-brand="tp-link">TP-Link</button>
+                    <button class="filter-btn" data-brand="yale">Yale</button>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <span class="filter-label">品类筛选</span>
+                <div class="filter-buttons" id="categoryFilters">
+                    <button class="filter-btn active" data-category="all">全部品类</button>
+                    <button class="filter-btn" data-category="Security Camera">📷 Security Camera</button>
+                    <button class="filter-btn" data-category="Video Doorbell">🔔 Video Doorbell</button>
+                    <button class="filter-btn" data-category="Smart Lock">🔐 Smart Lock</button>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <span class="filter-label">价格区间</span>
+                <div class="filter-buttons" id="priceFilters">
+                    <button class="filter-btn active" data-price="all">全部价格</button>
+                    <button class="filter-btn" data-price="0-200">$0-$200</button>
+                    <button class="filter-btn" data-price="200-400">$200-$400</button>
+                    <button class="filter-btn" data-price="400-700">$400-$700</button>
+                    <button class="filter-btn" data-price="700-1200">$700-$1200</button>
+                    <button class="filter-btn" data-price="1200-99999">$1200+</button>
+                </div>
+            </div>
+
+            <button class="clear-filters" onclick="clearAllFilters()">🔄 清除筛选</button>
+        </div>
+
+        <div id="app">
+            <div class="no-data">⏳ 加载数据中...</div>
+        </div>
+
+        <div class="timestamp" id="timestamp"></div>
+    </div>
+
+    <script>
+        let allData = [];
+        let currentFilters = {
+            brand: 'all',
+            category: 'all',
+            price: 'all'
+        };
+
+        async function loadData() {
+            try {
+                // 数据直接内嵌在页面中
+                const data = [
+  {
+    "name": "eufy S3 Pro Security Camera Kit (4 Pack)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-s3-pro-security-camera-kit-4-pack-1",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:02:19.697936",
+    "price": 1999.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy S4 Max NVR POE 24/7 Security Camera System [4 PTZ Cameras]",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-s4-max-nvr-poe-24-7-security-camera-system-4-ptz-cameras",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:02:23.715244",
+    "price": 1999.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy E40 Essential Security Camera Kit with Homebase 2 (4 Pack)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-e40-essential-security-camera-kit-with-homebase-2-4-pack",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:02:27.565675",
+    "price": 799.0,
+    "was_price": 1099.0,
+    "discount_percent": 27,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security S330 4G/Wi-Fi Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-s330-4g-wi-fi-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:02:31.799073",
+    "price": 599.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security EufyCam Solo S40 Spotlight 2K Solar (Wireless)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-eufycam-solo-s40-spotlight-2k-solar-wireless",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:02:35.810658",
+    "price": 429.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy E40 NVR POE Bullet Add-on Security Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-e40-nvr-poe-bullet-add-on-security-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:02:40.255273",
+    "price": 249.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy Baby S340 Smart Sock Baby Monitor with Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-baby-s340-smart-sock-baby-monitor-with-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:02:44.843570",
+    "price": 549.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy E42 Security Camera Kit (4 Pack)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-e42-security-camera-kit-4-pack",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:02:49.712519",
+    "price": 1499.0,
+    "status": "success"
+  },
+  {
+    "name": "Eufy Baby E21 4K Standalone Baby Monitor Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-baby-e21-4k-standalone-baby-monitor-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:02:53.811450",
+    "price": 279.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy S4 NVR POE 24/7 Security System [2 x PTZ + 2 x Turret Cameras]",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-s4-nvr-poe-24-7-security-system-2-x-ptz-2-x-turret-cameras",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:02:57.969839",
+    "price": 1649.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy E30 Floodlight Security Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-e30-floodlight-security-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:03:02.132295",
+    "price": 299.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy SoloCam S340 Security Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-solocam-s340-security-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:03:06.019327",
+    "price": 449.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy EufyCam S4 Security Camera (2 Pack)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-eufycam-s4-security-camera-2-pack",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:03:10.042301",
+    "price": 1649.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy E40 Essential Security Camera Kit with Homebase 2 (2 Pack)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-e40-essential-security-camera-kit-with-homebase-2-2-pack",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:03:14.320540",
+    "price": 449.0,
+    "was_price": 599.0,
+    "discount_percent": 25,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security eufyCam E330 4K Home Security System with Homebase 3 (4-Pack)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-eufycam-e330-4k-home-security-system-with-homebase-3-4-pack",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:03:18.307832",
+    "price": 999.0,
+    "was_price": 1399.0,
+    "discount_percent": 29,
+    "status": "success"
+  },
+  {
+    "name": "eufy E42 Security Camera Kit (2 Pack)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-e42-security-camera-kit-2-pack",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:03:23.239329",
+    "price": 899.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security S350 Indoor Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-s350-indoor-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:03:27.314771",
+    "price": 279.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy E30 Indoor Security Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-e30-indoor-security-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:03:31.541378",
+    "price": 199.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy S3 Pro Security Camera Kit (2 Pack)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-s3-pro-security-camera-kit-2-pack-1",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:03:35.789862",
+    "price": 1299.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security E340 Dual Camera Video Doorbell",
+    "brand": "eufy",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-e340-dual-camera-video-doorbell",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:03:39.781095",
+    "price": 249.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy E41 NVR POE 24/7 Security System [4 x Turret Cameras]",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-e41-nvr-poe-24-7-security-system-4-x-turret-cameras",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:03:44.164328",
+    "price": 1299.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security eufyCam E330 4K 24/7 Security Camera (Add On)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-eufycam-e330-4k-24-7-security-camera-add-on",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:03:48.106824",
+    "price": 299.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy V2 Advanced Security Camera Kit",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-v2-advanced-security-camera-kit",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:03:52.141355",
+    "price": 1149.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy S4 NVR POE PTZ Add-on Security Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-s4-nvr-poe-ptz-add-on-security-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:03:57.175644",
+    "price": 449.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security eufyCam 2C Pro 2K Wireless Home Security System (Addon Camera)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-eufycam-2c-pro-2k-wireless-home-security-system-addon-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:04:02.061951",
+    "price": 199.0,
+    "was_price": 249.0,
+    "discount_percent": 20,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security Wireless Dual Camera Doorbell 2K (Add-On)",
+    "brand": "eufy",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-wireless-dual-camera-doorbell-2k-add-on",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:04:06.274970",
+    "price": 349.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security E340 Floodlight Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-e340-floodlight-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:04:11.333957",
+    "price": 449.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy S340 SOLOCAM Security Camera with Homebase (2 Pack)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-s340-solocam-security-camera-with-homebase-2-pack",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:04:24.557163",
+    "price": 1199.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy E40 Essential Add On Security Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-e40-essential-add-on-security-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:04:28.800808",
+    "price": 229.0,
+    "was_price": 299.0,
+    "discount_percent": 23,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security C210 2K SoloCam",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-c210-2k-solocam",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:04:32.946230",
+    "price": 149.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy EufyCam S4 Security Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-eufycam-s4-security-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:04:37.186214",
+    "price": 669.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security 2k Indoor Pan & Tilt Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-2k-indoor-pan-tilt-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:04:43.950832",
+    "price": 79.0,
+    "was_price": 139.0,
+    "discount_percent": 43,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security Solocam S220 (1 Pack)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-solocam-s220-1-pack",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:04:47.994708",
+    "price": 219.0,
+    "status": "success"
+  },
+  {
+    "name": "Arlo Essential Indoor Camera",
+    "brand": "Arlo",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/arlo-essential-indoor-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:04:52.047859",
+    "price": 97.0,
+    "status": "success"
+  },
+  {
+    "name": "Arlo Pro 6 2K Outdoor Solar Security Camera Kit + 12M Subscription(4 Pack)",
+    "brand": "Arlo",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/arlo-pro-6-2k-outdoor-solar-security-camera-kit-12m-subscription4-pack",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:04:55.814093",
+    "price": 869.0,
+    "status": "success"
+  },
+  {
+    "name": "Arlo Essential Security Camera Kit with Solar Panel + 6M Subscription (4 Pack)",
+    "brand": "Arlo",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/arlo-essential-security-camera-kit-with-solar-panel-6m-subscription-4-pack",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:05:00.766075",
+    "price": 349.0,
+    "status": "success"
+  },
+  {
+    "name": "Arlo Essentials 2K (3rd Gen) Outdoor Security Camera",
+    "brand": "Arlo",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/arlo-essentials-2k-3rd-gen-outdoor-security-camera",
+    "price": null,
+    "scraped_at": "2026-03-17T15:05:16.838796",
+    "status": "failed"
+  },
+  {
+    "name": "Arlo Ultra 3 4K Outdoor Security Camera Kit + 12M Subscription (4 Pack)",
+    "brand": "Arlo",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/arlo-ultra-3-4k-outdoor-security-camera-kit-12m-subscription-4-pack",
+    "price": null,
+    "scraped_at": "2026-03-17T15:05:31.938319",
+    "status": "failed"
+  },
+  {
+    "name": "Google Nest Cam with Floodlight (Wired)",
+    "brand": "Google Nest",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/google-nest-cam-with-floodlight-wired",
+    "price": null,
+    "scraped_at": "2026-03-17T15:05:47.010710",
+    "status": "failed"
+  },
+  {
+    "name": "Google Nest Gen2 Wired Outdoor Camera",
+    "brand": "Google Nest",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/google-nest-gen2-wired-outdoor-camera",
+    "price": null,
+    "scraped_at": "2026-03-17T15:06:02.109188",
+    "status": "failed"
+  },
+  {
+    "name": "Google Nest Gen3 Wired Indoor Camera",
+    "brand": "Google Nest",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/google-nest-gen3-wired-indoor-camera",
+    "price": null,
+    "scraped_at": "2026-03-17T15:06:17.177208",
+    "status": "failed"
+  },
+  {
+    "name": "Google Nest Outdoor/ Indoor Battery Security Camera [2 Pack]",
+    "brand": "Google Nest",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/google-nest-outdoor-indoor-battery-security-camera-2-pack",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:06:25.069326",
+    "price": 444.0,
+    "was_price": 464.0,
+    "discount_percent": 4,
+    "status": "success"
+  },
+  {
+    "name": "TP-LINK Tapo 2K Pan & Tilt Wi-Fi Security Camera [2 Pack]",
+    "brand": "TP-Link",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-pan-tilt-wi-fi-security-camera-2-pack",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:06:29.364901",
+    "price": 109.0,
+    "status": "success"
+  },
+  {
+    "name": "TP-Link Tapo 3K Solar-Powered Pan & Tilt Security Camera Kit",
+    "brand": "TP-Link",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/tp-link-tapo-3k-solar-powered-pan-tilt-security-camera-kit",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:06:33.867931",
+    "price": 249.0,
+    "status": "success"
+  },
+  {
+    "name": "TP-Link Tapo 4K Solar-Powered Pan/Tilt Security Camera Kit",
+    "brand": "TP-Link",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/tp-link-tapo-4k-solar-powered-pan-tilt-security-camera-kit",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:06:38.140960",
+    "price": 240.0,
+    "was_price": 249.0,
+    "discount_percent": 4,
+    "status": "success"
+  },
+  {
+    "name": "TP-Link Tapo 2K 3MP Smart Wire-Free Security System (4-pack)",
+    "brand": "TP-Link",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-3mp-smart-wire-free-security-system-4-pack",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:06:42.316492",
+    "price": 429.0,
+    "status": "success"
+  },
+  {
+    "name": "TP-Link Tapo 4K Pan & Tilt AI Home Security Camera",
+    "brand": "TP-Link",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/tp-link-tapo-4k-pan-tilt-ai-home-security-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:06:46.450287",
+    "price": 129.0,
+    "status": "success"
+  },
+  {
+    "name": "TP-Link Tapo 2K Smart Video Doorbell",
+    "brand": "TP-Link",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-smart-video-doorbell",
+    "price": null,
+    "scraped_at": "2026-03-17T15:07:02.513434",
+    "status": "failed"
+  },
+  {
+    "name": "Laser Smart Full HD Video Doorbell (Black)",
+    "brand": "Other",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/laser-smart-full-hd-video-doorbell-black",
+    "price": null,
+    "scraped_at": "2026-03-17T15:07:17.584026",
+    "status": "failed"
+  },
+  {
+    "name": "Laser Smart Full HD Video Doorbell (White)",
+    "brand": "Other",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/laser-smart-full-hd-video-doorbell-white",
+    "price": null,
+    "scraped_at": "2026-03-17T15:07:32.659216",
+    "status": "failed"
+  },
+  {
+    "name": "Reolink Wired Smart WiFi 2K+ Video Doorbell Outdoor Security Camera Package",
+    "brand": "Other",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/reolink-wired-smart-wifi-2k-video-doorbell-outdoor-security-camera-package",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:07:40.419897",
+    "price": 139.99,
+    "status": "success"
+  },
+  {
+    "name": "TP-Link Tapo 2K Smart Video Doorbell Mini",
+    "brand": "TP-Link",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-smart-video-doorbell-mini",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:07:47.848269",
+    "price": 79.0,
+    "was_price": 99.0,
+    "discount_percent": 20,
+    "status": "success"
+  },
+  {
+    "name": "Auslock Slim Series Smart Lock S3 (Gold)",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/auslock-slim-series-smart-lock-s3-gold",
+    "currency": "AUD",
+    "scraped_at": "2026-03-17T15:07:55.519401",
+    "price": 479.0,
+    "status": "success"
+  },
+  {
+    "name": "MEC Digital Motorised Smart Lock",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/mec-digital-motorised-smart-lock",
+    "price": null,
+    "scraped_at": "2026-03-17T15:08:11.694329",
+    "status": "failed"
+  },
+  {
+    "name": "Kaadas S110-5W Lever Smart Door Lock WiFi (Copper)",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/kaadas-s110-5w-lever-smart-door-lock-wifi-copper",
+    "price": null,
+    "scraped_at": "2026-03-17T15:08:27.061375",
+    "status": "failed"
+  },
+  {
+    "name": "eufy C34 Smart Lock",
+    "brand": "eufy",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-c34-smart-lock",
+    "price": null,
+    "scraped_at": "2026-03-17T15:08:42.214157",
+    "status": "failed"
+  },
+  {
+    "name": "Aqara Smart Door Lock D100",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/aqara-smart-door-lock-d100",
+    "price": null,
+    "scraped_at": "2026-03-17T15:08:57.301663",
+    "status": "failed"
+  },
+  {
+    "name": "Kaadas Q15-5WK Push Pull Wi-Fi Smart Lock - Matte Black",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/kaadas-q15-5wk-push-pull-wi-fi-smart-lock-matte-black",
+    "price": null,
+    "scraped_at": "2026-03-17T15:09:12.384302",
+    "status": "failed"
+  },
+  {
+    "name": "Kaadas RX-C Deadbolt Smart Lock (Satin Nickel)",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/kaadas-rx-c-deadbolt-smart-lock-satin-nickel",
+    "price": null,
+    "scraped_at": "2026-03-17T15:09:27.479743",
+    "status": "failed"
+  },
+  {
+    "name": "eufy Familock S3 Max Video Smart Lock",
+    "brand": "eufy",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-familock-s3-max-video-smart-lock",
+    "price": null,
+    "scraped_at": "2026-03-17T15:09:42.566837",
+    "status": "failed"
+  },
+  {
+    "name": "eufy Security Video Smart Lock",
+    "brand": "eufy",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-video-smart-lock",
+    "price": null,
+    "scraped_at": "2026-03-17T15:09:57.659730",
+    "status": "failed"
+  },
+  {
+    "name": "Laser Smart Deadbolt Lock with Apple Home Integration",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/laser-smart-deadbolt-lock-with-apple-home-integration",
+    "price": null,
+    "scraped_at": "2026-03-17T15:10:12.899384",
+    "status": "failed"
+  },
+  {
+    "name": "Auslock H11A Bluetooth Wi-Fi Smart Door Locks",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/auslock-h11a-bluetooth-wi-fi-smart-door-locks",
+    "price": null,
+    "scraped_at": "2026-03-17T15:10:28.292238",
+    "status": "failed"
+  },
+  {
+    "name": "Yale ByYou Pro Smart Mortice Lock",
+    "brand": "Yale",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/yale-byyou-pro-smart-mortice-lock",
+    "price": null,
+    "scraped_at": "2026-03-17T15:10:44.147481",
+    "status": "failed"
+  },
+  {
+    "name": "Auslock H05 Keyless Entry Smart Door Lock - Black",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/auslock-h05-keyless-entry-smart-door-lock-black",
+    "price": null,
+    "scraped_at": "2026-03-17T15:10:59.236711",
+    "status": "failed"
+  },
+  {
+    "name": "Aqara U100 with M100 Smart Lock Hub Kit",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/aqara-u100-with-m100-smart-lock-hub-kit",
+    "price": null,
+    "scraped_at": "2026-03-17T15:11:14.312826",
+    "status": "failed"
+  },
+  {
+    "name": "MEC Digital Motorised Smart Lock Matte Black",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/mec-digital-motorised-smart-lock-matte-black",
+    "price": null,
+    "scraped_at": "2026-03-17T15:11:29.378687",
+    "status": "failed"
+  }
+];
+
+                if (!data || data.length === 0) {
+                    document.getElementById('app').innerHTML = `
+                        <div class="no-data">
+                            <h2>📭 暂无数据</h2>
+                            <p style="margin-top: 10px">请先运行爬虫获取价格数据</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                allData = data;
+                renderDashboard(data);
+                setupFilters();
+            } catch (error) {
+                document.getElementById('app').innerHTML = `
+                    <div class="no-data">
+                        <h2>❌ 加载失败</h2>
+                        <p style="margin-top: 10px">${error.message}</p>
+                    </div>
+                `;
+            }
+        }
+
+        function setupFilters() {
+            document.getElementById('brandFilters').addEventListener('click', (e) => {
+                if (e.target.classList.contains('filter-btn')) {
+                    document.querySelectorAll('#brandFilters .filter-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    e.target.classList.add('active');
+                    currentFilters.brand = e.target.dataset.brand;
+                    applyFilters();
+                }
+            });
+
+            document.getElementById('categoryFilters').addEventListener('click', (e) => {
+                if (e.target.classList.contains('filter-btn')) {
+                    document.querySelectorAll('#categoryFilters .filter-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    e.target.classList.add('active');
+                    currentFilters.category = e.target.dataset.category;
+                    applyFilters();
+                }
+            });
+
+            document.getElementById('priceFilters').addEventListener('click', (e) => {
+                if (e.target.classList.contains('filter-btn')) {
+                    document.querySelectorAll('#priceFilters .filter-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    e.target.classList.add('active');
+                    currentFilters.price = e.target.dataset.price;
+                    applyFilters();
+                }
+            });
+        }
+
+        function clearAllFilters() {
+            currentFilters = { brand: 'all', category: 'all', price: 'all' };
+
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.brand === 'all' || btn.dataset.category === 'all' || btn.dataset.price === 'all') {
+                    btn.classList.add('active');
+                }
+            });
+
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const validData = allData.filter(p => p.status === 'success' && p.price);
+
+            let filtered = validData.filter(product => {
+                // 品牌筛选
+                if (currentFilters.brand !== 'all') {
+                    if ((product.brand || 'eufy').toLowerCase() !== currentFilters.brand.toLowerCase()) {
+                        return false;
+                    }
+                }
+
+                // 品类筛选
+                if (currentFilters.category !== 'all') {
+                    const productCategory = product.category || 'Security Camera';
+                    if (productCategory !== currentFilters.category) {
+                        return false;
+                    }
+                }
+
+                // 价格筛选
+                if (currentFilters.price !== 'all') {
+                    const [min, max] = currentFilters.price.split('-').map(Number);
+                    if (product.price < min || product.price >= max) {
+                        return false;
+                    }
+                }
+
+                return true;
+            });
+
+            updateStats(filtered);
+            updateCategories(filtered);
+        }
+
+        function updateStats(data) {
+            const cameras = data.filter(p => (p.category || 'Security Camera') === 'Security Camera');
+            const doorbells = data.filter(p => p.category === 'Video Doorbell');
+            const locks = data.filter(p => p.category === 'Smart Lock');
+
+            document.querySelector('.stats').innerHTML = `
+                <div class="stat-card">
+                    <div class="stat-number">${data.length}</div>
+                    <div class="stat-label">显示产品</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" style="color: #2196f3">${cameras.length}</div>
+                    <div class="stat-label">📷 Camera</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" style="color: #ff9800">${doorbells.length}</div>
+                    <div class="stat-label">🔔 Doorbell</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" style="color: #9c27b0">${locks.length}</div>
+                    <div class="stat-label">🔐 Lock</div>
+                </div>
+            `;
+        }
+
+        function updateCategories(data) {
+            const categories = {
+                'Security Camera': { icon: '📷', products: [] },
+                'Video Doorbell': { icon: '🔔', products: [] },
+                'Smart Lock': { icon: '🔐', products: [] }
+            };
+
+            data.forEach(product => {
+                const cat = product.category || 'Security Camera';
+                if (categories[cat]) {
+                    categories[cat].products.push(product);
+                }
+            });
+
+            const categoriesHTML = Object.entries(categories)
+                .filter(([_, info]) => info.products.length > 0)
+                .map(([categoryName, info]) => renderCategory(categoryName, info))
+                .join('');
+
+            document.querySelector('#categorySections').innerHTML = categoriesHTML || `
+                <div class="no-results">
+                    <h2>🔍 未找到符合条件的产品</h2>
+                    <p style="margin-top: 10px">试试调整筛选条件</p>
+                </div>
+            `;
+        }
+
+        function renderCategory(categoryName, info) {
+            const products = info.products.sort((a, b) => a.price - b.price);
+
+            // 按价格区间分组
+            const priceBands = {
+                '$0-$200': products.filter(p => p.price < 200),
+                '$200-$400': products.filter(p => p.price >= 200 && p.price < 400),
+                '$400-$700': products.filter(p => p.price >= 400 && p.price < 700),
+                '$700-$1200': products.filter(p => p.price >= 700 && p.price < 1200),
+                '$1200+': products.filter(p => p.price >= 1200)
+            };
+
+            const bandsHTML = Object.entries(priceBands)
+                .filter(([_, prods]) => prods.length > 0)
+                .map(([bandName, prods]) => `
+                    <div class="price-band">
+                        <div class="band-title">${bandName} (${prods.length}款)</div>
+                        <div class="product-grid">
+                            ${prods.map(product => renderProductCard(product)).join('')}
+                        </div>
+                    </div>
+                `).join('');
+
+            return `
+                <div class="category-section">
+                    <div class="category-header">
+                        <div class="category-title">
+                            <span class="category-icon">${info.icon}</span>
+                            <span class="category-name">${categoryName}</span>
+                        </div>
+                        <span class="category-count">${products.length} 款产品</span>
+                    </div>
+                    ${bandsHTML}
+                </div>
+            `;
+        }
+
+        function renderProductCard(product) {
+            const brandClass = (product.brand || 'eufy').toLowerCase().replace(' ', '-');
+            const hasDiscount = product.was_price && product.was_price > product.price;
+            const priceClass = hasDiscount ? '' : 'no-discount';
+
+            return `
+                <div class="product-card ${brandClass}" onclick="window.open('${product.url}', '_blank')">
+                    <div class="product-top">
+                        <span class="brand-badge ${brandClass}">${product.brand || 'eufy'}</span>
+                        ${hasDiscount ? `<span class="discount-badge">${product.discount_percent}% OFF</span>` : ''}
+                    </div>
+                    <div class="product-name">${product.name}</div>
+                    <div class="product-bottom">
+                        <div class="product-meta">JB Hi-Fi</div>
+                        <div class="product-prices">
+                            ${hasDiscount ? `<div class="price-was">$${product.was_price.toFixed(0)}</div>` : ''}
+                            <div class="price-current ${priceClass}">$${product.price.toFixed(0)}</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderDashboard(data) {
+            const validData = data.filter(p => p.status === 'success' && p.price);
+
+            const statsHTML = '<div class="stats"></div>';
+            const categoriesHTML = '<div id="categorySections"></div>';
+
+            document.getElementById('app').innerHTML = statsHTML + categoriesHTML;
+
+            updateStats(validData);
+            updateCategories(validData);
+
+            if (data[0] && data[0].scraped_at) {
+                const updateTime = new Date(data[0].scraped_at).toLocaleString('zh-CN');
+                document.getElementById('timestamp').textContent = `📅 最后更新: ${updateTime}`;
+            }
+        }
+
+        loadData();
+        setInterval(loadData, 30000);
+    </script>
+<!-- 最后更新: 2026-03-17 15:11:30 -->
+</body>
+</html>

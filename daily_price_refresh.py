@@ -10,6 +10,7 @@ import json
 import time
 import re
 from datetime import datetime
+from product_classifier import classify_product, is_valid_product, validate_product_data
 
 def search_all_eufy_cameras():
     """搜索所有eufy camera产品"""
@@ -60,10 +61,9 @@ def search_all_eufy_cameras():
 
                     # 是eufy camera
                     if 'eufy' in title_lower and any(kw in title_lower for kw in ['camera', 'cam', 'eufycam', 'security', 'video', 'doorbell', 'baby monitor']):
-                        # 排除配件
-                        if not any(kw in title_lower for kw in ['cable', 'mount', 'bracket', 'solar panel', 'adapter']):
-                            # 判断是否是门铃
-                            category = 'Video Doorbell' if 'doorbell' in title_lower else 'Security Camera'
+                        # 使用统一分类器判断是否是有效产品和品类
+                        if is_valid_product(title):
+                            category = classify_product(title, 'eufy')
                             all_products.append({
                                 'name': title,
                                 'brand': 'eufy',
@@ -123,29 +123,34 @@ def search_doorbell_lock():
                             title = detail_page.locator('h1').first.inner_text()
                             title_lower = title.lower()
 
-                            is_doorbell = 'doorbell' in title_lower
-                            is_lock = 'lock' in title_lower and 'unlock' not in title_lower
+                            # 使用统一分类器
+                            if is_valid_product(title):
+                                category = classify_product(title)
 
-                            if (is_doorbell or is_lock) and not any(kw in title_lower for kw in ['cable', 'mount', 'bracket', 'chime', 'adapter', 'battery']):
-                                brand = 'Other'
-                                if 'eufy' in title_lower:
-                                    brand = 'eufy'
-                                elif 'ring' in title_lower:
-                                    brand = 'Ring'
-                                elif 'arlo' in title_lower:
-                                    brand = 'Arlo'
-                                elif 'yale' in title_lower:
-                                    brand = 'Yale'
-                                elif 'tp-link' in title_lower or 'tapo' in title_lower:
-                                    brand = 'TP-Link'
+                                # 只保留门铃和门锁
+                                if category in ['Video Doorbell', 'Smart Lock']:
+                                    # 识别品牌
+                                    brand = 'Other'
+                                    if 'eufy' in title_lower:
+                                        brand = 'eufy'
+                                    elif 'ring' in title_lower:
+                                        brand = 'Ring'
+                                    elif 'arlo' in title_lower:
+                                        brand = 'Arlo'
+                                    elif 'yale' in title_lower:
+                                        brand = 'Yale'
+                                    elif 'tp-link' in title_lower or 'tapo' in title_lower:
+                                        brand = 'TP-Link'
+                                    elif 'swann' in title_lower:
+                                        brand = 'Swann'
 
-                                products.append({
-                                    'name': title,
-                                    'brand': brand,
-                                    'category': 'Video Doorbell' if is_doorbell else 'Smart Lock',
-                                    'url': full_url,
-                                    'channel': 'JB Hi-Fi'
-                                })
+                                    products.append({
+                                        'name': title,
+                                        'brand': brand,
+                                        'category': category,
+                                        'url': full_url,
+                                        'channel': 'JB Hi-Fi'
+                                    })
                         except:
                             pass
 
@@ -206,9 +211,9 @@ def search_competitor_cameras():
                             # 确认是目标品牌的camera
                             if brand_name.lower().replace(' ', '') in title_lower.replace(' ', ''):
                                 if any(kw in title_lower for kw in ['camera', 'cam', 'doorbell', 'security']):
-                                    if not any(kw in title_lower for kw in ['cable', 'mount', 'adapter']):
-                                        # 判断品类：如果包含doorbell则归类为Video Doorbell
-                                        category = 'Video Doorbell' if 'doorbell' in title_lower else 'Security Camera'
+                                    # 使用统一分类器
+                                    if is_valid_product(title):
+                                        category = classify_product(title, brand_name)
 
                                         competitors.append({
                                             'name': title,
@@ -374,14 +379,39 @@ def main():
 
     all_products = eufy_products + competitor_products + doorbell_lock_products
 
+    # 验证产品数据
+    print(f'\n🔍 验证产品数据...')
+    valid_products = []
+    invalid_count = 0
+
+    for product in all_products:
+        is_valid, error = validate_product_data(product)
+        if is_valid:
+            valid_products.append(product)
+        else:
+            print(f'  ⚠️  跳过无效产品: {product.get("name", "Unknown")} - {error}')
+            invalid_count += 1
+
+    if invalid_count > 0:
+        print(f'  跳过了 {invalid_count} 个无效产品')
+
+    # 按品类统计
+    category_stats = {}
+    for p in valid_products:
+        cat = p['category']
+        category_stats[cat] = category_stats.get(cat, 0) + 1
+
     print(f'\n📊 找到产品:')
-    print(f'  eufy camera: {len(eufy_products)} 款')
-    print(f'  竞品 camera: {len(competitor_products)} 款')
+    print(f'  eufy: {len(eufy_products)} 款')
+    print(f'  竞品: {len(competitor_products)} 款')
     print(f'  门铃+门锁: {len(doorbell_lock_products)} 款')
-    print(f'  总计: {len(all_products)} 款')
+    print(f'  总计: {len(valid_products)} 款')
+    print(f'\n📂 品类分布:')
+    for cat, count in sorted(category_stats.items()):
+        print(f'  {cat}: {count} 款')
 
     # 2. 抓取价格
-    results = scrape_prices(all_products)
+    results = scrape_prices(valid_products)
 
     # 3. 保存结果
     with open('/Users/anker/Desktop/feishu_bot/price_results_latest.json', 'w', encoding='utf-8') as f:

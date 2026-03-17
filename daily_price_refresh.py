@@ -207,9 +207,13 @@ def search_competitor_cameras():
                             if brand_name.lower().replace(' ', '') in title_lower.replace(' ', ''):
                                 if any(kw in title_lower for kw in ['camera', 'cam', 'doorbell', 'security']):
                                     if not any(kw in title_lower for kw in ['cable', 'mount', 'adapter']):
+                                        # 判断品类：如果包含doorbell则归类为Video Doorbell
+                                        category = 'Video Doorbell' if 'doorbell' in title_lower else 'Security Camera'
+
                                         competitors.append({
                                             'name': title,
                                             'brand': brand_name,
+                                            'category': category,
                                             'url': full_url,
                                             'channel': 'JB Hi-Fi'
                                         })

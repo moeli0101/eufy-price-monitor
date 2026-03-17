@@ -171,6 +171,7 @@ def search_competitor_cameras():
         ('Ring', 'ring security camera'),
         ('Google Nest', 'google nest cam'),
         ('TP-Link', 'tp-link tapo camera'),
+        ('Swann', 'swann security camera'),
     ]
 
     with sync_playwright() as p:
@@ -266,6 +267,42 @@ def extract_price(page):
     except:
         return None
 
+def scrape_single_product_with_retry(browser, product, max_retries=3):
+    """抓取单个产品价格，带重试机制"""
+    for attempt in range(max_retries):
+        try:
+            page = browser.new_page(
+                user_agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
+            )
+
+            # 增加超时时间到30秒
+            page.goto(product['url'], wait_until='domcontentloaded', timeout=30000)
+            price_data = extract_price(page)
+            page.close()
+
+            if price_data:
+                return price_data, True
+            elif attempt < max_retries - 1:
+                # 如果没有价格数据且还有重试机会，等待后重试
+                time.sleep(2)
+                continue
+            else:
+                return None, False
+
+        except Exception as e:
+            if page:
+                page.close()
+            if attempt < max_retries - 1:
+                # 还有重试机会，等待后重试
+                time.sleep(2)
+                continue
+            else:
+                # 最后一次尝试也失败了
+                return None, False
+
+    return None, False
+
+
 def scrape_prices(products):
     """抓取所有产品价格"""
     print(f'\n💰 抓取价格 ({len(products)} 款)...')
@@ -279,53 +316,34 @@ def scrape_prices(products):
             if i % 10 == 0:
                 print(f'  进度: {i}/{len(products)}')
 
-            try:
-                page = browser.new_page(
-                    user_agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
-                )
+            # 使用带重试的抓取函数
+            price_data, success = scrape_single_product_with_retry(browser, product, max_retries=3)
 
-                page.goto(product['url'], wait_until='domcontentloaded', timeout=15000)
-                price_data = extract_price(page)
-                page.close()
+            result = {
+                'name': product['name'],
+                'brand': product['brand'],
+                'category': product.get('category', 'Security Camera'),
+                'channel': 'JB Hi-Fi',
+                'url': product['url'],
+                'currency': 'AUD',
+                'scraped_at': datetime.now().isoformat(),
+            }
 
-                result = {
-                    'name': product['name'],
-                    'brand': product['brand'],
-                    'category': product.get('category', 'Security Camera'),
-                    'channel': 'JB Hi-Fi',
-                    'url': product['url'],
-                    'currency': 'AUD',
-                    'scraped_at': datetime.now().isoformat(),
-                }
+            # 处理价格数据
+            if success and price_data:
+                result['price'] = price_data['price']
+                if 'was_price' in price_data:
+                    result['was_price'] = price_data['was_price']
+                if 'discount_percent' in price_data:
+                    result['discount_percent'] = price_data['discount_percent']
+                result['status'] = 'success'
+            else:
+                result['price'] = None
+                result['status'] = 'failed'
 
-                # 处理价格数据
-                if price_data:
-                    result['price'] = price_data['price']
-                    if 'was_price' in price_data:
-                        result['was_price'] = price_data['was_price']
-                    if 'discount_percent' in price_data:
-                        result['discount_percent'] = price_data['discount_percent']
-                    result['status'] = 'success'
-                else:
-                    result['price'] = None
-                    result['status'] = 'failed'
+            results.append(result)
 
-                results.append(result)
-
-                time.sleep(1)
-
-            except:
-                result = {
-                    'name': product['name'],
-                    'brand': product['brand'],
-                    'category': product.get('category', 'Security Camera'),
-                    'channel': 'JB Hi-Fi',
-                    'url': product['url'],
-                    'price': None,
-                    'scraped_at': datetime.now().isoformat(),
-                    'status': 'failed'
-                }
-                results.append(result)
+            time.sleep(1)
 
         browser.close()
 

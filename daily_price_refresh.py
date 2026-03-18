@@ -117,7 +117,7 @@ def search_doorbell_lock():
             ]
         )
 
-        search_terms = ['smart doorbell', 'smart lock']
+        search_terms = ['smart doorbell', 'video doorbell', 'smart lock']
 
         for term in search_terms:
             print(f'  搜索: {term}')
@@ -135,7 +135,7 @@ def search_doorbell_lock():
                 product_urls = re.findall(r'href="(/products/[^"]+)"', content)
                 unique_urls = list(set(product_urls))
 
-                for url in unique_urls[:15]:
+                for url in unique_urls[:30]:  # 增加到30个以确保不遗漏
                     full_url = f'https://www.jbhifi.com.au{url}'
 
                     if any(p['url'] == full_url for p in products):

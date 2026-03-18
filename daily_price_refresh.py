@@ -19,13 +19,26 @@ def search_all_eufy_cameras():
     all_products = []
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        page = browser.new_page()
+        # 添加反爬虫对策：真实的浏览器参数
+        browser = p.chromium.launch(
+            headless=True,
+            args=[
+                '--disable-blink-features=AutomationControlled',
+                '--no-sandbox',
+                '--disable-dev-shm-usage'
+            ]
+        )
+
+        # 创建页面，设置真实的 User-Agent 和 viewport
+        page = browser.new_page(
+            user_agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            viewport={'width': 1920, 'height': 1080}
+        )
 
         # 搜索eufy camera
         search_url = 'https://www.jbhifi.com.au/search?query=eufy+camera&page=1'
-        page.goto(search_url, wait_until='domcontentloaded', timeout=20000)
-        time.sleep(3)
+        page.goto(search_url, wait_until='domcontentloaded', timeout=30000)
+        time.sleep(5)  # 增加等待时间，确保 JavaScript 完全渲染
 
         content = page.content()
         product_urls = re.findall(r'href="(/products/[^"]+)"', content)
@@ -34,8 +47,8 @@ def search_all_eufy_cameras():
         print(f'  第1页: {len(unique_urls)} 个链接')
 
         # 第2页
-        page.goto('https://www.jbhifi.com.au/search?query=eufy+camera&page=2', timeout=20000)
-        time.sleep(3)
+        page.goto('https://www.jbhifi.com.au/search?query=eufy+camera&page=2', wait_until='domcontentloaded', timeout=30000)
+        time.sleep(5)
         content = page.content()
         product_urls_p2 = re.findall(r'href="(/products/[^"]+)"', content)
         unique_urls.extend([url for url in set(product_urls_p2) if url not in unique_urls])
@@ -91,18 +104,29 @@ def search_doorbell_lock():
     products = []
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
+        # 添加反爬虫对策
+        browser = p.chromium.launch(
+            headless=True,
+            args=[
+                '--disable-blink-features=AutomationControlled',
+                '--no-sandbox',
+                '--disable-dev-shm-usage'
+            ]
+        )
 
         search_terms = ['smart doorbell', 'smart lock']
 
         for term in search_terms:
             print(f'  搜索: {term}')
-            page = browser.new_page()
+            page = browser.new_page(
+                user_agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                viewport={'width': 1920, 'height': 1080}
+            )
 
             try:
                 search_url = f'https://www.jbhifi.com.au/search?query={term.replace(" ", "+")}'
-                page.goto(search_url, timeout=20000)
-                time.sleep(3)
+                page.goto(search_url, wait_until='domcontentloaded', timeout=30000)
+                time.sleep(5)
 
                 content = page.content()
                 product_urls = re.findall(r'href="(/products/[^"]+)"', content)
@@ -180,17 +204,28 @@ def search_competitor_cameras():
     ]
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
+        # 添加反爬虫对策
+        browser = p.chromium.launch(
+            headless=True,
+            args=[
+                '--disable-blink-features=AutomationControlled',
+                '--no-sandbox',
+                '--disable-dev-shm-usage'
+            ]
+        )
 
         for brand_name, search_term in brands:
             print(f'  搜索 {brand_name}...')
 
-            page = browser.new_page()
+            page = browser.new_page(
+                user_agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                viewport={'width': 1920, 'height': 1080}
+            )
             search_url = f'https://www.jbhifi.com.au/search?query={search_term.replace(" ", "+")}'
 
             try:
-                page.goto(search_url, wait_until='domcontentloaded', timeout=20000)
-                time.sleep(3)
+                page.goto(search_url, wait_until='domcontentloaded', timeout=30000)
+                time.sleep(5)
 
                 content = page.content()
                 product_urls = re.findall(r'href="(/products/[^"]+)"', content)
@@ -414,7 +449,7 @@ def main():
     results = scrape_prices(valid_products)
 
     # 3. 保存结果
-    with open('price_results_latest.json', 'w', encoding='utf-8') as f:
+    with open('/Users/anker/Desktop/feishu_bot/price_results_latest.json', 'w', encoding='utf-8') as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
 
     # 4. 统计
@@ -443,7 +478,7 @@ def main():
 
     # 追加到日志文件
     try:
-        with open('price_refresh_log.json', 'r', encoding='utf-8') as f:
+        with open('/Users/anker/Desktop/feishu_bot/price_refresh_log.json', 'r', encoding='utf-8') as f:
             logs = json.load(f)
     except:
         logs = []
@@ -454,7 +489,7 @@ def main():
     if len(logs) > 30:
         logs = logs[-30:]
 
-    with open('price_refresh_log.json', 'w', encoding='utf-8') as f:
+    with open('/Users/anker/Desktop/feishu_bot/price_refresh_log.json', 'w', encoding='utf-8') as f:
         json.dump(logs, f, ensure_ascii=False, indent=2)
 
 if __name__ == '__main__':

@@ -11,6 +11,9 @@ import time
 import re
 from datetime import datetime
 from product_classifier import classify_product, is_valid_product, validate_product_data
+from price_history_manager import PriceHistoryManager
+from promotion_detector import PromotionDetector
+from promotion_calendar_generator import PromotionCalendarGenerator
 
 def search_all_eufy_cameras():
     """搜索所有eufy camera产品"""
@@ -452,6 +455,43 @@ def main():
     with open('price_results_latest.json', 'w', encoding='utf-8') as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
 
+    # 3.5. 更新历史数据和检测促销
+    print(f'\n📊 更新历史数据和检测促销...')
+    history_manager = PriceHistoryManager()
+    promotion_detector = PromotionDetector()
+
+    promotion_count = 0
+    for result in results:
+        if result['status'] != 'success' or not result.get('price'):
+            continue
+
+        # 更新历史
+        product_id = history_manager.update_price(result)
+
+        # 检测促销
+        current_price = result['price']
+        original_price = result.get('was_price', current_price)
+
+        promotion_detector.update_promotions(
+            product_id=product_id,
+            product_name=result['name'],
+            brand=result['brand'],
+            category=result['category'],
+            current_price=current_price,
+            original_price=original_price,
+            url=result.get('url', '')
+        )
+
+        if result.get('was_price') and result['was_price'] > current_price:
+            promotion_count += 1
+
+    # 保存历史和促销数据
+    history_manager.save_history()
+    promotion_detector.save_promotions()
+
+    print(f'  历史记录: {len(history_manager.history)} 个产品')
+    print(f'  促销中: {promotion_count} 款')
+
     # 4. 统计
     success = sum(1 for r in results if r['status'] == 'success')
 
@@ -491,6 +531,16 @@ def main():
 
     with open('price_refresh_log.json', 'w', encoding='utf-8') as f:
         json.dump(logs, f, ensure_ascii=False, indent=2)
+
+    # 6. 生成促销日历
+    print(f'\n📅 生成促销日历...')
+    calendar_generator = PromotionCalendarGenerator()
+
+    # 生成当月日历
+    now = datetime.now()
+    calendar = calendar_generator.generate_monthly_calendar(now.year, now.month)
+    calendar_generator.save_calendar_json(calendar)
+    print(f'  生成了 {len(calendar)} 个产品的日历')
 
 if __name__ == '__main__':
     main()

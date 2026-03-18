@@ -9,9 +9,9 @@
       {
         "date": "2026-03-18",
         "price": 299.0,
-        "original_price": 349.0,
-        "is_on_sale": true,
-        "discount_percentage": 14,
+        "original_price": 299.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
         "status": "success"
       }
     ]
@@ -1761,6 +1761,414 @@
         "date": "2026-03-18",
         "price": 699.0,
         "original_price": 699.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "arlo_arlo_pro_6_2k_outdoor_solar_security_camera_kit_+_12m_subscr": {
+    "product_name": "Arlo Pro 6 2K Outdoor Solar Security Camera Kit + 12M Subscription(4 Pack)",
+    "brand": "Arlo",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/arlo-pro-6-2k-outdoor-solar-security-camera-kit-12m-subscription4-pack",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 869.0,
+        "original_price": 869.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "arlo_arlo_essentials_2k_3rd_gen_outdoor_security_camera": {
+    "product_name": "Arlo Essentials 2K (3rd Gen) Outdoor Security Camera",
+    "brand": "Arlo",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/arlo-essentials-2k-3rd-gen-outdoor-security-camera",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 149.0,
+        "original_price": 149.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "arlo_arlo_essential_indoor_camera": {
+    "product_name": "Arlo Essential Indoor Camera",
+    "brand": "Arlo",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/arlo-essential-indoor-camera",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 97.0,
+        "original_price": 97.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "arlo_arlo_ultra_2_4k_uhd_wire_free_security_spotlight_camera_syst": {
+    "product_name": "Arlo Ultra 2 4K UHD Wire-Free Security Spotlight Camera System – 2 Cameras & Smart Hub",
+    "brand": "Arlo",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/arlo-ultra-2-4k-uhd-wire-free-security-spotlight-camera-system-2-cameras-smart-hub",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 599.0,
+        "original_price": 599.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "ring_ring_outdoor_cam_pro_plug_in_security_camera_black": {
+    "product_name": "Ring Outdoor Cam Pro Plug-In Security Camera (Black)",
+    "brand": "Ring",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/ring-outdoor-cam-pro-plug-in-security-camera-black",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 249.0,
+        "original_price": 329.0,
+        "is_on_sale": true,
+        "discount_percentage": 24,
+        "status": "success"
+      }
+    ]
+  },
+  "ring_ring_indoor_cam_plus_plug_in_security_camera_white": {
+    "product_name": "Ring Indoor Cam Plus Plug-In Security Camera (White)",
+    "brand": "Ring",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/ring-indoor-cam-plus-plug-in-security-camera-white",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 69.0,
+        "original_price": 99.0,
+        "is_on_sale": true,
+        "discount_percentage": 30,
+        "status": "success"
+      }
+    ]
+  },
+  "google nest_google_nest_gen2_wired_outdoor_camera": {
+    "product_name": "Google Nest Gen2 Wired Outdoor Camera",
+    "brand": "Google Nest",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/google-nest-gen2-wired-outdoor-camera",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 197.0,
+        "original_price": 239.0,
+        "is_on_sale": true,
+        "discount_percentage": 18,
+        "status": "success"
+      }
+    ]
+  },
+  "tp-link_tp_link_tapo_2k_3mp_smart_wire_free_security_system_4_pack": {
+    "product_name": "TP-Link Tapo 2K 3MP Smart Wire-Free Security System (4-pack)",
+    "brand": "TP-Link",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-3mp-smart-wire-free-security-system-4-pack",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 429.0,
+        "original_price": 429.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "tp-link_tp_link_tapo_3k_solar_powered_pan_tilt_security_camera_kit": {
+    "product_name": "TP-Link Tapo 3K Solar-Powered Pan & Tilt Security Camera Kit",
+    "brand": "TP-Link",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/tp-link-tapo-3k-solar-powered-pan-tilt-security-camera-kit",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 249.0,
+        "original_price": 249.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "swann_swann_advancedx_4k_16_channel_dome_security_camera_kit_[8_pa": {
+    "product_name": "Swann AdvancedX 4K 16 Channel Dome Security Camera Kit [8 Pack]",
+    "brand": "Swann",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/swann-advancedx-4k-16-channel-dome-security-camera-kit-8-pack",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 1499.0,
+        "original_price": 1499.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "swann_swann_4k_advancedx_series_add_on_bullet_camera_for_nvr_[1_pa": {
+    "product_name": "Swann 4K AdvancedX Series Add On Bullet Camera for NVR [1 Pack]",
+    "brand": "Swann",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/swann-4k-advancedx-series-add-on-bullet-camera-for-nvr-1-pack",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 129.0,
+        "original_price": 129.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "swann_swann_4k_advancedx_series_nvr_security_system_[8_camera_kit]": {
+    "product_name": "Swann 4K AdvancedX Series NVR Security System [8 Camera Kit]",
+    "brand": "Swann",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/swann-4k-advancedx-series-nvr-security-system-8-camera-kit",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 1249.0,
+        "original_price": 1249.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "swann_swann_2k_home_wired_dvr_security_camera_kit_4_pack": {
+    "product_name": "Swann 2K Home Wired DVR Security Camera Kit (4 Pack)",
+    "brand": "Swann",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/swann-2k-home-wired-dvr-security-camera-kit-4-pack",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 599.0,
+        "original_price": 599.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "swann_swann_allsecure650_2k_wireless_add_on_camera": {
+    "product_name": "Swann AllSecure650 2K Wireless Add-on Camera",
+    "brand": "Swann",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/swann-allsecure650-2k-wireless-add-on-camera",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 269.0,
+        "original_price": 269.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "other_uniden_app_cam_solo_x2k_wirefree_video_door_bell": {
+    "product_name": "Uniden App Cam Solo X2K Wirefree Video Door Bell",
+    "brand": "Other",
+    "category": "Video Doorbell",
+    "url": "https://www.jbhifi.com.au/products/uniden-app-cam-solo-x2k-wirefree-video-door-bell",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 159.0,
+        "original_price": 159.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "eufy_eufy_video_doorbell_2k_wired": {
+    "product_name": "eufy Video Doorbell 2K (Wired)",
+    "brand": "eufy",
+    "category": "Video Doorbell",
+    "url": "https://www.jbhifi.com.au/products/eufy-video-doorbell-2k-wired",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 239.0,
+        "original_price": 239.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "eufy_eufy_video_doorbell_2k_wireless_with_homebase_2": {
+    "product_name": "eufy Video Doorbell 2K Wireless with Homebase 2",
+    "brand": "eufy",
+    "category": "Video Doorbell",
+    "url": "https://www.jbhifi.com.au/products/eufy-video-doorbell-2k-wireless-with-homebase-2",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 399.0,
+        "original_price": 399.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "eufy_eufy_security_slim_1080p_wireless_doorbell_with_homebase_min": {
+    "product_name": "eufy Security Slim 1080P Wireless Doorbell with Homebase Mini Repeater",
+    "brand": "eufy",
+    "category": "Video Doorbell",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-slim-1080p-wireless-doorbell-with-homebase-mini-repeater",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 279.0,
+        "original_price": 279.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "other_kaadas_k20_pro_max_3d_face_recognition_wi_fi_lock_with_camer": {
+    "product_name": "Kaadas K20 Pro Max 3D Face Recognition Wi-Fi Lock with Camera (Copper)",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "url": "https://www.jbhifi.com.au/products/kaadas-k20-pro-max-3d-face-recognition-wi-fi-lock-with-camera-copper",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 849.0,
+        "original_price": 849.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "other_laser_smart_deadbolt_lock_with_apple_home_integration": {
+    "product_name": "Laser Smart Deadbolt Lock with Apple Home Integration",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "url": "https://www.jbhifi.com.au/products/laser-smart-deadbolt-lock-with-apple-home-integration",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 189.0,
+        "original_price": 189.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "eufy_eufy_smart_lever_lock_c33_black": {
+    "product_name": "eufy Smart Lever Lock C33 (Black)",
+    "brand": "eufy",
+    "category": "Smart Lock",
+    "url": "https://www.jbhifi.com.au/products/eufy-smart-lever-lock-c33-black",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 349.0,
+        "original_price": 349.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "other_aqara_smart_door_lock_a100": {
+    "product_name": "Aqara Smart Door Lock A100",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "url": "https://www.jbhifi.com.au/products/aqara-smart-door-lock-a100",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 299.0,
+        "original_price": 449.0,
+        "is_on_sale": true,
+        "discount_percentage": 33,
+        "status": "success"
+      }
+    ]
+  },
+  "other_kaadas_rx_c_deadbolt_smart_lock_satin_nickel": {
+    "product_name": "Kaadas RX-C Deadbolt Smart Lock (Satin Nickel)",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "url": "https://www.jbhifi.com.au/products/kaadas-rx-c-deadbolt-smart-lock-satin-nickel",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 149.0,
+        "original_price": 149.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "other_zigbang_shp_r80_smart_door_lock": {
+    "product_name": "Zigbang SHP-R80 Smart Door Lock",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "url": "https://www.jbhifi.com.au/products/zigbang-shp-r80-smart-door-lock",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 895.0,
+        "original_price": 895.0,
         "is_on_sale": false,
         "discount_percentage": 0,
         "status": "success"

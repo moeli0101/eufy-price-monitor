@@ -1,21 +1,6 @@
 {
   "active_promotions": [
     {
-      "product_id": "eufy_eufy_e30_floodlight_security_camera",
-      "product_name": "eufy E30 Floodlight Security Camera",
-      "brand": "eufy",
-      "category": "Security Camera",
-      "url": "https://www.jbhifi.com.au/products/eufy-e30-floodlight-security-camera",
-      "start_date": "2026-03-18",
-      "end_date": null,
-      "original_price": 349.0,
-      "sale_price": 299.0,
-      "discount_percentage": 14.3,
-      "save_amount": 50.0,
-      "duration_days": 1,
-      "status": "active"
-    },
-    {
       "product_id": "eufy_eufy_e40_essential_security_camera_kit_with_homebase_2_2_pac",
       "product_name": "eufy E40 Essential Security Camera Kit with Homebase 2 (2 Pack)",
       "brand": "eufy",
@@ -344,7 +329,83 @@
       "save_amount": 150.0,
       "duration_days": 1,
       "status": "active"
+    },
+    {
+      "product_id": "ring_ring_outdoor_cam_pro_plug_in_security_camera_black",
+      "product_name": "Ring Outdoor Cam Pro Plug-In Security Camera (Black)",
+      "brand": "Ring",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/ring-outdoor-cam-pro-plug-in-security-camera-black",
+      "start_date": "2026-03-18",
+      "end_date": null,
+      "original_price": 329.0,
+      "sale_price": 249.0,
+      "discount_percentage": 24.3,
+      "save_amount": 80.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "ring_ring_indoor_cam_plus_plug_in_security_camera_white",
+      "product_name": "Ring Indoor Cam Plus Plug-In Security Camera (White)",
+      "brand": "Ring",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/ring-indoor-cam-plus-plug-in-security-camera-white",
+      "start_date": "2026-03-18",
+      "end_date": null,
+      "original_price": 99.0,
+      "sale_price": 69.0,
+      "discount_percentage": 30.3,
+      "save_amount": 30.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "google nest_google_nest_gen2_wired_outdoor_camera",
+      "product_name": "Google Nest Gen2 Wired Outdoor Camera",
+      "brand": "Google Nest",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/google-nest-gen2-wired-outdoor-camera",
+      "start_date": "2026-03-18",
+      "end_date": null,
+      "original_price": 239.0,
+      "sale_price": 197.0,
+      "discount_percentage": 17.6,
+      "save_amount": 42.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "other_aqara_smart_door_lock_a100",
+      "product_name": "Aqara Smart Door Lock A100",
+      "brand": "Other",
+      "category": "Smart Lock",
+      "url": "https://www.jbhifi.com.au/products/aqara-smart-door-lock-a100",
+      "start_date": "2026-03-18",
+      "end_date": null,
+      "original_price": 449.0,
+      "sale_price": 299.0,
+      "discount_percentage": 33.4,
+      "save_amount": 150.0,
+      "duration_days": 1,
+      "status": "active"
     }
   ],
-  "historical_promotions": []
+  "historical_promotions": [
+    {
+      "product_id": "eufy_eufy_e30_floodlight_security_camera",
+      "product_name": "eufy E30 Floodlight Security Camera",
+      "brand": "eufy",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/eufy-e30-floodlight-security-camera",
+      "start_date": "2026-03-18",
+      "end_date": "2026-03-18",
+      "original_price": 349.0,
+      "sale_price": 299.0,
+      "discount_percentage": 14.3,
+      "save_amount": 50.0,
+      "duration_days": 1,
+      "status": "ended"
+    }
+  ]
 }

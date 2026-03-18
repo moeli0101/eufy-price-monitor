@@ -8,10 +8,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 299.0,
+        "price": 269.0,
         "original_price": 299.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 10,
         "status": "success"
       }
     ]
@@ -25,10 +25,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 349.0,
+        "price": 279.0,
         "original_price": 349.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 20,
         "status": "success"
       }
     ]
@@ -42,10 +42,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 1299.0,
+        "price": 999.0,
         "original_price": 1299.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 23,
         "status": "success"
       }
     ]
@@ -59,10 +59,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 1299.0,
+        "price": 999.0,
         "original_price": 1299.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 23,
         "status": "success"
       }
     ]
@@ -76,10 +76,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 899.0,
+        "price": 599.0,
         "original_price": 899.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 33,
         "status": "success"
       }
     ]
@@ -93,10 +93,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 1649.0,
+        "price": 1319.0,
         "original_price": 1649.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 20,
         "status": "success"
       }
     ]
@@ -110,10 +110,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 1499.0,
+        "price": 999.0,
         "original_price": 1499.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 33,
         "status": "success"
       }
     ]
@@ -127,10 +127,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 549.0,
+        "price": 379.0,
         "original_price": 549.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 31,
         "status": "success"
       }
     ]
@@ -144,10 +144,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 669.0,
+        "price": 549.0,
         "original_price": 669.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 18,
         "status": "success"
       }
     ]
@@ -161,10 +161,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 1199.0,
+        "price": 799.0,
         "original_price": 1199.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 33,
         "status": "success"
       }
     ]
@@ -212,10 +212,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 299.0,
+        "price": 199.0,
         "original_price": 299.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 33,
         "status": "success"
       }
     ]
@@ -229,10 +229,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 1999.0,
+        "price": 1599.0,
         "original_price": 1999.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 20,
         "status": "success"
       }
     ]
@@ -264,9 +264,9 @@
       {
         "date": "2026-03-18",
         "price": 219.0,
-        "original_price": 279.0,
-        "is_on_sale": true,
-        "discount_percentage": 22,
+        "original_price": 219.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
         "status": "success"
       }
     ]
@@ -280,10 +280,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 199.0,
+        "price": 149.0,
         "original_price": 199.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 25,
         "status": "success"
       }
     ]
@@ -331,10 +331,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 149.0,
+        "price": 129.0,
         "original_price": 149.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 13,
         "status": "success"
       }
     ]
@@ -365,10 +365,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 449.0,
+        "price": 359.0,
         "original_price": 449.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 20,
         "status": "success"
       }
     ]
@@ -382,10 +382,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 1999.0,
+        "price": 1599.0,
         "original_price": 1999.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 20,
         "status": "success"
       }
     ]
@@ -399,10 +399,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 279.0,
+        "price": 219.0,
         "original_price": 279.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 22,
         "status": "success"
       }
     ]
@@ -416,10 +416,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 449.0,
+        "price": 349.0,
         "original_price": 449.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 22,
         "status": "success"
       }
     ]
@@ -450,10 +450,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 1649.0,
+        "price": 1299.0,
         "original_price": 1649.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 21,
         "status": "success"
       }
     ]
@@ -468,9 +468,9 @@
       {
         "date": "2026-03-18",
         "price": 429.0,
-        "original_price": 599.0,
-        "is_on_sale": true,
-        "discount_percentage": 28,
+        "original_price": 429.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
         "status": "success"
       }
     ]
@@ -501,10 +501,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 449.0,
+        "price": 359.0,
         "original_price": 449.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 20,
         "status": "success"
       }
     ]
@@ -535,10 +535,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 429.0,
+        "price": 299.0,
         "original_price": 429.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 30,
         "status": "success"
       }
     ]
@@ -960,10 +960,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 129.0,
+        "price": 199.0,
         "original_price": 199.0,
-        "is_on_sale": true,
-        "discount_percentage": 35,
+        "is_on_sale": false,
+        "discount_percentage": 0,
         "status": "success"
       }
     ]
@@ -977,10 +977,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 299.0,
+        "price": 199.0,
         "original_price": 299.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 33,
         "status": "success"
       }
     ]
@@ -1011,10 +1011,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 279.0,
+        "price": 249.0,
         "original_price": 279.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 11,
         "status": "success"
       }
     ]
@@ -1198,10 +1198,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 499.0,
+        "price": 399.0,
         "original_price": 499.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 20,
         "status": "success"
       }
     ]
@@ -1368,10 +1368,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 699.0,
+        "price": 549.0,
         "original_price": 699.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 21,
         "status": "success"
       }
     ]
@@ -1538,10 +1538,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 449.0,
+        "price": 349.0,
         "original_price": 449.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 22,
         "status": "success"
       }
     ]
@@ -1606,10 +1606,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 249.0,
+        "price": 199.0,
         "original_price": 249.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 20,
         "status": "success"
       }
     ]
@@ -1742,10 +1742,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 299.0,
+        "price": 449.0,
         "original_price": 449.0,
-        "is_on_sale": true,
-        "discount_percentage": 33,
+        "is_on_sale": false,
+        "discount_percentage": 0,
         "status": "success"
       }
     ]
@@ -1776,10 +1776,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 869.0,
+        "price": 649.0,
         "original_price": 869.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 25,
         "status": "success"
       }
     ]
@@ -2048,10 +2048,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 399.0,
+        "price": 349.0,
         "original_price": 399.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 13,
         "status": "success"
       }
     ]
@@ -2065,10 +2065,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 279.0,
+        "price": 249.0,
         "original_price": 279.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 11,
         "status": "success"
       }
     ]
@@ -2116,10 +2116,10 @@
     "price_history": [
       {
         "date": "2026-03-18",
-        "price": 349.0,
+        "price": 279.0,
         "original_price": 349.0,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 20,
         "status": "success"
       }
     ]
@@ -2171,6 +2171,227 @@
         "original_price": 895.0,
         "is_on_sale": false,
         "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "arlo_arlo_essential_security_camera_kit_with_solar_panel_+_6m_sub": {
+    "product_name": "Arlo Essential Security Camera Kit with Solar Panel + 6M Subscription (4 Pack)",
+    "brand": "Arlo",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/arlo-essential-security-camera-kit-with-solar-panel-6m-subscription-4-pack",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 349.0,
+        "original_price": 349.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "arlo_arlo_ultra_3_4k_outdoor_security_camera_kit_+_12m_subscripti": {
+    "product_name": "Arlo Ultra 3 4K Outdoor Security Camera Kit + 12M Subscription (4 Pack)",
+    "brand": "Arlo",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/arlo-ultra-3-4k-outdoor-security-camera-kit-12m-subscription-4-pack",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 894.0,
+        "original_price": 1299.0,
+        "is_on_sale": true,
+        "discount_percentage": 31,
+        "status": "success"
+      }
+    ]
+  },
+  "ring_ring_spotlight_cam_plus_plug_in_white": {
+    "product_name": "Ring Spotlight Cam Plus Plug-In (White)",
+    "brand": "Ring",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/ring-spotlight-cam-plus-plug-in-white",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 99.0,
+        "original_price": 259.0,
+        "is_on_sale": true,
+        "discount_percentage": 62,
+        "status": "success"
+      }
+    ]
+  },
+  "ring_ring_floodlight_security_camera_pro_2k_wired_white": {
+    "product_name": "Ring Floodlight Security Camera Pro 2K Wired (White)",
+    "brand": "Ring",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/ring-floodlight-security-camera-pro-2k-wired-white",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 349.0,
+        "original_price": 349.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "ring_ring_indoor_cam_[2nd_gen]_white": {
+    "product_name": "Ring Indoor Cam [2nd Gen](White)",
+    "brand": "Ring",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/ring-indoor-cam-2nd-genwhite",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 55.0,
+        "original_price": 79.0,
+        "is_on_sale": true,
+        "discount_percentage": 30,
+        "status": "success"
+      }
+    ]
+  },
+  "ring_ring_indoor_cam_2_pack_[2nd_gen]_white": {
+    "product_name": "Ring Indoor Cam 2 Pack [2nd Gen](White)",
+    "brand": "Ring",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/ring-indoor-cam-2-pack-2nd-genwhite",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 89.0,
+        "original_price": 129.0,
+        "is_on_sale": true,
+        "discount_percentage": 31,
+        "status": "success"
+      }
+    ]
+  },
+  "tp-link_tp_link_tapo_3k_indoor_outdoor_home_security_wi_fi_camera": {
+    "product_name": "TP-Link Tapo 3K Indoor/Outdoor Home Security Wi-Fi Camera",
+    "brand": "TP-Link",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/tp-link-tapo-3k-indoor-outdoor-home-security-wi-fi-camera",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 89.0,
+        "original_price": 109.0,
+        "is_on_sale": true,
+        "discount_percentage": 18,
+        "status": "success"
+      }
+    ]
+  },
+  "tp-link_tp_link_tapo_2k_pan_tilt_ai_home_security_wi_fi_camera": {
+    "product_name": "TP-Link Tapo 2K Pan/Tilt AI Home Security Wi-Fi Camera",
+    "brand": "TP-Link",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-pan-tilt-ai-home-security-wi-fi-camera",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 59.0,
+        "original_price": 79.0,
+        "is_on_sale": true,
+        "discount_percentage": 25,
+        "status": "success"
+      }
+    ]
+  },
+  "tp-link_tp_link_tapo_smart_floodlight_camera_2k_wired": {
+    "product_name": "TP-Link Tapo Smart Floodlight Camera 2K (Wired)",
+    "brand": "TP-Link",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/tp-link-tapo-smart-floodlight-camera-2k-wired",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 249.0,
+        "original_price": 249.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "swann_swann_elite_6k_12_mp_nvr_security_camera_system_[6_camera_ki": {
+    "product_name": "Swann Elite 6K/12 MP NVR Security Camera System [6 Camera Kit]",
+    "brand": "Swann",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/swann-elite-6k-12-mp-nvr-security-camera-system-6-camera-kit",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 1299.0,
+        "original_price": 1299.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "swann_swann_4k_maxranger_mini_security_camera_add_on": {
+    "product_name": "Swann 4K MaxRanger Mini Security Camera (Add On)",
+    "brand": "Swann",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/swann-4k-maxranger-mini-security-camera-add-on",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 249.0,
+        "original_price": 249.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "swann_swann_xtreem4k_wirelesscamera_with_solar_panel": {
+    "product_name": "Swann Xtreem4K WirelessCamera with Solar Panel",
+    "brand": "Swann",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/swann-xtreem4k-wirelesscamera-with-solar-panel",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 214.0,
+        "original_price": 269.0,
+        "is_on_sale": true,
+        "discount_percentage": 20,
+        "status": "success"
+      }
+    ]
+  },
+  "swann_swann_maxranger_v2_security_camera_kit_4_pack": {
+    "product_name": "Swann MaxRanger V2 Security Camera Kit (4 Pack)",
+    "brand": "Swann",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/swann-maxranger-v2-security-camera-kit-4-pack",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-18",
+        "price": 994.0,
+        "original_price": 1299.0,
+        "is_on_sale": true,
+        "discount_percentage": 23,
         "status": "success"
       }
     ]

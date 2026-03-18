@@ -414,7 +414,7 @@ def main():
     results = scrape_prices(valid_products)
 
     # 3. 保存结果
-    with open('/Users/anker/Desktop/feishu_bot/price_results_latest.json', 'w', encoding='utf-8') as f:
+    with open('price_results_latest.json', 'w', encoding='utf-8') as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
 
     # 4. 统计
@@ -443,7 +443,7 @@ def main():
 
     # 追加到日志文件
     try:
-        with open('/Users/anker/Desktop/feishu_bot/price_refresh_log.json', 'r', encoding='utf-8') as f:
+        with open('price_refresh_log.json', 'r', encoding='utf-8') as f:
             logs = json.load(f)
     except:
         logs = []
@@ -454,7 +454,7 @@ def main():
     if len(logs) > 30:
         logs = logs[-30:]
 
-    with open('/Users/anker/Desktop/feishu_bot/price_refresh_log.json', 'w', encoding='utf-8') as f:
+    with open('price_refresh_log.json', 'w', encoding='utf-8') as f:
         json.dump(logs, f, ensure_ascii=False, indent=2)
 
 if __name__ == '__main__':

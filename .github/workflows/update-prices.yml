@@ -5,6 +5,9 @@ on:
     - cron: '0 18 * * *'  # 每天UTC 18:00 (澳洲东部时间凌晨2-4点)
   workflow_dispatch:  # 允许手动触发
 
+ permissions:
+    contents: write  # 允许workflow push到仓库
+    
 jobs:
   update-prices:
     runs-on: ubuntu-latest

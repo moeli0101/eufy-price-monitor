@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>促销日历 - eufy & 竞品分析</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .filters {
+            padding: 30px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .filter-group label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #495057;
+        }
+
+        .filter-group select,
+        .filter-group input {
+            padding: 8px 12px;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            font-size: 14px;
+            min-width: 150px;
+        }
+
+        .filter-group select:focus,
+        .filter-group input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-left: auto;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+
+        .product-selector {
+            padding: 20px 30px;
+            background: #fff;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .product-selector h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #212529;
+        }
+
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+        }
+
+        .product-checkbox {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .product-checkbox:hover {
+            background: #f8f9fa;
+            border-color: #667eea;
+        }
+
+        .product-checkbox input[type="checkbox"] {
+            margin-right: 10px;
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+        }
+
+        .product-checkbox input[type="checkbox"]:checked + .product-label {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .product-label {
+            font-size: 14px;
+            color: #495057;
+            flex: 1;
+        }
+
+        .product-brand {
+            font-size: 12px;
+            color: #6c757d;
+            margin-left: 8px;
+        }
+
+        .calendar-container {
+            padding: 30px;
+            overflow-x: auto;
+        }
+
+        .calendar-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 1200px;
+        }
+
+        .calendar-table th,
+        .calendar-table td {
+            padding: 12px 8px;
+            text-align: center;
+            border: 1px solid #dee2e6;
+        }
+
+        .calendar-table th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .calendar-table td {
+            font-size: 13px;
+        }
+
+        .product-name-cell {
+            position: sticky;
+            left: 0;
+            background: #f8f9fa;
+            font-weight: 600;
+            text-align: left;
+            padding-left: 15px;
+            max-width: 300px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            z-index: 9;
+        }
+
+        .price-cell {
+            background: white;
+            position: relative;
+        }
+
+        .price-cell.sale {
+            background: #fff3cd;
+        }
+
+        .price-cell.no-data {
+            background: #f8f9fa;
+            color: #adb5bd;
+        }
+
+        .price-value {
+            font-weight: 600;
+            color: #212529;
+        }
+
+        .price-cell.sale .price-value {
+            color: #dc3545;
+        }
+
+        .discount-badge {
+            display: inline-block;
+            background: #dc3545;
+            color: white;
+            font-size: 11px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-top: 4px;
+        }
+
+        .stats-panel {
+            padding: 30px;
+            background: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 8px;
+        }
+
+        .stat-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+            color: #6c757d;
+        }
+
+        .loading-spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #6c757d;
+        }
+
+        .empty-state-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            opacity: 0.5;
+        }
+
+        @media (max-width: 768px) {
+            .filters {
+                flex-direction: column;
+            }
+
+            .action-buttons {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            .btn {
+                flex: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📅 促销日历</h1>
+            <p>eufy & 竞品价格趋势分析</p>
+        </div>
+
+        <div class="filters">
+            <div class="filter-group">
+                <label>年份</label>
+                <select id="year-select">
+                    <!-- 动态生成 -->
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>月份</label>
+                <select id="month-select">
+                    <option value="1">1月</option>
+                    <option value="2">2月</option>
+                    <option value="3">3月</option>
+                    <option value="4">4月</option>
+                    <option value="5">5月</option>
+                    <option value="6">6月</option>
+                    <option value="7">7月</option>
+                    <option value="8">8月</option>
+                    <option value="9">9月</option>
+                    <option value="10">10月</option>
+                    <option value="11">11月</option>
+                    <option value="12">12月</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>品牌</label>
+                <select id="brand-filter">
+                    <option value="">所有品牌</option>
+                    <!-- 动态生成 -->
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>品类</label>
+                <select id="category-filter">
+                    <option value="">所有品类</option>
+                    <!-- 动态生成 -->
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>搜索产品</label>
+                <input type="text" id="search-input" placeholder="输入产品名...">
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn btn-primary" onclick="calendar.applyFilters()">应用筛选</button>
+                <button class="btn btn-secondary" onclick="calendar.exportText()">导出文本</button>
+            </div>
+        </div>
+
+        <div class="product-selector">
+            <h3>选择产品进行对比：</h3>
+            <div class="product-list" id="product-list">
+                <!-- 动态生成 -->
+            </div>
+        </div>
+
+        <div class="calendar-container" id="calendar-container">
+            <div class="loading">
+                <div class="loading-spinner"></div>
+                <p>加载中...</p>
+            </div>
+        </div>
+
+        <div class="stats-panel" id="stats-panel" style="display: none;">
+            <div class="stats-grid" id="stats-grid">
+                <!-- 动态生成 -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        class PromotionCalendar {
+            constructor() {
+                this.historyData = {};
+                this.calendarData = {};
+                this.selectedProducts = new Set();
+                this.currentYear = new Date().getFullYear();
+                this.currentMonth = new Date().getMonth() + 1;
+                this.allBrands = new Set();
+                this.allCategories = new Set();
+
+                this.init();
+            }
+
+            async init() {
+                await this.loadData();
+                this.initFilters();
+                this.renderProductList();
+                this.renderCalendar();
+            }
+
+            async loadData() {
+                try {
+                    // 加载历史数据
+                    const historyResponse = await fetch('price_history.json');
+                    this.historyData = await historyResponse.json();
+
+                    // 提取所有品牌和品类
+                    Object.values(this.historyData).forEach(product => {
+                        this.allBrands.add(product.brand);
+                        this.allCategories.add(product.category);
+                    });
+
+                    console.log('数据加载成功:', Object.keys(this.historyData).length, '个产品');
+                } catch (error) {
+                    console.error('加载数据失败:', error);
+                    this.showEmptyState('加载数据失败，请刷新页面重试');
+                }
+            }
+
+            initFilters() {
+                // 初始化年份选择器
+                const yearSelect = document.getElementById('year-select');
+                const currentYear = new Date().getFullYear();
+                for (let year = currentYear; year >= currentYear - 2; year--) {
+                    const option = document.createElement('option');
+                    option.value = year;
+                    option.textContent = year + '年';
+                    if (year === this.currentYear) option.selected = true;
+                    yearSelect.appendChild(option);
+                }
+
+                // 初始化月份选择器
+                document.getElementById('month-select').value = this.currentMonth;
+
+                // 初始化品牌筛选器
+                const brandFilter = document.getElementById('brand-filter');
+                Array.from(this.allBrands).sort().forEach(brand => {
+                    const option = document.createElement('option');
+                    option.value = brand;
+                    option.textContent = brand;
+                    brandFilter.appendChild(option);
+                });
+
+                // 初始化品类筛选器
+                const categoryFilter = document.getElementById('category-filter');
+                Array.from(this.allCategories).sort().forEach(category => {
+                    const option = document.createElement('option');
+                    option.value = category;
+                    option.textContent = category;
+                    categoryFilter.appendChild(option);
+                });
+
+                // 绑定事件
+                yearSelect.addEventListener('change', () => this.applyFilters());
+                document.getElementById('month-select').addEventListener('change', () => this.applyFilters());
+                document.getElementById('search-input').addEventListener('input', (e) => this.filterProductList(e.target.value));
+            }
+
+            renderProductList() {
+                const productList = document.getElementById('product-list');
+                productList.innerHTML = '';
+
+                const brand = document.getElementById('brand-filter').value;
+                const category = document.getElementById('category-filter').value;
+
+                Object.entries(this.historyData).forEach(([productId, product]) => {
+                    if (brand && product.brand !== brand) return;
+                    if (category && product.category !== category) return;
+
+                    const div = document.createElement('div');
+                    div.className = 'product-checkbox';
+
+                    const checkbox = document.createElement('input');
+                    checkbox.type = 'checkbox';
+                    checkbox.id = `product-${productId}`;
+                    checkbox.checked = this.selectedProducts.has(productId);
+                    checkbox.addEventListener('change', (e) => {
+                        if (e.target.checked) {
+                            this.selectedProducts.add(productId);
+                        } else {
+                            this.selectedProducts.delete(productId);
+                        }
+                        this.renderCalendar();
+                    });
+
+                    const label = document.createElement('label');
+                    label.className = 'product-label';
+                    label.htmlFor = `product-${productId}`;
+                    label.textContent = product.product_name;
+
+                    const brandSpan = document.createElement('span');
+                    brandSpan.className = 'product-brand';
+                    brandSpan.textContent = product.brand;
+
+                    div.appendChild(checkbox);
+                    label.appendChild(brandSpan);
+                    div.appendChild(label);
+                    productList.appendChild(div);
+                });
+            }
+
+            filterProductList(searchTerm) {
+                const productList = document.getElementById('product-list');
+                const checkboxes = productList.getElementsByClassName('product-checkbox');
+
+                Array.from(checkboxes).forEach(checkbox => {
+                    const label = checkbox.querySelector('.product-label');
+                    const productName = label.textContent.toLowerCase();
+                    if (productName.includes(searchTerm.toLowerCase())) {
+                        checkbox.style.display = 'flex';
+                    } else {
+                        checkbox.style.display = 'none';
+                    }
+                });
+            }
+
+            applyFilters() {
+                this.currentYear = parseInt(document.getElementById('year-select').value);
+                this.currentMonth = parseInt(document.getElementById('month-select').value);
+                this.renderProductList();
+                this.renderCalendar();
+            }
+
+            renderCalendar() {
+                const container = document.getElementById('calendar-container');
+
+                if (this.selectedProducts.size === 0) {
+                    this.showEmptyState('请选择至少一个产品查看促销日历');
+                    return;
+                }
+
+                // 计算该月的天数
+                const daysInMonth = new Date(this.currentYear, this.currentMonth, 0).getDate();
+
+                // 生成表格
+                let html = '<table class="calendar-table"><thead><tr>';
+                html += '<th>产品</th>';
+                for (let day = 1; day <= daysInMonth; day++) {
+                    html += `<th>${day}</th>`;
+                }
+                html += '</tr></thead><tbody>';
+
+                // 为每个选中的产品生成一行
+                this.selectedProducts.forEach(productId => {
+                    const product = this.historyData[productId];
+                    if (!product) return;
+
+                    html += '<tr>';
+                    html += `<td class="product-name-cell" title="${product.product_name}">${product.product_name}</td>`;
+
+                    for (let day = 1; day <= daysInMonth; day++) {
+                        const dateStr = `${this.currentYear}-${String(this.currentMonth).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+                        const priceRecord = product.price_history.find(r => r.date === dateStr);
+
+                        if (priceRecord && priceRecord.price) {
+                            const isOnSale = priceRecord.is_on_sale;
+                            const cellClass = isOnSale ? 'price-cell sale' : 'price-cell';
+
+                            html += `<td class="${cellClass}">`;
+                            html += `<div class="price-value">$${priceRecord.price}</div>`;
+                            if (isOnSale && priceRecord.discount_percentage > 0) {
+                                html += `<div class="discount-badge">${priceRecord.discount_percentage}% OFF</div>`;
+                            }
+                            html += '</td>';
+                        } else {
+                            html += '<td class="price-cell no-data">-</td>';
+                        }
+                    }
+
+                    html += '</tr>';
+                });
+
+                html += '</tbody></table>';
+                container.innerHTML = html;
+
+                // 显示统计信息
+                this.renderStats();
+            }
+
+            renderStats() {
+                const statsPanel = document.getElementById('stats-panel');
+                const statsGrid = document.getElementById('stats-grid');
+
+                let totalPromotionDays = 0;
+                let totalProducts = this.selectedProducts.size;
+                let avgDiscount = 0;
+                let discountCount = 0;
+
+                this.selectedProducts.forEach(productId => {
+                    const product = this.historyData[productId];
+                    if (!product) return;
+
+                    product.price_history.forEach(record => {
+                        if (record.is_on_sale) {
+                            totalPromotionDays++;
+                            if (record.discount_percentage) {
+                                avgDiscount += record.discount_percentage;
+                                discountCount++;
+                            }
+                        }
+                    });
+                });
+
+                avgDiscount = discountCount > 0 ? Math.round(avgDiscount / discountCount) : 0;
+
+                statsGrid.innerHTML = `
+                    <div class="stat-card">
+                        <div class="stat-label">选中产品</div>
+                        <div class="stat-value">${totalProducts}</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">总促销天数</div>
+                        <div class="stat-value">${totalPromotionDays}</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">平均折扣</div>
+                        <div class="stat-value">${avgDiscount}%</div>
+                    </div>
+                `;
+
+                statsPanel.style.display = 'block';
+            }
+
+            showEmptyState(message) {
+                const container = document.getElementById('calendar-container');
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">📅</div>
+                        <p>${message}</p>
+                    </div>
+                `;
+                document.getElementById('stats-panel').style.display = 'none';
+            }
+
+            exportText() {
+                if (this.selectedProducts.size === 0) {
+                    alert('请先选择产品');
+                    return;
+                }
+
+                let text = `促销日历导出\n`;
+                text += `时间：${this.currentYear}年${this.currentMonth}月\n`;
+                text += `${'='.repeat(80)}\n\n`;
+
+                this.selectedProducts.forEach(productId => {
+                    const product = this.historyData[productId];
+                    if (!product) return;
+
+                    text += `产品：${product.product_name} (${product.brand})\n`;
+                    text += `品类：${product.category}\n`;
+                    text += `${'-'.repeat(80)}\n`;
+
+                    const daysInMonth = new Date(this.currentYear, this.currentMonth, 0).getDate();
+
+                    for (let day = 1; day <= daysInMonth; day++) {
+                        const dateStr = `${this.currentYear}-${String(this.currentMonth).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+                        const priceRecord = product.price_history.find(r => r.date === dateStr);
+
+                        if (priceRecord && priceRecord.price) {
+                            const status = priceRecord.is_on_sale ? `🔥 促销 (${priceRecord.discount_percentage}% OFF)` : '正常价格';
+                            text += `  ${dateStr}: $${priceRecord.price} - ${status}\n`;
+                        }
+                    }
+
+                    text += '\n';
+                });
+
+                // 下载文本文件
+                const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `promotion_calendar_${this.currentYear}_${this.currentMonth}.txt`;
+                a.click();
+                URL.revokeObjectURL(url);
+            }
+        }
+
+        // 初始化
+        let calendar;
+        window.addEventListener('DOMContentLoaded', () => {
+            calendar = new PromotionCalendar();
+        });
+    </script>
+</body>
+</html>

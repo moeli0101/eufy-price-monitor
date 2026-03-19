@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+bot_debug.log
+nohup.out
+.DS_Store
+*.tmp

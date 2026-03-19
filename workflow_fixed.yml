@@ -5,12 +5,10 @@ on:
     - cron: '0 18 * * *'  # 每天UTC 18:00 (澳洲东部时间凌晨2-4点)
   workflow_dispatch:  # 允许手动触发
 
-permissions:
-  contents: write  # 允许workflow push到仓库
-    
 jobs:
   update-prices:
     runs-on: ubuntu-latest
+    timeout-minutes: 60  # 设置60分钟超时，防止任务卡住
 
     steps:
       - name: Checkout code
@@ -31,6 +29,10 @@ jobs:
         run: |
           python daily_price_refresh.py
 
+      - name: Verify scraping results
+        run: |
+          python validate_data.py
+
       - name: Generate standalone HTML
         run: |
           python << 'EOF'
@@ -38,7 +40,7 @@ jobs:
           from datetime import datetime
 
           # 读取dashboard HTML
-          with open('price_dashboard_v6.html', 'r', encoding='utf-8') as f:
+          with open('price_dashboard_v5.html', 'r', encoding='utf-8') as f:
               html = f.read()
 
           # 读取最新JSON数据
@@ -76,5 +78,5 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add docs/index.html price_results_latest.json price_history.json promotions.json promotion_calendar.json price_refresh_log.json
+          git add docs/index.html price_results_latest.json
           git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto update prices $(date +'%Y-%m-%d')" && git push)

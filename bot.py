@@ -85,22 +85,28 @@ if os.path.exists('product_database.json'):
     except Exception as e:
         print(f'[产品库] 加载失败: {e}')
 
+# 对话历史记录（用户ID -> conversation_id）
+conversation_history = {}
+
 # ==================== 核心功能 ====================
 
-def call_aime_api(messages, user_query):
-    """调用AIME API"""
+def call_aime_api(messages, user_query, user_id='default'):
+    """调用AIME API - 支持对话历史"""
     try:
         headers = {
             'Authorization': f'Bearer {AIME_API_KEY}',
             'Content-Type': 'application/json'
         }
 
+        # 获取或创建conversation_id
+        conversation_id = conversation_history.get(user_id, '')
+
         data = {
             'inputs': {},
             'query': user_query,
             'response_mode': 'blocking',
-            'conversation_id': '',
-            'user': 'feishu-bot',
+            'conversation_id': conversation_id,
+            'user': user_id,
             'files': []
         }
 
@@ -114,6 +120,12 @@ def call_aime_api(messages, user_query):
 
         if response.status_code == 200:
             result = response.json()
+
+            # 保存conversation_id用于下次对话
+            if 'conversation_id' in result:
+                conversation_history[user_id] = result['conversation_id']
+                print(f'[对话] 用户 {user_id} 的对话ID已更新')
+
             return result.get('answer', '抱歉，我没有理解您的问题')
         else:
             print(f'[AIME] API错误: {response.status_code}')
@@ -123,8 +135,8 @@ def call_aime_api(messages, user_query):
         print(f'[AIME] 调用失败: {e}')
         return '抱歉，AI服务连接失败'
 
-def enhance(user_message):
-    """增强回复 - 添加知识库和产品库支持"""
+def enhance(user_message, user_id='default'):
+    """增强回复 - 添加知识库和产品库支持 + 思维链 + 对话记忆"""
 
     # 1. 检查是否是更新知识库命令
     if '更新知识库' in user_message or '刷新知识库' in user_message:
@@ -139,30 +151,59 @@ def enhance(user_message):
     # 3. 检查知识库
     kb_context = search_knowledge_base(user_message)
     if kb_context:
-        # 有知识库内容，增强prompt
+        # 有知识库内容，增强prompt + 思维链
         prompt = f"""你是eufy产品知识助手"小moe"（女生，3月12日生日，双鱼座，主人是moe li）。
 
 以下是从知识库找到的相关资料：
 {kb_context}
 
-请基于以上资料回答用户问题：{user_message}
+用户问题：{user_message}
 
-要求：
+请使用思维链方式回答（Chain of Thought）：
+
+步骤1 - 理解问题：
+- 用户在问什么？核心关键词是什么？
+
+步骤2 - 分析资料：
+- 知识库中哪些信息相关？
+- 重点内容是什么？
+
+步骤3 - 整合回答：
+基于以上分析，给出清晰的答案：
 1. 优先使用知识库资料
 2. 引用时注明来源
 3. 如果资料不足，可以说明
-4. 保持专业简洁"""
+4. 保持专业简洁
 
-        return call_aime_api([], prompt)
+注意：只输出"步骤3 - 整合回答"的内容给用户，步骤1和2是你的内部思考过程。"""
 
-    # 4. 没有知识库，正常回复
+        return call_aime_api([], prompt, user_id)
+
+    # 4. 没有知识库，正常回复 + 思维链
     prompt = f"""你是eufy产品知识助手"小moe"（女生，3月12日生日，双鱼座，主人是moe li）。
 
 用户问题：{user_message}
 
-注意：在日常对话中保持专业简洁。只有在被问到"你是谁"、"你的主人是谁"等相关问题时，才可以说"我的主人是聪明漂亮善良的moe li"。"""
+请使用思维链方式回答（Chain of Thought）：
 
-    return call_aime_api([], prompt)
+步骤1 - 理解意图：
+- 这是什么类型的问题？（产品咨询/市场分析/技术问题/日常对话）
+- 用户真正想知道什么？
+
+步骤2 - 构思回答：
+- 我需要提供什么信息？
+- 如何组织答案更清晰？
+
+步骤3 - 给出答案：
+基于以上思考，提供准确、专业、友好的回答。
+
+注意：
+- 只输出"步骤3 - 给出答案"的内容给用户
+- 在日常对话中保持专业简洁
+- 只有在被问到"你是谁"、"你的主人是谁"等相关问题时，才可以说"我的主人是聪明漂亮善良的moe li"
+- 对于复杂问题，分点列出便于理解"""
+
+    return call_aime_api([], prompt, user_id)
 
 def search_product(query):
     """搜索产品库"""
@@ -245,6 +286,7 @@ def handle_message(event):
     """处理接收到的消息"""
     try:
         message = event.event.message
+        sender = event.event.sender
         content_str = message.content
         content = json.loads(content_str)
 
@@ -257,10 +299,13 @@ def handle_message(event):
         # 移除@机器人的部分
         user_message = user_message.replace('@_user_1', '').strip()
 
-        print(f'[收到消息] {user_message}')
+        # 获取用户ID（用于对话历史）
+        user_id = sender.sender_id.user_id if hasattr(sender, 'sender_id') else 'default'
 
-        # 生成回复
-        reply = enhance(user_message)
+        print(f'[收到消息] 用户:{user_id} 内容:{user_message}')
+
+        # 生成回复（传递user_id以支持对话记忆）
+        reply = enhance(user_message, user_id)
 
         print(f'[回复] {reply[:100]}...')
 

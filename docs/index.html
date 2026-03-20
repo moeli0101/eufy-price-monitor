@@ -2352,7 +2352,33 @@
 
                 // 加载最新产品数据
                 const productsResponse = await fetch('price_results_latest.json');
-                trackerAllProducts = await productsResponse.json();
+                const rawProducts = await productsResponse.json();
+
+                // 标准化产品数据格式并添加ID
+                trackerAllProducts = rawProducts.map(product => {
+                    // 根据产品名称和品牌生成ID（与price_history的key匹配）
+                    const id = (product.brand + '_' + product.name)
+                        .toLowerCase()
+                        .replace(/[^a-z0-9]+/g, '_')
+                        .replace(/^_+|_+$/g, '');
+
+                    // 从price_history获取is_on_sale信息
+                    let isOnSale = false;
+                    if (trackerHistory[id] && trackerHistory[id].price_history.length > 0) {
+                        const latestHistory = trackerHistory[id].price_history[trackerHistory[id].price_history.length - 1];
+                        isOnSale = latestHistory.is_on_sale || false;
+                    }
+
+                    return {
+                        id: id,
+                        product_name: product.name,
+                        brand: product.brand,
+                        category: product.category,
+                        url: product.url,
+                        current_price: product.price,
+                        is_on_sale: isOnSale
+                    };
+                });
 
                 // 更新顶部横幅数据
                 updateBannerInfo();

@@ -420,9 +420,236 @@
             display: block;
         }
 
+        /* Top Banner */
+        .top-banner {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: -20px -20px 20px -20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .banner-left {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .banner-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+        }
+
+        .banner-item strong {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .banner-contact {
+            font-size: 13px;
+        }
+
+        .banner-contact a {
+            color: #ffffff;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        .banner-contact a:hover {
+            color: #f0f0f0;
+        }
+
+        /* Price Tracker Styles */
+        .tracker-controls {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+
+        .tracker-section-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tracker-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .tracker-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-left: 4px solid #e0e0e0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tracker-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
+        }
+
+        .tracker-card.selected {
+            border-left-color: #3498db;
+            background: #f8fbff;
+        }
+
+        .tracker-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .tracker-card-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #2c3e50;
+            flex: 1;
+            line-height: 1.4;
+        }
+
+        .tracker-card-checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            flex-shrink: 0;
+            margin-left: 10px;
+            position: relative;
+            transition: all 0.2s;
+        }
+
+        .tracker-card.selected .tracker-card-checkbox {
+            background: #3498db;
+            border-color: #3498db;
+        }
+
+        .tracker-card.selected .tracker-card-checkbox::after {
+            content: '✓';
+            position: absolute;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .tracker-card-info {
+            display: flex;
+            gap: 10px;
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .tracker-card-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: #27ae60;
+        }
+
+        .tracker-card-price.on-sale {
+            color: #e74c3c;
+        }
+
+        .export-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .export-btn {
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .export-btn:hover {
+            background: #2980b9;
+            transform: translateY(-1px);
+        }
+
+        .export-btn.secondary {
+            background: #95a5a6;
+        }
+
+        .export-btn.secondary:hover {
+            background: #7f8c8d;
+        }
+
+        #tracker-chartContainer {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-top: 20px;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #95a5a6;
+        }
+
+        .empty-state-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .empty-state p {
+            font-size: 16px;
+            color: #7f8c8d;
+        }
+
     </style>
+    <!-- Chart.js for price trends -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
 </head>
 <body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <div class="banner-left">
+            <div class="banner-item">
+                <span>📅 数据更新时间：</span>
+                <strong id="lastUpdateTime">加载中...</strong>
+            </div>
+            <div class="banner-item">
+                <span>📊 已累计：</span>
+                <strong id="totalDays">--</strong>
+                <span>天数据</span>
+            </div>
+        </div>
+        <div class="banner-contact">
+            如果在使用中遇到问题请联系开发者 <a href="mailto:moe.li@anker.com"><strong>moe (moe.li@anker.com)</strong></a>
+        </div>
+    </div>
+
     <div class="container">
         <div class="header">
             <h1>🎯 eufy 智能安防价格监控 - JB Hi-Fi</h1>
@@ -431,8 +658,8 @@
 
         <!-- Tab 导航 -->
         <div class="tabs">
-            <button class="tab-btn active" onclick="switchTab('prices')">💰 价格列表</button>
-            <button class="tab-btn" onclick="switchTab('calendar')">📅 促销日历</button>
+            <button class="tab-btn active" onclick="switchTab('prices')">📋 产品列表</button>
+            <button class="tab-btn" onclick="switchTab('tracker')">📈 价格追踪</button>
         </div>
 
         <!-- 价格列表 Tab -->
@@ -2066,47 +2293,25 @@
 
         </div> <!-- 关闭 prices-tab -->
 
-        <!-- 促销日历 Tab -->
-        <div id="calendar-tab" class="tab-content">
-            <div class="calendar-controls">
-                <div class="calendar-control-group">
-                    <label>年份</label>
-                    <select id="cal-year"></select>
-                </div>
-                <div class="calendar-control-group">
-                    <label>月份</label>
-                    <select id="cal-month">
-                        <option value="1">1月</option>
-                        <option value="2">2月</option>
-                        <option value="3">3月</option>
-                        <option value="4">4月</option>
-                        <option value="5">5月</option>
-                        <option value="6">6月</option>
-                        <option value="7">7月</option>
-                        <option value="8">8月</option>
-                        <option value="9">9月</option>
-                        <option value="10">10月</option>
-                        <option value="11">11月</option>
-                        <option value="12">12月</option>
-                    </select>
-                </div>
-                <div class="calendar-control-group">
-                    <label>品牌</label>
-                    <select id="cal-brand">
-                        <option value="">所有品牌</option>
-                    </select>
-                </div>
-                <div class="calendar-control-group" style="margin-left: auto;">
-                    <button class="filter-btn active" onclick="loadCalendar()">刷新日历</button>
+        <!-- 价格追踪 Tab -->
+        <div id="tracker-tab" class="tab-content">
+            <div class="tracker-controls">
+                <h3 class="tracker-section-title">📊 选择产品进行价格追踪对比</h3>
+                <p style="color: #666; margin-bottom: 20px; font-size: 14px;">点击产品卡片选择/取消选择，最多可同时对比 5 个产品的价格变化趋势</p>
+                <div class="tracker-grid" id="tracker-productCards"></div>
+
+                <div class="export-buttons" id="export-buttons" style="display: none;">
+                    <button class="export-btn" onclick="exportData('json')">📥 导出 JSON</button>
+                    <button class="export-btn secondary" onclick="exportData('csv')">📥 导出 CSV</button>
                 </div>
             </div>
 
-            <div class="product-selector">
-                <h3>选择产品对比：</h3>
-                <div class="product-list" id="cal-product-list"></div>
+            <div id="tracker-chartContainer">
+                <div class="empty-state">
+                    <div class="empty-state-icon">📈</div>
+                    <p>请选择产品开始追踪价格变化</p>
+                </div>
             </div>
-
-            <div id="calendar-container"></div>
         </div>
 
     <script>
@@ -2124,160 +2329,332 @@
             document.getElementById(tabName + '-tab').classList.add('active');
             event.target.classList.add('active');
 
-            // 如果切换到促销日历，加载数据
-            if (tabName === 'calendar' && !window.calendarLoaded) {
-                initCalendar();
-                window.calendarLoaded = true;
+            // 如果切换到价格追踪，加载数据
+            if (tabName === 'tracker' && !window.trackerLoaded) {
+                loadTrackerData();
+                window.trackerLoaded = true;
             }
         }
 
-        // 促销日历功能
-        let historyData = {};
-        let selectedProducts = new Set();
+        // 价格追踪功能
+        let trackerAllProducts = [];
+        let trackerHistory = {};
+        let trackerSelectedProducts = [];
+        let trackerChart = null;
+        const trackerColors = ['#3498db', '#2ecc71', '#e74c3c', '#f39c12', '#9b59b6'];
 
-        async function initCalendar() {
+        // 加载数据
+        async function loadTrackerData() {
             try {
-                const response = await fetch('price_history.json');
-                historyData = await response.json();
+                // 加载价格历史数据
+                const historyResponse = await fetch('price_history.json');
+                trackerHistory = await historyResponse.json();
 
-                // 初始化控件
-                const now = new Date();
-                const yearSelect = document.getElementById('cal-year');
-                const currentYear = now.getFullYear();
-                
-                for (let year = currentYear; year >= currentYear - 2; year--) {
-                    const option = document.createElement('option');
-                    option.value = year;
-                    option.textContent = year + '年';
-                    if (year === currentYear) option.selected = true;
-                    yearSelect.appendChild(option);
-                }
+                // 加载最新产品数据
+                const productsResponse = await fetch('price_results_latest.json');
+                trackerAllProducts = await productsResponse.json();
 
-                document.getElementById('cal-month').value = now.getMonth() + 1;
+                // 更新顶部横幅数据
+                updateBannerInfo();
 
-                // 提取所有品牌
-                const brands = new Set();
-                Object.values(historyData).forEach(product => {
-                    brands.add(product.brand);
-                });
-
-                const brandSelect = document.getElementById('cal-brand');
-                Array.from(brands).sort().forEach(brand => {
-                    const option = document.createElement('option');
-                    option.value = brand;
-                    option.textContent = brand;
-                    brandSelect.appendChild(option);
-                });
-
-                // 渲染产品列表
-                renderProductList();
+                // 渲染产品卡片
+                renderTrackerProducts();
             } catch (error) {
-                console.error('加载数据失败:', error);
-                document.getElementById('calendar-container').innerHTML = `
-                    <div class="empty-calendar">
-                        <div class="empty-calendar-icon">📅</div>
-                        <p>暂无历史数据，请等待系统首次运行后生成数据</p>
+                console.error('数据加载失败:', error);
+                document.getElementById('tracker-productCards').innerHTML = `
+                    <div style="padding: 40px; text-align: center; color: #e74c3c; grid-column: 1 / -1;">
+                        <p style="font-size: 18px; margin-bottom: 10px;">⚠️ 数据加载失败</p>
+                        <p style="font-size: 14px; color: #666;">${error.message}</p>
                     </div>
                 `;
             }
         }
 
-        function renderProductList() {
-            const productList = document.getElementById('cal-product-list');
-            productList.innerHTML = '';
+        // 更新顶部横幅信息
+        function updateBannerInfo() {
+            // 计算最新更新时间和累计天数
+            let latestDate = null;
+            let earliestDate = null;
 
-            const brandFilter = document.getElementById('cal-brand').value;
-
-            Object.entries(historyData).forEach(([productId, product]) => {
-                if (brandFilter && product.brand !== brandFilter) return;
-
-                const div = document.createElement('div');
-                div.className = 'product-checkbox';
-
-                const checkbox = document.createElement('input');
-                checkbox.type = 'checkbox';
-                checkbox.id = 'cal-' + productId;
-                checkbox.checked = selectedProducts.has(productId);
-                checkbox.onchange = () => {
-                    if (checkbox.checked) {
-                        selectedProducts.add(productId);
-                    } else {
-                        selectedProducts.delete(productId);
-                    }
-                    loadCalendar();
-                };
-
-                const label = document.createElement('label');
-                label.htmlFor = 'cal-' + productId;
-                label.textContent = product.product_name + ' (' + product.brand + ')';
-
-                div.appendChild(checkbox);
-                div.appendChild(label);
-                productList.appendChild(div);
+            Object.values(trackerHistory).forEach(product => {
+                if (product.price_history && product.price_history.length > 0) {
+                    product.price_history.forEach(record => {
+                        const date = new Date(record.date);
+                        if (!latestDate || date > latestDate) latestDate = date;
+                        if (!earliestDate || date < earliestDate) earliestDate = date;
+                    });
+                }
             });
+
+            if (latestDate) {
+                const year = latestDate.getFullYear();
+                const month = String(latestDate.getMonth() + 1).padStart(2, '0');
+                const day = String(latestDate.getDate()).padStart(2, '0');
+                const hours = String(latestDate.getHours()).padStart(2, '0');
+                const minutes = String(latestDate.getMinutes()).padStart(2, '0');
+                document.getElementById('lastUpdateTime').textContent = `${year}-${month}-${day} ${hours}:${minutes}`;
+            }
+
+            if (earliestDate && latestDate) {
+                const daysDiff = Math.floor((latestDate - earliestDate) / (1000 * 60 * 60 * 24)) + 1;
+                document.getElementById('totalDays').textContent = daysDiff;
+            }
         }
 
-        function loadCalendar() {
-            const container = document.getElementById('calendar-container');
-            
-            if (selectedProducts.size === 0) {
+        // 渲染产品卡片
+        function renderTrackerProducts() {
+            const container = document.getElementById('tracker-productCards');
+
+            if (trackerAllProducts.length === 0) {
                 container.innerHTML = `
-                    <div class="empty-calendar">
-                        <div class="empty-calendar-icon">📅</div>
-                        <p>请选择至少一个产品查看促销日历</p>
+                    <div style="padding: 40px; text-align: center; color: #95a5a6; grid-column: 1 / -1;">
+                        <p style="font-size: 18px;">😊 暂无产品数据</p>
                     </div>
                 `;
                 return;
             }
 
-            const year = parseInt(document.getElementById('cal-year').value);
-            const month = parseInt(document.getElementById('cal-month').value);
-            const daysInMonth = new Date(year, month, 0).getDate();
+            container.innerHTML = trackerAllProducts.map(product => {
+                const isSelected = trackerSelectedProducts.some(p => p.id === product.id);
+                const hasHistory = trackerHistory[product.id] && trackerHistory[product.id].price_history.length > 0;
 
-            let html = '<table class="calendar-table"><thead><tr><th>产品</th>';
-            for (let day = 1; day <= daysInMonth; day++) {
-                html += `<th>${day}</th>`;
-            }
-            html += '</tr></thead><tbody>';
-
-            selectedProducts.forEach(productId => {
-                const product = historyData[productId];
-                if (!product) return;
-
-                html += '<tr>';
-                html += `<td class="product-name" title="${product.product_name}">${product.product_name}</td>`;
-
-                for (let day = 1; day <= daysInMonth; day++) {
-                    const dateStr = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-                    const record = product.price_history.find(r => r.date === dateStr);
-
-                    if (record && record.price) {
-                        const cellClass = record.is_on_sale ? 'price-cell sale' : 'price-cell';
-                        html += `<td class="${cellClass}">`;
-                        html += `<div class="price-value">$${record.price}</div>`;
-                        if (record.is_on_sale && record.discount_percentage > 0) {
-                            html += `<div class="discount-badge">${record.discount_percentage}% OFF</div>`;
-                        }
-                        html += '</td>';
-                    } else {
-                        html += '<td class="no-data">-</td>';
-                    }
-                }
-
-                html += '</tr>';
-            });
-
-            html += '</tbody></table>';
-            container.innerHTML = html;
+                return `
+                    <div class="tracker-card ${isSelected ? 'selected' : ''}"
+                         onclick="toggleProductSelection('${product.id}')"
+                         style="${!hasHistory ? 'opacity: 0.5; cursor: not-allowed;' : ''}">
+                        <div class="tracker-card-header">
+                            <div class="tracker-card-title">${product.product_name}</div>
+                            <div class="tracker-card-checkbox"></div>
+                        </div>
+                        <div class="tracker-card-info">
+                            <span>🏷️ ${product.brand}</span>
+                            <span>📦 ${product.category}</span>
+                        </div>
+                        <div class="tracker-card-price ${product.is_on_sale ? 'on-sale' : ''}">
+                            $${product.current_price}${product.is_on_sale ? ' 🔥' : ''}
+                        </div>
+                        ${!hasHistory ? '<div style="font-size: 11px; color: #e74c3c; margin-top: 5px;">⚠️ 暂无历史数据</div>' : ''}
+                    </div>
+                `;
+            }).join('');
         }
 
-        // 品牌筛选变化时重新渲染产品列表
-        document.addEventListener('DOMContentLoaded', () => {
-            const brandSelect = document.getElementById('cal-brand');
-            if (brandSelect) {
-                brandSelect.addEventListener('change', renderProductList);
+        // 切换产品选择
+        function toggleProductSelection(productId) {
+            const product = trackerAllProducts.find(p => p.id === productId);
+            const hasHistory = trackerHistory[productId] && trackerHistory[productId].price_history.length > 0;
+
+            if (!product || !hasHistory) return;
+
+            const index = trackerSelectedProducts.findIndex(p => p.id === productId);
+
+            if (index > -1) {
+                // 取消选择
+                trackerSelectedProducts.splice(index, 1);
+            } else {
+                // 添加选择（最多5个）
+                if (trackerSelectedProducts.length >= 5) {
+                    alert('最多只能同时对比5个产品');
+                    return;
+                }
+                trackerSelectedProducts.push(product);
             }
-        });
+
+            // 重新渲染产品卡片
+            renderTrackerProducts();
+
+            // 更新图表
+            updateTrackerChart();
+
+            // 显示/隐藏导出按钮
+            document.getElementById('export-buttons').style.display =
+                trackerSelectedProducts.length > 0 ? 'flex' : 'none';
+        }
+
+        // 更新图表
+        function updateTrackerChart() {
+            const container = document.getElementById('tracker-chartContainer');
+
+            if (trackerSelectedProducts.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">📈</div>
+                        <p>请选择产品开始追踪价格变化</p>
+                    </div>
+                `;
+                if (trackerChart) {
+                    trackerChart.destroy();
+                    trackerChart = null;
+                }
+                return;
+            }
+
+            // 创建canvas（如果不存在）
+            if (!container.querySelector('canvas')) {
+                container.innerHTML = '<canvas id="trackerPriceChart"></canvas>';
+            }
+
+            const ctx = document.getElementById('trackerPriceChart').getContext('2d');
+
+            // 准备数据集
+            const datasets = trackerSelectedProducts.map((product, index) => {
+                const history = trackerHistory[product.id];
+                const data = history.price_history.map(record => ({
+                    x: new Date(record.date),
+                    y: record.price
+                }));
+
+                return {
+                    label: product.product_name,
+                    data: data,
+                    borderColor: trackerColors[index % trackerColors.length],
+                    backgroundColor: trackerColors[index % trackerColors.length] + '20',
+                    borderWidth: 3,
+                    fill: false,
+                    tension: 0.1,
+                    pointRadius: 4,
+                    pointHoverRadius: 6
+                };
+            });
+
+            // 销毁旧图表
+            if (trackerChart) {
+                trackerChart.destroy();
+            }
+
+            // 创建新图表
+            trackerChart = new Chart(ctx, {
+                type: 'line',
+                data: { datasets },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: '价格趋势对比',
+                            font: { size: 18, weight: 'bold' },
+                            color: '#2c3e50'
+                        },
+                        legend: {
+                            display: true,
+                            position: 'top',
+                            labels: {
+                                font: { size: 12 },
+                                padding: 15,
+                                usePointStyle: true
+                            }
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false,
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': $' + context.parsed.y.toFixed(2);
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            type: 'time',
+                            time: {
+                                unit: 'day',
+                                displayFormats: {
+                                    day: 'MM/dd'
+                                }
+                            },
+                            title: {
+                                display: true,
+                                text: '日期',
+                                font: { size: 14, weight: 'bold' }
+                            }
+                        },
+                        y: {
+                            beginAtZero: false,
+                            title: {
+                                display: true,
+                                text: '价格 (AUD)',
+                                font: { size: 14, weight: 'bold' }
+                            },
+                            ticks: {
+                                callback: function(value) {
+                                    return '$' + value.toFixed(2);
+                                }
+                            }
+                        }
+                    },
+                    interaction: {
+                        mode: 'nearest',
+                        axis: 'x',
+                        intersect: false
+                    }
+                }
+            });
+
+            // 设置图表容器高度
+            container.style.height = '500px';
+        }
+
+        // 导出数据
+        function exportData(format) {
+            if (trackerSelectedProducts.length === 0) {
+                alert('请先选择要导出的产品');
+                return;
+            }
+
+            let exportContent, filename, mimeType;
+
+            if (format === 'json') {
+                const exportData = {};
+                trackerSelectedProducts.forEach(product => {
+                    exportData[product.id] = {
+                        product_name: product.product_name,
+                        brand: product.brand,
+                        category: product.category,
+                        url: product.url,
+                        price_history: trackerHistory[product.id].price_history
+                    };
+                });
+                exportContent = JSON.stringify(exportData, null, 2);
+                filename = 'price_data_' + new Date().toISOString().split('T')[0] + '.json';
+                mimeType = 'application/json';
+            } else if (format === 'csv') {
+                const lines = ['产品名称,品牌,品类,日期,价格,原价,是否促销,折扣百分比'];
+
+                trackerSelectedProducts.forEach(product => {
+                    const history = trackerHistory[product.id].price_history;
+                    history.forEach(record => {
+                        lines.push([
+                            `"${product.product_name}"`,
+                            product.brand,
+                            product.category,
+                            record.date,
+                            record.price,
+                            record.original_price || record.price,
+                            record.is_on_sale ? '是' : '否',
+                            record.discount_percentage || 0
+                        ].join(','));
+                    });
+                });
+
+                exportContent = lines.join('\n');
+                filename = 'price_data_' + new Date().toISOString().split('T')[0] + '.csv';
+                mimeType = 'text/csv';
+            }
+
+            // 创建下载
+            const blob = new Blob(['\ufeff' + exportContent], { type: mimeType + ';charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+        }
+
     </script>
 
 <!-- 最后更新: 2026-03-19 20:15:16 -->

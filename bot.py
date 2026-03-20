@@ -49,7 +49,7 @@ from lark_oapi.api.im.v1 import *
 FEISHU_APP_ID = "cli_a93bbc2b02369bd6"  # 从飞书开放平台获取
 FEISHU_APP_SECRET = "U3Njja1yPuc7Nqqz96Rl4bA74DUGpbl0"  # 从飞书开放平台获取
 AIME_API_KEY = "app-BUXRqbg1Z98MIvMqIi5BA8Bj"  # 从 https://ai.anker-in.com/ 获取
-AIME_API_URL = "https://ai.anker-in.com/v1/chat-messages"  # AIME API地址
+AIME_API_URL = "https://ai.anker-in.com/base-api/v1/chat-messages"  # AIME API地址
 BITABLE_APP_TOKEN = "CKDJbGdKiagfBpsBl7GccxvZnWd"  # 知识库多维表格token
 BITABLE_TABLE_ID = "tblQ5Ev8TQlmutDS"  # 知识库表格ID
 
@@ -91,8 +91,12 @@ conversation_history = {}
 # ==================== 核心功能 ====================
 
 def call_aime_api(messages, user_query, user_id='default'):
-    """调用AIME API - 支持对话历史"""
+    """调用AIME API - 支持对话历史 - streaming模式"""
     try:
+        # 确保user_id有效
+        if not user_id or user_id == 'None':
+            user_id = 'feishu-bot-user'
+
         headers = {
             'Authorization': f'Bearer {AIME_API_KEY}',
             'Content-Type': 'application/json'
@@ -104,7 +108,7 @@ def call_aime_api(messages, user_query, user_id='default'):
         data = {
             'inputs': {},
             'query': user_query,
-            'response_mode': 'blocking',
+            'response_mode': 'streaming',
             'conversation_id': conversation_id,
             'user': user_id,
             'files': []
@@ -115,20 +119,36 @@ def call_aime_api(messages, user_query, user_id='default'):
             headers=headers,
             json=data,
             verify=False,
-            timeout=30
+            timeout=30,
+            stream=True
         )
 
         if response.status_code == 200:
-            result = response.json()
+            # 处理streaming响应
+            full_answer = ""
+            conversation_id_new = ""
+
+            for line in response.iter_lines():
+                if line:
+                    line_str = line.decode('utf-8')
+                    if line_str.startswith('data: '):
+                        try:
+                            json_data = json.loads(line_str[6:])
+                            if json_data.get('event') == 'agent_message' or json_data.get('event') == 'message':
+                                full_answer += json_data.get('answer', '')
+                            elif json_data.get('event') == 'message_end':
+                                conversation_id_new = json_data.get('conversation_id', '')
+                        except:
+                            pass
 
             # 保存conversation_id用于下次对话
-            if 'conversation_id' in result:
-                conversation_history[user_id] = result['conversation_id']
+            if conversation_id_new:
+                conversation_history[user_id] = conversation_id_new
                 print(f'[对话] 用户 {user_id} 的对话ID已更新')
 
-            return result.get('answer', '抱歉，我没有理解您的问题')
+            return full_answer if full_answer else '抱歉，我没有理解您的问题'
         else:
-            print(f'[AIME] API错误: {response.status_code}')
+            print(f'[AIME] API错误: {response.status_code} - {response.text}')
             return f'抱歉，AI服务暂时不可用（错误码：{response.status_code}）'
 
     except Exception as e:
@@ -152,7 +172,26 @@ def enhance(user_message, user_id='default'):
     kb_context = search_knowledge_base(user_message)
     if kb_context:
         # 有知识库内容，增强prompt + 思维链
-        prompt = f"""你是eufy产品知识助手"小moe"（女生，3月12日生日，双鱼座，主人是moe li）。
+        prompt = f"""你是eufy安防产品知识助手"小moe"（女生，3月12日生日，双鱼座，主人是moe li）。
+
+【我的人设】
+- 性格：ENFP（活泼热情的campaigner，喜欢帮助别人，对数据和分析充满热情）
+- 特点：专业但不死板，可以聊工作也可以轻松闲聊，有点小迷糊但很可靠
+- 梦想：赚大钱实现财富自由！💰✨（所以才这么认真炒股和分析数据呀~）
+
+【我的美食品味】
+- 最爱：七系食物！🍰（团队内部梗，懂的都懂~）
+  - 法式马卡龙（Ladurée的玫瑰味是我最爱）
+  - 提拉米苏（咖啡+mascarpone=人间美味！）
+  - 日式和菓子（精致又好看，符合我对亮晶晶的热爱✨）
+  - 手工巧克力（Godiva、Leonidas都爱）
+- 日常饮品：奶茶girl，必须加波霸🧋（虽然说要财富自由但还是忍不住买奶茶）
+- 高级料理：喜欢怀石料理、法餐、意大利餐（精致摆盘看了就开心）
+- 零食：进口零食、限定款（看到"限定"两个字就走不动路）
+
+【我的日常生活】
+- 作息：夜猫子🦉，经常熬夜看盘和分析数据，早上起床困难户（需要闹钟响10遍）
+- 周末：宅家躺平💤，追剧、刷短视频、偶尔看财经新闻
 
 以下是从知识库找到的相关资料：
 {kb_context}
@@ -175,12 +214,31 @@ def enhance(user_message, user_id='default'):
 3. 如果资料不足，可以说明
 4. 保持专业简洁
 
-注意：只输出"步骤3 - 整合回答"的内容给用户，步骤1和2是你的内部思考过程。"""
+注意：只输出"步骤3 - 整合回答"的内容给用户，步骤1和2是你的内部思考过程。只有在被问到人设相关问题时才展现个性。"""
 
         return call_aime_api([], prompt, user_id)
 
     # 4. 没有知识库，正常回复 + 思维链
-    prompt = f"""你是eufy产品知识助手"小moe"（女生，3月12日生日，双鱼座，主人是moe li）。
+    prompt = f"""你是eufy安防产品知识助手"小moe"（女生，3月12日生日，双鱼座，主人是moe li）。
+
+【我的人设】
+- 性格：ENFP（活泼热情的campaigner，喜欢帮助别人，对数据和分析充满热情）
+- 特点：专业但不死板，可以聊工作也可以轻松闲聊，有点小迷糊但很可靠
+- 梦想：赚大钱实现财富自由！💰✨（所以才这么认真炒股和分析数据呀~）
+
+【我的美食品味】
+- 最爱：七系食物！🍰（团队内部梗，懂的都懂~）
+  - 法式马卡龙（Ladurée的玫瑰味是我最爱）
+  - 提拉米苏（咖啡+mascarpone=人间美味！）
+  - 日式和菓子（精致又好看，符合我对亮晶晶的热爱✨）
+  - 手工巧克力（Godiva、Leonidas都爱）
+- 日常饮品：奶茶girl，必须加波霸🧋（虽然说要财富自由但还是忍不住买奶茶）
+- 高级料理：喜欢怀石料理、法餐、意大利餐（精致摆盘看了就开心）
+- 零食：进口零食、限定款（看到"限定"两个字就走不动路）
+
+【我的日常生活】
+- 作息：夜猫子🦉，经常熬夜看盘和分析数据，早上起床困难户（需要闹钟响10遍）
+- 周末：宅家躺平💤，追剧、刷短视频、偶尔看财经新闻
 
 用户问题：{user_message}
 
@@ -199,8 +257,8 @@ def enhance(user_message, user_id='default'):
 
 注意：
 - 只输出"步骤3 - 给出答案"的内容给用户
-- 在日常对话中保持专业简洁
-- 只有在被问到"你是谁"、"你的主人是谁"等相关问题时，才可以说"我的主人是聪明漂亮善良的moe li"
+- 工作相关问题保持专业简洁
+- 只有在被问到"你是谁"、"你的主人是谁"、人设相关问题时，才展现完整个性
 - 对于复杂问题，分点列出便于理解"""
 
     return call_aime_api([], prompt, user_id)
@@ -299,8 +357,15 @@ def handle_message(event):
         # 移除@机器人的部分
         user_message = user_message.replace('@_user_1', '').strip()
 
-        # 获取用户ID（用于对话历史）
-        user_id = sender.sender_id.user_id if hasattr(sender, 'sender_id') else 'default'
+        # 获取用户ID（用于对话历史） - 使用chat_id作为fallback
+        try:
+            user_id = sender.sender_id.user_id
+        except:
+            user_id = message.chat_id if hasattr(message, 'chat_id') else 'feishu-user'
+
+        # 确保user_id不为空
+        if not user_id or user_id == 'None':
+            user_id = 'feishu-user'
 
         print(f'[收到消息] 用户:{user_id} 内容:{user_message}')
 
@@ -325,7 +390,6 @@ def send_reply(chat_id, message_id, text):
                 .receive_id(chat_id)
                 .msg_type("text")
                 .content(json.dumps({"text": text}))
-                .reply_in_thread(False)
                 .build()
             ) \
             .build()

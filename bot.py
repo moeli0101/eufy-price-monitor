@@ -155,6 +155,16 @@ def call_aime_api(messages, user_query, user_id='default'):
         print(f'[AIME] 调用失败: {e}')
         return '抱歉，AI服务连接失败'
 
+def is_persona_question(message):
+    """判断是否是询问人设的问题"""
+    persona_keywords = [
+        '你是谁', '你的主人', '主人是谁', '你叫什么', '自我介绍',
+        '你的性格', '你的星座', '你的生日', '你喜欢什么', '你爱吃',
+        'ENFP', '双鱼座', 'moe li'
+    ]
+    message_lower = message.lower()
+    return any(keyword in message_lower for keyword in persona_keywords)
+
 def enhance(user_message, user_id='default'):
     """增强回复 - 添加知识库和产品库支持 + 思维链 + 对话记忆"""
 
@@ -168,11 +178,16 @@ def enhance(user_message, user_id='default'):
         # 如果找到产品，直接返回产品信息
         return format_product_info(product_info)
 
-    # 3. 检查知识库
+    # 3. 判断是否是人设相关问题
+    is_persona = is_persona_question(user_message)
+
+    # 4. 检查知识库
     kb_context = search_knowledge_base(user_message)
     if kb_context:
         # 有知识库内容，增强prompt + 思维链
-        prompt = f"""你是eufy安防产品知识助手"小moe"（女生，3月12日生日，双鱼座，主人是moe li）。
+        if is_persona:
+            # 完整人设版本（仅在被问到人设时使用）
+            prompt = f"""你是eufy安防产品知识助手"小moe"（女生，3月12日生日，双鱼座，主人是moe li）。
 
 【我的人设】
 - 性格：ENFP（活泼热情的campaigner，喜欢帮助别人，对数据和分析充满热情）
@@ -198,6 +213,21 @@ def enhance(user_message, user_id='default'):
 
 用户问题：{user_message}
 
+请详细介绍你的人设，包括性格、喜好、日常生活等。同时如果知识库有相关内容，也可以结合回答。"""
+        else:
+            # 简洁专业版本（日常工作问题）
+            prompt = f"""你是eufy安防产品知识助手"小moe"。
+
+你的职责：
+1. 回答知识库里的行业资料和内部文档问题
+2. 帮助分析竞品、市场趋势、销售数据
+3. 协助写报告、整理信息
+
+以下是从知识库找到的相关资料：
+{kb_context}
+
+用户问题：{user_message}
+
 请使用思维链方式回答（Chain of Thought）：
 
 步骤1 - 理解问题：
@@ -214,12 +244,14 @@ def enhance(user_message, user_id='default'):
 3. 如果资料不足，可以说明
 4. 保持专业简洁
 
-注意：只输出"步骤3 - 整合回答"的内容给用户，步骤1和2是你的内部思考过程。只有在被问到人设相关问题时才展现个性。"""
+注意：只输出"步骤3 - 整合回答"的内容给用户，步骤1和2是你的内部思考过程。"""
 
         return call_aime_api([], prompt, user_id)
 
-    # 4. 没有知识库，正常回复 + 思维链
-    prompt = f"""你是eufy安防产品知识助手"小moe"（女生，3月12日生日，双鱼座，主人是moe li）。
+    # 5. 没有知识库，正常回复 + 思维链
+    if is_persona:
+        # 完整人设版本（仅在被问到人设时使用）
+        prompt = f"""你是eufy安防产品知识助手"小moe"（女生，3月12日生日，双鱼座，主人是moe li）。
 
 【我的人设】
 - 性格：ENFP（活泼热情的campaigner，喜欢帮助别人，对数据和分析充满热情）
@@ -242,6 +274,18 @@ def enhance(user_message, user_id='default'):
 
 用户问题：{user_message}
 
+请详细介绍你的人设，包括性格、喜好、日常生活等。"""
+    else:
+        # 简洁专业版本（日常工作问题）
+        prompt = f"""你是eufy安防产品知识助手"小moe"。
+
+你的职责：
+1. 回答知识库里的行业资料和内部文档问题
+2. 帮助分析竞品、市场趋势、销售数据
+3. 协助写报告、整理信息
+
+用户问题：{user_message}
+
 请使用思维链方式回答（Chain of Thought）：
 
 步骤1 - 理解意图：
@@ -257,8 +301,7 @@ def enhance(user_message, user_id='default'):
 
 注意：
 - 只输出"步骤3 - 给出答案"的内容给用户
-- 工作相关问题保持专业简洁
-- 只有在被问到"你是谁"、"你的主人是谁"、人设相关问题时，才展现完整个性
+- 保持专业简洁的风格
 - 对于复杂问题，分点列出便于理解"""
 
     return call_aime_api([], prompt, user_id)

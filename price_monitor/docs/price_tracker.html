@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eufy价格历史追踪 - Price Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #f5f7fa;
+            padding: 0;
+            margin: 0;
+        }
+
+        .top-banner {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-size: 14px;
+        }
+
+        .banner-left {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .banner-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .banner-item strong {
+            font-size: 16px;
+            color: #ffd700;
+        }
+
+        .banner-contact {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .banner-contact:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .banner-contact a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .content-wrapper {
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 15px;
+        }
+
+        .controls {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+
+        .control-row {
+            display: grid;
+            grid-template-columns: 120px 1fr 120px;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .control-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #666;
+        }
+
+        select {
+            padding: 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            background: white;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+
+        select:hover {
+            border-color: #667eea;
+        }
+
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5568d3;
+        }
+
+        .btn-secondary {
+            background: #e0e0e0;
+            color: #666;
+        }
+
+        .btn-secondary:hover {
+            background: #d0d0d0;
+        }
+
+        .export-section {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .export-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-export {
+            padding: 10px 20px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-export:hover {
+            background: #218838;
+        }
+
+        .btn-export:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .date-filter {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .date-input {
+            padding: 8px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            background: white;
+            cursor: pointer;
+        }
+
+        .date-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .date-shortcuts {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .date-shortcut-btn {
+            padding: 6px 12px;
+            border: 2px solid #e0e0e0;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.2s;
+            color: #666;
+        }
+
+        .date-shortcut-btn:hover {
+            border-color: #667eea;
+            color: #667eea;
+        }
+
+        .date-shortcut-btn.active {
+            background: #667eea;
+            border-color: #667eea;
+            color: white;
+        }
+
+        .selected-products {
+            margin-top: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .selected-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .product-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .product-tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 12px;
+            background: white;
+            border: 2px solid #667eea;
+            border-radius: 20px;
+            font-size: 13px;
+            color: #667eea;
+        }
+
+        .product-tag .remove {
+            margin-left: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .chart-section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+
+        .chart-header {
+            margin-bottom: 20px;
+        }
+
+        .chart-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 600px;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 80px 20px;
+            color: #999;
+        }
+
+        .empty-icon {
+            font-size: 64px;
+            margin-bottom: 15px;
+        }
+
+        .product-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .product-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-left: 4px solid #667eea;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .product-card-link {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 12px;
+            color: #667eea;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+
+        .product-card:hover .product-card-link {
+            opacity: 1;
+        }
+
+        .product-card-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+            padding-right: 80px;
+        }
+
+        .product-card-brand {
+            display: inline-block;
+            padding: 4px 10px;
+            background: #f0f3ff;
+            color: #667eea;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .product-card-price {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .current-price {
+            font-size: 32px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .original-price {
+            font-size: 18px;
+            color: #999;
+            text-decoration: line-through;
+        }
+
+        .sale-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            background: #ff6b6b;
+            color: white;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .info-box {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            color: #856404;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .info-box strong {
+            color: #ff6b00;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-banner">
+        <div class="banner-left">
+            <div class="banner-item">
+                <span>📅 数据更新时间：</span>
+                <strong id="lastUpdateTime">加载中...</strong>
+            </div>
+            <div class="banner-item">
+                <span>📊 已累计：</span>
+                <strong id="totalDays">--</strong>
+                <span>天数据</span>
+            </div>
+        </div>
+        <div class="banner-contact">
+            📧 发现问题请联系开发者 <strong><a href="mailto:moe.li@anker.com">moe (moe.li@anker.com)</a></strong>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+    <div class="container">
+        <div class="header">
+            <h1>📊 eufy价格历史追踪</h1>
+            <div class="subtitle">对比多个产品的价格变化趋势 · JB Hi-Fi</div>
+        </div>
+
+        <div class="info-box">
+            💡 加载中...
+        </div>
+
+        <div class="controls">
+            <div class="control-row">
+                <div class="control-label">品牌筛选</div>
+                <select id="brandFilter">
+                    <option value="all">全部品牌</option>
+                </select>
+                <div></div>
+            </div>
+
+            <div class="control-row">
+                <div class="control-label">品类筛选</div>
+                <select id="categoryFilter">
+                    <option value="all">全部品类</option>
+                </select>
+                <div></div>
+            </div>
+
+            <div class="control-row">
+                <div class="control-label">选择产品</div>
+                <select id="productSelect">
+                    <option value="">-- 请选择产品 --</option>
+                </select>
+                <button class="btn btn-primary" id="addBtn">添加</button>
+            </div>
+
+            <div class="control-row">
+                <div class="control-label">日期范围</div>
+                <div style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
+                    <div class="date-filter">
+                        <input type="date" id="startDate" class="date-input" placeholder="开始日期">
+                        <span>至</span>
+                        <input type="date" id="endDate" class="date-input" placeholder="结束日期">
+                    </div>
+                    <div class="date-shortcuts">
+                        <button class="date-shortcut-btn active" data-days="all">全部</button>
+                        <button class="date-shortcut-btn" data-days="7">最近7天</button>
+                        <button class="date-shortcut-btn" data-days="14">最近14天</button>
+                        <button class="date-shortcut-btn" data-days="30">最近30天</button>
+                    </div>
+                </div>
+                <div></div>
+            </div>
+
+            <div class="selected-products" id="selectedSection" style="display: none;">
+                <div class="selected-label">已选产品（最多5个）</div>
+                <div class="product-tags" id="selectedTags"></div>
+
+                <div class="export-section">
+                    <div class="selected-label" style="margin-bottom: 10px;">导出数据</div>
+                    <div class="export-buttons">
+                        <button class="btn-export" id="exportJsonBtn">📥 导出JSON</button>
+                        <button class="btn-export" id="exportCsvBtn">📊 导出CSV</button>
+                        <button class="btn-export" id="exportAllBtn">🗂️ 导出全部数据</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-cards" id="productCards" style="display: none;">
+            <!-- 动态生成产品卡片 -->
+        </div>
+
+        <div class="chart-section">
+            <div class="chart-header">
+                <div class="chart-title">价格历史对比</div>
+            </div>
+            <div class="chart-container" id="chartContainer">
+                <div class="empty-state">
+                    <div class="empty-icon">📈</div>
+                    <p>请选择产品开始追踪价格变化</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        class PriceTracker {
+            constructor() {
+                this.allProducts = [];
+                this.history = {};
+                this.selectedProducts = [];
+                this.chart = null;
+                this.dataDays = 0;
+                this.dateFilter = {
+                    start: null,
+                    end: null,
+                    mode: 'all'
+                };
+                this.colors = [
+                    '#667eea', '#f093fb', '#43e97b', '#fa709a', '#feca57'
+                ];
+
+                this.init();
+            }
+
+            async init() {
+                await this.loadData();
+                this.populateFilters();
+                this.initializeDateRange();
+                this.updateProductList();
+                this.setupEventListeners();
+            }
+
+            initializeDateRange() {
+                // 设置日期选择器的最大值为今天
+                const today = new Date().toISOString().split('T')[0];
+                document.getElementById('endDate').max = today;
+                document.getElementById('startDate').max = today;
+
+                // 如果有数据，设置开始日期的最小值
+                if (this.dataDays > 0) {
+                    const firstDate = Object.values(this.history)[0].price_history[0].date;
+                    document.getElementById('startDate').min = firstDate;
+                    document.getElementById('endDate').min = firstDate;
+                }
+            }
+
+            async loadData() {
+                try {
+                    const historyResponse = await fetch('price_history.json');
+                    this.history = await historyResponse.json();
+
+                    this.allProducts = Object.keys(this.history).map(id => ({
+                        id: id,
+                        name: this.history[id].product_name,
+                        brand: this.history[id].brand,
+                        category: this.history[id].category,
+                        latestPrice: this.getLatestPrice(id)
+                    }));
+
+                    // 计算数据天数
+                    this.dataDays = 0;
+                    Object.values(this.history).forEach(product => {
+                        const days = product.price_history.length;
+                        this.dataDays = Math.max(this.dataDays, days);
+                    });
+
+                    // 更新提示信息
+                    this.updateInfoBox();
+                    this.updateTopBanner();
+
+                    console.log(`✅ 加载了 ${this.allProducts.length} 个产品，${this.dataDays} 天数据`);
+                } catch (error) {
+                    console.error('加载数据失败:', error);
+                    alert('数据加载失败，请刷新页面重试');
+                }
+            }
+
+            updateTopBanner() {
+                // 更新累计天数
+                document.getElementById('totalDays').textContent = this.dataDays;
+
+                // 获取最新更新时间
+                let latestDate = null;
+                Object.values(this.history).forEach(product => {
+                    if (product.price_history && product.price_history.length > 0) {
+                        const date = product.price_history[product.price_history.length - 1].date;
+                        if (!latestDate || date > latestDate) {
+                            latestDate = date;
+                        }
+                    }
+                });
+
+                if (latestDate) {
+                    // 转换为更友好的格式
+                    const dateObj = new Date(latestDate + 'T00:00:00');
+                    const now = new Date();
+                    const diffDays = Math.floor((now - dateObj) / (1000 * 60 * 60 * 24));
+
+                    let displayText = latestDate;
+                    if (diffDays === 0) {
+                        displayText += ' (今天)';
+                    } else if (diffDays === 1) {
+                        displayText += ' (昨天)';
+                    } else if (diffDays > 1) {
+                        displayText += ` (${diffDays}天前)`;
+                    }
+
+                    document.getElementById('lastUpdateTime').textContent = displayText;
+                } else {
+                    document.getElementById('lastUpdateTime').textContent = '未知';
+                }
+            }
+
+            getLatestPrice(productId) {
+                const history = this.history[productId].price_history;
+                return history && history.length > 0 ? history[history.length - 1].price : 0;
+            }
+
+            updateInfoBox() {
+                const infoBox = document.querySelector('.info-box');
+                if (infoBox) {
+                    const dateRangeText = this.dateFilter.mode === 'all'
+                        ? '全部'
+                        : this.dateFilter.start && this.dateFilter.end
+                        ? `${this.dateFilter.start} 至 ${this.dateFilter.end}`
+                        : '全部';
+
+                    infoBox.innerHTML = `💡 提示：已爬取 <strong>${this.dataDays}</strong> 天数据，后续会持续更新。当前显示范围：<strong>${dateRangeText}</strong>`;
+                }
+            }
+
+            exportJSON() {
+                if (this.selectedProducts.length === 0) {
+                    alert('请先选择产品');
+                    return;
+                }
+
+                const exportData = {};
+                this.selectedProducts.forEach(product => {
+                    exportData[product.id] = this.history[product.id];
+                });
+
+                const dataStr = JSON.stringify(exportData, null, 2);
+                const blob = new Blob([dataStr], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `price_history_${new Date().toISOString().split('T')[0]}.json`;
+                a.click();
+                URL.revokeObjectURL(url);
+            }
+
+            exportCSV() {
+                if (this.selectedProducts.length === 0) {
+                    alert('请先选择产品');
+                    return;
+                }
+
+                let csv = 'Product ID,Product Name,Brand,Category,Date,Price,Original Price,On Sale,Discount %\n';
+
+                this.selectedProducts.forEach(product => {
+                    const data = this.history[product.id];
+                    data.price_history.forEach(record => {
+                        csv += `"${product.id}","${data.product_name}","${data.brand}","${data.category}",${record.date},${record.price},${record.original_price},${record.is_on_sale},${record.discount_percentage}\n`;
+                    });
+                });
+
+                const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `price_history_${new Date().toISOString().split('T')[0]}.csv`;
+                a.click();
+                URL.revokeObjectURL(url);
+            }
+
+            exportAll() {
+                const dataStr = JSON.stringify(this.history, null, 2);
+                const blob = new Blob([dataStr], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `all_price_history_${new Date().toISOString().split('T')[0]}.json`;
+                a.click();
+                URL.revokeObjectURL(url);
+
+                alert(`✅ 已导出全部 ${Object.keys(this.history).length} 个产品的历史数据`);
+            }
+
+            setDateShortcut(days) {
+                const startDateInput = document.getElementById('startDate');
+                const endDateInput = document.getElementById('endDate');
+
+                if (days === 'all') {
+                    // 显示全部数据
+                    startDateInput.value = '';
+                    endDateInput.value = '';
+                    this.dateFilter = { start: null, end: null, mode: 'all' };
+                } else {
+                    // 计算日期范围
+                    const end = new Date();
+                    const start = new Date();
+                    start.setDate(start.getDate() - parseInt(days));
+
+                    startDateInput.value = start.toISOString().split('T')[0];
+                    endDateInput.value = end.toISOString().split('T')[0];
+
+                    this.dateFilter = {
+                        start: start.toISOString().split('T')[0],
+                        end: end.toISOString().split('T')[0],
+                        mode: 'custom'
+                    };
+                }
+
+                this.updateChart();
+                this.updateInfoBox();
+            }
+
+            applyDateFilter() {
+                const startDate = document.getElementById('startDate').value;
+                const endDate = document.getElementById('endDate').value;
+
+                // 取消快捷按钮的激活状态
+                document.querySelectorAll('.date-shortcut-btn').forEach(b => b.classList.remove('active'));
+
+                this.dateFilter = {
+                    start: startDate || null,
+                    end: endDate || null,
+                    mode: 'custom'
+                };
+
+                this.updateChart();
+                this.updateInfoBox();
+            }
+
+            filterPriceHistory(priceHistory) {
+                if (!this.dateFilter.start && !this.dateFilter.end) {
+                    return priceHistory;
+                }
+
+                return priceHistory.filter(record => {
+                    const recordDate = record.date;
+
+                    if (this.dateFilter.start && recordDate < this.dateFilter.start) {
+                        return false;
+                    }
+
+                    if (this.dateFilter.end && recordDate > this.dateFilter.end) {
+                        return false;
+                    }
+
+                    return true;
+                });
+            }
+
+            populateFilters() {
+                // 品牌筛选
+                const brands = [...new Set(this.allProducts.map(p => p.brand))].sort();
+                const brandFilter = document.getElementById('brandFilter');
+                brands.forEach(brand => {
+                    const option = document.createElement('option');
+                    option.value = brand;
+                    option.textContent = brand;
+                    brandFilter.appendChild(option);
+                });
+
+                // 品类筛选
+                const categories = [...new Set(this.allProducts.map(p => p.category))].sort();
+                const categoryFilter = document.getElementById('categoryFilter');
+                const categoryIcons = {
+                    'Security Camera': '📷',
+                    'Video Doorbell': '🔔',
+                    'Smart Lock': '🔐'
+                };
+                categories.forEach(cat => {
+                    const option = document.createElement('option');
+                    option.value = cat;
+                    option.textContent = `${categoryIcons[cat] || ''} ${cat}`;
+                    categoryFilter.appendChild(option);
+                });
+            }
+
+            updateProductList() {
+                const brand = document.getElementById('brandFilter').value;
+                const category = document.getElementById('categoryFilter').value;
+                const productSelect = document.getElementById('productSelect');
+
+                let filtered = this.allProducts;
+
+                if (brand !== 'all') {
+                    filtered = filtered.filter(p => p.brand === brand);
+                }
+
+                if (category !== 'all') {
+                    filtered = filtered.filter(p => p.category === category);
+                }
+
+                // 排除已选产品
+                filtered = filtered.filter(p =>
+                    !this.selectedProducts.find(sp => sp.id === p.id)
+                );
+
+                productSelect.innerHTML = '<option value="">-- 请选择产品 --</option>';
+                filtered.forEach(product => {
+                    const option = document.createElement('option');
+                    option.value = product.id;
+                    option.textContent = `${product.name} ($${product.latestPrice})`;
+                    productSelect.appendChild(option);
+                });
+            }
+
+            setupEventListeners() {
+                document.getElementById('brandFilter').addEventListener('change', () => {
+                    this.updateProductList();
+                });
+
+                document.getElementById('categoryFilter').addEventListener('change', () => {
+                    this.updateProductList();
+                });
+
+                document.getElementById('addBtn').addEventListener('click', () => {
+                    this.addProduct();
+                });
+
+                document.getElementById('productSelect').addEventListener('change', (e) => {
+                    if (e.target.value) {
+                        this.addProduct();
+                    }
+                });
+
+                // 导出功能
+                document.getElementById('exportJsonBtn').addEventListener('click', () => {
+                    this.exportJSON();
+                });
+
+                document.getElementById('exportCsvBtn').addEventListener('click', () => {
+                    this.exportCSV();
+                });
+
+                document.getElementById('exportAllBtn').addEventListener('click', () => {
+                    this.exportAll();
+                });
+
+                // 日期筛选
+                document.getElementById('startDate').addEventListener('change', () => {
+                    this.applyDateFilter();
+                });
+
+                document.getElementById('endDate').addEventListener('change', () => {
+                    this.applyDateFilter();
+                });
+
+                document.querySelectorAll('.date-shortcut-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        document.querySelectorAll('.date-shortcut-btn').forEach(b => b.classList.remove('active'));
+                        e.target.classList.add('active');
+                        this.setDateShortcut(e.target.dataset.days);
+                    });
+                });
+            }
+
+            addProduct() {
+                const productSelect = document.getElementById('productSelect');
+                const productId = productSelect.value;
+
+                if (!productId) {
+                    return;
+                }
+
+                if (this.selectedProducts.length >= 5) {
+                    alert('最多只能选择5个产品进行对比');
+                    return;
+                }
+
+                const product = this.allProducts.find(p => p.id === productId);
+                if (product && !this.selectedProducts.find(p => p.id === productId)) {
+                    this.selectedProducts.push(product);
+                    this.updateSelectedTags();
+                    this.updateProductList();
+                    this.updateChart();
+                    this.updateProductCards();
+                }
+
+                productSelect.value = '';
+            }
+
+            removeProduct(productId) {
+                this.selectedProducts = this.selectedProducts.filter(p => p.id !== productId);
+                this.updateSelectedTags();
+                this.updateProductList();
+                this.updateChart();
+                this.updateProductCards();
+            }
+
+            updateSelectedTags() {
+                const section = document.getElementById('selectedSection');
+                const tagsContainer = document.getElementById('selectedTags');
+
+                if (this.selectedProducts.length === 0) {
+                    section.style.display = 'none';
+                    return;
+                }
+
+                section.style.display = 'block';
+                tagsContainer.innerHTML = '';
+
+                this.selectedProducts.forEach((product, index) => {
+                    const tag = document.createElement('div');
+                    tag.className = 'product-tag';
+                    tag.style.borderColor = this.colors[index];
+                    tag.style.color = this.colors[index];
+                    tag.innerHTML = `
+                        ${product.name.substring(0, 50)}${product.name.length > 50 ? '...' : ''}
+                        <span class="remove" onclick="tracker.removeProduct('${product.id}')">✕</span>
+                    `;
+                    tagsContainer.appendChild(tag);
+                });
+            }
+
+            updateChart() {
+                const container = document.getElementById('chartContainer');
+
+                if (this.selectedProducts.length === 0) {
+                    container.innerHTML = `
+                        <div class="empty-state">
+                            <div class="empty-icon">📈</div>
+                            <p>请选择产品开始追踪价格变化</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                container.innerHTML = '<canvas id="priceChart"></canvas>';
+
+                const datasets = this.selectedProducts.map((product, index) => {
+                    const priceHistory = this.history[product.id].price_history;
+                    const filteredHistory = this.filterPriceHistory(priceHistory);
+
+                    return {
+                        label: product.name,
+                        data: filteredHistory.map(record => ({
+                            x: record.date,
+                            y: record.price
+                        })),
+                        borderColor: this.colors[index],
+                        backgroundColor: this.colors[index] + '20',
+                        tension: 0.4,
+                        pointRadius: 5,
+                        pointHoverRadius: 8,
+                        pointBackgroundColor: this.colors[index],
+                        pointBorderColor: '#fff',
+                        pointBorderWidth: 2,
+                        borderWidth: 3,
+                        fill: false
+                    };
+                });
+
+                if (this.chart) {
+                    this.chart.destroy();
+                }
+
+                const ctx = document.getElementById('priceChart').getContext('2d');
+                this.chart = new Chart(ctx, {
+                    type: 'line',
+                    data: { datasets },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                                labels: {
+                                    usePointStyle: true,
+                                    padding: 15,
+                                    font: {
+                                        size: 12
+                                    }
+                                }
+                            },
+                            tooltip: {
+                                mode: 'index',
+                                intersect: false,
+                                backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                                titleFont: {
+                                    size: 14,
+                                    weight: 'bold'
+                                },
+                                bodyFont: {
+                                    size: 13
+                                },
+                                padding: 12,
+                                callbacks: {
+                                    label: function(context) {
+                                        return `${context.dataset.label}: $${context.parsed.y.toFixed(2)}`;
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            x: {
+                                type: 'time',
+                                time: {
+                                    unit: 'day',
+                                    displayFormats: {
+                                        day: 'MM-dd'
+                                    }
+                                },
+                                title: {
+                                    display: true,
+                                    text: '日期',
+                                    font: {
+                                        size: 14,
+                                        weight: 'bold'
+                                    }
+                                },
+                                grid: {
+                                    display: true,
+                                    color: 'rgba(0, 0, 0, 0.05)'
+                                }
+                            },
+                            y: {
+                                beginAtZero: false,
+                                title: {
+                                    display: true,
+                                    text: '价格 (AUD)',
+                                    font: {
+                                        size: 14,
+                                        weight: 'bold'
+                                    }
+                                },
+                                ticks: {
+                                    callback: function(value) {
+                                        return '$' + value.toFixed(0);
+                                    },
+                                    font: {
+                                        size: 13
+                                    }
+                                },
+                                grid: {
+                                    display: true,
+                                    color: 'rgba(0, 0, 0, 0.1)'
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            updateProductCards() {
+                const cardsContainer = document.getElementById('productCards');
+
+                if (this.selectedProducts.length === 0) {
+                    cardsContainer.style.display = 'none';
+                    return;
+                }
+
+                cardsContainer.style.display = 'grid';
+                cardsContainer.innerHTML = '';
+
+                this.selectedProducts.forEach((product, index) => {
+                    const productData = this.history[product.id];
+                    const history = productData.price_history;
+                    const latest = history[history.length - 1];
+
+                    const card = document.createElement('div');
+                    card.className = 'product-card';
+                    card.style.borderLeftColor = this.colors[index];
+                    card.title = '点击跳转到JB Hi-Fi产品页面';
+
+                    // 添加点击事件
+                    card.addEventListener('click', () => {
+                        if (productData.url) {
+                            window.open(productData.url, '_blank');
+                        }
+                    });
+
+                    const saleBadge = latest.is_on_sale
+                        ? `<span class="sale-badge">-${latest.discount_percentage}% OFF</span>`
+                        : '';
+
+                    const priceDisplay = latest.is_on_sale
+                        ? `
+                            <div class="product-card-price">
+                                <span class="current-price">$${latest.price}</span>
+                                <span class="original-price">$${latest.original_price}</span>
+                                ${saleBadge}
+                            </div>
+                        `
+                        : `
+                            <div class="product-card-price">
+                                <span class="current-price">$${latest.price}</span>
+                            </div>
+                        `;
+
+                    card.innerHTML = `
+                        <div class="product-card-link">🔗 JB Hi-Fi</div>
+                        <div class="product-card-brand">${product.brand}</div>
+                        <div class="product-card-name">${product.name}</div>
+                        ${priceDisplay}
+                    `;
+
+                    cardsContainer.appendChild(card);
+                });
+            }
+        }
+
+        let tracker;
+        window.addEventListener('DOMContentLoaded', () => {
+            tracker = new PriceTracker();
+        });
+    </script>
+</body>
+</html>

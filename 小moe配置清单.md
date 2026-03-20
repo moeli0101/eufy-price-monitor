@@ -119,6 +119,15 @@ cd /Users/anker/Desktop/feishu_bot
 
 ### 2026-03-20
 
+**16:39 - 人设展现策略优化 🎯**
+- ✅ 新增人设问题判断函数（is_persona_question）
+- ✅ 实现双版本prompt机制：
+  - 简洁版：日常工作问题只说功能，不提性格
+  - 完整版：被问到人设时才展现ENFP、美食品味等
+- ✅ 整理feishu_bot文件夹（price_monitor/、data/、docs_archive/、scripts/、archive/）
+- ✅ 清理桌面文件（删除副本、临时文件等约5MB）
+- ✅ 备份完成
+
 **12:20 - 完整人设恢复 🎉**
 - ✅ 从bot.cpython-314.pyc成功提取原版人设
 - ✅ 恢复完整性格、美食品味、日常生活等所有细节

@@ -29,10 +29,20 @@ jobs:
 
       - name: Run price refresh script
         run: |
+          cd price_monitor
           python daily_price_refresh.py
+
+      - name: Copy data to docs
+        run: |
+          cd price_monitor
+          cp price_history.json docs/
+          cp promotions.json docs/
+          cp price_results_latest.json docs/
+          echo "✅ 数据文件已复制到docs目录"
 
       - name: Generate standalone HTML
         run: |
+          cd price_monitor
           python << 'EOF'
           import json
           from datetime import datetime
@@ -76,5 +86,5 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add docs/index.html price_results_latest.json price_history.json promotions.json promotion_calendar.json price_refresh_log.json
+          git add price_monitor/docs/index.html price_monitor/docs/price_history.json price_monitor/docs/promotions.json price_monitor/docs/price_results_latest.json price_monitor/price_results_latest.json price_monitor/price_history.json price_monitor/promotions.json price_monitor/price_refresh_log.json
           git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto update prices $(date +'%Y-%m-%d')" && git push)

@@ -162,13 +162,24 @@ jobs:
               sys.exit(1)
           EOF
 
+      - name: Copy to root docs for GitHub Pages
+        run: |
+          # 确保根目录docs文件夹存在
+          mkdir -p docs
+
+          # 从price_monitor/docs复制所有文件到根docs/
+          cp price_monitor/docs/index.html docs/
+          cp price_monitor/docs/*.json docs/ || echo "⚠️ 部分JSON文件复制失败"
+
+          echo "✅ 文件已复制到根目录docs/文件夹用于GitHub Pages部署"
+
       - name: Commit and push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
 
           # 添加文件
-          git add price_monitor/docs/ price_monitor/*.json price_monitor/*.log 2>/dev/null || true
+          git add price_monitor/docs/ price_monitor/*.json price_monitor/*.log docs/ 2>/dev/null || true
 
           # 检查是否有变化
           if git diff --staged --quiet; then

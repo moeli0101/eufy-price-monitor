@@ -117,8 +117,8 @@ jobs:
           import sys
 
           try:
-              # 读取dashboard HTML
-              with open('price_dashboard_v6.html', 'r', encoding='utf-8') as f:
+              # 读取包含tracker功能的完整dashboard HTML
+              with open('price_dashboard_with_tracker.html', 'r', encoding='utf-8') as f:
                   html = f.read()
 
               # 读取最新JSON数据
@@ -130,21 +130,19 @@ jobs:
                   print(f"⚠️ 数据太少，只有 {len(data)} 个产品")
                   sys.exit(1)
 
-              # 替换fetch调用为内嵌数据
+              # 生成新的JSON数据
               json_data = json.dumps(data, ensure_ascii=False, indent=2)
 
-              old_code = '''        async function loadData() {
-                          try {
-                              // 添加时间戳防止缓存
-                              const response = await fetch(`price_results_latest.json?t=${new Date().getTime()}`);
-                              const data = await response.json();'''
+              # 使用正则表达式替换数据数组（保留tracker功能不被破坏）
+              import re
+              pattern = r'(async function loadData\(\) \{\s*try \{\s*// 数据直接内嵌在页面中\s*const data = )\[[\s\S]*?\];'
+              replacement = r'\1' + json_data + ';'
+              html = re.sub(pattern, replacement, html, count=1)
 
-              new_code = f'''        async function loadData() {{
-                          try {{
-                              // 数据直接内嵌在页面中
-                              const data = {json_data};'''
-
-              html = html.replace(old_code, new_code)
+              # 验证替换成功
+              if 'const data = [' not in html:
+                  print("⚠️ 警告：数据替换可能失败")
+                  sys.exit(1)
 
               # 添加更新时间
               update_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")

@@ -1,0 +1,2688 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eufy 智能安防价格监控</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+            background: #f5f7fa;
+            padding: 20px;
+            color: #2c3e50;
+        }
+
+        .container {
+            max-width: 1800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            color: #1a1a1a;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 15px;
+        }
+
+        .filters {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+
+        .filter-section {
+            margin-bottom: 15px;
+        }
+
+        .filter-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .filter-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #666;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border: 2px solid #e0e0e0;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+            transition: all 0.2s;
+            color: #666;
+        }
+
+        .filter-btn:hover {
+            border-color: #667eea;
+            color: #667eea;
+        }
+
+        .filter-btn.active {
+            background: #667eea;
+            border-color: #667eea;
+            color: white;
+        }
+
+        .clear-filters {
+            margin-top: 10px;
+            padding: 8px 16px;
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .clear-filters:hover {
+            background: #ff5252;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: #888;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        /* 类别区域 */
+        .category-section {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+        }
+
+        .category-section.hidden {
+            display: none;
+        }
+
+        .category-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #f0f0f0;
+            margin-bottom: 20px;
+        }
+
+        .category-title {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .category-icon {
+            font-size: 32px;
+        }
+
+        .category-name {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .category-count {
+            background: #667eea;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        /* 价格区间分组 */
+        .price-band {
+            margin-bottom: 25px;
+        }
+
+        .price-band:last-child {
+            margin-bottom: 0;
+        }
+
+        .band-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #666;
+            margin-bottom: 12px;
+            padding-left: 5px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 12px;
+        }
+
+        .product-card {
+            background: #f8f9fb;
+            border-radius: 8px;
+            padding: 12px;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: 2px solid transparent;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .product-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-color: #667eea;
+        }
+
+        .product-card.eufy {
+            border-left: 3px solid #00c853;
+        }
+
+        .product-card.arlo {
+            border-left: 3px solid #2196f3;
+        }
+
+        .product-card.ring {
+            border-left: 3px solid #ff9800;
+        }
+
+        .product-card.google-nest {
+            border-left: 3px solid #f44336;
+        }
+
+        .product-card.tp-link {
+            border-left: 3px solid #9c27b0;
+        }
+
+        .product-card.yale {
+            border-left: 3px solid #795548;
+        }
+
+        .product-card.other {
+            border-left: 3px solid #9e9e9e;
+        }
+
+        .product-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            gap: 8px;
+        }
+
+        .brand-badge {
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            flex-shrink: 0;
+        }
+
+        .brand-badge.eufy {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .brand-badge.arlo {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+
+        .brand-badge.ring {
+            background: #fff3e0;
+            color: #e65100;
+        }
+
+        .brand-badge.google-nest {
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        .brand-badge.tp-link {
+            background: #f3e5f5;
+            color: #6a1b9a;
+        }
+
+        .brand-badge.yale {
+            background: #efebe9;
+            color: #4e342e;
+        }
+
+        .brand-badge.other {
+            background: #f5f5f5;
+            color: #616161;
+        }
+
+        .discount-badge {
+            background: #ff3b30;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        .product-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: #2c3e50;
+            line-height: 1.4;
+            margin-bottom: 8px;
+            flex: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .product-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 8px;
+            margin-top: auto;
+        }
+
+        .product-meta {
+            font-size: 11px;
+            color: #999;
+        }
+
+        .product-prices {
+            text-align: right;
+        }
+
+        .price-was {
+            font-size: 11px;
+            color: #999;
+            text-decoration: line-through;
+            margin-bottom: 2px;
+        }
+
+        .price-current {
+            font-size: 20px;
+            font-weight: 700;
+            color: #00c853;
+        }
+
+        .price-current.no-discount {
+            color: #2c3e50;
+        }
+
+        .timestamp {
+            text-align: center;
+            color: #888;
+            margin-top: 20px;
+            font-size: 12px;
+        }
+
+        .no-data, .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            border-radius: 12px;
+            color: #666;
+        }
+    
+        /* Tab 导航样式 */
+        .tabs {
+            background: white;
+            padding: 0 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+            display: flex;
+            gap: 0;
+        }
+
+        .tab-btn {
+            padding: 18px 32px;
+            border: none;
+            background: transparent;
+            font-size: 16px;
+            font-weight: 600;
+            color: #666;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .tab-btn:hover {
+            color: #667eea;
+        }
+
+        .tab-btn.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Top Banner */
+        .top-banner {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: -20px -20px 20px -20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .banner-left {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .banner-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+        }
+
+        .banner-item strong {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .banner-contact {
+            font-size: 13px;
+        }
+
+        .banner-contact a {
+            color: #ffffff;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        .banner-contact a:hover {
+            color: #f0f0f0;
+        }
+
+        /* Price Tracker Styles */
+        .tracker-controls {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+
+        .tracker-section-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tracker-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .tracker-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border-left: 4px solid #e0e0e0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tracker-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
+        }
+
+        .tracker-card.selected {
+            border-left-color: #3498db;
+            background: #f8fbff;
+        }
+
+        .tracker-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .tracker-card-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #2c3e50;
+            flex: 1;
+            line-height: 1.4;
+        }
+
+        .tracker-card-checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            flex-shrink: 0;
+            margin-left: 10px;
+            position: relative;
+            transition: all 0.2s;
+        }
+
+        .tracker-card.selected .tracker-card-checkbox {
+            background: #3498db;
+            border-color: #3498db;
+        }
+
+        .tracker-card.selected .tracker-card-checkbox::after {
+            content: '✓';
+            position: absolute;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .tracker-card-info {
+            display: flex;
+            gap: 10px;
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .tracker-card-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: #27ae60;
+        }
+
+        .tracker-card-price.on-sale {
+            color: #e74c3c;
+        }
+
+        .export-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .export-btn {
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .export-btn:hover {
+            background: #2980b9;
+            transform: translateY(-1px);
+        }
+
+        .export-btn.secondary {
+            background: #95a5a6;
+        }
+
+        .export-btn.secondary:hover {
+            background: #7f8c8d;
+        }
+
+        #tracker-chartContainer {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-top: 20px;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #95a5a6;
+        }
+
+        .empty-state-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+
+        .empty-state p {
+            font-size: 16px;
+            color: #7f8c8d;
+        }
+
+    </style>
+    <!-- Chart.js for price trends -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <div class="banner-left">
+            <div class="banner-item">
+                <span>📅 数据更新时间：</span>
+                <strong id="lastUpdateTime">加载中...</strong>
+            </div>
+            <div class="banner-item">
+                <span>📊 已累计：</span>
+                <strong id="totalDays">--</strong>
+                <span>天数据</span>
+            </div>
+        </div>
+        <div class="banner-contact">
+            如果在使用中遇到问题请联系开发者 <a href="mailto:moe.li@anker.com"><strong>moe (moe.li@anker.com)</strong></a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>🎯 eufy 智能安防价格监控 - JB Hi-Fi</h1>
+            <p class="subtitle">Security Camera · Video Doorbell · Smart Lock | eufy vs 竞品全方位价格对比</p>
+        </div>
+
+        <!-- Tab 导航 -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('prices')">📋 产品列表</button>
+            <button class="tab-btn" onclick="switchTab('tracker')">📈 价格追踪</button>
+        </div>
+
+        <!-- 价格列表 Tab -->
+        <div id="prices-tab" class="tab-content active">
+        <div class="filters">
+            <div class="filter-section">
+                <span class="filter-label">品牌筛选</span>
+                <div class="filter-buttons" id="brandFilters">
+                    <button class="filter-btn active" data-brand="all">全部品牌</button>
+                    <button class="filter-btn" data-brand="eufy">eufy</button>
+                    <button class="filter-btn" data-brand="swann">Swann</button>
+                    <button class="filter-btn" data-brand="arlo">Arlo</button>
+                    <button class="filter-btn" data-brand="ring">Ring</button>
+                    <button class="filter-btn" data-brand="google nest">Google Nest</button>
+                    <button class="filter-btn" data-brand="tp-link">TP-Link</button>
+                    <button class="filter-btn" data-brand="yale">Yale</button>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <span class="filter-label">品类筛选</span>
+                <div class="filter-buttons" id="categoryFilters">
+                    <button class="filter-btn active" data-category="all">全部品类</button>
+                    <button class="filter-btn" data-category="Security Camera">📷 Security Camera</button>
+                    <button class="filter-btn" data-category="Video Doorbell">🔔 Video Doorbell</button>
+                    <button class="filter-btn" data-category="Smart Lock">🔐 Smart Lock</button>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <span class="filter-label">价格区间</span>
+                <div class="filter-buttons" id="priceFilters">
+                    <button class="filter-btn active" data-price="all">全部价格</button>
+                    <button class="filter-btn" data-price="0-200">$0-$200</button>
+                    <button class="filter-btn" data-price="200-400">$200-$400</button>
+                    <button class="filter-btn" data-price="400-700">$400-$700</button>
+                    <button class="filter-btn" data-price="700-1200">$700-$1200</button>
+                    <button class="filter-btn" data-price="1200-99999">$1200+</button>
+                </div>
+            </div>
+
+            <button class="clear-filters" onclick="clearAllFilters()">🔄 清除筛选</button>
+        </div>
+
+        <div id="app">
+            <div class="no-data">⏳ 加载数据中...</div>
+        </div>
+
+        <div class="timestamp" id="timestamp"></div>
+    </div>
+
+    <script>
+        let allData = [];
+        let currentFilters = {
+            brand: 'all',
+            category: 'all',
+            price: 'all'
+        };
+
+        async function loadData() {
+            try {
+                // 数据直接内嵌在页面中
+                const data = [
+  {
+    "name": "eufy Security E340 Dual Camera Video Doorbell",
+    "brand": "eufy",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-e340-dual-camera-video-doorbell",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:07:33.373265",
+    "price": 249.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy S4 NVR POE 24/7 Security System [2 x PTZ + 2 x Turret Cameras]",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-s4-nvr-poe-24-7-security-system-2-x-ptz-2-x-turret-cameras",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:07:37.438637",
+    "price": 1319.0,
+    "was_price": 1649.0,
+    "discount_percent": 20,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security S350 Indoor Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-s350-indoor-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:07:41.440023",
+    "price": 219.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy S4 Max NVR POE 24/7 Security Camera System [4 PTZ Cameras]",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-s4-max-nvr-poe-24-7-security-camera-system-4-ptz-cameras",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:07:45.699946",
+    "price": 1599.0,
+    "was_price": 1999.0,
+    "discount_percent": 20,
+    "status": "success"
+  },
+  {
+    "name": "eufy E40 Essential Add On Security Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-e40-essential-add-on-security-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:07:49.988929",
+    "price": 229.0,
+    "was_price": 299.0,
+    "discount_percent": 23,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security eufyCam E330 4K 24/7 Security Camera (Add On)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-eufycam-e330-4k-24-7-security-camera-add-on",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:07:54.333622",
+    "price": 199.0,
+    "was_price": 299.0,
+    "discount_percent": 33,
+    "status": "success"
+  },
+  {
+    "name": "eufy E42 Security Camera Kit (4 Pack)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-e42-security-camera-kit-4-pack",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:07:58.601670",
+    "price": 999.0,
+    "was_price": 1499.0,
+    "discount_percent": 33,
+    "status": "success"
+  },
+  {
+    "name": "eufy S3 Pro Security Camera Kit (2 Pack)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-s3-pro-security-camera-kit-2-pack-1",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:08:02.850969",
+    "price": 999.0,
+    "was_price": 1299.0,
+    "discount_percent": 23,
+    "status": "success"
+  },
+  {
+    "name": "eufy EufyCam S4 Security Camera (2 Pack)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-eufycam-s4-security-camera-2-pack",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:08:07.098011",
+    "price": 1299.0,
+    "was_price": 1649.0,
+    "discount_percent": 21,
+    "status": "success"
+  },
+  {
+    "name": "eufy E30 Indoor Security Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-e30-indoor-security-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:08:11.423990",
+    "price": 149.0,
+    "was_price": 199.0,
+    "discount_percent": 25,
+    "status": "success"
+  },
+  {
+    "name": "eufy E40 Essential Security Camera Kit with Homebase 2 (4 Pack)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-e40-essential-security-camera-kit-with-homebase-2-4-pack",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:08:15.929449",
+    "price": 799.0,
+    "was_price": 1099.0,
+    "discount_percent": 27,
+    "status": "success"
+  },
+  {
+    "name": "eufy S4 NVR POE PTZ Add-on Security Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-s4-nvr-poe-ptz-add-on-security-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:08:19.992806",
+    "price": 359.0,
+    "was_price": 449.0,
+    "discount_percent": 20,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security 2k Indoor Pan & Tilt Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-2k-indoor-pan-tilt-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:08:24.133918",
+    "price": 79.0,
+    "was_price": 139.0,
+    "discount_percent": 43,
+    "status": "success"
+  },
+  {
+    "name": "eufy SoloCam S340 Security Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-solocam-s340-security-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:08:28.168329",
+    "price": 349.0,
+    "was_price": 449.0,
+    "discount_percent": 22,
+    "status": "success"
+  },
+  {
+    "name": "eufy S340 SOLOCAM Security Camera with Homebase (2 Pack)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-s340-solocam-security-camera-with-homebase-2-pack",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:08:32.282398",
+    "price": 799.0,
+    "was_price": 1199.0,
+    "discount_percent": 33,
+    "status": "success"
+  },
+  {
+    "name": "eufy E42 Security Camera Kit (2 Pack)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-e42-security-camera-kit-2-pack",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:08:36.572336",
+    "price": 599.0,
+    "was_price": 899.0,
+    "discount_percent": 33,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security eufyCam 2C Pro 2K Wireless Home Security System (Addon Camera)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-eufycam-2c-pro-2k-wireless-home-security-system-addon-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:08:40.791285",
+    "price": 199.0,
+    "was_price": 249.0,
+    "discount_percent": 20,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security EufyCam Solo S40 Spotlight 2K Solar (Wireless)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-eufycam-solo-s40-spotlight-2k-solar-wireless",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:08:44.806365",
+    "price": 299.0,
+    "was_price": 429.0,
+    "discount_percent": 30,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security Wireless Dual Camera Doorbell 2K (Add-On)",
+    "brand": "eufy",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-wireless-dual-camera-doorbell-2k-add-on",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:08:49.009780",
+    "price": 279.0,
+    "was_price": 349.0,
+    "discount_percent": 20,
+    "status": "success"
+  },
+  {
+    "name": "Eufy Baby E21 4K Standalone Baby Monitor Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-baby-e21-4k-standalone-baby-monitor-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:08:53.353624",
+    "price": 219.0,
+    "was_price": 279.0,
+    "discount_percent": 22,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security eufyCam E330 4K Home Security System with Homebase 3 (4-Pack)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-eufycam-e330-4k-home-security-system-with-homebase-3-4-pack",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:08:57.599216",
+    "price": 999.0,
+    "was_price": 1399.0,
+    "discount_percent": 29,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security S330 4G/Wi-Fi Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-s330-4g-wi-fi-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:09:01.763790",
+    "price": 429.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy E41 NVR POE 24/7 Security System [4 x Turret Cameras]",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-e41-nvr-poe-24-7-security-system-4-x-turret-cameras",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:09:05.829703",
+    "price": 999.0,
+    "was_price": 1299.0,
+    "discount_percent": 23,
+    "status": "success"
+  },
+  {
+    "name": "eufy E40 Essential Security Camera Kit with Homebase 2 (2 Pack)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-e40-essential-security-camera-kit-with-homebase-2-2-pack",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:09:10.240095",
+    "price": 449.0,
+    "was_price": 599.0,
+    "discount_percent": 25,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security C210 2K SoloCam",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-c210-2k-solocam",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:09:14.397131",
+    "price": 129.0,
+    "was_price": 149.0,
+    "discount_percent": 13,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security E340 Floodlight Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-e340-floodlight-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:09:18.640411",
+    "price": 359.0,
+    "was_price": 449.0,
+    "discount_percent": 20,
+    "status": "success"
+  },
+  {
+    "name": "eufy E40 NVR POE Bullet Add-on Security Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-e40-nvr-poe-bullet-add-on-security-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:09:22.613258",
+    "price": 249.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy V2 Advanced Security Camera Kit",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-v2-advanced-security-camera-kit",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:09:26.675142",
+    "price": 1149.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy Baby S340 Smart Sock Baby Monitor with Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-baby-s340-smart-sock-baby-monitor-with-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:09:30.854788",
+    "price": 379.0,
+    "was_price": 549.0,
+    "discount_percent": 31,
+    "status": "success"
+  },
+  {
+    "name": "eufy EufyCam S4 Security Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-eufycam-s4-security-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:09:34.988923",
+    "price": 549.0,
+    "was_price": 669.0,
+    "discount_percent": 18,
+    "status": "success"
+  },
+  {
+    "name": "eufy S3 Pro Security Camera Kit (4 Pack)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-s3-pro-security-camera-kit-4-pack-1",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:09:39.280170",
+    "price": 1599.0,
+    "was_price": 1999.0,
+    "discount_percent": 20,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security Solocam S220 (1 Pack)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-solocam-s220-1-pack",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:09:44.402334",
+    "price": 219.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy E30 Floodlight Security Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-e30-floodlight-security-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:09:48.373049",
+    "price": 269.0,
+    "was_price": 299.0,
+    "discount_percent": 10,
+    "status": "success"
+  },
+  {
+    "name": "Arlo Essential Pan & Tilt 2K Outdoor Security Camera",
+    "brand": "Arlo",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/arlo-essential-pan-tilt-2k-outdoor-security-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:09:52.488594",
+    "price": 74.0,
+    "was_price": 119.0,
+    "discount_percent": 38,
+    "status": "success"
+  },
+  {
+    "name": "Arlo Essentials 2K (3rd Gen) Outdoor Security Camera",
+    "brand": "Arlo",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/arlo-essentials-2k-3rd-gen-outdoor-security-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:09:56.507032",
+    "price": 149.0,
+    "status": "success"
+  },
+  {
+    "name": "Arlo Ultra 3 4K Outdoor Security Camera",
+    "brand": "Arlo",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/arlo-ultra-3-4k-outdoor-security-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:10:00.536132",
+    "price": 279.0,
+    "status": "success"
+  },
+  {
+    "name": "Arlo Essentials 2K (3rd Gen) Outdoor Solar Security Camera Kit + 6M Subscription (4 Pack)",
+    "brand": "Arlo",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/arlo-essentials-2k-3rd-gen-outdoor-solar-security-camera-kit-6m-subscription-4-pack",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:10:04.514280",
+    "price": 559.0,
+    "was_price": 699.0,
+    "discount_percent": 20,
+    "status": "success"
+  },
+  {
+    "name": "Arlo Ultra 3 4K Outdoor Security Camera Kit + 12M Subscription (4 Pack)",
+    "brand": "Arlo",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/arlo-ultra-3-4k-outdoor-security-camera-kit-12m-subscription-4-pack",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:10:08.387425",
+    "price": 894.0,
+    "was_price": 1299.0,
+    "discount_percent": 31,
+    "status": "success"
+  },
+  {
+    "name": "Ring Floodlight Cam Wired Plus (Black)",
+    "brand": "Ring",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/ring-floodlight-cam-wired-plus-black",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:10:12.590834",
+    "price": 179.0,
+    "was_price": 269.0,
+    "discount_percent": 33,
+    "status": "success"
+  },
+  {
+    "name": "Ring Pan-Tilt Indoor Security Camera (Black)",
+    "brand": "Ring",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/ring-pan-tilt-indoor-security-camera-black",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:10:16.791046",
+    "price": 69.0,
+    "was_price": 99.0,
+    "discount_percent": 30,
+    "status": "success"
+  },
+  {
+    "name": "Ring Spotlight Cam Plus Plug-In (White)",
+    "brand": "Ring",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/ring-spotlight-cam-plus-plug-in-white",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:10:21.070258",
+    "price": 99.0,
+    "was_price": 259.0,
+    "discount_percent": 62,
+    "status": "success"
+  },
+  {
+    "name": "Google Nest Cam (Indoor, Wired)",
+    "brand": "Google Nest",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/google-nest-cam-indoor-wired",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:10:24.775844",
+    "price": 59.0,
+    "status": "success"
+  },
+  {
+    "name": "Google Nest Cam with Floodlight (Wired)",
+    "brand": "Google Nest",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/google-nest-cam-with-floodlight-wired",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:10:29.026862",
+    "price": 464.0,
+    "was_price": 477.0,
+    "discount_percent": 3,
+    "status": "success"
+  },
+  {
+    "name": "TP-Link Tapo Indoor/Outdoor Home Wi-Fi Security Camera",
+    "brand": "TP-Link",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/tp-link-tapo-indoor-outdoor-home-wi-fi-security-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:10:33.312911",
+    "price": 59.0,
+    "status": "success"
+  },
+  {
+    "name": "TP-Link Tapo 2K Indoor/Outdoor Dual Lens Pan/Tilt Security Camera",
+    "brand": "TP-Link",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-indoor-outdoor-dual-lens-pan-tilt-security-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:10:37.476627",
+    "price": 110.0,
+    "was_price": 119.0,
+    "discount_percent": 8,
+    "status": "success"
+  },
+  {
+    "name": "TP-Link Tapo 3K Indoor/Outdoor Home Security Wi-Fi Camera",
+    "brand": "TP-Link",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/tp-link-tapo-3k-indoor-outdoor-home-security-wi-fi-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:10:41.597942",
+    "price": 89.0,
+    "was_price": 109.0,
+    "discount_percent": 18,
+    "status": "success"
+  },
+  {
+    "name": "TP-Link Tapo Tapo 2K Wi-Fi Security Camera",
+    "brand": "TP-Link",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/tp-link-tapo-tapo-2k-wi-fi-security-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:10:54.757991",
+    "price": null,
+    "status": "failed"
+  },
+  {
+    "name": "TP-Link Tapo Smart 2K Wire-Free Security Camera System (2 Pack)",
+    "brand": "TP-Link",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/tp-link-tapo-smart-2k-wire-free-security-camera-system-2-pack",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:10:58.800554",
+    "price": 379.0,
+    "status": "success"
+  },
+  {
+    "name": "Swann MaxTrak 4K AI Auto Tracking Long Range Add-On Security Camera w/Solar",
+    "brand": "Swann",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/swann-maxtrak-4k-ai-auto-tracking-long-range-add-on-security-camera-w-solar",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:11:02.923313",
+    "price": 399.0,
+    "status": "success"
+  },
+  {
+    "name": "Swann MaxRanger V2 Add On Security Camera",
+    "brand": "Swann",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/swann-maxranger-v2-add-on-security-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:11:07.028840",
+    "price": 374.0,
+    "status": "success"
+  },
+  {
+    "name": "Swann 4K Floodlight Security Camera",
+    "brand": "Swann",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/swann-4k-floodlight-security-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:11:11.062925",
+    "price": 199.0,
+    "was_price": 299.0,
+    "discount_percent": 33,
+    "status": "success"
+  },
+  {
+    "name": "Swann AdvancedX 4K 16 Channel Bullet Security Camera Kit [8 Pack]",
+    "brand": "Swann",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/swann-advancedx-4k-16-channel-bullet-security-camera-kit-8-pack",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:11:15.272606",
+    "price": 1499.0,
+    "status": "success"
+  },
+  {
+    "name": "Swann MaxRanger V2 Security Camera Kit (4 Pack)",
+    "brand": "Swann",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/swann-maxranger-v2-security-camera-kit-4-pack",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:11:19.610452",
+    "price": 994.0,
+    "was_price": 1299.0,
+    "discount_percent": 23,
+    "status": "success"
+  },
+  {
+    "name": "TP-Link Tapo 2K Smart Video Doorbell Mini",
+    "brand": "TP-Link",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-smart-video-doorbell-mini",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:11:23.496885",
+    "price": 79.0,
+    "was_price": 99.0,
+    "discount_percent": 20,
+    "status": "success"
+  },
+  {
+    "name": "Laser Smart Full HD Video Doorbell (White)",
+    "brand": "Other",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/laser-smart-full-hd-video-doorbell-white",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:11:27.362648",
+    "price": 149.95,
+    "status": "success"
+  },
+  {
+    "name": "Aqara Smart Video Doorbell G4 with Chime (Black)",
+    "brand": "Other",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/aqara-smart-video-doorbell-g4-with-chime-black",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:11:32.139594",
+    "price": 199.0,
+    "status": "success"
+  },
+  {
+    "name": "TP-Link Tapo 2K Smart Video Doorbell",
+    "brand": "TP-Link",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-smart-video-doorbell",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:11:36.094763",
+    "price": 90.0,
+    "was_price": 99.0,
+    "discount_percent": 9,
+    "status": "success"
+  },
+  {
+    "name": "Laser Smart Full HD Video Doorbell (Black)",
+    "brand": "Other",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/laser-smart-full-hd-video-doorbell-black",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:11:39.933521",
+    "price": 149.95,
+    "status": "success"
+  },
+  {
+    "name": "Reolink Wired Smart WiFi 2K+ Video Doorbell Outdoor Security Camera Package",
+    "brand": "Other",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/reolink-wired-smart-wifi-2k-video-doorbell-outdoor-security-camera-package",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:11:43.809317",
+    "price": 139.99,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security E340 Dual Camera Video Doorbell",
+    "brand": "eufy",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-e340-dual-camera-video-doorbell",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:11:47.671552",
+    "price": 249.0,
+    "status": "success"
+  },
+  {
+    "name": "Reolink 5MP PoE Camera Video Doorbell with Chime Person Detection",
+    "brand": "Other",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/reolink-5mp-poe-camera-video-doorbell-with-chime-person-detection",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:11:51.337892",
+    "price": 119.99,
+    "status": "success"
+  },
+  {
+    "name": "eufy C31 Video Doorbell",
+    "brand": "eufy",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-c31-video-doorbell",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:11:55.421743",
+    "price": 199.0,
+    "was_price": 299.0,
+    "discount_percent": 33,
+    "status": "success"
+  },
+  {
+    "name": "eufy Video Doorbell 2K (Wired)",
+    "brand": "eufy",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-video-doorbell-2k-wired",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:11:59.283171",
+    "price": 239.0,
+    "status": "success"
+  },
+  {
+    "name": "Ring Wired Video Doorbell Pro Plug-In",
+    "brand": "Ring",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/ring-wired-video-doorbell-pro-plug-in",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:12:03.393867",
+    "price": 349.0,
+    "was_price": 399.0,
+    "discount_percent": 13,
+    "status": "success"
+  },
+  {
+    "name": "eufy Video Doorbell 2K Wireless with Homebase 2",
+    "brand": "eufy",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-video-doorbell-2k-wireless-with-homebase-2",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:12:07.215912",
+    "price": 349.0,
+    "was_price": 399.0,
+    "discount_percent": 13,
+    "status": "success"
+  },
+  {
+    "name": "eufy C30 Video Doorbell",
+    "brand": "eufy",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-c30-video-doorbell",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:12:11.147959",
+    "price": 149.0,
+    "status": "success"
+  },
+  {
+    "name": "Ring Video Doorbell Plus with Chime",
+    "brand": "Ring",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/ring-video-doorbell-plus-with-chime",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:12:15.222621",
+    "price": 149.0,
+    "was_price": 269.0,
+    "discount_percent": 45,
+    "status": "success"
+  },
+  {
+    "name": "Reolink 5MP Wi-Fi Video Doorbell Camera",
+    "brand": "Other",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/reolink-5mp-wi-fi-video-doorbell-camera",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:12:19.200022",
+    "price": 139.99,
+    "status": "success"
+  },
+  {
+    "name": "TP-Link Tapo 2K Wireless Video Doorbell with Hub",
+    "brand": "TP-Link",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-wireless-video-doorbell-with-hub",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:12:23.148373",
+    "price": 229.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security Wireless Dual Camera Doorbell 2K (Add-On)",
+    "brand": "eufy",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-wireless-dual-camera-doorbell-2k-add-on",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:12:27.032879",
+    "price": 279.0,
+    "was_price": 349.0,
+    "discount_percent": 20,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security Slim 1080P Wireless Doorbell with Homebase Mini Repeater",
+    "brand": "eufy",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-slim-1080p-wireless-doorbell-with-homebase-mini-repeater",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:12:30.979222",
+    "price": 249.0,
+    "was_price": 279.0,
+    "discount_percent": 11,
+    "status": "success"
+  },
+  {
+    "name": "Ring Wired Video Doorbell Pro POE",
+    "brand": "Ring",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/ring-wired-video-doorbell-pro-poe",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:12:34.884227",
+    "price": 499.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security Dual Cam Wireless 2K Video Doorbell",
+    "brand": "eufy",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-dual-cam-wireless-2k-video-doorbell",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:12:38.841121",
+    "price": 399.0,
+    "was_price": 499.0,
+    "discount_percent": 20,
+    "status": "success"
+  },
+  {
+    "name": "Ring Video Doorbell (Wired)",
+    "brand": "Ring",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/ring-video-doorbell-wired",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:12:42.748646",
+    "price": 59.0,
+    "was_price": 89.0,
+    "discount_percent": 34,
+    "status": "success"
+  },
+  {
+    "name": "Swann Buddy 4K Video Doorbell with Chime",
+    "brand": "Swann",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/swann-buddy-4k-video-doorbell-with-chime",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:12:46.747038",
+    "price": 184.0,
+    "was_price": 299.0,
+    "discount_percent": 38,
+    "status": "success"
+  },
+  {
+    "name": "Arlo Essentials 2K Video Doorbell (2nd Generation)",
+    "brand": "Arlo",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/arlo-essentials-2k-video-doorbell-2nd-generation",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:12:50.727971",
+    "price": 79.0,
+    "was_price": 179.0,
+    "discount_percent": 56,
+    "status": "success"
+  },
+  {
+    "name": "Swann MaxRanger4K Long-Range Wireless Video Doorbell (Add-On)",
+    "brand": "Swann",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/swann-maxranger4k-long-range-wireless-video-doorbell-add-on",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:12:54.700601",
+    "price": 349.0,
+    "status": "success"
+  },
+  {
+    "name": "Kaadas K20 Pro Max 3D Face Recognition Wi-Fi Lock with Camera (Copper)",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/kaadas-k20-pro-max-3d-face-recognition-wi-fi-lock-with-camera-copper",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:12:58.468327",
+    "price": 849.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security Wireless Video Doorbell 2K (Addon)",
+    "brand": "eufy",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-wireless-video-doorbell-2k-addon",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:13:02.634749",
+    "price": 249.0,
+    "was_price": 279.0,
+    "discount_percent": 11,
+    "status": "success"
+  },
+  {
+    "name": "Uniden App Cam Solo X2K Wirefree Video Door Bell",
+    "brand": "Other",
+    "category": "Video Doorbell",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/uniden-app-cam-solo-x2k-wirefree-video-door-bell",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:13:06.668060",
+    "price": 159.0,
+    "status": "success"
+  },
+  {
+    "name": "Auslock Novo Series N25 Door Handle Smart Lock (Black)",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/auslock-novo-series-n25-door-handle-smart-lock-black",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:13:10.534391",
+    "price": 339.0,
+    "status": "success"
+  },
+  {
+    "name": "Auslock H05 Keyless Entry Smart Door Lock - Black",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/auslock-h05-keyless-entry-smart-door-lock-black",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:13:14.324479",
+    "price": 319.0,
+    "status": "success"
+  },
+  {
+    "name": "Auslock H06 Wi-Fi Smart Lock - Black",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/auslock-h06-wi-fi-smart-lock-black",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:13:18.081188",
+    "price": 369.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy C34 Smart Lock",
+    "brand": "eufy",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-c34-smart-lock",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:13:22.085856",
+    "price": 199.0,
+    "was_price": 249.0,
+    "discount_percent": 20,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security E330 Video Smart Lock",
+    "brand": "eufy",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-e330-video-smart-lock",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:13:26.058667",
+    "price": 479.0,
+    "was_price": 599.0,
+    "discount_percent": 20,
+    "status": "success"
+  },
+  {
+    "name": "Gecko TSA Smart Lock Bluetooth Tracker",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/gecko-tsa-smart-lock-bluetooth-tracker",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:13:39.475498",
+    "price": null,
+    "status": "failed"
+  },
+  {
+    "name": "eufy E31 Smart Lock",
+    "brand": "eufy",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-e31-smart-lock",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:13:43.422423",
+    "price": 349.0,
+    "was_price": 449.0,
+    "discount_percent": 22,
+    "status": "success"
+  },
+  {
+    "name": "Laser Smart Home Keyless Smart Deadbolt Lock with App Control (Black)",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/laser-smart-home-keyless-smart-deadbolt-lock-with-app-control-black",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:13:47.135484",
+    "price": 169.0,
+    "status": "success"
+  },
+  {
+    "name": "MEC Digital Motorised Smart Lock",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/mec-digital-motorised-smart-lock",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:13:50.933072",
+    "price": 99.0,
+    "status": "success"
+  },
+  {
+    "name": "Kaadas S110-5W Lever Smart Door Lock WiFi (Copper)",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/kaadas-s110-5w-lever-smart-door-lock-wifi-copper",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:13:54.714507",
+    "price": 249.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy E35 Smart Lock",
+    "brand": "eufy",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-e35-smart-lock",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:13:58.872775",
+    "price": 549.0,
+    "was_price": 699.0,
+    "discount_percent": 21,
+    "status": "success"
+  },
+  {
+    "name": "Kensington LD5400T Thunderbolt 3 Dual 4K Docking Station Dock Smart Lock",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/kensington-ld5400t-thunderbolt-3-dual-4k-docking-station-dock-smart-lock",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:14:02.674528",
+    "price": 598.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy Smart Lever Lock C33 (Black)",
+    "brand": "eufy",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-smart-lever-lock-c33-black",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:14:06.884075",
+    "price": 279.0,
+    "was_price": 349.0,
+    "discount_percent": 20,
+    "status": "success"
+  },
+  {
+    "name": "Kaadas Q15-5WK Push Pull Wi-Fi Smart Lock - Matte Black",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/kaadas-q15-5wk-push-pull-wi-fi-smart-lock-matte-black",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:14:10.711057",
+    "price": 319.0,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security Video Smart Lock",
+    "brand": "eufy",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-video-smart-lock",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:14:14.749701",
+    "price": 639.0,
+    "was_price": 799.0,
+    "discount_percent": 20,
+    "status": "success"
+  },
+  {
+    "name": "MEC Digital Motorised Smart Lock Black",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/mec-digital-motorised-smart-lock-black",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:14:18.538129",
+    "price": 99.0,
+    "status": "success"
+  },
+  {
+    "name": "Yale ByYou Pro Smart Mortice Lock",
+    "brand": "Yale",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/yale-byyou-pro-smart-mortice-lock",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:14:22.398894",
+    "price": 699.0,
+    "status": "success"
+  },
+  {
+    "name": "Aqara Smart Door Lock A100",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/aqara-smart-door-lock-a100",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:14:26.570607",
+    "price": 299.0,
+    "was_price": 449.0,
+    "discount_percent": 33,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security Wi-Fi Smart Lock",
+    "brand": "eufy",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-wi-fi-smart-lock",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:14:30.654921",
+    "price": 199.0,
+    "was_price": 249.0,
+    "discount_percent": 20,
+    "status": "success"
+  },
+  {
+    "name": "Aqara Smart Door Lock D100",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/aqara-smart-door-lock-d100",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:14:35.325210",
+    "price": 679.0,
+    "status": "success"
+  },
+  {
+    "name": "Kaadas RX-C Deadbolt Smart Lock (Satin Nickel)",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/kaadas-rx-c-deadbolt-smart-lock-satin-nickel",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:14:39.098792",
+    "price": 149.0,
+    "status": "success"
+  },
+  {
+    "name": "Kaadas S500-5W Lever Smart Door Lock WiFi (Black)",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/kaadas-s500-5w-lever-smart-door-lock-wifi-black",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:14:44.024183",
+    "price": 299.0,
+    "status": "success"
+  },
+  {
+    "name": "Kaadas K9 Push Pull Fingerprint WiFi Smart Lock (Copper)",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/kaadas-k9-push-pull-fingerprint-wifi-smart-lock-copper",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:14:47.774235",
+    "price": 489.0,
+    "status": "success"
+  },
+  {
+    "name": "MEC Digital Motorised Smart Lock Matte Black",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/mec-digital-motorised-smart-lock-matte-black",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:14:51.861568",
+    "price": 99.0,
+    "status": "success"
+  },
+  {
+    "name": "Zigbang SHP-R80 Smart Door Lock",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/zigbang-shp-r80-smart-door-lock",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:14:55.893861",
+    "price": 895.0,
+    "status": "success"
+  },
+  {
+    "name": "Aqara U100 with M100 Smart Lock Hub Kit",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/aqara-u100-with-m100-smart-lock-hub-kit",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:14:59.961459",
+    "price": 449.0,
+    "status": "success"
+  },
+  {
+    "name": "Auslock G2 Wi-Fi Smart Lock Gateway",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/auslock-g2-wi-fi-smart-lock-gateway",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:15:03.919530",
+    "price": 95.0,
+    "status": "success"
+  },
+  {
+    "name": "Laser Smart Deadbolt Lock with Apple Home Integration",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/laser-smart-deadbolt-lock-with-apple-home-integration",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:15:07.798227",
+    "price": 189.0,
+    "status": "success"
+  },
+  {
+    "name": "Kaadas S500-5W Lever Smart Door Lock WiFi (Copper)",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/kaadas-s500-5w-lever-smart-door-lock-wifi-copper",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:15:11.668464",
+    "price": 299.0,
+    "status": "success"
+  },
+  {
+    "name": "Auslock Novo Series N31B Door Handle Smart Lock (Black)",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/auslock-novo-series-n31b-door-handle-smart-lock-black",
+    "currency": "AUD",
+    "scraped_at": "2026-03-19T20:15:15.571694",
+    "price": 339.0,
+    "status": "success"
+  }
+];
+
+                if (!data || data.length === 0) {
+                    document.getElementById('app').innerHTML = `
+                        <div class="no-data">
+                            <h2>📭 暂无数据</h2>
+                            <p style="margin-top: 10px">请先运行爬虫获取价格数据</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                allData = data;
+                renderDashboard(data);
+                setupFilters();
+            } catch (error) {
+                document.getElementById('app').innerHTML = `
+                    <div class="no-data">
+                        <h2>❌ 加载失败</h2>
+                        <p style="margin-top: 10px">${error.message}</p>
+                    </div>
+                `;
+            }
+        }
+
+        function setupFilters() {
+            document.getElementById('brandFilters').addEventListener('click', (e) => {
+                if (e.target.classList.contains('filter-btn')) {
+                    document.querySelectorAll('#brandFilters .filter-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    e.target.classList.add('active');
+                    currentFilters.brand = e.target.dataset.brand;
+                    applyFilters();
+                }
+            });
+
+            document.getElementById('categoryFilters').addEventListener('click', (e) => {
+                if (e.target.classList.contains('filter-btn')) {
+                    document.querySelectorAll('#categoryFilters .filter-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    e.target.classList.add('active');
+                    currentFilters.category = e.target.dataset.category;
+                    applyFilters();
+                }
+            });
+
+            document.getElementById('priceFilters').addEventListener('click', (e) => {
+                if (e.target.classList.contains('filter-btn')) {
+                    document.querySelectorAll('#priceFilters .filter-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    e.target.classList.add('active');
+                    currentFilters.price = e.target.dataset.price;
+                    applyFilters();
+                }
+            });
+        }
+
+        function clearAllFilters() {
+            currentFilters = { brand: 'all', category: 'all', price: 'all' };
+
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.brand === 'all' || btn.dataset.category === 'all' || btn.dataset.price === 'all') {
+                    btn.classList.add('active');
+                }
+            });
+
+            applyFilters();
+        }
+
+        function applyFilters() {
+            const validData = allData.filter(p => p.status === 'success' && p.price);
+
+            let filtered = validData.filter(product => {
+                // 品牌筛选
+                if (currentFilters.brand !== 'all') {
+                    if ((product.brand || 'eufy').toLowerCase() !== currentFilters.brand.toLowerCase()) {
+                        return false;
+                    }
+                }
+
+                // 品类筛选
+                if (currentFilters.category !== 'all') {
+                    const productCategory = product.category || 'Security Camera';
+                    if (productCategory !== currentFilters.category) {
+                        return false;
+                    }
+                }
+
+                // 价格筛选
+                if (currentFilters.price !== 'all') {
+                    const [min, max] = currentFilters.price.split('-').map(Number);
+                    if (product.price < min || product.price >= max) {
+                        return false;
+                    }
+                }
+
+                return true;
+            });
+
+            updateStats(filtered);
+            updateCategories(filtered);
+        }
+
+        function updateStats(data) {
+            const cameras = data.filter(p => (p.category || 'Security Camera') === 'Security Camera');
+            const doorbells = data.filter(p => p.category === 'Video Doorbell');
+            const locks = data.filter(p => p.category === 'Smart Lock');
+
+            document.querySelector('.stats').innerHTML = `
+                <div class="stat-card">
+                    <div class="stat-number">${data.length}</div>
+                    <div class="stat-label">显示产品</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" style="color: #2196f3">${cameras.length}</div>
+                    <div class="stat-label">📷 Camera</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" style="color: #ff9800">${doorbells.length}</div>
+                    <div class="stat-label">🔔 Doorbell</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" style="color: #9c27b0">${locks.length}</div>
+                    <div class="stat-label">🔐 Lock</div>
+                </div>
+            `;
+        }
+
+        function updateCategories(data) {
+            const categories = {
+                'Security Camera': { icon: '📷', products: [] },
+                'Video Doorbell': { icon: '🔔', products: [] },
+                'Smart Lock': { icon: '🔐', products: [] }
+            };
+
+            data.forEach(product => {
+                const cat = product.category || 'Security Camera';
+                if (categories[cat]) {
+                    categories[cat].products.push(product);
+                }
+            });
+
+            const categoriesHTML = Object.entries(categories)
+                .filter(([_, info]) => info.products.length > 0)
+                .map(([categoryName, info]) => renderCategory(categoryName, info))
+                .join('');
+
+            document.querySelector('#categorySections').innerHTML = categoriesHTML || `
+                <div class="no-results">
+                    <h2>🔍 未找到符合条件的产品</h2>
+                    <p style="margin-top: 10px">试试调整筛选条件</p>
+                </div>
+            `;
+        }
+
+        function renderCategory(categoryName, info) {
+            const products = info.products.sort((a, b) => a.price - b.price);
+
+            // 按价格区间分组
+            const priceBands = {
+                '$0-$200': products.filter(p => p.price < 200),
+                '$200-$400': products.filter(p => p.price >= 200 && p.price < 400),
+                '$400-$700': products.filter(p => p.price >= 400 && p.price < 700),
+                '$700-$1200': products.filter(p => p.price >= 700 && p.price < 1200),
+                '$1200+': products.filter(p => p.price >= 1200)
+            };
+
+            const bandsHTML = Object.entries(priceBands)
+                .filter(([_, prods]) => prods.length > 0)
+                .map(([bandName, prods]) => `
+                    <div class="price-band">
+                        <div class="band-title">${bandName} (${prods.length}款)</div>
+                        <div class="product-grid">
+                            ${prods.map(product => renderProductCard(product)).join('')}
+                        </div>
+                    </div>
+                `).join('');
+
+            return `
+                <div class="category-section">
+                    <div class="category-header">
+                        <div class="category-title">
+                            <span class="category-icon">${info.icon}</span>
+                            <span class="category-name">${categoryName}</span>
+                        </div>
+                        <span class="category-count">${products.length} 款产品</span>
+                    </div>
+                    ${bandsHTML}
+                </div>
+            `;
+        }
+
+        function renderProductCard(product) {
+            const brandClass = (product.brand || 'eufy').toLowerCase().replace(' ', '-');
+            const hasDiscount = product.was_price && product.was_price > product.price;
+            const priceClass = hasDiscount ? '' : 'no-discount';
+
+            return `
+                <div class="product-card ${brandClass}" onclick="window.open('${product.url}', '_blank')">
+                    <div class="product-top">
+                        <span class="brand-badge ${brandClass}">${product.brand || 'eufy'}</span>
+                        ${hasDiscount ? `<span class="discount-badge">${product.discount_percent}% OFF</span>` : ''}
+                    </div>
+                    <div class="product-name">${product.name}</div>
+                    <div class="product-bottom">
+                        <div class="product-meta">JB Hi-Fi</div>
+                        <div class="product-prices">
+                            ${hasDiscount ? `<div class="price-was">$${product.was_price.toFixed(0)}</div>` : ''}
+                            <div class="price-current ${priceClass}">$${product.price.toFixed(0)}</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderDashboard(data) {
+            const validData = data.filter(p => p.status === 'success' && p.price);
+
+            const statsHTML = '<div class="stats"></div>';
+            const categoriesHTML = '<div id="categorySections"></div>';
+
+            document.getElementById('app').innerHTML = statsHTML + categoriesHTML;
+
+            updateStats(validData);
+            updateCategories(validData);
+
+            if (data[0] && data[0].scraped_at) {
+                const updateTime = new Date(data[0].scraped_at).toLocaleString('zh-CN');
+                document.getElementById('timestamp').textContent = `📅 最后更新: ${updateTime}`;
+            }
+        }
+
+        loadData();
+        setInterval(loadData, 30000);
+    </script>
+
+        </div> <!-- 关闭 prices-tab -->
+
+        <!-- 价格追踪 Tab -->
+        <div id="tracker-tab" class="tab-content">
+            <div class="tracker-controls">
+                <h3 class="tracker-section-title">📊 选择产品进行价格追踪对比</h3>
+                <p style="color: #666; margin-bottom: 20px; font-size: 14px;">点击产品卡片选择/取消选择，最多可同时对比 5 个产品的价格变化趋势</p>
+                <div class="tracker-grid" id="tracker-productCards"></div>
+
+                <div class="export-buttons" id="export-buttons" style="display: none;">
+                    <button class="export-btn" onclick="exportData('json')">📥 导出 JSON</button>
+                    <button class="export-btn secondary" onclick="exportData('csv')">📥 导出 CSV</button>
+                </div>
+            </div>
+
+            <div id="tracker-chartContainer">
+                <div class="empty-state">
+                    <div class="empty-state-icon">📈</div>
+                    <p>请选择产品开始追踪价格变化</p>
+                </div>
+            </div>
+        </div>
+
+    <script>
+        // Tab 切换函数
+        function switchTab(tabName) {
+            // 隐藏所有 Tab
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // 显示选中的 Tab
+            document.getElementById(tabName + '-tab').classList.add('active');
+            event.target.classList.add('active');
+
+            // 如果切换到价格追踪，加载数据
+            if (tabName === 'tracker' && !window.trackerLoaded) {
+                loadTrackerData();
+                window.trackerLoaded = true;
+            }
+        }
+
+        // 价格追踪功能
+        let trackerAllProducts = [];
+        let trackerHistory = {};
+        let trackerSelectedProducts = [];
+        let trackerChart = null;
+        const trackerColors = ['#3498db', '#2ecc71', '#e74c3c', '#f39c12', '#9b59b6'];
+
+        // 加载数据
+        async function loadTrackerData() {
+            try {
+                // 加载价格历史数据
+                const historyResponse = await fetch('price_history.json');
+                trackerHistory = await historyResponse.json();
+
+                // 加载最新产品数据
+                const productsResponse = await fetch('price_results_latest.json');
+                const rawProducts = await productsResponse.json();
+
+                // 标准化产品数据格式并添加ID
+                trackerAllProducts = rawProducts.map(product => {
+                    // 根据产品名称和品牌生成ID（与price_history的key匹配）
+                    const id = (product.brand + '_' + product.name)
+                        .toLowerCase()
+                        .replace(/[^a-z0-9]+/g, '_')
+                        .replace(/^_+|_+$/g, '');
+
+                    // 从price_history获取is_on_sale信息
+                    let isOnSale = false;
+                    if (trackerHistory[id] && trackerHistory[id].price_history.length > 0) {
+                        const latestHistory = trackerHistory[id].price_history[trackerHistory[id].price_history.length - 1];
+                        isOnSale = latestHistory.is_on_sale || false;
+                    }
+
+                    return {
+                        id: id,
+                        product_name: product.name,
+                        brand: product.brand,
+                        category: product.category,
+                        url: product.url,
+                        current_price: product.price,
+                        is_on_sale: isOnSale
+                    };
+                });
+
+                // 更新顶部横幅数据
+                updateBannerInfo();
+
+                // 渲染产品卡片
+                renderTrackerProducts();
+            } catch (error) {
+                console.error('数据加载失败:', error);
+                document.getElementById('tracker-productCards').innerHTML = `
+                    <div style="padding: 40px; text-align: center; color: #e74c3c; grid-column: 1 / -1;">
+                        <p style="font-size: 18px; margin-bottom: 10px;">⚠️ 数据加载失败</p>
+                        <p style="font-size: 14px; color: #666;">${error.message}</p>
+                    </div>
+                `;
+            }
+        }
+
+        // 更新顶部横幅信息
+        function updateBannerInfo() {
+            // 计算最新更新时间和累计天数
+            let latestDate = null;
+            let earliestDate = null;
+
+            Object.values(trackerHistory).forEach(product => {
+                if (product.price_history && product.price_history.length > 0) {
+                    product.price_history.forEach(record => {
+                        const date = new Date(record.date);
+                        if (!latestDate || date > latestDate) latestDate = date;
+                        if (!earliestDate || date < earliestDate) earliestDate = date;
+                    });
+                }
+            });
+
+            if (latestDate) {
+                const year = latestDate.getFullYear();
+                const month = String(latestDate.getMonth() + 1).padStart(2, '0');
+                const day = String(latestDate.getDate()).padStart(2, '0');
+                const hours = String(latestDate.getHours()).padStart(2, '0');
+                const minutes = String(latestDate.getMinutes()).padStart(2, '0');
+                document.getElementById('lastUpdateTime').textContent = `${year}-${month}-${day} ${hours}:${minutes}`;
+            }
+
+            if (earliestDate && latestDate) {
+                const daysDiff = Math.floor((latestDate - earliestDate) / (1000 * 60 * 60 * 24)) + 1;
+                document.getElementById('totalDays').textContent = daysDiff;
+            }
+        }
+
+        // 渲染产品卡片
+        function renderTrackerProducts() {
+            const container = document.getElementById('tracker-productCards');
+
+            if (trackerAllProducts.length === 0) {
+                container.innerHTML = `
+                    <div style="padding: 40px; text-align: center; color: #95a5a6; grid-column: 1 / -1;">
+                        <p style="font-size: 18px;">😊 暂无产品数据</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = trackerAllProducts.map(product => {
+                const isSelected = trackerSelectedProducts.some(p => p.id === product.id);
+                const hasHistory = trackerHistory[product.id] && trackerHistory[product.id].price_history.length > 0;
+
+                return `
+                    <div class="tracker-card ${isSelected ? 'selected' : ''}"
+                         onclick="toggleProductSelection('${product.id}')"
+                         style="${!hasHistory ? 'opacity: 0.5; cursor: not-allowed;' : ''}">
+                        <div class="tracker-card-header">
+                            <div class="tracker-card-title">${product.product_name}</div>
+                            <div class="tracker-card-checkbox"></div>
+                        </div>
+                        <div class="tracker-card-info">
+                            <span>🏷️ ${product.brand}</span>
+                            <span>📦 ${product.category}</span>
+                        </div>
+                        <div class="tracker-card-price ${product.is_on_sale ? 'on-sale' : ''}">
+                            $${product.current_price}${product.is_on_sale ? ' 🔥' : ''}
+                        </div>
+                        ${!hasHistory ? '<div style="font-size: 11px; color: #e74c3c; margin-top: 5px;">⚠️ 暂无历史数据</div>' : ''}
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // 切换产品选择
+        function toggleProductSelection(productId) {
+            const product = trackerAllProducts.find(p => p.id === productId);
+            const hasHistory = trackerHistory[productId] && trackerHistory[productId].price_history.length > 0;
+
+            if (!product || !hasHistory) return;
+
+            const index = trackerSelectedProducts.findIndex(p => p.id === productId);
+
+            if (index > -1) {
+                // 取消选择
+                trackerSelectedProducts.splice(index, 1);
+            } else {
+                // 添加选择（最多5个）
+                if (trackerSelectedProducts.length >= 5) {
+                    alert('最多只能同时对比5个产品');
+                    return;
+                }
+                trackerSelectedProducts.push(product);
+            }
+
+            // 重新渲染产品卡片
+            renderTrackerProducts();
+
+            // 更新图表
+            updateTrackerChart();
+
+            // 显示/隐藏导出按钮
+            document.getElementById('export-buttons').style.display =
+                trackerSelectedProducts.length > 0 ? 'flex' : 'none';
+        }
+
+        // 更新图表
+        function updateTrackerChart() {
+            const container = document.getElementById('tracker-chartContainer');
+
+            if (trackerSelectedProducts.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">📈</div>
+                        <p>请选择产品开始追踪价格变化</p>
+                    </div>
+                `;
+                if (trackerChart) {
+                    trackerChart.destroy();
+                    trackerChart = null;
+                }
+                return;
+            }
+
+            // 创建canvas（如果不存在）
+            if (!container.querySelector('canvas')) {
+                container.innerHTML = '<canvas id="trackerPriceChart"></canvas>';
+            }
+
+            const ctx = document.getElementById('trackerPriceChart').getContext('2d');
+
+            // 准备数据集
+            const datasets = trackerSelectedProducts.map((product, index) => {
+                const history = trackerHistory[product.id];
+                const data = history.price_history.map(record => ({
+                    x: new Date(record.date),
+                    y: record.price
+                }));
+
+                return {
+                    label: product.product_name,
+                    data: data,
+                    borderColor: trackerColors[index % trackerColors.length],
+                    backgroundColor: trackerColors[index % trackerColors.length] + '20',
+                    borderWidth: 3,
+                    fill: false,
+                    tension: 0.1,
+                    pointRadius: 4,
+                    pointHoverRadius: 6
+                };
+            });
+
+            // 销毁旧图表
+            if (trackerChart) {
+                trackerChart.destroy();
+            }
+
+            // 创建新图表
+            trackerChart = new Chart(ctx, {
+                type: 'line',
+                data: { datasets },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: '价格趋势对比',
+                            font: { size: 18, weight: 'bold' },
+                            color: '#2c3e50'
+                        },
+                        legend: {
+                            display: true,
+                            position: 'top',
+                            labels: {
+                                font: { size: 12 },
+                                padding: 15,
+                                usePointStyle: true
+                            }
+                        },
+                        tooltip: {
+                            mode: 'index',
+                            intersect: false,
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': $' + context.parsed.y.toFixed(2);
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            type: 'time',
+                            time: {
+                                unit: 'day',
+                                displayFormats: {
+                                    day: 'MM/dd'
+                                }
+                            },
+                            title: {
+                                display: true,
+                                text: '日期',
+                                font: { size: 14, weight: 'bold' }
+                            }
+                        },
+                        y: {
+                            beginAtZero: false,
+                            title: {
+                                display: true,
+                                text: '价格 (AUD)',
+                                font: { size: 14, weight: 'bold' }
+                            },
+                            ticks: {
+                                callback: function(value) {
+                                    return '$' + value.toFixed(2);
+                                }
+                            }
+                        }
+                    },
+                    interaction: {
+                        mode: 'nearest',
+                        axis: 'x',
+                        intersect: false
+                    }
+                }
+            });
+
+            // 设置图表容器高度
+            container.style.height = '500px';
+        }
+
+        // 导出数据
+        function exportData(format) {
+            if (trackerSelectedProducts.length === 0) {
+                alert('请先选择要导出的产品');
+                return;
+            }
+
+            let exportContent, filename, mimeType;
+
+            if (format === 'json') {
+                const exportData = {};
+                trackerSelectedProducts.forEach(product => {
+                    exportData[product.id] = {
+                        product_name: product.product_name,
+                        brand: product.brand,
+                        category: product.category,
+                        url: product.url,
+                        price_history: trackerHistory[product.id].price_history
+                    };
+                });
+                exportContent = JSON.stringify(exportData, null, 2);
+                filename = 'price_data_' + new Date().toISOString().split('T')[0] + '.json';
+                mimeType = 'application/json';
+            } else if (format === 'csv') {
+                const lines = ['产品名称,品牌,品类,日期,价格,原价,是否促销,折扣百分比'];
+
+                trackerSelectedProducts.forEach(product => {
+                    const history = trackerHistory[product.id].price_history;
+                    history.forEach(record => {
+                        lines.push([
+                            `"${product.product_name}"`,
+                            product.brand,
+                            product.category,
+                            record.date,
+                            record.price,
+                            record.original_price || record.price,
+                            record.is_on_sale ? '是' : '否',
+                            record.discount_percentage || 0
+                        ].join(','));
+                    });
+                });
+
+                exportContent = lines.join('\n');
+                filename = 'price_data_' + new Date().toISOString().split('T')[0] + '.csv';
+                mimeType = 'text/csv';
+            }
+
+            // 创建下载
+            const blob = new Blob(['\ufeff' + exportContent], { type: mimeType + ';charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+        }
+
+    </script>
+
+<!-- 最后更新: 2026-03-19 20:15:16 -->
+</body>
+</html>

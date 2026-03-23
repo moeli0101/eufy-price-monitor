@@ -2232,7 +2232,33 @@
         <div id="tracker-tab" class="tab-content">
             <div class="tracker-controls">
                 <h3 class="tracker-section-title">📊 选择产品进行价格追踪对比</h3>
-                <p style="color: #666; margin-bottom: 20px; font-size: 14px;">点击产品卡片选择/取消选择，最多可同时对比 5 个产品的价格变化趋势</p>
+
+                <!-- 筛选器 -->
+                <div class="filters" style="margin-bottom: 20px;">
+                    <div class="filter-section">
+                        <span class="filter-label">品牌筛选</span>
+                        <div class="filter-buttons" id="trackerBrandFilters">
+                            <button class="filter-btn active" data-brand="all">全部品牌</button>
+                        </div>
+                    </div>
+                    <div class="filter-section">
+                        <span class="filter-label">类别筛选</span>
+                        <div class="filter-buttons" id="trackerCategoryFilters">
+                            <button class="filter-btn active" data-category="all">全部类别</button>
+                        </div>
+                    </div>
+                    <div class="filter-section">
+                        <span class="filter-label">状态筛选</span>
+                        <div class="filter-buttons" id="trackerStatusFilters">
+                            <button class="filter-btn active" data-status="all">全部</button>
+                            <button class="filter-btn" data-status="on-sale">促销中 🔥</button>
+                        </div>
+                    </div>
+                </div>
+
+                <p style="color: #666; margin-bottom: 20px; font-size: 14px;">
+                    <span id="tracker-product-count">0</span> 个产品 | 点击产品卡片选择/取消选择，最多可同时对比 5 个产品的价格变化趋势
+                </p>
                 <div class="tracker-grid" id="tracker-productCards"></div>
 
                 <div class="export-buttons" id="export-buttons" style="display: none;">
@@ -2277,6 +2303,11 @@
         let trackerSelectedProducts = [];
         let trackerChart = null;
         const trackerColors = ['#3498db', '#2ecc71', '#e74c3c', '#f39c12', '#9b59b6'];
+        let trackerFilters = {
+            brand: 'all',
+            category: 'all',
+            status: 'all'
+        };
 
         // 加载数据
         async function loadTrackerData() {
@@ -2318,6 +2349,9 @@
                 // 更新顶部横幅数据
                 updateBannerInfo();
 
+                // 初始化筛选器
+                initTrackerFilters();
+
                 // 渲染产品卡片
                 renderTrackerProducts();
             } catch (error) {
@@ -2329,6 +2363,82 @@
                     </div>
                 `;
             }
+        }
+
+        // 初始化筛选器
+        function initTrackerFilters() {
+            // 获取所有唯一的品牌和类别
+            const brands = [...new Set(trackerAllProducts.map(p => p.brand))].sort();
+            const categories = [...new Set(trackerAllProducts.map(p => p.category))].sort();
+
+            // 渲染品牌筛选按钮
+            const brandFiltersContainer = document.getElementById('trackerBrandFilters');
+            brandFiltersContainer.innerHTML = `
+                <button class="filter-btn active" data-brand="all">全部品牌</button>
+                ${brands.map(brand => `<button class="filter-btn" data-brand="${brand}">${brand}</button>`).join('')}
+            `;
+
+            // 渲染类别筛选按钮
+            const categoryFiltersContainer = document.getElementById('trackerCategoryFilters');
+            categoryFiltersContainer.innerHTML = `
+                <button class="filter-btn active" data-category="all">全部类别</button>
+                ${categories.map(category => `<button class="filter-btn" data-category="${category}">${category}</button>`).join('')}
+            `;
+
+            // 绑定筛选事件
+            brandFiltersContainer.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    brandFiltersContainer.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    trackerFilters.brand = this.dataset.brand;
+                    applyTrackerFilters();
+                });
+            });
+
+            categoryFiltersContainer.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    categoryFiltersContainer.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    trackerFilters.category = this.dataset.category;
+                    applyTrackerFilters();
+                });
+            });
+
+            document.getElementById('trackerStatusFilters').querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.getElementById('trackerStatusFilters').querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    trackerFilters.status = this.dataset.status;
+                    applyTrackerFilters();
+                });
+            });
+        }
+
+        // 应用筛选并重新渲染
+        function applyTrackerFilters() {
+            renderTrackerProducts();
+        }
+
+        // 获取筛选后的产品列表
+        function getFilteredProducts() {
+            return trackerAllProducts.filter(product => {
+                // 品牌筛选
+                if (trackerFilters.brand !== 'all' && product.brand !== trackerFilters.brand) {
+                    return false;
+                }
+
+                // 类别筛选
+                if (trackerFilters.category !== 'all' && product.category !== trackerFilters.category) {
+                    return false;
+                }
+
+                // 状态筛选
+                if (trackerFilters.status === 'on-sale' && !product.is_on_sale) {
+                    return false;
+                }
+
+                return true;
+            });
         }
 
         // 更新顶部横幅信息
@@ -2365,6 +2475,10 @@
         // 渲染产品卡片
         function renderTrackerProducts() {
             const container = document.getElementById('tracker-productCards');
+            const filteredProducts = getFilteredProducts();
+
+            // 更新产品数量显示
+            document.getElementById('tracker-product-count').textContent = filteredProducts.length;
 
             if (trackerAllProducts.length === 0) {
                 container.innerHTML = `
@@ -2375,7 +2489,17 @@
                 return;
             }
 
-            container.innerHTML = trackerAllProducts.map(product => {
+            if (filteredProducts.length === 0) {
+                container.innerHTML = `
+                    <div style="padding: 40px; text-align: center; color: #95a5a6; grid-column: 1 / -1;">
+                        <p style="font-size: 18px;">😊 没有符合筛选条件的产品</p>
+                        <p style="font-size: 14px; color: #666; margin-top: 10px;">请调整筛选条件</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = filteredProducts.map(product => {
                 const isSelected = trackerSelectedProducts.some(p => p.id === product.id);
                 const hasHistory = trackerHistory[product.id] && trackerHistory[product.id].price_history.length > 0;
 

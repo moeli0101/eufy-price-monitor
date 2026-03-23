@@ -2384,7 +2384,11 @@
                          onclick="toggleProductSelection('${product.id}')"
                          style="${!hasHistory ? 'opacity: 0.5; cursor: not-allowed;' : ''}">
                         <div class="tracker-card-header">
-                            <div class="tracker-card-title">${product.product_name}</div>
+                            <a href="${product.url}"
+                               target="_blank"
+                               class="tracker-card-title"
+                               style="text-decoration: none; color: inherit; cursor: pointer;"
+                               onclick="event.stopPropagation();">${product.product_name}</a>
                             <div class="tracker-card-checkbox"></div>
                         </div>
                         <div class="tracker-card-info">

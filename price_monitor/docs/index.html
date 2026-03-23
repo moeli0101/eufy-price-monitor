@@ -2618,6 +2618,22 @@
 
     </script>
 
-<!-- 最后更新: 2026-03-23 10:35:09 2026-03-19 20:15:16 -->
+    <script>
+        // 页面加载时自动初始化tracker数据
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() {
+                console.log('🚀 自动加载tracker数据...');
+                loadTrackerData();
+                window.trackerLoaded = true;
+            });
+        } else {
+            // DOMContentLoaded已经触发
+            console.log('🚀 页面已加载，立即加载tracker数据...');
+            loadTrackerData();
+            window.trackerLoaded = true;
+        }
+    </script>
+
+<!-- 最后更新: 2026-03-23 10:35:09 -->
 </body>
 </html>

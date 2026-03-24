@@ -397,9 +397,9 @@ def scrape_prices(products):
     return results
 
 
-def search_eufy_baby():
-    """搜索eufy baby母婴产品"""
-    print('\n🍼 搜索eufy baby产品...')
+def search_baby_products():
+    """搜索所有品牌的母婴产品（baby monitor、breast pump等）"""
+    print('\n🍼 搜索母婴产品...')
 
     products = []
 
@@ -414,8 +414,15 @@ def search_eufy_baby():
             ]
         )
 
-        # 搜索关键词列表
-        search_terms = ['eufy baby', 'eufy baby monitor', 'eufy breast pump']
+        # 搜索关键词列表 - 包括各个品牌
+        search_terms = [
+            'baby monitor',
+            'breast pump',
+            'momcozy baby',
+            'nanit baby monitor',
+            'owlet baby',
+            'eufy baby'
+        ]
 
         for term in search_terms:
             print(f'  搜索: {term}')
@@ -435,7 +442,7 @@ def search_eufy_baby():
 
                 print(f'    找到 {len(unique_urls)} 个产品链接')
 
-                for url in unique_urls[:20]:  # 取前20个
+                for url in unique_urls[:25]:  # 每个搜索词取前25个
                     full_url = f'https://www.jbhifi.com.au{url}'
 
                     # 避免重复
@@ -451,19 +458,37 @@ def search_eufy_baby():
                             title = detail_page.locator('h1').first.inner_text()
                             title_lower = title.lower()
 
-                            # 确认是eufy baby产品
-                            if 'eufy' in title_lower and any(kw in title_lower for kw in ['baby', 'breast', 'pump', 'nursing', 'infant', 'monitor']):
+                            # 确认是baby相关产品
+                            if any(kw in title_lower for kw in ['baby', 'breast', 'pump', 'nursing', 'infant', 'monitor', 'momcozy', 'nanit', 'owlet']):
                                 # 使用统一分类器判断是否是有效产品
                                 if is_valid_product(title):
-                                    category = classify_product(title, 'eufy')
-                                    products.append({
-                                        'name': title,
-                                        'brand': 'eufy',
-                                        'category': category,
-                                        'url': full_url,
-                                        'channel': 'JB Hi-Fi'
-                                    })
-                                    print(f'    ✅ {title}')
+                                    category = classify_product(title)
+
+                                    # 识别品牌
+                                    brand = 'Other'
+                                    if 'eufy' in title_lower:
+                                        brand = 'eufy'
+                                    elif 'momcozy' in title_lower:
+                                        brand = 'Momcozy'
+                                    elif 'nanit' in title_lower:
+                                        brand = 'Nanit'
+                                    elif 'owlet' in title_lower:
+                                        brand = 'Owlet'
+                                    elif 'philips' in title_lower:
+                                        brand = 'Philips'
+                                    elif 'vtech' in title_lower:
+                                        brand = 'VTech'
+
+                                    # 只添加Baby类别的产品
+                                    if category == 'Baby':
+                                        products.append({
+                                            'name': title,
+                                            'brand': brand,
+                                            'category': category,
+                                            'url': full_url,
+                                            'channel': 'JB Hi-Fi'
+                                        })
+                                        print(f'    ✅ {brand} - {title}')
                         except:
                             pass
 
@@ -481,7 +506,7 @@ def search_eufy_baby():
 
         browser.close()
 
-    print(f'  共找到 {len(products)} 个eufy baby产品')
+    print(f'  共找到 {len(products)} 个母婴产品')
     return products
 
 
@@ -495,7 +520,7 @@ def main():
     eufy_products = search_all_eufy_cameras()
     competitor_products = search_competitor_cameras()
     doorbell_lock_products = search_doorbell_lock()
-    eufy_baby_products = search_eufy_baby()
+    baby_products = search_baby_products()
 
     # 给camera产品添加category（如果还没有的话）
     for p in eufy_products:
@@ -505,7 +530,7 @@ def main():
         if 'category' not in p:
             p['category'] = 'Security Camera'
 
-    all_products = eufy_products + competitor_products + doorbell_lock_products + eufy_baby_products
+    all_products = eufy_products + competitor_products + doorbell_lock_products + baby_products
 
     # 验证产品数据
     print(f'\n🔍 验证产品数据...')

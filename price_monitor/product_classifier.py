@@ -19,8 +19,14 @@ def classify_product(product_name, brand=''):
     name_lower = product_name.lower()
 
     # 1. 母婴产品判断（最高优先级）
-    baby_keywords = ['baby', 'breast pump', 'nursing', 'infant', 'newborn', 'sock', 'monitor baby']
-    if any(kw in name_lower for kw in baby_keywords):
+    baby_keywords = ['baby', 'breast pump', 'nursing', 'infant', 'newborn', 'sock', 'monitor baby', 'momcozy', 'nanit', 'owlet']
+    # 排除不是baby产品的关键词
+    exclude_keywords = ['lock', 'deadbolt', 'doorbell']
+
+    has_baby_keyword = any(kw in name_lower for kw in baby_keywords)
+    has_exclude = any(ex in name_lower for ex in exclude_keywords)
+
+    if has_baby_keyword and not has_exclude:
         return 'Baby'
 
     # 2. 门铃判断

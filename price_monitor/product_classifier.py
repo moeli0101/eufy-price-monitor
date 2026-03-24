@@ -14,16 +14,21 @@ def classify_product(product_name, brand=''):
         brand: 品牌名称（可选）
 
     Returns:
-        str: 'Video Doorbell', 'Smart Lock', 或 'Security Camera'
+        str: 'Video Doorbell', 'Smart Lock', 'Security Camera', 或 'Baby'
     """
     name_lower = product_name.lower()
 
-    # 1. 门铃判断（最高优先级）
+    # 1. 母婴产品判断（最高优先级）
+    baby_keywords = ['baby', 'breast pump', 'nursing', 'infant', 'newborn', 'sock', 'monitor baby']
+    if any(kw in name_lower for kw in baby_keywords):
+        return 'Baby'
+
+    # 2. 门铃判断
     doorbell_keywords = ['doorbell', 'door bell', 'video door']
     if any(kw in name_lower for kw in doorbell_keywords):
         return 'Video Doorbell'
 
-    # 2. 门锁判断
+    # 3. 门锁判断
     lock_keywords = ['lock', 'deadbolt', 'door lock', 'smart lock']
     lock_exclusions = ['unlock', 'lock kit']  # 排除词
 
@@ -33,7 +38,7 @@ def classify_product(product_name, brand=''):
     if is_lock and not has_exclusion:
         return 'Smart Lock'
 
-    # 3. 默认为安防相机
+    # 4. 默认为安防相机
     return 'Security Camera'
 
 
@@ -98,7 +103,7 @@ def validate_product_data(product):
             return False, f"Missing required field: {field}"
 
     # 验证category值
-    valid_categories = ['Security Camera', 'Video Doorbell', 'Smart Lock']
+    valid_categories = ['Security Camera', 'Video Doorbell', 'Smart Lock', 'Baby']
     if product['category'] not in valid_categories:
         return False, f"Invalid category: {product['category']}"
 

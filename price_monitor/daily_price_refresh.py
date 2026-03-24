@@ -396,6 +396,95 @@ def scrape_prices(products):
 
     return results
 
+
+def search_eufy_baby():
+    """搜索eufy baby母婴产品"""
+    print('\n🍼 搜索eufy baby产品...')
+
+    products = []
+
+    with sync_playwright() as p:
+        # 添加反爬虫对策
+        browser = p.chromium.launch(
+            headless=True,
+            args=[
+                '--disable-blink-features=AutomationControlled',
+                '--no-sandbox',
+                '--disable-dev-shm-usage'
+            ]
+        )
+
+        # 搜索关键词列表
+        search_terms = ['eufy baby', 'eufy baby monitor', 'eufy breast pump']
+
+        for term in search_terms:
+            print(f'  搜索: {term}')
+            page = browser.new_page(
+                user_agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                viewport={'width': 1920, 'height': 1080}
+            )
+
+            try:
+                search_url = f'https://www.jbhifi.com.au/search?query={term.replace(" ", "+")}'
+                page.goto(search_url, wait_until='domcontentloaded', timeout=30000)
+                time.sleep(5)
+
+                content = page.content()
+                product_urls = re.findall(r'href="(/products/[^"]+)"', content)
+                unique_urls = list(set(product_urls))
+
+                print(f'    找到 {len(unique_urls)} 个产品链接')
+
+                for url in unique_urls[:20]:  # 取前20个
+                    full_url = f'https://www.jbhifi.com.au{url}'
+
+                    # 避免重复
+                    if any(p['url'] == full_url for p in products):
+                        continue
+
+                    try:
+                        detail_page = browser.new_page()
+                        detail_page.goto(full_url, timeout=12000)
+                        time.sleep(1)
+
+                        try:
+                            title = detail_page.locator('h1').first.inner_text()
+                            title_lower = title.lower()
+
+                            # 确认是eufy baby产品
+                            if 'eufy' in title_lower and any(kw in title_lower for kw in ['baby', 'breast', 'pump', 'nursing', 'infant', 'monitor']):
+                                # 使用统一分类器判断是否是有效产品
+                                if is_valid_product(title):
+                                    category = classify_product(title, 'eufy')
+                                    products.append({
+                                        'name': title,
+                                        'brand': 'eufy',
+                                        'category': category,
+                                        'url': full_url,
+                                        'channel': 'JB Hi-Fi'
+                                    })
+                                    print(f'    ✅ {title}')
+                        except:
+                            pass
+
+                        detail_page.close()
+                        time.sleep(0.3)
+
+                    except:
+                        pass
+
+            except Exception as e:
+                print(f'    ⚠️ 搜索失败: {e}')
+
+            page.close()
+            time.sleep(1)
+
+        browser.close()
+
+    print(f'  共找到 {len(products)} 个eufy baby产品')
+    return products
+
+
 def main():
     print('=' * 70)
     print('🤖 每日价格自动刷新')
@@ -406,6 +495,7 @@ def main():
     eufy_products = search_all_eufy_cameras()
     competitor_products = search_competitor_cameras()
     doorbell_lock_products = search_doorbell_lock()
+    eufy_baby_products = search_eufy_baby()
 
     # 给camera产品添加category（如果还没有的话）
     for p in eufy_products:
@@ -415,7 +505,7 @@ def main():
         if 'category' not in p:
             p['category'] = 'Security Camera'
 
-    all_products = eufy_products + competitor_products + doorbell_lock_products
+    all_products = eufy_products + competitor_products + doorbell_lock_products + eufy_baby_products
 
     # 验证产品数据
     print(f'\n🔍 验证产品数据...')

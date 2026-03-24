@@ -3020,6 +3020,14 @@
         "is_on_sale": false,
         "discount_percentage": 0,
         "status": "success"
+      },
+      {
+        "date": "2026-03-24",
+        "price": 99.0,
+        "original_price": 99.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
       }
     ]
   },
@@ -3525,6 +3533,14 @@
         "is_on_sale": true,
         "discount_percentage": 3,
         "status": "success"
+      },
+      {
+        "date": "2026-03-24",
+        "price": 464.0,
+        "original_price": 477.0,
+        "is_on_sale": true,
+        "discount_percentage": 3,
+        "status": "success"
       }
     ]
   },
@@ -3718,6 +3734,14 @@
       },
       {
         "date": "2026-03-23",
+        "price": 269.0,
+        "original_price": 269.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      },
+      {
+        "date": "2026-03-24",
         "price": 269.0,
         "original_price": 269.0,
         "is_on_sale": false,
@@ -4047,6 +4071,14 @@
       },
       {
         "date": "2026-03-22",
+        "price": 149.0,
+        "original_price": 269.0,
+        "is_on_sale": true,
+        "discount_percentage": 45,
+        "status": "success"
+      },
+      {
+        "date": "2026-03-24",
         "price": 149.0,
         "original_price": 269.0,
         "is_on_sale": true,
@@ -4391,6 +4423,14 @@
       },
       {
         "date": "2026-03-23",
+        "price": 129.0,
+        "original_price": 179.0,
+        "is_on_sale": true,
+        "discount_percentage": 28,
+        "status": "success"
+      },
+      {
+        "date": "2026-03-24",
         "price": 129.0,
         "original_price": 179.0,
         "is_on_sale": true,
@@ -5380,6 +5420,14 @@
         "is_on_sale": false,
         "discount_percentage": 0,
         "status": "success"
+      },
+      {
+        "date": "2026-03-24",
+        "price": 279.0,
+        "original_price": 279.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
       }
     ]
   },
@@ -5492,6 +5540,14 @@
       },
       {
         "date": "2026-03-23",
+        "price": 374.0,
+        "original_price": 374.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      },
+      {
+        "date": "2026-03-24",
         "price": 374.0,
         "original_price": 374.0,
         "is_on_sale": false,
@@ -5632,6 +5688,14 @@
       },
       {
         "date": "2026-03-23",
+        "price": 134.99,
+        "original_price": 134.99,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      },
+      {
+        "date": "2026-03-24",
         "price": 134.99,
         "original_price": 134.99,
         "is_on_sale": false,
@@ -5869,6 +5933,14 @@
         "is_on_sale": true,
         "discount_percentage": 25,
         "status": "success"
+      },
+      {
+        "date": "2026-03-24",
+        "price": 59.0,
+        "original_price": 79.0,
+        "is_on_sale": true,
+        "discount_percentage": 25,
+        "status": "success"
       }
     ]
   },
@@ -6070,6 +6142,14 @@
         "is_on_sale": true,
         "discount_percentage": 20,
         "status": "success"
+      },
+      {
+        "date": "2026-03-24",
+        "price": 319.0,
+        "original_price": 399.0,
+        "is_on_sale": true,
+        "discount_percentage": 20,
+        "status": "success"
       }
     ]
   },
@@ -6107,6 +6187,14 @@
     "price_history": [
       {
         "date": "2026-03-23",
+        "price": 249.0,
+        "original_price": 329.0,
+        "is_on_sale": true,
+        "discount_percentage": 24,
+        "status": "success"
+      },
+      {
+        "date": "2026-03-24",
         "price": 249.0,
         "original_price": 329.0,
         "is_on_sale": true,
@@ -6183,6 +6271,14 @@
     "price_history": [
       {
         "date": "2026-03-23",
+        "price": 129.0,
+        "original_price": 129.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      },
+      {
+        "date": "2026-03-24",
         "price": 129.0,
         "original_price": 129.0,
         "is_on_sale": false,
@@ -7145,6 +7241,108 @@
         "date": "2026-03-24",
         "price": 699.0,
         "original_price": 699.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "ring_ring_floodlight_cam_wired_plus_black": {
+    "product_name": "Ring Floodlight Cam Wired Plus (Black)",
+    "brand": "Ring",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/ring-floodlight-cam-wired-plus-black",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-24",
+        "price": 179.0,
+        "original_price": 269.0,
+        "is_on_sale": true,
+        "discount_percentage": 33,
+        "status": "success"
+      }
+    ]
+  },
+  "ring_ring_floodlight_security_camera_pro_2k_wired_white": {
+    "product_name": "Ring Floodlight Security Camera Pro 2K Wired (White)",
+    "brand": "Ring",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/ring-floodlight-security-camera-pro-2k-wired-white",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-24",
+        "price": 349.0,
+        "original_price": 349.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "tp-link_tp_link_tapo_c460_4k_solar_powered_security_camera_kit": {
+    "product_name": "TP-Link Tapo C460 4K Solar-Powered Security Camera Kit",
+    "brand": "TP-Link",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/tp-link-tapo-c460-4k-solar-powered-security-camera-kit",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-24",
+        "price": 279.0,
+        "original_price": 279.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "other_oricom_sc640_6\"_video_baby_monitor": {
+    "product_name": "Oricom SC640 6\" Video Baby Monitor",
+    "brand": "Other",
+    "category": "Baby",
+    "url": "https://www.jbhifi.com.au/products/oricom-sc640-6-video-baby-monitor",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-24",
+        "price": 179.0,
+        "original_price": 179.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "momcozy_momcozy_v1_pro_hospital_grade_wearable_breast_pump": {
+    "product_name": "Momcozy V1 Pro Hospital-Grade Wearable Breast Pump",
+    "brand": "Momcozy",
+    "category": "Baby",
+    "url": "https://www.jbhifi.com.au/products/momcozy-v1-pro-hospital-grade-wearable-breast-pump",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-24",
+        "price": 299.0,
+        "original_price": 299.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "momcozy_momcozy_kleanpal_pro_baby_bottle_washer": {
+    "product_name": "Momcozy KleanPal Pro Baby Bottle Washer",
+    "brand": "Momcozy",
+    "category": "Baby",
+    "url": "https://www.jbhifi.com.au/products/momcozy-kleanpal-pro-baby-bottle-washer",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-03-24",
+        "price": 549.0,
+        "original_price": 549.0,
         "is_on_sale": false,
         "discount_percentage": 0,
         "status": "success"

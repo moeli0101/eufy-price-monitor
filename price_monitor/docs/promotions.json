@@ -522,7 +522,7 @@
       "sale_price": 197.0,
       "discount_percentage": 17.6,
       "save_amount": 42.0,
-      "duration_days": 1,
+      "duration_days": 5,
       "status": "active"
     },
     {
@@ -582,7 +582,7 @@
       "sale_price": 59.0,
       "discount_percentage": 33.7,
       "save_amount": 30.0,
-      "duration_days": 4,
+      "duration_days": 5,
       "status": "active"
     },
     {
@@ -597,7 +597,7 @@
       "sale_price": 199.0,
       "discount_percentage": 33.4,
       "save_amount": 100.0,
-      "duration_days": 4,
+      "duration_days": 5,
       "status": "active"
     },
     {
@@ -612,7 +612,7 @@
       "sale_price": 249.0,
       "discount_percentage": 10.8,
       "save_amount": 30.0,
-      "duration_days": 3,
+      "duration_days": 5,
       "status": "active"
     },
     {
@@ -642,7 +642,7 @@
       "sale_price": 149.0,
       "discount_percentage": 44.6,
       "save_amount": 120.0,
-      "duration_days": 3,
+      "duration_days": 5,
       "status": "active"
     },
     {
@@ -687,7 +687,7 @@
       "sale_price": 129.0,
       "discount_percentage": 27.9,
       "save_amount": 50.0,
-      "duration_days": 4,
+      "duration_days": 5,
       "status": "active"
     },
     {
@@ -927,7 +927,7 @@
       "sale_price": 349.0,
       "discount_percentage": 12.5,
       "save_amount": 50.0,
-      "duration_days": 3,
+      "duration_days": 4,
       "status": "active"
     },
     {
@@ -972,7 +972,7 @@
       "sale_price": 279.0,
       "discount_percentage": 20.1,
       "save_amount": 70.0,
-      "duration_days": 3,
+      "duration_days": 4,
       "status": "active"
     },
     {
@@ -987,7 +987,7 @@
       "sale_price": 894.0,
       "discount_percentage": 31.2,
       "save_amount": 405.0,
-      "duration_days": 1,
+      "duration_days": 3,
       "status": "active"
     },
     {
@@ -1002,7 +1002,7 @@
       "sale_price": 179.0,
       "discount_percentage": 33.5,
       "save_amount": 90.0,
-      "duration_days": 1,
+      "duration_days": 3,
       "status": "active"
     },
     {
@@ -1032,7 +1032,7 @@
       "sale_price": 59.0,
       "discount_percentage": 25.3,
       "save_amount": 20.0,
-      "duration_days": 2,
+      "duration_days": 3,
       "status": "active"
     },
     {
@@ -1062,7 +1062,7 @@
       "sale_price": 319.0,
       "discount_percentage": 20.1,
       "save_amount": 80.0,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -1092,7 +1092,7 @@
       "sale_price": 249.0,
       "discount_percentage": 24.3,
       "save_amount": 80.0,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -1302,6 +1302,231 @@
       "sale_price": 279.0,
       "discount_percentage": 20.1,
       "save_amount": 70.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "arlo_arlo_essential_pan_tilt_2k_outdoor_security_camera",
+      "product_name": "Arlo Essential Pan & Tilt 2K Outdoor Security Camera",
+      "brand": "Arlo",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/arlo-essential-pan-tilt-2k-outdoor-security-camera",
+      "start_date": "2026-03-24",
+      "end_date": null,
+      "original_price": 119.0,
+      "sale_price": 74.0,
+      "discount_percentage": 37.8,
+      "save_amount": 45.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "ring_ring_spotlight_security_camera_pro_2k_plug_in_white",
+      "product_name": "Ring Spotlight Security Camera Pro 2K Plug-in (White)",
+      "brand": "Ring",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/ring-spotlight-security-camera-pro-2k-plug-in-white",
+      "start_date": "2026-03-24",
+      "end_date": null,
+      "original_price": 299.0,
+      "sale_price": 229.0,
+      "discount_percentage": 23.4,
+      "save_amount": 70.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "ring_ring_spotlight_cam_plus_plug_in_white",
+      "product_name": "Ring Spotlight Cam Plus Plug-In (White)",
+      "brand": "Ring",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/ring-spotlight-cam-plus-plug-in-white",
+      "start_date": "2026-03-24",
+      "end_date": null,
+      "original_price": 259.0,
+      "sale_price": 99.0,
+      "discount_percentage": 61.8,
+      "save_amount": 160.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "tp-link_tp_link_tapo_2k_solar_powered_pan_tilt_security_camera_kit",
+      "product_name": "TP-Link Tapo 2K Solar-Powered Pan/Tilt Security Camera Kit",
+      "brand": "TP-Link",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-solar-powered-pan-tilt-security-camera-kit",
+      "start_date": "2026-03-24",
+      "end_date": null,
+      "original_price": 199.0,
+      "sale_price": 169.0,
+      "discount_percentage": 15.1,
+      "save_amount": 30.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "swann_swann_4k_advancedx_series_nvr_security_system_[6_camera_kit]",
+      "product_name": "Swann 4K AdvancedX Series NVR Security System [6 Camera Kit]",
+      "brand": "Swann",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/swann-4k-advancedx-series-nvr-security-system-6-camera-kit",
+      "start_date": "2026-03-24",
+      "end_date": null,
+      "original_price": 999.0,
+      "sale_price": 799.0,
+      "discount_percentage": 20.0,
+      "save_amount": 200.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "swann_swann_4k_floodlight_security_camera",
+      "product_name": "Swann 4K Floodlight Security Camera",
+      "brand": "Swann",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/swann-4k-floodlight-security-camera",
+      "start_date": "2026-03-24",
+      "end_date": null,
+      "original_price": 299.0,
+      "sale_price": 199.0,
+      "discount_percentage": 33.4,
+      "save_amount": 100.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "other_oricom_smart_hd_baby_monitor_with_remote",
+      "product_name": "Oricom Smart HD Baby Monitor with Remote",
+      "brand": "Other",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/oricom-smart-hd-baby-monitor-with-remote",
+      "start_date": "2026-03-24",
+      "end_date": null,
+      "original_price": 179.0,
+      "sale_price": 159.0,
+      "discount_percentage": 11.2,
+      "save_amount": 20.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "other_oricom_babysense7_breathing_movement_monitor",
+      "product_name": "Oricom BabySense7 Breathing Movement Monitor",
+      "brand": "Other",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/oricom-babysense7-breathing-movement-monitor",
+      "start_date": "2026-03-24",
+      "end_date": null,
+      "original_price": 249.0,
+      "sale_price": 199.0,
+      "discount_percentage": 20.1,
+      "save_amount": 50.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "other_uniden_bw2511_2_8\"_baby_monitor",
+      "product_name": "Uniden BW2511 2.8\" Baby Monitor",
+      "brand": "Other",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/uniden-bw2511-2-8-baby-monitor",
+      "start_date": "2026-03-24",
+      "end_date": null,
+      "original_price": 99.0,
+      "sale_price": 68.0,
+      "discount_percentage": 31.3,
+      "save_amount": 31.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "other_oricom_smart_remote_5_pan_tilt_baby_monitor",
+      "product_name": "Oricom Smart Remote 5 Pan & Tilt Baby Monitor",
+      "brand": "Other",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/oricom-smart-remote-5-pan-tilt-baby-monitor",
+      "start_date": "2026-03-24",
+      "end_date": null,
+      "original_price": 329.0,
+      "sale_price": 299.0,
+      "discount_percentage": 9.1,
+      "save_amount": 30.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "vtech_vtech_bm5250n_5\"_full_colour_video_audio_baby_monitor",
+      "product_name": "Vtech BM5250N 5\" Full Colour Video & Audio Baby Monitor",
+      "brand": "VTech",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/vtech-bm5250n-5-full-colour-video-audio-baby-monitor",
+      "start_date": "2026-03-24",
+      "end_date": null,
+      "original_price": 179.0,
+      "sale_price": 119.0,
+      "discount_percentage": 33.5,
+      "save_amount": 60.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "other_medela_harmony_manual_breast_pump",
+      "product_name": "Medela Harmony Manual Breast Pump",
+      "brand": "Other",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/medela-harmony-manual-breast-pump",
+      "start_date": "2026-03-24",
+      "end_date": null,
+      "original_price": 74.0,
+      "sale_price": 64.0,
+      "discount_percentage": 13.5,
+      "save_amount": 10.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "other_medela_motion_inbra_wearable_breast_pump_single",
+      "product_name": "Medela Motion InBra Wearable Breast Pump (Single)",
+      "brand": "Other",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/medela-motion-inbra-wearable-breast-pump-single",
+      "start_date": "2026-03-24",
+      "end_date": null,
+      "original_price": 239.0,
+      "sale_price": 219.0,
+      "discount_percentage": 8.4,
+      "save_amount": 20.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "other_medela_motion_inbra_wearable_breast_pump_double",
+      "product_name": "Medela Motion InBra Wearable Breast Pump (Double)",
+      "brand": "Other",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/medela-motion-inbra-wearable-breast-pump-double",
+      "start_date": "2026-03-24",
+      "end_date": null,
+      "original_price": 379.0,
+      "sale_price": 339.0,
+      "discount_percentage": 10.6,
+      "save_amount": 40.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "ring_ring_floodlight_cam_wired_plus_black",
+      "product_name": "Ring Floodlight Cam Wired Plus (Black)",
+      "brand": "Ring",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/ring-floodlight-cam-wired-plus-black",
+      "start_date": "2026-03-24",
+      "end_date": null,
+      "original_price": 269.0,
+      "sale_price": 179.0,
+      "discount_percentage": 33.5,
+      "save_amount": 90.0,
       "duration_days": 1,
       "status": "active"
     }

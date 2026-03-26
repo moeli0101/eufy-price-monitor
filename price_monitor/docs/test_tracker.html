@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>价格追踪测试</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .card { border: 1px solid #ddd; padding: 15px; margin: 10px 0; border-radius: 8px; }
+        .error { color: red; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+    <h1>价格追踪数据测试</h1>
+    <div id="status"></div>
+    <div id="output"></div>
+
+    <script>
+        async function testData() {
+            const statusDiv = document.getElementById('status');
+            const outputDiv = document.getElementById('output');
+
+            try {
+                statusDiv.innerHTML = '<p class="success">📡 正在加载数据...</p>';
+
+                // 加载历史数据
+                const historyResponse = await fetch('price_history.json');
+                const trackerHistory = await historyResponse.json();
+
+                // 加载最新产品数据
+                const productsResponse = await fetch('price_results_latest.json');
+                const rawProducts = await productsResponse.json();
+
+                statusDiv.innerHTML = `
+                    <p class="success">✅ 数据加载成功！</p>
+                    <p>产品数量: ${rawProducts.length}</p>
+                    <p>历史数据: ${Object.keys(trackerHistory).length} 个产品</p>
+                `;
+
+                // 标准化产品数据
+                const trackerAllProducts = rawProducts.map(product => {
+                    const id = (product.brand + '_' + product.name)
+                        .toLowerCase()
+                        .replace(/[^a-z0-9]+/g, '_')
+                        .replace(/^_+|_+$/g, '');
+
+                    let isOnSale = false;
+                    if (trackerHistory[id] && trackerHistory[id].price_history.length > 0) {
+                        const latestHistory = trackerHistory[id].price_history[trackerHistory[id].price_history.length - 1];
+                        isOnSale = latestHistory.is_on_sale || false;
+                    }
+
+                    return {
+                        id: id,
+                        product_name: product.name,
+                        brand: product.brand,
+                        category: product.category,
+                        url: product.url,
+                        current_price: product.price,
+                        is_on_sale: isOnSale
+                    };
+                });
+
+                // 显示前5个产品
+                let html = '<h2>前5个产品:</h2>';
+                trackerAllProducts.slice(0, 5).forEach((product, index) => {
+                    const hasHistory = trackerHistory[product.id] && trackerHistory[product.id].price_history.length > 0;
+                    html += `
+                        <div class="card">
+                            <h3>${index + 1}. ${product.product_name}</h3>
+                            <p><strong>品牌:</strong> ${product.brand}</p>
+                            <p><strong>分类:</strong> ${product.category}</p>
+                            <p><strong>价格:</strong> $${product.current_price}</p>
+                            <p><strong>促销:</strong> ${product.is_on_sale ? '是 🔥' : '否'}</p>
+                            <p><strong>ID:</strong> ${product.id}</p>
+                            <p><strong>有历史数据:</strong> ${hasHistory ? '✅' : '❌'}</p>
+                            ${hasHistory ? `<p><strong>历史记录数:</strong> ${trackerHistory[product.id].price_history.length}</p>` : ''}
+                        </div>
+                    `;
+                });
+
+                outputDiv.innerHTML = html;
+
+            } catch (error) {
+                statusDiv.innerHTML = `<p class="error">❌ 错误: ${error.message}</p>`;
+                console.error('详细错误:', error);
+            }
+        }
+
+        testData();
+    </script>
+</body>
+</html>

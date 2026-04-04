@@ -42,7 +42,7 @@
       "sale_price": 199.0,
       "discount_percentage": 26.0,
       "save_amount": 70.0,
-      "duration_days": 14,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -76,51 +76,6 @@
       "status": "active"
     },
     {
-      "product_id": "ring_ring_video_doorbell_wired",
-      "product_name": "Ring Video Doorbell (Wired)",
-      "brand": "Ring",
-      "category": "Video Doorbell",
-      "url": "https://www.jbhifi.com.au/products/ring-video-doorbell-wired",
-      "start_date": "2026-03-20",
-      "end_date": null,
-      "original_price": 89.0,
-      "sale_price": 59.0,
-      "discount_percentage": 33.7,
-      "save_amount": 30.0,
-      "duration_days": 12,
-      "status": "active"
-    },
-    {
-      "product_id": "eufy_eufy_c31_video_doorbell",
-      "product_name": "eufy C31 Video Doorbell",
-      "brand": "eufy",
-      "category": "Video Doorbell",
-      "url": "https://www.jbhifi.com.au/products/eufy-c31-video-doorbell",
-      "start_date": "2026-03-20",
-      "end_date": null,
-      "original_price": 299.0,
-      "sale_price": 199.0,
-      "discount_percentage": 33.4,
-      "save_amount": 100.0,
-      "duration_days": 12,
-      "status": "active"
-    },
-    {
-      "product_id": "eufy_eufy_security_e330_video_smart_lock",
-      "product_name": "eufy Security E330 Video Smart Lock",
-      "brand": "eufy",
-      "category": "Smart Lock",
-      "url": "https://www.jbhifi.com.au/products/eufy-security-e330-video-smart-lock",
-      "start_date": "2026-03-20",
-      "end_date": null,
-      "original_price": 599.0,
-      "sale_price": 479.0,
-      "discount_percentage": 20.0,
-      "save_amount": 120.0,
-      "duration_days": 11,
-      "status": "active"
-    },
-    {
       "product_id": "other_aqara_smart_door_lock_a100",
       "product_name": "Aqara Smart Door Lock A100",
       "brand": "Other",
@@ -132,7 +87,7 @@
       "sale_price": 299.0,
       "discount_percentage": 33.4,
       "save_amount": 150.0,
-      "duration_days": 15,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -151,21 +106,6 @@
       "status": "active"
     },
     {
-      "product_id": "swann_swann_evo_2k_solar_outdoor_security_camera",
-      "product_name": "Swann EVO 2K Solar Outdoor Security Camera",
-      "brand": "Swann",
-      "category": "Security Camera",
-      "url": "https://www.jbhifi.com.au/products/swann-evo-2k-solar-outdoor-security-camera",
-      "start_date": "2026-03-21",
-      "end_date": null,
-      "original_price": 179.0,
-      "sale_price": 99.0,
-      "discount_percentage": 44.7,
-      "save_amount": 80.0,
-      "duration_days": 5,
-      "status": "active"
-    },
-    {
       "product_id": "arlo_arlo_ultra_3_4k_outdoor_security_camera_kit_+_12m_subscripti",
       "product_name": "Arlo Ultra 3 4K Outdoor Security Camera Kit + 12M Subscription (4 Pack)",
       "brand": "Arlo",
@@ -178,21 +118,6 @@
       "discount_percentage": 31.2,
       "save_amount": 405.0,
       "duration_days": 10,
-      "status": "active"
-    },
-    {
-      "product_id": "tp-link_tp_link_tapo_2k_pan_tilt_ai_home_security_wi_fi_camera",
-      "product_name": "TP-Link Tapo 2K Pan/Tilt AI Home Security Wi-Fi Camera",
-      "brand": "TP-Link",
-      "category": "Security Camera",
-      "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-pan-tilt-ai-home-security-wi-fi-camera",
-      "start_date": "2026-03-22",
-      "end_date": null,
-      "original_price": 79.0,
-      "sale_price": 59.0,
-      "discount_percentage": 25.3,
-      "save_amount": 20.0,
-      "duration_days": 8,
       "status": "active"
     },
     {
@@ -253,21 +178,6 @@
       "discount_percentage": 22.4,
       "save_amount": 49.0,
       "duration_days": 1,
-      "status": "active"
-    },
-    {
-      "product_id": "tp-link_tp_link_tapo_outdoor_pan_tilt_wifi_security_camera",
-      "product_name": "TP-Link Tapo Outdoor Pan& Tilt WiFi Security Camera",
-      "brand": "TP-Link",
-      "category": "Security Camera",
-      "url": "https://www.jbhifi.com.au/products/tp-link-tapo-outdoor-pan-tilt-wifi-security-camera",
-      "start_date": "2026-03-23",
-      "end_date": null,
-      "original_price": 89.0,
-      "sale_price": 69.0,
-      "discount_percentage": 22.5,
-      "save_amount": 20.0,
-      "duration_days": 8,
       "status": "active"
     },
     {
@@ -342,7 +252,7 @@
       "sale_price": 199.0,
       "discount_percentage": 20.1,
       "save_amount": 50.0,
-      "duration_days": 10,
+      "duration_days": 12,
       "status": "active"
     },
     {
@@ -391,21 +301,6 @@
       "status": "active"
     },
     {
-      "product_id": "ring_ring_floodlight_cam_pro_2nd_gen_wired_security_camera_white",
-      "product_name": "Ring Floodlight Cam Pro(2nd Gen) Wired Security Camera (White)",
-      "brand": "Ring",
-      "category": "Security Camera",
-      "url": "https://www.jbhifi.com.au/products/ring-floodlight-cam-pro2nd-gen-wired-security-camera-white",
-      "start_date": "2026-03-28",
-      "end_date": null,
-      "original_price": 429.0,
-      "sale_price": 359.0,
-      "discount_percentage": 16.3,
-      "save_amount": 70.0,
-      "duration_days": 4,
-      "status": "active"
-    },
-    {
       "product_id": "other_dream_sight_dream_sock_duo_baby_monitor_mint",
       "product_name": "Dream Sight & Dream Sock Duo Baby Monitor (Mint)",
       "brand": "Other",
@@ -417,7 +312,7 @@
       "sale_price": 629.0,
       "discount_percentage": 10.0,
       "save_amount": 70.0,
-      "duration_days": 3,
+      "duration_days": 4,
       "status": "active"
     },
     {
@@ -432,7 +327,7 @@
       "sale_price": 222.0,
       "discount_percentage": 20.4,
       "save_amount": 57.0,
-      "duration_days": 3,
+      "duration_days": 4,
       "status": "active"
     },
     {
@@ -447,7 +342,7 @@
       "sale_price": 479.0,
       "discount_percentage": 20.0,
       "save_amount": 120.0,
-      "duration_days": 3,
+      "duration_days": 4,
       "status": "active"
     },
     {
@@ -462,7 +357,7 @@
       "sale_price": 269.0,
       "discount_percentage": 10.0,
       "save_amount": 30.0,
-      "duration_days": 2,
+      "duration_days": 4,
       "status": "active"
     },
     {
@@ -477,7 +372,7 @@
       "sale_price": 89.0,
       "discount_percentage": 19.8,
       "save_amount": 22.0,
-      "duration_days": 3,
+      "duration_days": 4,
       "status": "active"
     },
     {
@@ -492,7 +387,7 @@
       "sale_price": 389.0,
       "discount_percentage": 20.4,
       "save_amount": 100.0,
-      "duration_days": 3,
+      "duration_days": 4,
       "status": "active"
     },
     {
@@ -507,7 +402,7 @@
       "sale_price": 239.0,
       "discount_percentage": 20.1,
       "save_amount": 60.0,
-      "duration_days": 3,
+      "duration_days": 4,
       "status": "active"
     },
     {
@@ -522,7 +417,7 @@
       "sale_price": 319.0,
       "discount_percentage": 21.0,
       "save_amount": 85.0,
-      "duration_days": 3,
+      "duration_days": 4,
       "status": "active"
     },
     {
@@ -552,7 +447,7 @@
       "sale_price": 239.0,
       "discount_percentage": 20.1,
       "save_amount": 60.0,
-      "duration_days": 3,
+      "duration_days": 4,
       "status": "active"
     },
     {
@@ -567,7 +462,7 @@
       "sale_price": 169.0,
       "discount_percentage": 10.6,
       "save_amount": 20.0,
-      "duration_days": 3,
+      "duration_days": 4,
       "status": "active"
     },
     {
@@ -582,7 +477,7 @@
       "sale_price": 79.0,
       "discount_percentage": 20.2,
       "save_amount": 20.0,
-      "duration_days": 3,
+      "duration_days": 4,
       "status": "active"
     },
     {
@@ -597,7 +492,7 @@
       "sale_price": 139.0,
       "discount_percentage": 22.3,
       "save_amount": 40.0,
-      "duration_days": 3,
+      "duration_days": 4,
       "status": "active"
     },
     {
@@ -627,7 +522,22 @@
       "sale_price": 439.0,
       "discount_percentage": 20.0,
       "save_amount": 110.0,
-      "duration_days": 3,
+      "duration_days": 4,
+      "status": "active"
+    },
+    {
+      "product_id": "arlo_arlo_ultra_2_4k_uhd_wire_free_security_spotlight_camera_syst",
+      "product_name": "Arlo Ultra 2 4K UHD Wire-Free Security Spotlight Camera System – 2 Cameras & Smart Hub",
+      "brand": "Arlo",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/arlo-ultra-2-4k-uhd-wire-free-security-spotlight-camera-system-2-cameras-smart-hub",
+      "start_date": "2026-04-04",
+      "end_date": null,
+      "original_price": 599.0,
+      "sale_price": 229.0,
+      "discount_percentage": 61.8,
+      "save_amount": 370.0,
+      "duration_days": 1,
       "status": "active"
     }
   ],
@@ -1875,6 +1785,111 @@
       "discount_percentage": 8.4,
       "save_amount": 20.0,
       "duration_days": 8,
+      "status": "ended"
+    },
+    {
+      "product_id": "ring_ring_floodlight_cam_pro_2nd_gen_wired_security_camera_white",
+      "product_name": "Ring Floodlight Cam Pro(2nd Gen) Wired Security Camera (White)",
+      "brand": "Ring",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/ring-floodlight-cam-pro2nd-gen-wired-security-camera-white",
+      "start_date": "2026-03-28",
+      "end_date": "2026-04-04",
+      "original_price": 429.0,
+      "sale_price": 359.0,
+      "discount_percentage": 16.3,
+      "save_amount": 70.0,
+      "duration_days": 4,
+      "status": "ended"
+    },
+    {
+      "product_id": "tp-link_tp_link_tapo_outdoor_pan_tilt_wifi_security_camera",
+      "product_name": "TP-Link Tapo Outdoor Pan& Tilt WiFi Security Camera",
+      "brand": "TP-Link",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/tp-link-tapo-outdoor-pan-tilt-wifi-security-camera",
+      "start_date": "2026-03-23",
+      "end_date": "2026-04-04",
+      "original_price": 89.0,
+      "sale_price": 69.0,
+      "discount_percentage": 22.5,
+      "save_amount": 20.0,
+      "duration_days": 8,
+      "status": "ended"
+    },
+    {
+      "product_id": "tp-link_tp_link_tapo_2k_pan_tilt_ai_home_security_wi_fi_camera",
+      "product_name": "TP-Link Tapo 2K Pan/Tilt AI Home Security Wi-Fi Camera",
+      "brand": "TP-Link",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-pan-tilt-ai-home-security-wi-fi-camera",
+      "start_date": "2026-03-22",
+      "end_date": "2026-04-04",
+      "original_price": 79.0,
+      "sale_price": 59.0,
+      "discount_percentage": 25.3,
+      "save_amount": 20.0,
+      "duration_days": 8,
+      "status": "ended"
+    },
+    {
+      "product_id": "swann_swann_evo_2k_solar_outdoor_security_camera",
+      "product_name": "Swann EVO 2K Solar Outdoor Security Camera",
+      "brand": "Swann",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/swann-evo-2k-solar-outdoor-security-camera",
+      "start_date": "2026-03-21",
+      "end_date": "2026-04-04",
+      "original_price": 179.0,
+      "sale_price": 99.0,
+      "discount_percentage": 44.7,
+      "save_amount": 80.0,
+      "duration_days": 5,
+      "status": "ended"
+    },
+    {
+      "product_id": "eufy_eufy_c31_video_doorbell",
+      "product_name": "eufy C31 Video Doorbell",
+      "brand": "eufy",
+      "category": "Video Doorbell",
+      "url": "https://www.jbhifi.com.au/products/eufy-c31-video-doorbell",
+      "start_date": "2026-03-20",
+      "end_date": "2026-04-04",
+      "original_price": 299.0,
+      "sale_price": 199.0,
+      "discount_percentage": 33.4,
+      "save_amount": 100.0,
+      "duration_days": 12,
+      "status": "ended"
+    },
+    {
+      "product_id": "ring_ring_video_doorbell_wired",
+      "product_name": "Ring Video Doorbell (Wired)",
+      "brand": "Ring",
+      "category": "Video Doorbell",
+      "url": "https://www.jbhifi.com.au/products/ring-video-doorbell-wired",
+      "start_date": "2026-03-20",
+      "end_date": "2026-04-04",
+      "original_price": 89.0,
+      "sale_price": 59.0,
+      "discount_percentage": 33.7,
+      "save_amount": 30.0,
+      "duration_days": 12,
+      "status": "ended"
+    },
+    {
+      "product_id": "eufy_eufy_security_e330_video_smart_lock",
+      "product_name": "eufy Security E330 Video Smart Lock",
+      "brand": "eufy",
+      "category": "Smart Lock",
+      "url": "https://www.jbhifi.com.au/products/eufy-security-e330-video-smart-lock",
+      "start_date": "2026-03-20",
+      "end_date": "2026-04-04",
+      "original_price": 599.0,
+      "sale_price": 479.0,
+      "discount_percentage": 20.0,
+      "save_amount": 120.0,
+      "duration_days": 11,
       "status": "ended"
     }
   ]

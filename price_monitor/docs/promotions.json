@@ -1,21 +1,6 @@
 {
   "active_promotions": [
     {
-      "product_id": "eufy_eufy_s4_nvr_poe_ptz_add_on_security_camera",
-      "product_name": "eufy S4 NVR POE PTZ Add-on Security Camera",
-      "brand": "eufy",
-      "category": "Security Camera",
-      "url": "https://www.jbhifi.com.au/products/eufy-s4-nvr-poe-ptz-add-on-security-camera",
-      "start_date": "2026-03-20",
-      "end_date": null,
-      "original_price": 449.0,
-      "sale_price": 359.0,
-      "discount_percentage": 20.0,
-      "save_amount": 90.0,
-      "duration_days": 9,
-      "status": "active"
-    },
-    {
       "product_id": "eufy_eufy_security_eufycam_3_4k_add_on_camera",
       "product_name": "eufy Security eufyCam 3 4K (Add-on Camera)",
       "brand": "eufy",
@@ -46,21 +31,6 @@
       "status": "active"
     },
     {
-      "product_id": "ring_ring_spotlight_cam_pro_plug_in_security_camera_white",
-      "product_name": "Ring Spotlight Cam Pro Plug-In Security Camera (White)",
-      "brand": "Ring",
-      "category": "Security Camera",
-      "url": "https://www.jbhifi.com.au/products/ring-spotlight-cam-pro-plug-in-security-camera-white",
-      "start_date": "2026-03-20",
-      "end_date": null,
-      "original_price": 399.0,
-      "sale_price": 319.0,
-      "discount_percentage": 20.1,
-      "save_amount": 80.0,
-      "duration_days": 2,
-      "status": "active"
-    },
-    {
       "product_id": "ring_ring_spotlight_cam_pro_wired_security_camera_white",
       "product_name": "Ring Spotlight Cam Pro Wired Security Camera (White)",
       "brand": "Ring",
@@ -88,21 +58,6 @@
       "discount_percentage": 31.0,
       "save_amount": 40.0,
       "duration_days": 2,
-      "status": "active"
-    },
-    {
-      "product_id": "ring_ring_outdoor_cam_pro_plug_in_security_camera_black",
-      "product_name": "Ring Outdoor Cam Pro Plug-In Security Camera (Black)",
-      "brand": "Ring",
-      "category": "Security Camera",
-      "url": "https://www.jbhifi.com.au/products/ring-outdoor-cam-pro-plug-in-security-camera-black",
-      "start_date": "2026-03-23",
-      "end_date": null,
-      "original_price": 329.0,
-      "sale_price": 249.0,
-      "discount_percentage": 24.3,
-      "save_amount": 80.0,
-      "duration_days": 6,
       "status": "active"
     },
     {
@@ -151,21 +106,6 @@
       "status": "active"
     },
     {
-      "product_id": "ring_ring_floodlight_cam_wired_plus_black",
-      "product_name": "Ring Floodlight Cam Wired Plus (Black)",
-      "brand": "Ring",
-      "category": "Security Camera",
-      "url": "https://www.jbhifi.com.au/products/ring-floodlight-cam-wired-plus-black",
-      "start_date": "2026-03-24",
-      "end_date": null,
-      "original_price": 269.0,
-      "sale_price": 179.0,
-      "discount_percentage": 33.5,
-      "save_amount": 90.0,
-      "duration_days": 7,
-      "status": "active"
-    },
-    {
       "product_id": "eufy_eufy_security_2k_indoor_camera",
       "product_name": "eufy Security 2K Indoor Camera",
       "brand": "eufy",
@@ -192,7 +132,7 @@
       "sale_price": 629.0,
       "discount_percentage": 10.0,
       "save_amount": 70.0,
-      "duration_days": 6,
+      "duration_days": 7,
       "status": "active"
     },
     {
@@ -207,7 +147,7 @@
       "sale_price": 222.0,
       "discount_percentage": 20.4,
       "save_amount": 57.0,
-      "duration_days": 6,
+      "duration_days": 7,
       "status": "active"
     },
     {
@@ -222,7 +162,7 @@
       "sale_price": 479.0,
       "discount_percentage": 20.0,
       "save_amount": 120.0,
-      "duration_days": 6,
+      "duration_days": 7,
       "status": "active"
     },
     {
@@ -237,7 +177,7 @@
       "sale_price": 269.0,
       "discount_percentage": 10.0,
       "save_amount": 30.0,
-      "duration_days": 6,
+      "duration_days": 7,
       "status": "active"
     },
     {
@@ -252,7 +192,7 @@
       "sale_price": 89.0,
       "discount_percentage": 19.8,
       "save_amount": 22.0,
-      "duration_days": 6,
+      "duration_days": 7,
       "status": "active"
     },
     {
@@ -267,7 +207,7 @@
       "sale_price": 389.0,
       "discount_percentage": 20.4,
       "save_amount": 100.0,
-      "duration_days": 6,
+      "duration_days": 7,
       "status": "active"
     },
     {
@@ -282,7 +222,7 @@
       "sale_price": 239.0,
       "discount_percentage": 20.1,
       "save_amount": 60.0,
-      "duration_days": 6,
+      "duration_days": 7,
       "status": "active"
     },
     {
@@ -297,7 +237,7 @@
       "sale_price": 319.0,
       "discount_percentage": 21.0,
       "save_amount": 85.0,
-      "duration_days": 6,
+      "duration_days": 7,
       "status": "active"
     },
     {
@@ -312,7 +252,7 @@
       "sale_price": 62.0,
       "discount_percentage": 21.5,
       "save_amount": 17.0,
-      "duration_days": 6,
+      "duration_days": 7,
       "status": "active"
     },
     {
@@ -327,7 +267,7 @@
       "sale_price": 239.0,
       "discount_percentage": 20.1,
       "save_amount": 60.0,
-      "duration_days": 6,
+      "duration_days": 7,
       "status": "active"
     },
     {
@@ -342,7 +282,7 @@
       "sale_price": 169.0,
       "discount_percentage": 10.6,
       "save_amount": 20.0,
-      "duration_days": 6,
+      "duration_days": 7,
       "status": "active"
     },
     {
@@ -357,7 +297,7 @@
       "sale_price": 79.0,
       "discount_percentage": 20.2,
       "save_amount": 20.0,
-      "duration_days": 6,
+      "duration_days": 7,
       "status": "active"
     },
     {
@@ -372,7 +312,7 @@
       "sale_price": 139.0,
       "discount_percentage": 22.3,
       "save_amount": 40.0,
-      "duration_days": 5,
+      "duration_days": 7,
       "status": "active"
     },
     {
@@ -402,7 +342,7 @@
       "sale_price": 439.0,
       "discount_percentage": 20.0,
       "save_amount": 110.0,
-      "duration_days": 6,
+      "duration_days": 7,
       "status": "active"
     },
     {
@@ -417,7 +357,7 @@
       "sale_price": 229.0,
       "discount_percentage": 61.8,
       "save_amount": 370.0,
-      "duration_days": 1,
+      "duration_days": 4,
       "status": "active"
     }
   ],
@@ -1890,6 +1830,66 @@
       "discount_percentage": 23.3,
       "save_amount": 100.0,
       "duration_days": 1,
+      "status": "ended"
+    },
+    {
+      "product_id": "eufy_eufy_s4_nvr_poe_ptz_add_on_security_camera",
+      "product_name": "eufy S4 NVR POE PTZ Add-on Security Camera",
+      "brand": "eufy",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/eufy-s4-nvr-poe-ptz-add-on-security-camera",
+      "start_date": "2026-03-20",
+      "end_date": "2026-04-07",
+      "original_price": 449.0,
+      "sale_price": 359.0,
+      "discount_percentage": 20.0,
+      "save_amount": 90.0,
+      "duration_days": 9,
+      "status": "ended"
+    },
+    {
+      "product_id": "ring_ring_floodlight_cam_wired_plus_black",
+      "product_name": "Ring Floodlight Cam Wired Plus (Black)",
+      "brand": "Ring",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/ring-floodlight-cam-wired-plus-black",
+      "start_date": "2026-03-24",
+      "end_date": "2026-04-07",
+      "original_price": 269.0,
+      "sale_price": 179.0,
+      "discount_percentage": 33.5,
+      "save_amount": 90.0,
+      "duration_days": 7,
+      "status": "ended"
+    },
+    {
+      "product_id": "ring_ring_spotlight_cam_pro_plug_in_security_camera_white",
+      "product_name": "Ring Spotlight Cam Pro Plug-In Security Camera (White)",
+      "brand": "Ring",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/ring-spotlight-cam-pro-plug-in-security-camera-white",
+      "start_date": "2026-03-20",
+      "end_date": "2026-04-07",
+      "original_price": 399.0,
+      "sale_price": 319.0,
+      "discount_percentage": 20.1,
+      "save_amount": 80.0,
+      "duration_days": 2,
+      "status": "ended"
+    },
+    {
+      "product_id": "ring_ring_outdoor_cam_pro_plug_in_security_camera_black",
+      "product_name": "Ring Outdoor Cam Pro Plug-In Security Camera (Black)",
+      "brand": "Ring",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/ring-outdoor-cam-pro-plug-in-security-camera-black",
+      "start_date": "2026-03-23",
+      "end_date": "2026-04-07",
+      "original_price": 329.0,
+      "sale_price": 249.0,
+      "discount_percentage": 24.3,
+      "save_amount": 80.0,
+      "duration_days": 6,
       "status": "ended"
     }
   ]

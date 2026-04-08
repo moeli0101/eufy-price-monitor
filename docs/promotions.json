@@ -132,7 +132,7 @@
       "sale_price": 629.0,
       "discount_percentage": 10.0,
       "save_amount": 70.0,
-      "duration_days": 7,
+      "duration_days": 8,
       "status": "active"
     },
     {
@@ -147,7 +147,7 @@
       "sale_price": 222.0,
       "discount_percentage": 20.4,
       "save_amount": 57.0,
-      "duration_days": 7,
+      "duration_days": 8,
       "status": "active"
     },
     {
@@ -162,7 +162,7 @@
       "sale_price": 479.0,
       "discount_percentage": 20.0,
       "save_amount": 120.0,
-      "duration_days": 7,
+      "duration_days": 8,
       "status": "active"
     },
     {
@@ -192,7 +192,7 @@
       "sale_price": 89.0,
       "discount_percentage": 19.8,
       "save_amount": 22.0,
-      "duration_days": 7,
+      "duration_days": 8,
       "status": "active"
     },
     {
@@ -207,7 +207,7 @@
       "sale_price": 389.0,
       "discount_percentage": 20.4,
       "save_amount": 100.0,
-      "duration_days": 7,
+      "duration_days": 8,
       "status": "active"
     },
     {
@@ -222,7 +222,7 @@
       "sale_price": 239.0,
       "discount_percentage": 20.1,
       "save_amount": 60.0,
-      "duration_days": 7,
+      "duration_days": 8,
       "status": "active"
     },
     {
@@ -237,7 +237,7 @@
       "sale_price": 319.0,
       "discount_percentage": 21.0,
       "save_amount": 85.0,
-      "duration_days": 7,
+      "duration_days": 8,
       "status": "active"
     },
     {
@@ -252,7 +252,7 @@
       "sale_price": 62.0,
       "discount_percentage": 21.5,
       "save_amount": 17.0,
-      "duration_days": 7,
+      "duration_days": 8,
       "status": "active"
     },
     {
@@ -267,7 +267,7 @@
       "sale_price": 239.0,
       "discount_percentage": 20.1,
       "save_amount": 60.0,
-      "duration_days": 7,
+      "duration_days": 8,
       "status": "active"
     },
     {
@@ -282,7 +282,7 @@
       "sale_price": 169.0,
       "discount_percentage": 10.6,
       "save_amount": 20.0,
-      "duration_days": 7,
+      "duration_days": 8,
       "status": "active"
     },
     {
@@ -297,7 +297,7 @@
       "sale_price": 79.0,
       "discount_percentage": 20.2,
       "save_amount": 20.0,
-      "duration_days": 7,
+      "duration_days": 8,
       "status": "active"
     },
     {
@@ -312,7 +312,7 @@
       "sale_price": 139.0,
       "discount_percentage": 22.3,
       "save_amount": 40.0,
-      "duration_days": 7,
+      "duration_days": 8,
       "status": "active"
     },
     {
@@ -342,7 +342,7 @@
       "sale_price": 439.0,
       "discount_percentage": 20.0,
       "save_amount": 110.0,
-      "duration_days": 7,
+      "duration_days": 8,
       "status": "active"
     },
     {
@@ -357,7 +357,67 @@
       "sale_price": 229.0,
       "discount_percentage": 61.8,
       "save_amount": 370.0,
-      "duration_days": 4,
+      "duration_days": 5,
+      "status": "active"
+    },
+    {
+      "product_id": "tp-link_tp_link_tapo_2k_pan_tilt_wi_fi_security_camera_[2_pack]",
+      "product_name": "TP-LINK Tapo 2K Pan & Tilt Wi-Fi Security Camera [2 Pack]",
+      "brand": "TP-Link",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-pan-tilt-wi-fi-security-camera-2-pack",
+      "start_date": "2026-04-08",
+      "end_date": null,
+      "original_price": 109.0,
+      "sale_price": 89.0,
+      "discount_percentage": 18.3,
+      "save_amount": 20.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "other_aqara_smart_video_doorbell_g4_with_chime_black",
+      "product_name": "Aqara Smart Video Doorbell G4 with Chime (Black)",
+      "brand": "Other",
+      "category": "Video Doorbell",
+      "url": "https://www.jbhifi.com.au/products/aqara-smart-video-doorbell-g4-with-chime-black",
+      "start_date": "2026-04-08",
+      "end_date": null,
+      "original_price": 199.0,
+      "sale_price": 129.0,
+      "discount_percentage": 35.2,
+      "save_amount": 70.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "tp-link_tp_link_tapo_2k_wireless_video_doorbell_with_hub",
+      "product_name": "TP-Link Tapo 2K Wireless Video Doorbell with Hub",
+      "brand": "TP-Link",
+      "category": "Video Doorbell",
+      "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-wireless-video-doorbell-with-hub",
+      "start_date": "2026-04-08",
+      "end_date": null,
+      "original_price": 229.0,
+      "sale_price": 189.0,
+      "discount_percentage": 17.5,
+      "save_amount": 40.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "other_uniden_bw4501_4_3”_full_hd_baby_monitor_and_clamp_camera",
+      "product_name": "Uniden BW4501 4.3” FULL HD Baby Monitor and Clamp Camera",
+      "brand": "Other",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/uniden-bw4501-4-3-full-hd-baby-monitor-and-clamp-camera",
+      "start_date": "2026-04-08",
+      "end_date": null,
+      "original_price": 229.0,
+      "sale_price": 199.0,
+      "discount_percentage": 13.1,
+      "save_amount": 30.0,
+      "duration_days": 1,
       "status": "active"
     }
   ],

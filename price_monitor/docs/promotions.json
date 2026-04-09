@@ -102,7 +102,7 @@
       "sale_price": 199.0,
       "discount_percentage": 20.1,
       "save_amount": 50.0,
-      "duration_days": 14,
+      "duration_days": 17,
       "status": "active"
     },
     {
@@ -132,7 +132,7 @@
       "sale_price": 629.0,
       "discount_percentage": 10.0,
       "save_amount": 70.0,
-      "duration_days": 8,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -147,7 +147,7 @@
       "sale_price": 222.0,
       "discount_percentage": 20.4,
       "save_amount": 57.0,
-      "duration_days": 8,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -162,7 +162,7 @@
       "sale_price": 479.0,
       "discount_percentage": 20.0,
       "save_amount": 120.0,
-      "duration_days": 8,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -177,7 +177,7 @@
       "sale_price": 269.0,
       "discount_percentage": 10.0,
       "save_amount": 30.0,
-      "duration_days": 7,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -207,7 +207,7 @@
       "sale_price": 389.0,
       "discount_percentage": 20.4,
       "save_amount": 100.0,
-      "duration_days": 8,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -222,7 +222,7 @@
       "sale_price": 239.0,
       "discount_percentage": 20.1,
       "save_amount": 60.0,
-      "duration_days": 8,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -237,7 +237,7 @@
       "sale_price": 319.0,
       "discount_percentage": 21.0,
       "save_amount": 85.0,
-      "duration_days": 8,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -252,7 +252,7 @@
       "sale_price": 62.0,
       "discount_percentage": 21.5,
       "save_amount": 17.0,
-      "duration_days": 8,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -267,7 +267,7 @@
       "sale_price": 239.0,
       "discount_percentage": 20.1,
       "save_amount": 60.0,
-      "duration_days": 8,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -282,7 +282,7 @@
       "sale_price": 169.0,
       "discount_percentage": 10.6,
       "save_amount": 20.0,
-      "duration_days": 8,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -297,7 +297,7 @@
       "sale_price": 79.0,
       "discount_percentage": 20.2,
       "save_amount": 20.0,
-      "duration_days": 8,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -312,7 +312,7 @@
       "sale_price": 139.0,
       "discount_percentage": 22.3,
       "save_amount": 40.0,
-      "duration_days": 8,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -342,7 +342,7 @@
       "sale_price": 439.0,
       "discount_percentage": 20.0,
       "save_amount": 110.0,
-      "duration_days": 8,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -387,7 +387,7 @@
       "sale_price": 129.0,
       "discount_percentage": 35.2,
       "save_amount": 70.0,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -417,6 +417,51 @@
       "sale_price": 199.0,
       "discount_percentage": 13.1,
       "save_amount": 30.0,
+      "duration_days": 2,
+      "status": "active"
+    },
+    {
+      "product_id": "arlo_arlo_essential_security_camera_kit_with_solar_panel_+_6m_sub",
+      "product_name": "Arlo Essential Security Camera Kit with Solar Panel + 6M Subscription (4 Pack)",
+      "brand": "Arlo",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/arlo-essential-security-camera-kit-with-solar-panel-6m-subscription-4-pack",
+      "start_date": "2026-04-09",
+      "end_date": null,
+      "original_price": 349.0,
+      "sale_price": 284.0,
+      "discount_percentage": 18.6,
+      "save_amount": 65.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "tp-link_tp_link_tapo_4k_pan_tilt_ai_home_security_camera",
+      "product_name": "TP-Link Tapo 4K Pan & Tilt AI Home Security Camera",
+      "brand": "TP-Link",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/tp-link-tapo-4k-pan-tilt-ai-home-security-camera",
+      "start_date": "2026-04-09",
+      "end_date": null,
+      "original_price": 129.0,
+      "sale_price": 119.0,
+      "discount_percentage": 7.8,
+      "save_amount": 10.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "tp-link_tp_link_tapo_c460_4k_solar_powered_security_camera_kit",
+      "product_name": "TP-Link Tapo C460 4K Solar-Powered Security Camera Kit",
+      "brand": "TP-Link",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/tp-link-tapo-c460-4k-solar-powered-security-camera-kit",
+      "start_date": "2026-04-09",
+      "end_date": null,
+      "original_price": 279.0,
+      "sale_price": 229.0,
+      "discount_percentage": 17.9,
+      "save_amount": 50.0,
       "duration_days": 1,
       "status": "active"
     }

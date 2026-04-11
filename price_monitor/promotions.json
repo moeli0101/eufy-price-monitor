@@ -27,22 +27,7 @@
       "sale_price": 199.0,
       "discount_percentage": 26.0,
       "save_amount": 70.0,
-      "duration_days": 17,
-      "status": "active"
-    },
-    {
-      "product_id": "ring_ring_spotlight_cam_pro_wired_security_camera_white",
-      "product_name": "Ring Spotlight Cam Pro Wired Security Camera (White)",
-      "brand": "Ring",
-      "category": "Security Camera",
-      "url": "https://www.jbhifi.com.au/products/ring-spotlight-cam-pro-wired-security-camera-white",
-      "start_date": "2026-03-23",
-      "end_date": null,
-      "original_price": 399.0,
-      "sale_price": 319.0,
-      "discount_percentage": 20.1,
-      "save_amount": 80.0,
-      "duration_days": 4,
+      "duration_days": 23,
       "status": "active"
     },
     {
@@ -58,21 +43,6 @@
       "discount_percentage": 31.0,
       "save_amount": 40.0,
       "duration_days": 2,
-      "status": "active"
-    },
-    {
-      "product_id": "tp-link_tp_link_tapo_2k_solar_powered_pan_tilt_security_camera_kit",
-      "product_name": "TP-Link Tapo 2K Solar-Powered Pan/Tilt Security Camera Kit",
-      "brand": "TP-Link",
-      "category": "Security Camera",
-      "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-solar-powered-pan-tilt-security-camera-kit",
-      "start_date": "2026-03-24",
-      "end_date": null,
-      "original_price": 199.0,
-      "sale_price": 169.0,
-      "discount_percentage": 15.1,
-      "save_amount": 30.0,
-      "duration_days": 5,
       "status": "active"
     },
     {
@@ -102,7 +72,7 @@
       "sale_price": 199.0,
       "discount_percentage": 20.1,
       "save_amount": 50.0,
-      "duration_days": 17,
+      "duration_days": 19,
       "status": "active"
     },
     {
@@ -132,7 +102,7 @@
       "sale_price": 629.0,
       "discount_percentage": 10.0,
       "save_amount": 70.0,
-      "duration_days": 9,
+      "duration_days": 11,
       "status": "active"
     },
     {
@@ -147,7 +117,7 @@
       "sale_price": 222.0,
       "discount_percentage": 20.4,
       "save_amount": 57.0,
-      "duration_days": 9,
+      "duration_days": 11,
       "status": "active"
     },
     {
@@ -162,7 +132,7 @@
       "sale_price": 479.0,
       "discount_percentage": 20.0,
       "save_amount": 120.0,
-      "duration_days": 9,
+      "duration_days": 11,
       "status": "active"
     },
     {
@@ -177,7 +147,7 @@
       "sale_price": 269.0,
       "discount_percentage": 10.0,
       "save_amount": 30.0,
-      "duration_days": 9,
+      "duration_days": 11,
       "status": "active"
     },
     {
@@ -207,7 +177,7 @@
       "sale_price": 389.0,
       "discount_percentage": 20.4,
       "save_amount": 100.0,
-      "duration_days": 9,
+      "duration_days": 11,
       "status": "active"
     },
     {
@@ -237,7 +207,7 @@
       "sale_price": 319.0,
       "discount_percentage": 21.0,
       "save_amount": 85.0,
-      "duration_days": 9,
+      "duration_days": 11,
       "status": "active"
     },
     {
@@ -252,7 +222,7 @@
       "sale_price": 62.0,
       "discount_percentage": 21.5,
       "save_amount": 17.0,
-      "duration_days": 9,
+      "duration_days": 11,
       "status": "active"
     },
     {
@@ -267,7 +237,7 @@
       "sale_price": 239.0,
       "discount_percentage": 20.1,
       "save_amount": 60.0,
-      "duration_days": 9,
+      "duration_days": 11,
       "status": "active"
     },
     {
@@ -282,7 +252,7 @@
       "sale_price": 169.0,
       "discount_percentage": 10.6,
       "save_amount": 20.0,
-      "duration_days": 9,
+      "duration_days": 11,
       "status": "active"
     },
     {
@@ -297,7 +267,7 @@
       "sale_price": 79.0,
       "discount_percentage": 20.2,
       "save_amount": 20.0,
-      "duration_days": 9,
+      "duration_days": 11,
       "status": "active"
     },
     {
@@ -312,7 +282,7 @@
       "sale_price": 139.0,
       "discount_percentage": 22.3,
       "save_amount": 40.0,
-      "duration_days": 9,
+      "duration_days": 11,
       "status": "active"
     },
     {
@@ -342,7 +312,7 @@
       "sale_price": 439.0,
       "discount_percentage": 20.0,
       "save_amount": 110.0,
-      "duration_days": 10,
+      "duration_days": 11,
       "status": "active"
     },
     {
@@ -387,7 +357,7 @@
       "sale_price": 129.0,
       "discount_percentage": 35.2,
       "save_amount": 70.0,
-      "duration_days": 2,
+      "duration_days": 4,
       "status": "active"
     },
     {
@@ -402,7 +372,7 @@
       "sale_price": 189.0,
       "discount_percentage": 17.5,
       "save_amount": 40.0,
-      "duration_days": 1,
+      "duration_days": 4,
       "status": "active"
     },
     {
@@ -417,7 +387,7 @@
       "sale_price": 199.0,
       "discount_percentage": 13.1,
       "save_amount": 30.0,
-      "duration_days": 2,
+      "duration_days": 4,
       "status": "active"
     },
     {
@@ -462,6 +432,36 @@
       "sale_price": 229.0,
       "discount_percentage": 17.9,
       "save_amount": 50.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "tp-link_tp_link_tapo_2k_solar_powered_pan_tilt_4g_lte_security_camer",
+      "product_name": "TP-Link Tapo 2K Solar-Powered Pan/Tilt 4G LTE Security Camera Kit",
+      "brand": "TP-Link",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-solar-powered-pan-tilt-4g-lte-security-camera-kit",
+      "start_date": "2026-04-11",
+      "end_date": null,
+      "original_price": 279.0,
+      "sale_price": 229.0,
+      "discount_percentage": 17.9,
+      "save_amount": 50.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "tp-link_tp_link_tapo_3k_indoor_outdoor_home_security_wi_fi_camera",
+      "product_name": "TP-Link Tapo 3K Indoor/Outdoor Home Security Wi-Fi Camera",
+      "brand": "TP-Link",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/tp-link-tapo-3k-indoor-outdoor-home-security-wi-fi-camera",
+      "start_date": "2026-04-11",
+      "end_date": null,
+      "original_price": 89.0,
+      "sale_price": 80.0,
+      "discount_percentage": 10.1,
+      "save_amount": 9.0,
       "duration_days": 1,
       "status": "active"
     }
@@ -1995,6 +1995,36 @@
       "discount_percentage": 24.3,
       "save_amount": 80.0,
       "duration_days": 6,
+      "status": "ended"
+    },
+    {
+      "product_id": "ring_ring_spotlight_cam_pro_wired_security_camera_white",
+      "product_name": "Ring Spotlight Cam Pro Wired Security Camera (White)",
+      "brand": "Ring",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/ring-spotlight-cam-pro-wired-security-camera-white",
+      "start_date": "2026-03-23",
+      "end_date": "2026-04-11",
+      "original_price": 399.0,
+      "sale_price": 319.0,
+      "discount_percentage": 20.1,
+      "save_amount": 80.0,
+      "duration_days": 4,
+      "status": "ended"
+    },
+    {
+      "product_id": "tp-link_tp_link_tapo_2k_solar_powered_pan_tilt_security_camera_kit",
+      "product_name": "TP-Link Tapo 2K Solar-Powered Pan/Tilt Security Camera Kit",
+      "brand": "TP-Link",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-solar-powered-pan-tilt-security-camera-kit",
+      "start_date": "2026-03-24",
+      "end_date": "2026-04-11",
+      "original_price": 199.0,
+      "sale_price": 169.0,
+      "discount_percentage": 15.1,
+      "save_amount": 30.0,
+      "duration_days": 5,
       "status": "ended"
     }
   ]

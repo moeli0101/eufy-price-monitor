@@ -87,7 +87,7 @@
       "sale_price": 629.0,
       "discount_percentage": 10.0,
       "save_amount": 70.0,
-      "duration_days": 12,
+      "duration_days": 13,
       "status": "active"
     },
     {
@@ -102,7 +102,7 @@
       "sale_price": 222.0,
       "discount_percentage": 20.4,
       "save_amount": 57.0,
-      "duration_days": 12,
+      "duration_days": 13,
       "status": "active"
     },
     {
@@ -117,7 +117,7 @@
       "sale_price": 479.0,
       "discount_percentage": 20.0,
       "save_amount": 120.0,
-      "duration_days": 12,
+      "duration_days": 13,
       "status": "active"
     },
     {
@@ -132,7 +132,7 @@
       "sale_price": 269.0,
       "discount_percentage": 10.0,
       "save_amount": 30.0,
-      "duration_days": 12,
+      "duration_days": 13,
       "status": "active"
     },
     {
@@ -162,7 +162,7 @@
       "sale_price": 389.0,
       "discount_percentage": 20.4,
       "save_amount": 100.0,
-      "duration_days": 12,
+      "duration_days": 13,
       "status": "active"
     },
     {
@@ -177,7 +177,7 @@
       "sale_price": 239.0,
       "discount_percentage": 20.1,
       "save_amount": 60.0,
-      "duration_days": 12,
+      "duration_days": 13,
       "status": "active"
     },
     {
@@ -192,7 +192,7 @@
       "sale_price": 319.0,
       "discount_percentage": 21.0,
       "save_amount": 85.0,
-      "duration_days": 12,
+      "duration_days": 13,
       "status": "active"
     },
     {
@@ -207,7 +207,7 @@
       "sale_price": 62.0,
       "discount_percentage": 21.5,
       "save_amount": 17.0,
-      "duration_days": 12,
+      "duration_days": 13,
       "status": "active"
     },
     {
@@ -222,7 +222,7 @@
       "sale_price": 239.0,
       "discount_percentage": 20.1,
       "save_amount": 60.0,
-      "duration_days": 12,
+      "duration_days": 13,
       "status": "active"
     },
     {
@@ -237,7 +237,7 @@
       "sale_price": 169.0,
       "discount_percentage": 10.6,
       "save_amount": 20.0,
-      "duration_days": 12,
+      "duration_days": 13,
       "status": "active"
     },
     {
@@ -252,7 +252,7 @@
       "sale_price": 79.0,
       "discount_percentage": 20.2,
       "save_amount": 20.0,
-      "duration_days": 12,
+      "duration_days": 13,
       "status": "active"
     },
     {
@@ -267,7 +267,7 @@
       "sale_price": 139.0,
       "discount_percentage": 22.3,
       "save_amount": 40.0,
-      "duration_days": 12,
+      "duration_days": 13,
       "status": "active"
     },
     {
@@ -297,7 +297,7 @@
       "sale_price": 439.0,
       "discount_percentage": 20.0,
       "save_amount": 110.0,
-      "duration_days": 12,
+      "duration_days": 13,
       "status": "active"
     },
     {
@@ -312,7 +312,7 @@
       "sale_price": 229.0,
       "discount_percentage": 61.8,
       "save_amount": 370.0,
-      "duration_days": 5,
+      "duration_days": 10,
       "status": "active"
     },
     {
@@ -342,7 +342,7 @@
       "sale_price": 129.0,
       "discount_percentage": 35.2,
       "save_amount": 70.0,
-      "duration_days": 5,
+      "duration_days": 6,
       "status": "active"
     },
     {
@@ -372,7 +372,7 @@
       "sale_price": 199.0,
       "discount_percentage": 13.1,
       "save_amount": 30.0,
-      "duration_days": 5,
+      "duration_days": 6,
       "status": "active"
     },
     {
@@ -387,7 +387,7 @@
       "sale_price": 284.0,
       "discount_percentage": 18.6,
       "save_amount": 65.0,
-      "duration_days": 1,
+      "duration_days": 5,
       "status": "active"
     },
     {
@@ -447,6 +447,51 @@
       "sale_price": 1199.0,
       "discount_percentage": 20.0,
       "save_amount": 300.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "tp-link_tp_link_tapo_3k_solar_powered_pan_tilt_security_camera_kit",
+      "product_name": "TP-Link Tapo 3K Solar-Powered Pan & Tilt Security Camera Kit",
+      "brand": "TP-Link",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/tp-link-tapo-3k-solar-powered-pan-tilt-security-camera-kit",
+      "start_date": "2026-04-13",
+      "end_date": null,
+      "original_price": 249.0,
+      "sale_price": 199.0,
+      "discount_percentage": 20.1,
+      "save_amount": 50.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "swann_swann_swannforce_1080p_dvr_65gb_security_camera_4_pack",
+      "product_name": "Swann Swannforce 1080P DVR 65GB Security Camera (4 Pack)",
+      "brand": "Swann",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/swann-swannforce-1080p-dvr-65gb-security-camera-4-pack",
+      "start_date": "2026-04-13",
+      "end_date": null,
+      "original_price": 399.0,
+      "sale_price": 279.0,
+      "discount_percentage": 30.1,
+      "save_amount": 120.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "philips_philips_avent_connected_baby_monitor",
+      "product_name": "Philips Avent Connected Baby Monitor",
+      "brand": "Philips",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/philips-avent-connected-baby-monitor-1",
+      "start_date": "2026-04-13",
+      "end_date": null,
+      "original_price": 279.0,
+      "sale_price": 223.0,
+      "discount_percentage": 20.1,
+      "save_amount": 56.0,
       "duration_days": 1,
       "status": "active"
     }

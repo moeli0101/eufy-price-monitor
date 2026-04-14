@@ -87,7 +87,7 @@
       "sale_price": 629.0,
       "discount_percentage": 10.0,
       "save_amount": 70.0,
-      "duration_days": 13,
+      "duration_days": 14,
       "status": "active"
     },
     {
@@ -102,7 +102,7 @@
       "sale_price": 222.0,
       "discount_percentage": 20.4,
       "save_amount": 57.0,
-      "duration_days": 13,
+      "duration_days": 14,
       "status": "active"
     },
     {
@@ -117,7 +117,7 @@
       "sale_price": 479.0,
       "discount_percentage": 20.0,
       "save_amount": 120.0,
-      "duration_days": 13,
+      "duration_days": 14,
       "status": "active"
     },
     {
@@ -132,7 +132,7 @@
       "sale_price": 269.0,
       "discount_percentage": 10.0,
       "save_amount": 30.0,
-      "duration_days": 13,
+      "duration_days": 14,
       "status": "active"
     },
     {
@@ -162,7 +162,7 @@
       "sale_price": 389.0,
       "discount_percentage": 20.4,
       "save_amount": 100.0,
-      "duration_days": 13,
+      "duration_days": 14,
       "status": "active"
     },
     {
@@ -177,7 +177,7 @@
       "sale_price": 239.0,
       "discount_percentage": 20.1,
       "save_amount": 60.0,
-      "duration_days": 13,
+      "duration_days": 14,
       "status": "active"
     },
     {
@@ -192,7 +192,7 @@
       "sale_price": 319.0,
       "discount_percentage": 21.0,
       "save_amount": 85.0,
-      "duration_days": 13,
+      "duration_days": 14,
       "status": "active"
     },
     {
@@ -222,7 +222,7 @@
       "sale_price": 239.0,
       "discount_percentage": 20.1,
       "save_amount": 60.0,
-      "duration_days": 13,
+      "duration_days": 14,
       "status": "active"
     },
     {
@@ -237,7 +237,7 @@
       "sale_price": 169.0,
       "discount_percentage": 10.6,
       "save_amount": 20.0,
-      "duration_days": 13,
+      "duration_days": 14,
       "status": "active"
     },
     {
@@ -252,7 +252,7 @@
       "sale_price": 79.0,
       "discount_percentage": 20.2,
       "save_amount": 20.0,
-      "duration_days": 13,
+      "duration_days": 14,
       "status": "active"
     },
     {
@@ -267,7 +267,7 @@
       "sale_price": 139.0,
       "discount_percentage": 22.3,
       "save_amount": 40.0,
-      "duration_days": 13,
+      "duration_days": 14,
       "status": "active"
     },
     {
@@ -297,7 +297,7 @@
       "sale_price": 439.0,
       "discount_percentage": 20.0,
       "save_amount": 110.0,
-      "duration_days": 13,
+      "duration_days": 14,
       "status": "active"
     },
     {
@@ -342,7 +342,7 @@
       "sale_price": 129.0,
       "discount_percentage": 35.2,
       "save_amount": 70.0,
-      "duration_days": 6,
+      "duration_days": 7,
       "status": "active"
     },
     {
@@ -357,7 +357,7 @@
       "sale_price": 189.0,
       "discount_percentage": 17.5,
       "save_amount": 40.0,
-      "duration_days": 5,
+      "duration_days": 7,
       "status": "active"
     },
     {
@@ -387,7 +387,7 @@
       "sale_price": 284.0,
       "discount_percentage": 18.6,
       "save_amount": 65.0,
-      "duration_days": 5,
+      "duration_days": 6,
       "status": "active"
     },
     {
@@ -462,7 +462,7 @@
       "sale_price": 199.0,
       "discount_percentage": 20.1,
       "save_amount": 50.0,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -481,17 +481,32 @@
       "status": "active"
     },
     {
-      "product_id": "philips_philips_avent_connected_baby_monitor",
-      "product_name": "Philips Avent Connected Baby Monitor",
-      "brand": "Philips",
-      "category": "Baby",
-      "url": "https://www.jbhifi.com.au/products/philips-avent-connected-baby-monitor-1",
-      "start_date": "2026-04-13",
+      "product_id": "eufy_eufy_security_dual_cam_wireless_2k_video_doorbell",
+      "product_name": "eufy Security Dual Cam Wireless 2K Video Doorbell",
+      "brand": "eufy",
+      "category": "Video Doorbell",
+      "url": "https://www.jbhifi.com.au/products/eufy-security-dual-cam-wireless-2k-video-doorbell",
+      "start_date": "2026-04-14",
       "end_date": null,
-      "original_price": 279.0,
-      "sale_price": 223.0,
+      "original_price": 499.0,
+      "sale_price": 399.0,
+      "discount_percentage": 20.0,
+      "save_amount": 100.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "eufy_eufy_video_doorbell_2k_wireless_with_homebase_2",
+      "product_name": "eufy Video Doorbell 2K Wireless with Homebase 2",
+      "brand": "eufy",
+      "category": "Video Doorbell",
+      "url": "https://www.jbhifi.com.au/products/eufy-video-doorbell-2k-wireless-with-homebase-2",
+      "start_date": "2026-04-14",
+      "end_date": null,
+      "original_price": 399.0,
+      "sale_price": 319.0,
       "discount_percentage": 20.1,
-      "save_amount": 56.0,
+      "save_amount": 80.0,
       "duration_days": 1,
       "status": "active"
     }
@@ -2084,6 +2099,21 @@
       "sale_price": 80.0,
       "discount_percentage": 10.1,
       "save_amount": 9.0,
+      "duration_days": 1,
+      "status": "ended"
+    },
+    {
+      "product_id": "philips_philips_avent_connected_baby_monitor",
+      "product_name": "Philips Avent Connected Baby Monitor",
+      "brand": "Philips",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/philips-avent-connected-baby-monitor-1",
+      "start_date": "2026-04-13",
+      "end_date": "2026-04-14",
+      "original_price": 279.0,
+      "sale_price": 223.0,
+      "discount_percentage": 20.1,
+      "save_amount": 56.0,
       "duration_days": 1,
       "status": "ended"
     }

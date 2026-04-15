@@ -140,6 +140,44 @@
             font-weight: 500;
         }
 
+        /* 异动统计卡片 - 高亮显示 */
+        .stat-card.highlight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            grid-column: span 2;
+        }
+
+        .stat-card.highlight .stat-number {
+            color: white;
+        }
+
+        .stat-card.highlight .stat-label {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .change-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .change-item {
+            text-align: center;
+        }
+
+        .change-number {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 3px;
+        }
+
+        .change-label {
+            font-size: 11px;
+            opacity: 0.9;
+        }
+
         /* 类别区域 */
         .category-section {
             background: white;
@@ -2516,6 +2554,92 @@
             applyFilters();
         }
 
+        // 计算本周价格异动
+        function calculateWeeklyChanges(data, useTrackerHistory = false) {
+            const now = new Date();
+            const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+
+            let decreased = 0;
+            let increased = 0;
+            let newPromo = 0;
+            const decreaseAmounts = [];
+
+            data.forEach(product => {
+                let history = null;
+                let currentPrice = null;
+                let currentPromo = false;
+
+                // 根据数据源获取历史数据
+                if (useTrackerHistory) {
+                    // 价格追踪页面：使用trackerHistory
+                    if (!trackerHistory[product.id] || !trackerHistory[product.id].price_history || trackerHistory[product.id].price_history.length === 0) {
+                        return;
+                    }
+                    history = trackerHistory[product.id].price_history;
+                    currentPrice = product.current_price;
+                    currentPromo = product.is_on_sale || false;
+                } else {
+                    // 产品列表页面：使用product.history_data
+                    if (!product.history_data || product.history_data.length === 0) {
+                        return;
+                    }
+                    history = product.history_data;
+                    currentPrice = product.price;
+                    currentPromo = product.is_on_sale || false;
+                }
+
+                // 找到7天前的价格
+                let oldPrice = null;
+                let oldPromo = false;
+                for (let i = history.length - 1; i >= 0; i--) {
+                    const recordDate = new Date(history[i].date);
+                    if (recordDate <= sevenDaysAgo) {
+                        oldPrice = history[i].price;
+                        oldPromo = history[i].is_on_sale || false;
+                        break;
+                    }
+                }
+
+                // 如果没有7天前的数据，使用最早的记录
+                if (oldPrice === null && history.length > 0) {
+                    oldPrice = history[0].price;
+                    oldPromo = history[0].is_on_sale || false;
+                }
+
+                // 计算价格变化
+                if (oldPrice !== null) {
+                    if (currentPrice < oldPrice) {
+                        decreased++;
+                        decreaseAmounts.push(oldPrice - currentPrice);
+                    } else if (currentPrice > oldPrice) {
+                        increased++;
+                    }
+
+                    // 新增促销
+                    if (currentPromo && !oldPromo) {
+                        newPromo++;
+                    }
+                }
+            });
+
+            const total = decreased + increased + newPromo;
+            const avgDecrease = decreaseAmounts.length > 0
+                ? decreaseAmounts.reduce((a, b) => a + b, 0) / decreaseAmounts.length
+                : 0;
+            const maxDecrease = decreaseAmounts.length > 0
+                ? Math.max(...decreaseAmounts)
+                : 0;
+
+            return {
+                decreased,
+                increased,
+                newPromo,
+                total,
+                avgDecrease,
+                maxDecrease
+            };
+        }
+
         function applyFilters() {
             const validData = allData.filter(p => p.status === 'success' && p.price);
 
@@ -2688,6 +2812,9 @@
 
         <!-- 价格追踪 Tab -->
         <div id="tracker-tab" class="tab-content">
+            <!-- 价格异动统计 -->
+            <div id="tracker-stats-container" style="margin-bottom: 20px;"></div>
+
             <div class="tracker-controls">
                 <h3 class="tracker-section-title">📊 选择产品进行价格追踪对比</h3>
 
@@ -2710,6 +2837,15 @@
                         <div class="filter-buttons" id="trackerStatusFilters">
                             <button class="filter-btn active" data-status="all">全部</button>
                             <button class="filter-btn" data-status="on-sale">促销中 🔥</button>
+                        </div>
+                    </div>
+                    <div class="filter-section">
+                        <span class="filter-label">📅 时间范围</span>
+                        <div class="filter-buttons" id="trackerTimeFilters">
+                            <button class="filter-btn active" data-days="all">全部</button>
+                            <button class="filter-btn" data-days="7">最近7天</button>
+                            <button class="filter-btn" data-days="14">最近14天</button>
+                            <button class="filter-btn" data-days="30">最近30天</button>
                         </div>
                     </div>
                 </div>
@@ -2764,7 +2900,8 @@
         let trackerFilters = {
             brand: 'all',
             category: 'all',
-            status: 'all'
+            status: 'all',
+            timeRange: 'all'  // 时间范围筛选
         };
 
         // 加载数据
@@ -2870,10 +3007,90 @@
                     applyTrackerFilters();
                 });
             });
+
+            // 时间范围筛选器
+            document.getElementById('trackerTimeFilters').querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.getElementById('trackerTimeFilters').querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    trackerFilters.timeRange = this.dataset.days;
+                    updateTrackerChart();  // 直接更新图表
+                });
+            });
+        }
+
+        // 更新价格追踪页面的异动统计
+        function updateTrackerStats() {
+            const filteredProducts = getFilteredProducts();
+            const weeklyChanges = calculateWeeklyChanges(filteredProducts, true);
+
+            // 构建筛选器描述
+            let filterDesc = '';
+            if (trackerFilters.brand !== 'all' || trackerFilters.category !== 'all') {
+                const parts = [];
+                if (trackerFilters.brand !== 'all') {
+                    parts.push(trackerFilters.brand);
+                }
+                if (trackerFilters.category !== 'all') {
+                    parts.push(trackerFilters.category);
+                }
+                filterDesc = ` (${parts.join(' ')})`;
+            }
+
+            const statsContainer = document.getElementById('tracker-stats-container');
+            statsContainer.innerHTML = `
+                <div class="stats">
+                    <div class="stat-card highlight">
+                        <div class="stat-number">📊 本周价格异动${filterDesc}</div>
+                        <div class="stat-label">过去7天的价格变化统计</div>
+                        <div class="change-stats">
+                            <div class="change-item">
+                                <div class="change-number">🔻 ${weeklyChanges.decreased}</div>
+                                <div class="change-label">降价</div>
+                            </div>
+                            <div class="change-item">
+                                <div class="change-number">🔺 ${weeklyChanges.increased}</div>
+                                <div class="change-label">涨价</div>
+                            </div>
+                            <div class="change-item">
+                                <div class="change-number">🏷️ ${weeklyChanges.newPromo}</div>
+                                <div class="change-label">新促销</div>
+                            </div>
+                            <div class="change-item">
+                                <div class="change-number">${weeklyChanges.total}</div>
+                                <div class="change-label">总变动</div>
+                            </div>
+                        </div>
+                        ${weeklyChanges.avgDecrease > 0 ? `
+                            <div style="margin-top: 10px; font-size: 13px; opacity: 0.95;">
+                                💰 平均降幅: $${weeklyChanges.avgDecrease.toFixed(2)} |
+                                📉 最大降幅: $${weeklyChanges.maxDecrease.toFixed(2)}
+                            </div>
+                        ` : ''}
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">${filteredProducts.length}</div>
+                        <div class="stat-label">显示产品</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" style="color: #4caf50">${weeklyChanges.decreased}</div>
+                        <div class="stat-label">🔻 降价产品</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" style="color: #ff5722">${weeklyChanges.increased}</div>
+                        <div class="stat-label">🔺 涨价产品</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" style="color: #ff9800">${weeklyChanges.newPromo}</div>
+                        <div class="stat-label">🏷️ 新促销</div>
+                    </div>
+                </div>
+            `;
         }
 
         // 应用筛选并重新渲染
         function applyTrackerFilters() {
+            updateTrackerStats();  // 更新异动统计
             renderTrackerProducts();
         }
 
@@ -2934,6 +3151,9 @@
         function renderTrackerProducts() {
             const container = document.getElementById('tracker-productCards');
             const filteredProducts = getFilteredProducts();
+
+            // 更新异动统计
+            updateTrackerStats();
 
             // 更新产品数量显示
             document.getElementById('tracker-product-count').textContent = filteredProducts.length;
@@ -3046,7 +3266,21 @@
             // 准备数据集
             const datasets = trackerSelectedProducts.map((product, index) => {
                 const history = trackerHistory[product.id];
-                const data = history.price_history.map(record => ({
+                let priceHistory = history.price_history;
+
+                // 应用时间范围筛选
+                if (trackerFilters.timeRange !== 'all') {
+                    const days = parseInt(trackerFilters.timeRange);
+                    const cutoffDate = new Date();
+                    cutoffDate.setDate(cutoffDate.getDate() - days);
+
+                    priceHistory = priceHistory.filter(record => {
+                        const recordDate = new Date(record.date);
+                        return recordDate >= cutoffDate;
+                    });
+                }
+
+                const data = priceHistory.map(record => ({
                     x: new Date(record.date),
                     y: record.price
                 }));

@@ -1,0 +1,41 @@
+name: Daily Price Refresh
+
+on:
+  schedule:
+    - cron: '0 18 * * *'  # 每天UTC 18:00运行（澳洲时间凌晨2-4点）
+  workflow_dispatch:      # 允许手动触发
+
+jobs:
+  refresh-prices:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          pip install playwright requests beautifulsoup4
+          playwright install chromium
+
+      - name: Run price refresh
+        run: |
+          python3 daily_price_refresh.py
+
+      - name: Copy files to docs
+        run: |
+          cp price_results_latest.json docs/
+          cp price_history.json docs/
+          cp promotions.json docs/
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git diff --quiet && git diff --staged --quiet || (git commit -m "🤖 Auto update prices $(date +'%Y-%m-%d %H:%M')" && git push)

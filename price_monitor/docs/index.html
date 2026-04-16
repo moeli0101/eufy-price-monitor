@@ -140,6 +140,200 @@
             font-weight: 500;
         }
 
+        /* 异动统计卡片 - 高亮显示 */
+        .stat-card.highlight {
+            background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
+            border: 2px solid #667eea;
+            color: #2c3e50;
+            grid-column: span 2;
+            padding: 30px;
+        }
+
+        .stat-card.highlight .stat-number {
+            color: #667eea;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .stat-card.highlight .stat-label {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .highlight-title {
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .highlight-subtitle {
+            text-align: center;
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 20px;
+        }
+
+        .change-stats {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #e8ebf7;
+        }
+
+        .change-item {
+            text-align: center;
+            padding: 15px 25px;
+            background: white;
+            border: 2px solid #e8ebf7;
+            border-radius: 10px;
+            transition: all 0.2s;
+            min-width: 120px;
+        }
+
+        .change-item:hover {
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+        }
+
+        .change-number {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #667eea;
+        }
+
+        .change-label {
+            font-size: 12px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .highlight-footer {
+            text-align: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 2px solid #e8ebf7;
+            font-size: 13px;
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        /* 价格变动产品列表 */
+        .price-changes-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .change-section {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+        }
+
+        .change-section-header {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .change-section-header.decreased {
+            color: #4caf50;
+        }
+
+        .change-section-header.increased {
+            color: #ff5722;
+        }
+
+        .change-section-header.promo {
+            color: #ff9800;
+        }
+
+        .product-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .product-item {
+            padding: 12px;
+            margin-bottom: 8px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+
+        .product-item:hover {
+            background: #e8ebf7;
+            transform: translateX(4px);
+        }
+
+        .product-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .product-name {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 6px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .product-name:hover {
+            color: #667eea;
+        }
+
+        .product-price-change {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+        }
+
+        .price-old {
+            text-decoration: line-through;
+            color: #999;
+        }
+
+        .price-new {
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .price-diff {
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .price-diff.down {
+            background: #e8f5e9;
+            color: #4caf50;
+        }
+
+        .price-diff.up {
+            background: #ffebee;
+            color: #ff5722;
+        }
+
+        .empty-list {
+            text-align: center;
+            padding: 30px;
+            color: #999;
+            font-size: 14px;
+        }
+
         /* 类别区域 */
         .category-section {
             background: white;
@@ -2557,6 +2751,180 @@
             applyFilters();
         }
 
+        // 计算本周价格异动
+        function calculateWeeklyChanges(data, useTrackerHistory = false) {
+            const now = new Date();
+            const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+
+            let decreased = 0;
+            let increased = 0;
+            let newPromo = 0;
+            const decreaseAmounts = [];
+
+            // 保存具体的产品列表
+            const decreasedProducts = [];
+            const increasedProducts = [];
+            const newPromoProducts = [];
+
+            data.forEach(product => {
+                let history = null;
+                let productName = '';
+                let productUrl = '';
+
+                // 根据数据源获取历史数据
+                if (useTrackerHistory) {
+                    // 价格追踪页面：使用trackerHistory
+                    if (!trackerHistory[product.id] || !trackerHistory[product.id].price_history || trackerHistory[product.id].price_history.length === 0) {
+                        return;
+                    }
+                    history = trackerHistory[product.id].price_history;
+                    productName = product.product_name;
+                    productUrl = product.url;
+                } else {
+                    // 产品列表页面：使用product.history_data
+                    if (!product.history_data || product.history_data.length === 0) {
+                        return;
+                    }
+                    history = product.history_data;
+                    productName = product.name;
+                    productUrl = product.url;
+                }
+
+                // 只查看过去7天内的历史记录，找出价格变化
+                const recentHistory = history.filter(record => {
+                    const recordDate = new Date(record.date);
+                    return recordDate >= sevenDaysAgo;
+                });
+
+                // 如果过去7天没有记录，跳过
+                if (recentHistory.length === 0) {
+                    return;
+                }
+
+                // 按日期排序
+                recentHistory.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+                // 获取起始和结束的数据
+                const startRecord = recentHistory[0];
+                const endRecord = recentHistory[recentHistory.length - 1];
+
+                let changeStartDate = startRecord.date;
+                let changeEndDate = endRecord.date;
+
+                // 检查MSRP（original_price）变化 - 这是真正的降价/涨价
+                const oldMSRP = startRecord.original_price || startRecord.price;
+                const newMSRP = endRecord.original_price || endRecord.price;
+                const oldSalePrice = startRecord.price;
+                const newSalePrice = endRecord.price;
+
+                // 检查价格是否有效
+                if (oldMSRP === null || oldMSRP === undefined || isNaN(oldMSRP) ||
+                    newMSRP === null || newMSRP === undefined || isNaN(newMSRP) ||
+                    oldSalePrice === null || oldSalePrice === undefined || isNaN(oldSalePrice) ||
+                    newSalePrice === null || newSalePrice === undefined || isNaN(newSalePrice)) {
+                    return;
+                }
+
+                // 检查过去7天内是否有MSRP变化
+                let hasMSRPChange = false;
+                for (let i = 1; i < recentHistory.length; i++) {
+                    const prevMSRP = recentHistory[i-1].original_price || recentHistory[i-1].price;
+                    const currMSRP = recentHistory[i].original_price || recentHistory[i].price;
+                    if (currMSRP !== prevMSRP) {
+                        hasMSRPChange = true;
+                        break;
+                    }
+                }
+
+                // 如果MSRP没变，检查是否有促销变化
+                let hasPromoChange = false;
+                for (let i = 1; i < recentHistory.length; i++) {
+                    const prevPromo = recentHistory[i-1].is_on_sale || false;
+                    const currPromo = recentHistory[i].is_on_sale || false;
+                    if (currPromo !== prevPromo) {
+                        hasPromoChange = true;
+                        break;
+                    }
+                }
+
+                // 如果既没有MSRP变化，也没有促销变化，跳过
+                if (!hasMSRPChange && !hasPromoChange) {
+                    return;
+                }
+
+                // 1. 统计MSRP变化（降价/涨价）
+                if (hasMSRPChange) {
+                    if (newMSRP < oldMSRP) {
+                        decreased++;
+                        const decrease = oldMSRP - newMSRP;
+                        decreaseAmounts.push(decrease);
+                        decreasedProducts.push({
+                            name: productName,
+                            url: productUrl,
+                            oldPrice: oldMSRP,
+                            newPrice: newMSRP,
+                            decrease: decrease,
+                            startDate: changeStartDate,
+                            endDate: changeEndDate
+                        });
+                    } else if (newMSRP > oldMSRP) {
+                        increased++;
+                        increasedProducts.push({
+                            name: productName,
+                            url: productUrl,
+                            oldPrice: oldMSRP,
+                            newPrice: newMSRP,
+                            increase: newMSRP - oldMSRP,
+                            startDate: changeStartDate,
+                            endDate: changeEndDate
+                        });
+                    }
+                }
+                // 2. 统计新增促销（MSRP不变，但新增了促销折扣）
+                else if (hasPromoChange) {
+                    const oldPromoStatus = startRecord.is_on_sale || false;
+                    const newPromoStatus = endRecord.is_on_sale || false;
+
+                    if (newPromoStatus && !oldPromoStatus) {
+                        newPromo++;
+                        newPromoProducts.push({
+                            name: productName,
+                            url: productUrl,
+                            price: newSalePrice,
+                            msrp: newMSRP,
+                            discount: newMSRP - newSalePrice,
+                            startDate: changeStartDate,
+                            endDate: changeEndDate
+                        });
+                    }
+                }
+            });
+
+            const total = decreased + increased + newPromo;
+            const avgDecrease = decreaseAmounts.length > 0
+                ? decreaseAmounts.reduce((a, b) => a + b, 0) / decreaseAmounts.length
+                : 0;
+            const maxDecrease = decreaseAmounts.length > 0
+                ? Math.max(...decreaseAmounts)
+                : 0;
+
+            // 按降幅排序（降价最多的在前）
+            decreasedProducts.sort((a, b) => b.decrease - a.decrease);
+            increasedProducts.sort((a, b) => b.increase - a.increase);
+
+            return {
+                decreased,
+                increased,
+                newPromo,
+                total,
+                avgDecrease,
+                maxDecrease,
+                decreasedProducts,
+                increasedProducts,
+                newPromoProducts
+            };
+        }
+
         function applyFilters() {
             const validData = allData.filter(p => p.status === 'success' && p.price);
 
@@ -2729,6 +3097,9 @@
 
         <!-- 价格追踪 Tab -->
         <div id="tracker-tab" class="tab-content">
+            <!-- 价格异动统计 -->
+            <div id="tracker-stats-container" style="margin-bottom: 20px;"></div>
+
             <div class="tracker-controls">
                 <h3 class="tracker-section-title">📊 选择产品进行价格追踪对比</h3>
 
@@ -2751,6 +3122,15 @@
                         <div class="filter-buttons" id="trackerStatusFilters">
                             <button class="filter-btn active" data-status="all">全部</button>
                             <button class="filter-btn" data-status="on-sale">促销中 🔥</button>
+                        </div>
+                    </div>
+                    <div class="filter-section">
+                        <span class="filter-label">📅 时间范围</span>
+                        <div class="filter-buttons" id="trackerTimeFilters">
+                            <button class="filter-btn active" data-days="all">全部</button>
+                            <button class="filter-btn" data-days="7">最近7天</button>
+                            <button class="filter-btn" data-days="14">最近14天</button>
+                            <button class="filter-btn" data-days="30">最近30天</button>
                         </div>
                     </div>
                 </div>
@@ -2805,7 +3185,8 @@
         let trackerFilters = {
             brand: 'all',
             category: 'all',
-            status: 'all'
+            status: 'all',
+            timeRange: 'all'  // 时间范围筛选
         };
 
         // 加载数据
@@ -2911,10 +3292,167 @@
                     applyTrackerFilters();
                 });
             });
+
+            // 时间范围筛选器
+            document.getElementById('trackerTimeFilters').querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    document.getElementById('trackerTimeFilters').querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    trackerFilters.timeRange = this.dataset.days;
+                    updateTrackerChart();  // 直接更新图表
+                });
+            });
+        }
+
+        // 更新价格追踪页面的异动统计
+        function updateTrackerStats() {
+            const filteredProducts = getFilteredProducts();
+            const weeklyChanges = calculateWeeklyChanges(filteredProducts, true);
+
+            // 构建筛选器描述
+            let filterTitle = '📊 本周价格异动';
+            let filterSubtitle = '过去7天的价格变化统计';
+
+            if (trackerFilters.brand !== 'all' || trackerFilters.category !== 'all') {
+                const parts = [];
+                if (trackerFilters.brand !== 'all') {
+                    // 首字母大写
+                    const brandName = trackerFilters.brand.charAt(0).toUpperCase() + trackerFilters.brand.slice(1);
+                    parts.push(brandName);
+                }
+                if (trackerFilters.category !== 'all') {
+                    parts.push(trackerFilters.category);
+                }
+                filterTitle = `📊 ${parts.join(' ')} 本周价格异动`;
+                filterSubtitle = `${parts.join(' ')} 产品过去7天的价格变化`;
+            }
+
+            // 格式化日期为 MM/DD 格式
+            const formatDate = (dateStr) => {
+                if (!dateStr) return '';
+                const date = new Date(dateStr);
+                return `${date.getMonth() + 1}/${date.getDate()}`;
+            };
+
+            // 生成产品列表HTML
+            const generateProductList = (products, type) => {
+                if (products.length === 0) {
+                    return '<div class="empty-list">😊 本周暂无变动</div>';
+                }
+
+                return products.slice(0, 10).map(product => {
+                    const dateRange = product.startDate && product.endDate
+                        ? `<div style="color: #999; font-size: 11px; margin-top: 4px;">📅 ${formatDate(product.startDate)} → ${formatDate(product.endDate)}</div>`
+                        : '';
+
+                    if (type === 'decreased') {
+                        return `
+                            <div class="product-item">
+                                <a href="${product.url}" target="_blank" class="product-name">${product.name}</a>
+                                <div class="product-price-change">
+                                    <span><span class="price-old">$${product.oldPrice}</span> → <span class="price-new">$${product.newPrice}</span></span>
+                                    <span class="price-diff down">-$${product.decrease.toFixed(2)}</span>
+                                </div>
+                                ${dateRange}
+                            </div>
+                        `;
+                    } else if (type === 'increased') {
+                        return `
+                            <div class="product-item">
+                                <a href="${product.url}" target="_blank" class="product-name">${product.name}</a>
+                                <div class="product-price-change">
+                                    <span><span class="price-old">$${product.oldPrice}</span> → <span class="price-new">$${product.newPrice}</span></span>
+                                    <span class="price-diff up">+$${product.increase.toFixed(2)}</span>
+                                </div>
+                                ${dateRange}
+                            </div>
+                        `;
+                    } else {
+                        // 促销产品
+                        const discountText = product.discount ? `-$${product.discount.toFixed(2)}` : '🔥';
+                        return `
+                            <div class="product-item">
+                                <a href="${product.url}" target="_blank" class="product-name">${product.name}</a>
+                                <div class="product-price-change">
+                                    <span>${product.msrp ? `<span class="price-old">$${product.msrp}</span> → ` : ''}<span class="price-new">$${product.price}</span></span>
+                                    <span class="price-diff down">${discountText}</span>
+                                </div>
+                                ${dateRange}
+                            </div>
+                        `;
+                    }
+                }).join('');
+            };
+
+            // 使用固定的"过去7天"（每天自动更新）
+            const today = new Date();
+            const sevenDaysAgo = new Date(today.getTime() - 7 * 24 * 60 * 60 * 1000);
+            const timeRangeText = `${formatDate(sevenDaysAgo)} - ${formatDate(today)}`;
+
+            const statsContainer = document.getElementById('tracker-stats-container');
+            statsContainer.innerHTML = `
+                <div style="text-align: center; margin-bottom: 15px; padding: 12px; background: #f8f9ff; border-radius: 8px; border: 1px solid #e8ebf7;">
+                    <span style="color: #667eea; font-weight: 600; font-size: 14px;">📅 统计时间范围：${timeRangeText} (过去7天)</span>
+                </div>
+                <div class="stats" style="margin-bottom: 20px;">
+                    <div class="stat-card">
+                        <div class="stat-number">${filteredProducts.length}</div>
+                        <div class="stat-label">筛选产品</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" style="color: #4caf50">${weeklyChanges.decreased}</div>
+                        <div class="stat-label">🔻 MSRP降价</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" style="color: #ff5722">${weeklyChanges.increased}</div>
+                        <div class="stat-label">🔺 MSRP涨价</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" style="color: #ff9800">${weeklyChanges.newPromo}</div>
+                        <div class="stat-label">🏷️ 新促销</div>
+                    </div>
+                </div>
+
+                <div class="price-changes-container">
+                    <div class="change-section">
+                        <div class="change-section-header decreased">
+                            🔻 MSRP降价
+                            <span style="font-size: 14px; color: #999;">(${weeklyChanges.decreased}个)</span>
+                        </div>
+                        <div style="font-size: 11px; color: #999; margin-bottom: 10px;">建议零售价降低</div>
+                        <div class="product-list">
+                            ${generateProductList(weeklyChanges.decreasedProducts, 'decreased')}
+                        </div>
+                    </div>
+
+                    <div class="change-section">
+                        <div class="change-section-header increased">
+                            🔺 MSRP涨价
+                            <span style="font-size: 14px; color: #999;">(${weeklyChanges.increased}个)</span>
+                        </div>
+                        <div style="font-size: 11px; color: #999; margin-bottom: 10px;">建议零售价上涨</div>
+                        <div class="product-list">
+                            ${generateProductList(weeklyChanges.increasedProducts, 'increased')}
+                        </div>
+                    </div>
+
+                    <div class="change-section">
+                        <div class="change-section-header promo">
+                            🏷️ 新增促销
+                            <span style="font-size: 14px; color: #999;">(${weeklyChanges.newPromo}个)</span>
+                        </div>
+                        <div style="font-size: 11px; color: #999; margin-bottom: 10px;">MSRP不变，新增折扣</div>
+                        <div class="product-list">
+                            ${generateProductList(weeklyChanges.newPromoProducts, 'promo')}
+                        </div>
+                    </div>
+                </div>
+            `;
         }
 
         // 应用筛选并重新渲染
         function applyTrackerFilters() {
+            updateTrackerStats();  // 更新异动统计
             renderTrackerProducts();
         }
 
@@ -2976,6 +3514,9 @@
             const container = document.getElementById('tracker-productCards');
             const filteredProducts = getFilteredProducts();
 
+            // 更新异动统计
+            updateTrackerStats();
+
             // 更新产品数量显示
             document.getElementById('tracker-product-count').textContent = filteredProducts.length;
 
@@ -3021,7 +3562,7 @@
                         <div class="tracker-card-price ${product.is_on_sale ? 'on-sale' : ''}">
                             $${product.current_price}${product.is_on_sale ? ' 🔥' : ''}
                         </div>
-                        ${!hasHistory ? '<div style="font-size: 11px; color: #e74c3c; margin-top: 5px;">⚠️ 暂无历史数据</div>' : ''}
+                        ${!hasHistory ? '<div style="font-size: 11px; color: #ff9800; margin-top: 5px;">📊 新产品，数据积累中...</div>' : ''}
                     </div>
                 `;
             }).join('');
@@ -3087,7 +3628,21 @@
             // 准备数据集
             const datasets = trackerSelectedProducts.map((product, index) => {
                 const history = trackerHistory[product.id];
-                const data = history.price_history.map(record => ({
+                let priceHistory = history.price_history;
+
+                // 应用时间范围筛选
+                if (trackerFilters.timeRange !== 'all') {
+                    const days = parseInt(trackerFilters.timeRange);
+                    const cutoffDate = new Date();
+                    cutoffDate.setDate(cutoffDate.getDate() - days);
+
+                    priceHistory = priceHistory.filter(record => {
+                        const recordDate = new Date(record.date);
+                        return recordDate >= cutoffDate;
+                    });
+                }
+
+                const data = priceHistory.map(record => ({
                     x: new Date(record.date),
                     y: record.price
                 }));
@@ -3262,6 +3817,7 @@
     </script>
 
 <!-- 最后更新: 2026-03-23 10:35:09 -->
-<!-- 最后更新: 2026-04-15 21:08:21 -->
+<!-- 最后更新: 2026-04-14 21:05:35 -->
+<!-- 最后更新: 2026-04-16 10:21:02 -->
 </body>
 </html>

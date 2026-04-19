@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2026-03-22T19:26:10.297184",
-    "total_products": 105,
-    "success_count": 102,
-    "cameras": 48,
-    "doorbells": 28,
-    "locks": 29,
-    "eufy_count": 31
-  },
-  {
     "timestamp": "2026-03-23T20:20:26.843788",
     "total_products": 111,
     "success_count": 108,
@@ -266,6 +257,15 @@
     "success_count": 152,
     "cameras": 50,
     "doorbells": 26,
+    "locks": 31,
+    "eufy_count": 34
+  },
+  {
+    "timestamp": "2026-04-19T19:12:54.181420",
+    "total_products": 156,
+    "success_count": 35,
+    "cameras": 48,
+    "doorbells": 27,
     "locks": 31,
     "eufy_count": 34
   }

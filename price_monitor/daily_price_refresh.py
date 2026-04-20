@@ -1,661 +1,387 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-每日价格自动刷新脚本
-自动从JB Hi-Fi抓取所有eufy和竞品camera的最新价格
+每日价格自动刷新脚本 - 固定产品列表版
+从 product_list_fixed.json 读取固定产品列表，逐一抓取价格
+不再依赖动态搜索，成功率更稳定
 """
 
 from playwright.sync_api import sync_playwright
 import json
 import time
-import re
+import random
 from datetime import datetime
+from pathlib import Path
 from product_classifier import classify_product, is_valid_product, validate_product_data
 from price_history_manager import PriceHistoryManager
 from promotion_detector import PromotionDetector
 from promotion_calendar_generator import PromotionCalendarGenerator
 
-def search_all_eufy_cameras():
-    """搜索所有eufy camera产品"""
-    print('🔍 搜索eufy产品...')
+# ─── User-Agent 池（轮换使用，降低被限速概率）─────────────────────────────────
+USER_AGENTS = [
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3 Safari/605.1.15",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0",
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+]
 
-    all_products = []
 
-    with sync_playwright() as p:
-        # 添加反爬虫对策：真实的浏览器参数
-        browser = p.chromium.launch(
-            headless=True,
-            args=[
-                '--disable-blink-features=AutomationControlled',
-                '--no-sandbox',
-                '--disable-dev-shm-usage'
-            ]
-        )
+def load_product_list():
+    """加载固定产品列表"""
+    list_file = Path("product_list_fixed.json")
+    if list_file.exists():
+        with open(list_file, "r", encoding="utf-8") as f:
+            products = json.load(f)
+        print(f"📋 加载固定产品列表: {len(products)} 个产品")
+        return products
+    else:
+        print("⚠️  product_list_fixed.json 不存在，将从 price_history.json 重新生成...")
+        return generate_product_list_from_history()
 
-        # 创建页面，设置真实的 User-Agent 和 viewport
-        page = browser.new_page(
-            user_agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-            viewport={'width': 1920, 'height': 1080}
-        )
 
-        # 搜索eufy camera
-        search_url = 'https://www.jbhifi.com.au/search?query=eufy+camera&page=1'
-        page.goto(search_url, wait_until='domcontentloaded', timeout=30000)
-        time.sleep(5)  # 增加等待时间，确保 JavaScript 完全渲染
+def generate_product_list_from_history():
+    """从历史数据生成产品列表（备用方案）"""
+    history_file = Path("price_history.json")
+    if not history_file.exists():
+        print("❌ price_history.json 也不存在，无法生成产品列表")
+        return []
 
-        content = page.content()
-        product_urls = re.findall(r'href="(/products/[^"]+)"', content)
-        unique_urls = list(set(product_urls))
-
-        print(f'  第1页: {len(unique_urls)} 个链接')
-
-        # 第2页
-        page.goto('https://www.jbhifi.com.au/search?query=eufy+camera&page=2', wait_until='domcontentloaded', timeout=30000)
-        time.sleep(5)
-        content = page.content()
-        product_urls_p2 = re.findall(r'href="(/products/[^"]+)"', content)
-        unique_urls.extend([url for url in set(product_urls_p2) if url not in unique_urls])
-
-        print(f'  第2页: 新增 {len(set(product_urls_p2)) - len(unique_urls) + len(set(product_urls_p2))} 个链接')
-
-        # 访问每个产品页
-        for url in unique_urls:
-            full_url = f'https://www.jbhifi.com.au{url}'
-
-            # 避免重复
-            if any(p['url'] == full_url for p in all_products):
-                continue
-
-            try:
-                detail_page = browser.new_page()
-                detail_page.goto(full_url, wait_until='domcontentloaded', timeout=15000)
-                time.sleep(1)
-
-                try:
-                    title = detail_page.locator('h1').first.inner_text()
-                    title_lower = title.lower()
-
-                    # 是eufy camera
-                    if 'eufy' in title_lower and any(kw in title_lower for kw in ['camera', 'cam', 'eufycam', 'security', 'video', 'doorbell', 'baby monitor']):
-                        # 使用统一分类器判断是否是有效产品和品类
-                        if is_valid_product(title):
-                            category = classify_product(title, 'eufy')
-                            all_products.append({
-                                'name': title,
-                                'brand': 'eufy',
-                                'category': category,
-                                'url': full_url,
-                                'channel': 'JB Hi-Fi'
-                            })
-                except:
-                    pass
-
-                detail_page.close()
-                time.sleep(0.3)
-
-            except:
-                pass
-
-        browser.close()
-
-    return all_products
-
-def search_doorbell_lock():
-    """搜索门铃和门锁"""
-    print('\n🔍 搜索门铃和门锁...')
+    with open(history_file, "r", encoding="utf-8") as f:
+        history = json.load(f)
 
     products = []
-
-    with sync_playwright() as p:
-        # 添加反爬虫对策
-        browser = p.chromium.launch(
-            headless=True,
-            args=[
-                '--disable-blink-features=AutomationControlled',
-                '--no-sandbox',
-                '--disable-dev-shm-usage'
-            ]
+    for key, data in history.items():
+        products.append(
+            {
+                "name": data["product_name"],
+                "brand": data["brand"],
+                "category": data["category"],
+                "url": data["url"],
+                "channel": data.get("channel", "JB Hi-Fi"),
+            }
         )
 
-        search_terms = ['smart doorbell', 'video doorbell', 'smart lock']
+    print(f"✅ 从历史数据生成产品列表: {len(products)} 个")
 
-        for term in search_terms:
-            print(f'  搜索: {term}')
-            page = browser.new_page(
-                user_agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-                viewport={'width': 1920, 'height': 1080}
-            )
-
-            try:
-                search_url = f'https://www.jbhifi.com.au/search?query={term.replace(" ", "+")}'
-                page.goto(search_url, wait_until='domcontentloaded', timeout=30000)
-                time.sleep(5)
-
-                content = page.content()
-                product_urls = re.findall(r'href="(/products/[^"]+)"', content)
-                unique_urls = list(set(product_urls))
-
-                for url in unique_urls[:30]:  # 增加到30个以确保不遗漏
-                    full_url = f'https://www.jbhifi.com.au{url}'
-
-                    if any(p['url'] == full_url for p in products):
-                        continue
-
-                    try:
-                        detail_page = browser.new_page()
-                        detail_page.goto(full_url, timeout=12000)
-                        time.sleep(1)
-
-                        try:
-                            title = detail_page.locator('h1').first.inner_text()
-                            title_lower = title.lower()
-
-                            # 使用统一分类器
-                            if is_valid_product(title):
-                                category = classify_product(title)
-
-                                # 只保留门铃和门锁
-                                if category in ['Video Doorbell', 'Smart Lock']:
-                                    # 识别品牌
-                                    brand = 'Other'
-                                    if 'eufy' in title_lower:
-                                        brand = 'eufy'
-                                    elif 'ring' in title_lower:
-                                        brand = 'Ring'
-                                    elif 'arlo' in title_lower:
-                                        brand = 'Arlo'
-                                    elif 'yale' in title_lower:
-                                        brand = 'Yale'
-                                    elif 'tp-link' in title_lower or 'tapo' in title_lower:
-                                        brand = 'TP-Link'
-                                    elif 'swann' in title_lower:
-                                        brand = 'Swann'
-
-                                    products.append({
-                                        'name': title,
-                                        'brand': brand,
-                                        'category': category,
-                                        'url': full_url,
-                                        'channel': 'JB Hi-Fi'
-                                    })
-                        except:
-                            pass
-
-                        detail_page.close()
-                    except:
-                        pass
-            except:
-                pass
-
-            page.close()
-
-        browser.close()
+    # 保存以便下次直接使用
+    with open("product_list_fixed.json", "w", encoding="utf-8") as f:
+        json.dump(products, f, ensure_ascii=False, indent=2)
 
     return products
 
-def search_competitor_cameras():
-    """搜索竞品camera"""
-    print('\n🔍 搜索竞品camera...')
-
-    competitors = []
-    brands = [
-        ('Arlo', 'arlo security camera'),
-        ('Ring', 'ring security camera'),
-        ('Google Nest', 'google nest cam'),
-        ('TP-Link', 'tp-link tapo camera'),
-        ('Swann', 'swann security camera'),
-    ]
-
-    with sync_playwright() as p:
-        # 添加反爬虫对策
-        browser = p.chromium.launch(
-            headless=True,
-            args=[
-                '--disable-blink-features=AutomationControlled',
-                '--no-sandbox',
-                '--disable-dev-shm-usage'
-            ]
-        )
-
-        for brand_name, search_term in brands:
-            print(f'  搜索 {brand_name}...')
-
-            page = browser.new_page(
-                user_agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-                viewport={'width': 1920, 'height': 1080}
-            )
-            search_url = f'https://www.jbhifi.com.au/search?query={search_term.replace(" ", "+")}'
-
-            try:
-                page.goto(search_url, wait_until='domcontentloaded', timeout=30000)
-                time.sleep(5)
-
-                content = page.content()
-                product_urls = re.findall(r'href="(/products/[^"]+)"', content)
-                unique_urls = list(set(product_urls))
-
-                for url in unique_urls[:6]:  # 每个品牌取前6个
-                    full_url = f'https://www.jbhifi.com.au{url}'
-
-                    try:
-                        detail_page = browser.new_page()
-                        detail_page.goto(full_url, timeout=15000)
-                        time.sleep(1)
-
-                        try:
-                            title = detail_page.locator('h1').first.inner_text()
-                            title_lower = title.lower()
-
-                            # 确认是目标品牌的camera
-                            if brand_name.lower().replace(' ', '') in title_lower.replace(' ', ''):
-                                if any(kw in title_lower for kw in ['camera', 'cam', 'doorbell', 'security']):
-                                    # 使用统一分类器
-                                    if is_valid_product(title):
-                                        category = classify_product(title, brand_name)
-
-                                        competitors.append({
-                                            'name': title,
-                                            'brand': brand_name,
-                                            'category': category,
-                                            'url': full_url,
-                                            'channel': 'JB Hi-Fi'
-                                        })
-                        except:
-                            pass
-
-                        detail_page.close()
-                    except:
-                        pass
-            except:
-                pass
-
-            page.close()
-            time.sleep(1)
-
-        browser.close()
-
-    return competitors
 
 def extract_price(page):
-    """提取价格 - 同时获取原价和促销价"""
+    """
+    提取价格 - 多选择器 fallback，同时获取原价和促销价
+    选择器按优先级排列，任意一个成功即返回
+    """
     try:
         time.sleep(1.5)
 
         current_price = None
         was_price = None
 
-        # 1. 抓取实际售价（ticket-price）
+        # 1. 主选择器：ticket-price（JB Hi-Fi 现价）
         try:
-            ticket_price_elem = page.locator('[data-testid="ticket-price"]').first
-            if ticket_price_elem.count() > 0:
-                text = ticket_price_elem.inner_text()
-                current_price = float(text.replace(',', '').strip())
-        except:
+            ticket = page.locator('[data-testid="ticket-price"]').first
+            if ticket.count() > 0:
+                text = ticket.inner_text().strip().replace(",", "").replace("$", "")
+                if text:
+                    current_price = float(text)
+        except Exception:
             pass
 
-        # 2. 抓取原价（floating-header-strikethrough-price，如果有促销的话）
+        # 2. Fallback：price-tag 类
+        if current_price is None:
+            try:
+                for sel in [
+                    ".price-tag__price",
+                    '[class*="price-tag"]',
+                    '[class*="PriceTag"]',
+                ]:
+                    elems = page.locator(sel)
+                    if elems.count() > 0:
+                        text = (
+                            elems.first.inner_text()
+                            .strip()
+                            .replace(",", "")
+                            .replace("$", "")
+                        )
+                        if text:
+                            current_price = float(text)
+                            break
+            except Exception:
+                pass
+
+        # 3. Fallback：JSON-LD 结构化数据（最可靠）
+        if current_price is None:
+            try:
+                import re
+
+                content = page.content()
+                # JB Hi-Fi 页面里有 JSON-LD 包含价格
+                ld_matches = re.findall(r'"price"\s*:\s*"?([\d.]+)"?', content)
+                if ld_matches:
+                    for price_str in ld_matches:
+                        val = float(price_str)
+                        if 1 < val < 50000:
+                            current_price = val
+                            break
+            except Exception:
+                pass
+
+        # 4. 抓取原价（划线价）
         try:
-            was_price_elem = page.locator('[data-testid="floating-header-strikethrough-price"]').first
-            if was_price_elem.count() > 0:
-                text = was_price_elem.inner_text()
-                was_price = float(text.replace(',', '').strip())
-        except:
+            strike = page.locator(
+                '[data-testid="floating-header-strikethrough-price"]'
+            ).first
+            if strike.count() > 0:
+                text = strike.inner_text().strip().replace(",", "").replace("$", "")
+                if text:
+                    was_price = float(text)
+        except Exception:
             pass
 
-        # 返回字典，包含当前价和原价
-        if current_price and 50 < current_price < 10000:
-            result = {'price': current_price}
+        # 验证价格合理性（JB Hi-Fi 产品价格范围）
+        if current_price and 1 < current_price < 50000:
+            result = {"price": current_price}
             if was_price and was_price > current_price:
-                result['was_price'] = was_price
-                result['discount_percent'] = round((was_price - current_price) / was_price * 100)
+                result["was_price"] = was_price
+                result["discount_percent"] = round(
+                    (was_price - current_price) / was_price * 100
+                )
             return result
 
         return None
-    except:
+
+    except Exception:
         return None
 
-def scrape_single_product_with_retry(browser, product, max_retries=3):
-    """抓取单个产品价格，带重试机制"""
+
+def scrape_single_product(browser, product, max_retries=3):
+    """
+    抓取单个产品价格，带重试机制
+    每次重试使用不同 User-Agent
+    """
+    page = None
     for attempt in range(max_retries):
         try:
+            ua = random.choice(USER_AGENTS)
             page = browser.new_page(
-                user_agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
+                user_agent=ua, viewport={"width": 1920, "height": 1080}
             )
 
-            # 增加超时时间到30秒
-            page.goto(product['url'], wait_until='domcontentloaded', timeout=30000)
+            page.goto(product["url"], wait_until="domcontentloaded", timeout=30000)
             price_data = extract_price(page)
             page.close()
+            page = None
 
             if price_data:
                 return price_data, True
-            elif attempt < max_retries - 1:
-                # 如果没有价格数据且还有重试机会，等待后重试
-                time.sleep(2)
-                continue
-            else:
-                return None, False
+
+            # 无价格数据，等待后重试
+            if attempt < max_retries - 1:
+                time.sleep(random.uniform(2, 4))
 
         except Exception as e:
             if page:
-                page.close()
+                try:
+                    page.close()
+                except Exception:
+                    pass
+                page = None
             if attempt < max_retries - 1:
-                # 还有重试机会，等待后重试
-                time.sleep(2)
-                continue
-            else:
-                # 最后一次尝试也失败了
-                return None, False
+                time.sleep(random.uniform(2, 5))
 
     return None, False
 
 
 def scrape_prices(products):
-    """抓取所有产品价格"""
-    print(f'\n💰 抓取价格 ({len(products)} 款)...')
+    """抓取所有产品价格（固定列表版）"""
+    total = len(products)
+    print(f"\n💰 抓取价格 ({total} 款)...")
 
     results = []
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
+        browser = p.chromium.launch(
+            headless=True,
+            args=[
+                "--disable-blink-features=AutomationControlled",
+                "--no-sandbox",
+                "--disable-dev-shm-usage",
+                "--disable-gpu",
+            ],
+        )
+
+        success_count = 0
+        fail_count = 0
 
         for i, product in enumerate(products, 1):
-            if i % 10 == 0:
-                print(f'  进度: {i}/{len(products)}')
+            # 进度日志（每10个打印一次，方便调试）
+            if i % 10 == 0 or i == 1:
+                rate = round(success_count / (i - 1) * 100) if i > 1 else 0
+                print(
+                    f"  进度: {i}/{total} | 成功:{success_count} 失败:{fail_count} 成功率:{rate}%"
+                )
 
-            # 使用带重试的抓取函数
-            price_data, success = scrape_single_product_with_retry(browser, product, max_retries=3)
+            price_data, success = scrape_single_product(browser, product, max_retries=3)
 
             result = {
-                'name': product['name'],
-                'brand': product['brand'],
-                'category': product.get('category', 'Security Camera'),
-                'channel': 'JB Hi-Fi',
-                'url': product['url'],
-                'currency': 'AUD',
-                'scraped_at': datetime.now().isoformat(),
+                "name": product["name"],
+                "brand": product["brand"],
+                "category": product.get("category", "Security Camera"),
+                "channel": product.get("channel", "JB Hi-Fi"),
+                "url": product["url"],
+                "currency": "AUD",
+                "scraped_at": datetime.now().isoformat(),
             }
 
-            # 处理价格数据
             if success and price_data:
-                result['price'] = price_data['price']
-                if 'was_price' in price_data:
-                    result['was_price'] = price_data['was_price']
-                if 'discount_percent' in price_data:
-                    result['discount_percent'] = price_data['discount_percent']
-                result['status'] = 'success'
+                result["price"] = price_data["price"]
+                if "was_price" in price_data:
+                    result["was_price"] = price_data["was_price"]
+                if "discount_percent" in price_data:
+                    result["discount_percent"] = price_data["discount_percent"]
+                result["status"] = "success"
+                success_count += 1
             else:
-                result['price'] = None
-                result['status'] = 'failed'
+                result["price"] = None
+                result["status"] = "failed"
+                fail_count += 1
 
             results.append(result)
 
-            time.sleep(1)
+            # 随机间隔：1-3秒，防止被限速
+            time.sleep(random.uniform(1.0, 3.0))
 
         browser.close()
 
     return results
 
 
-def search_baby_products():
-    """搜索所有品牌的母婴产品（baby monitor、breast pump等）"""
-    print('\n🍼 搜索母婴产品...')
-
-    products = []
-
-    with sync_playwright() as p:
-        # 添加反爬虫对策
-        browser = p.chromium.launch(
-            headless=True,
-            args=[
-                '--disable-blink-features=AutomationControlled',
-                '--no-sandbox',
-                '--disable-dev-shm-usage'
-            ]
-        )
-
-        # 搜索关键词列表 - 包括各个品牌
-        search_terms = [
-            'baby monitor',
-            'breast pump',
-            'momcozy baby',
-            'nanit baby monitor',
-            'owlet baby',
-            'eufy baby'
-        ]
-
-        for term in search_terms:
-            print(f'  搜索: {term}')
-            page = browser.new_page(
-                user_agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-                viewport={'width': 1920, 'height': 1080}
-            )
-
-            try:
-                search_url = f'https://www.jbhifi.com.au/search?query={term.replace(" ", "+")}'
-                page.goto(search_url, wait_until='domcontentloaded', timeout=30000)
-                time.sleep(5)
-
-                content = page.content()
-                product_urls = re.findall(r'href="(/products/[^"]+)"', content)
-                unique_urls = list(set(product_urls))
-
-                print(f'    找到 {len(unique_urls)} 个产品链接')
-
-                for url in unique_urls[:25]:  # 每个搜索词取前25个
-                    full_url = f'https://www.jbhifi.com.au{url}'
-
-                    # 避免重复
-                    if any(p['url'] == full_url for p in products):
-                        continue
-
-                    try:
-                        detail_page = browser.new_page()
-                        detail_page.goto(full_url, timeout=12000)
-                        time.sleep(1)
-
-                        try:
-                            title = detail_page.locator('h1').first.inner_text()
-                            title_lower = title.lower()
-
-                            # 确认是baby相关产品
-                            if any(kw in title_lower for kw in ['baby', 'breast', 'pump', 'nursing', 'infant', 'monitor', 'momcozy', 'nanit', 'owlet']):
-                                # 使用统一分类器判断是否是有效产品
-                                if is_valid_product(title):
-                                    category = classify_product(title)
-
-                                    # 识别品牌
-                                    brand = 'Other'
-                                    if 'eufy' in title_lower:
-                                        brand = 'eufy'
-                                    elif 'momcozy' in title_lower:
-                                        brand = 'Momcozy'
-                                    elif 'nanit' in title_lower:
-                                        brand = 'Nanit'
-                                    elif 'owlet' in title_lower:
-                                        brand = 'Owlet'
-                                    elif 'philips' in title_lower:
-                                        brand = 'Philips'
-                                    elif 'vtech' in title_lower:
-                                        brand = 'VTech'
-
-                                    # 只添加Baby类别的产品
-                                    if category == 'Baby':
-                                        products.append({
-                                            'name': title,
-                                            'brand': brand,
-                                            'category': category,
-                                            'url': full_url,
-                                            'channel': 'JB Hi-Fi'
-                                        })
-                                        print(f'    ✅ {brand} - {title}')
-                        except:
-                            pass
-
-                        detail_page.close()
-                        time.sleep(0.3)
-
-                    except:
-                        pass
-
-            except Exception as e:
-                print(f'    ⚠️ 搜索失败: {e}')
-
-            page.close()
-            time.sleep(1)
-
-        browser.close()
-
-    print(f'  共找到 {len(products)} 个母婴产品')
-    return products
-
-
 def main():
-    print('=' * 70)
-    print('🤖 每日价格自动刷新')
-    print(f'⏰ 运行时间: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}')
-    print('=' * 70)
+    print("=" * 70)
+    print("🤖 每日价格自动刷新（固定产品列表版）")
+    print(f"⏰ 运行时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print("=" * 70)
 
-    # 1. 搜索产品
-    eufy_products = search_all_eufy_cameras()
-    competitor_products = search_competitor_cameras()
-    doorbell_lock_products = search_doorbell_lock()
-    baby_products = search_baby_products()
+    # 1. 加载固定产品列表
+    products = load_product_list()
 
-    # 给camera产品添加category（如果还没有的话）
-    for p in eufy_products:
-        if 'category' not in p:
-            p['category'] = 'Security Camera'
-    for p in competitor_products:
-        if 'category' not in p:
-            p['category'] = 'Security Camera'
-
-    all_products = eufy_products + competitor_products + doorbell_lock_products + baby_products
-
-    # 验证产品数据
-    print(f'\n🔍 验证产品数据...')
-    valid_products = []
-    invalid_count = 0
-
-    for product in all_products:
-        is_valid, error = validate_product_data(product)
-        if is_valid:
-            valid_products.append(product)
-        else:
-            print(f'  ⚠️  跳过无效产品: {product.get("name", "Unknown")} - {error}')
-            invalid_count += 1
-
-    if invalid_count > 0:
-        print(f'  跳过了 {invalid_count} 个无效产品')
+    if not products:
+        print("❌ 无法加载产品列表，退出")
+        return
 
     # 按品类统计
-    category_stats = {}
-    for p in valid_products:
-        cat = p['category']
-        category_stats[cat] = category_stats.get(cat, 0) + 1
+    from collections import Counter
 
-    print(f'\n📊 找到产品:')
-    print(f'  eufy: {len(eufy_products)} 款')
-    print(f'  竞品: {len(competitor_products)} 款')
-    print(f'  门铃+门锁: {len(doorbell_lock_products)} 款')
-    print(f'  总计: {len(valid_products)} 款')
-    print(f'\n📂 品类分布:')
+    category_stats = Counter(p["category"] for p in products)
+    brand_stats = Counter(p["brand"] for p in products)
+
+    print(f"\n📊 产品列表统计:")
+    print(f"  总计: {len(products)} 款")
+    print(f"\n📂 品类分布:")
     for cat, count in sorted(category_stats.items()):
-        print(f'  {cat}: {count} 款')
+        print(f"  {cat}: {count} 款")
+    print(f"\n🏷️  主要品牌:")
+    for brand, count in sorted(brand_stats.items(), key=lambda x: -x[1])[:8]:
+        print(f"  {brand}: {count} 款")
 
     # 2. 抓取价格
-    results = scrape_prices(valid_products)
+    results = scrape_prices(products)
 
-    # 3. 保存结果
-    with open('price_results_latest.json', 'w', encoding='utf-8') as f:
+    # 3. 保存最新价格数据
+    with open("price_results_latest.json", "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
 
-    # 3.5. 更新历史数据和检测促销
-    print(f'\n📊 更新历史数据和检测促销...')
+    # 4. 更新历史数据 & 检测促销
+    print(f"\n📊 更新历史数据和检测促销...")
     history_manager = PriceHistoryManager()
     promotion_detector = PromotionDetector()
 
     promotion_count = 0
     for result in results:
-        if result['status'] != 'success' or not result.get('price'):
+        if result["status"] != "success" or not result.get("price"):
             continue
 
-        # 更新历史
         product_id = history_manager.update_price(result)
 
-        # 检测促销
-        current_price = result['price']
-        original_price = result.get('was_price', current_price)
+        current_price = result["price"]
+        original_price = result.get("was_price", current_price)
 
         promotion_detector.update_promotions(
             product_id=product_id,
-            product_name=result['name'],
-            brand=result['brand'],
-            category=result['category'],
+            product_name=result["name"],
+            brand=result["brand"],
+            category=result["category"],
             current_price=current_price,
             original_price=original_price,
-            url=result.get('url', '')
+            url=result.get("url", ""),
         )
 
-        if result.get('was_price') and result['was_price'] > current_price:
+        if result.get("was_price") and result["was_price"] > current_price:
             promotion_count += 1
 
-    # 保存历史和促销数据
     history_manager.save_history()
     promotion_detector.save_promotions()
 
-    print(f'  历史记录: {len(history_manager.history)} 个产品')
-    print(f'  促销中: {promotion_count} 款')
+    print(f"  历史记录: {len(history_manager.history)} 个产品")
+    print(f"  促销中: {promotion_count} 款")
 
-    # 4. 统计
-    success = sum(1 for r in results if r['status'] == 'success')
+    # 5. 统计结果
+    success_count = sum(1 for r in results if r["status"] == "success")
+    fail_count = len(results) - success_count
+    success_rate = round(success_count / len(results) * 100) if results else 0
 
-    print(f'\n{"=" * 70}')
-    print(f'✅ 完成！')
-    print(f'  成功: {success}/{len(results)} ({success*100//len(results)}%)')
-    print(f'  数据已保存到: price_results_latest.json')
-    print(f'{"=" * 70}')
+    print(f"\n{'=' * 70}")
+    print(f"✅ 完成！")
+    print(f"  成功: {success_count}/{len(results)} ({success_rate}%)")
+    print(f"  失败: {fail_count} 款")
+    print(f"  数据已保存到: price_results_latest.json")
+    print(f"{'=' * 70}")
 
-    # 5. 记录日志
-    cameras = sum(1 for r in results if (r.get('category', 'Security Camera') == 'Security Camera'))
-    doorbells = sum(1 for r in results if r.get('category') == 'Video Doorbell')
-    locks = sum(1 for r in results if r.get('category') == 'Smart Lock')
+    # 6. 记录运行日志
+    cameras = sum(1 for r in results if r.get("category") == "Security Camera")
+    doorbells = sum(1 for r in results if r.get("category") == "Video Doorbell")
+    locks = sum(1 for r in results if r.get("category") == "Smart Lock")
+    baby = sum(1 for r in results if r.get("category") == "Baby")
 
     log_entry = {
-        'timestamp': datetime.now().isoformat(),
-        'total_products': len(results),
-        'success_count': success,
-        'cameras': cameras,
-        'doorbells': doorbells,
-        'locks': locks,
-        'eufy_count': len(eufy_products)
+        "timestamp": datetime.now().isoformat(),
+        "total_products": len(results),
+        "success_count": success_count,
+        "fail_count": fail_count,
+        "success_rate": success_rate,
+        "cameras": cameras,
+        "doorbells": doorbells,
+        "locks": locks,
+        "baby": baby,
+        "eufy_count": sum(1 for r in results if r.get("brand") == "eufy"),
     }
 
-    # 追加到日志文件
     try:
-        with open('price_refresh_log.json', 'r', encoding='utf-8') as f:
+        with open("price_refresh_log.json", "r", encoding="utf-8") as f:
             logs = json.load(f)
-    except:
+    except Exception:
         logs = []
 
     logs.append(log_entry)
-
-    # 只保留最近30天的日志
     if len(logs) > 30:
         logs = logs[-30:]
 
-    with open('price_refresh_log.json', 'w', encoding='utf-8') as f:
+    with open("price_refresh_log.json", "w", encoding="utf-8") as f:
         json.dump(logs, f, ensure_ascii=False, indent=2)
 
-    # 6. 生成促销日历
-    print(f'\n📅 生成促销日历...')
+    # 7. 生成促销日历
+    print(f"\n📅 生成促销日历...")
     calendar_generator = PromotionCalendarGenerator()
-
-    # 生成当月日历
     now = datetime.now()
     calendar = calendar_generator.generate_monthly_calendar(now.year, now.month)
     calendar_generator.save_calendar_json(calendar)
-    print(f'  生成了 {len(calendar)} 个产品的日历')
+    print(f"  生成了 {len(calendar)} 个产品的日历")
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

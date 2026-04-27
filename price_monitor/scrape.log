@@ -1,6 +1,6 @@
 ======================================================================
 🤖 每日价格自动刷新（固定产品列表版）
-⏰ 运行时间: 2026-04-26 18:34:31
+⏰ 运行时间: 2026-04-27 19:02:19
 ======================================================================
 📋 加载固定产品列表: 250 个产品
 
@@ -44,38 +44,27 @@
   进度: 170/250 | 成功:154 失败:15 成功率:91%
   进度: 180/250 | 成功:164 失败:15 成功率:92%
   进度: 190/250 | 成功:173 失败:16 成功率:92%
-  进度: 200/250 | 成功:183 失败:16 成功率:92%
-  进度: 210/250 | 成功:191 失败:18 成功率:91%
-  进度: 220/250 | 成功:200 失败:19 成功率:91%
-  进度: 230/250 | 成功:209 失败:20 成功率:91%
-  进度: 240/250 | 成功:215 失败:24 成功率:90%
-  进度: 250/250 | 成功:224 失败:25 成功率:90%
+  进度: 200/250 | 成功:182 失败:17 成功率:91%
+  进度: 210/250 | 成功:190 失败:19 成功率:91%
+  进度: 220/250 | 成功:199 失败:20 成功率:91%
+  进度: 230/250 | 成功:208 失败:21 成功率:91%
+  进度: 240/250 | 成功:214 失败:25 成功率:90%
+  进度: 250/250 | 成功:223 失败:26 成功率:90%
 
 📊 更新历史数据和检测促销...
 ✅ 加载历史数据: 252 个产品
-✅ 加载促销记录: 60 活跃, 126 历史
-  🔥 新促销: Ring Pan-Tilt Indoor Security Camera (Black) (30.3% OFF)
-  🔥 新促销: Ring Spotlight Cam Pro Plug-In Security Camera (White) (20.1% OFF)
-  🔥 新促销: Ring Indoor Cam [2nd Gen](White) (30.4% OFF)
-  🔥 新促销: Ring Wired Video Doorbell Plus DIN Rail (40.2% OFF)
-  🔥 新促销: Ring Outdoor Security Camera Plus 2K Plug-In (Black) (39.1% OFF)
-  🔥 新促销: Ring Wired Video Doorbell Pro Plug-In (17.5% OFF)
-  🔥 新促销: Ring Outdoor Cam Pro Plug-In Security Camera (White) (24.3% OFF)
-  🔥 新促销: Ring Indoor Cam Plus Plug-In Security Camera (Black) (30.3% OFF)
-  🔥 新促销: Ring Spotlight Cam Pro Wired Security Camera (White) (20.1% OFF)
-  🔥 新促销: Ring Indoor Cam 2 Pack [2nd Gen](White) (31.0% OFF)
-  🔥 新促销: Ring Outdoor Cam Pro Plug-In Security Camera (Black) (24.3% OFF)
-  🔥 新促销: Ring Indoor Cam Plus Plug-In Security Camera (White) (30.3% OFF)
-  🔥 新促销: Ring Floodlight Cam Pro(2nd Gen) Wired Security Camera (White) (16.3% OFF)
+✅ 加载促销记录: 73 活跃, 126 历史
+  ✅ 促销结束: eufy Security Dual Cam Wireless 2K Video Doorbell (持续 13 天)
+  ✅ 促销结束: eufy Video Doorbell 2K Wireless with Homebase 2 (持续 13 天)
 ✅ 历史数据已保存: 252 个产品
 ✅ 促销记录已保存
   历史记录: 252 个产品
-  促销中: 67 款
+  促销中: 64 款
 
 ======================================================================
 ✅ 完成！
-  成功: 225/250 (90%)
-  失败: 25 款
+  成功: 224/250 (90%)
+  失败: 26 款
   数据已保存到: price_results_latest.json
 ======================================================================
 

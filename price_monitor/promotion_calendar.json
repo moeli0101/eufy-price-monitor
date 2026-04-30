@@ -200,6 +200,13 @@
         "original_price": 279.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 223.0,
+        "original_price": 279.0,
+        "is_sale": true,
+        "discount": 20
       }
     }
   },
@@ -393,6 +400,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 1149.0,
+        "original_price": 1149.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 1149.0,
         "original_price": 1149.0,
         "is_sale": false,
@@ -601,6 +615,13 @@
         "original_price": 549.0,
         "is_sale": true,
         "discount": 30
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 384.0,
+        "original_price": 549.0,
+        "is_sale": true,
+        "discount": 30
       }
     }
   },
@@ -798,6 +819,13 @@
         "original_price": 1999.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 1999.0,
+        "original_price": 1999.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -991,6 +1019,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 1299.0,
+        "original_price": 1299.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 1299.0,
         "original_price": 1299.0,
         "is_sale": false,
@@ -1199,6 +1234,13 @@
         "original_price": 149.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 149.0,
+        "original_price": 149.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -1392,6 +1434,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 1099.0,
+        "original_price": 1099.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 1099.0,
         "original_price": 1099.0,
         "is_sale": false,
@@ -1600,6 +1649,13 @@
         "original_price": 1499.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 1499.0,
+        "original_price": 1499.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -1800,6 +1856,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 199.0,
+        "original_price": 199.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 199.0,
         "original_price": 199.0,
         "is_sale": false,
@@ -2008,6 +2071,13 @@
         "original_price": 349.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 349.0,
+        "original_price": 349.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -2194,6 +2264,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 599.0,
+        "original_price": 599.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 599.0,
         "original_price": 599.0,
         "is_sale": false,
@@ -2395,6 +2472,13 @@
         "original_price": 449.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 449.0,
+        "original_price": 449.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -2588,6 +2672,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 299.0,
+        "original_price": 299.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 299.0,
         "original_price": 299.0,
         "is_sale": false,
@@ -2958,6 +3049,13 @@
         "original_price": 1649.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 1649.0,
+        "original_price": 1649.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -3148,6 +3246,13 @@
         "original_price": 1399.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 1399.0,
+        "original_price": 1399.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -3334,6 +3439,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 304.0,
+        "original_price": 429.0,
+        "is_sale": true,
+        "discount": 29
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 304.0,
         "original_price": 429.0,
         "is_sale": true,
@@ -3542,6 +3654,13 @@
         "original_price": 899.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 899.0,
+        "original_price": 899.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -3735,6 +3854,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 1999.0,
+        "original_price": 1999.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 1999.0,
         "original_price": 1999.0,
         "is_sale": false,
@@ -3936,6 +4062,13 @@
         "original_price": 249.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 249.0,
+        "original_price": 249.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -4129,6 +4262,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 599.0,
+        "original_price": 599.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 599.0,
         "original_price": 599.0,
         "is_sale": false,
@@ -4337,6 +4477,13 @@
         "original_price": 279.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 279.0,
+        "original_price": 279.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -4534,6 +4681,13 @@
         "original_price": 299.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 299.0,
+        "original_price": 299.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -4685,6 +4839,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 449.0,
+        "original_price": 449.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 449.0,
         "original_price": 449.0,
         "is_sale": false,
@@ -4900,6 +5061,13 @@
         "original_price": 1299.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 1299.0,
+        "original_price": 1299.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -5104,6 +5272,13 @@
         "original_price": 669.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 669.0,
+        "original_price": 669.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -5290,6 +5465,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 449.0,
+        "original_price": 449.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 449.0,
         "original_price": 449.0,
         "is_sale": false,
@@ -5487,6 +5669,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 249.0,
+        "original_price": 249.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 249.0,
         "original_price": 249.0,
         "is_sale": false,
@@ -5695,6 +5884,13 @@
         "original_price": 299.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 299.0,
+        "original_price": 299.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -5899,6 +6095,13 @@
         "original_price": 349.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 349.0,
+        "original_price": 349.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -6092,6 +6295,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 139.0,
+        "original_price": 139.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 139.0,
         "original_price": 139.0,
         "is_sale": false,
@@ -6300,6 +6510,13 @@
         "original_price": 1199.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 1199.0,
+        "original_price": 1199.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -6497,6 +6714,13 @@
         "original_price": 1649.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 1649.0,
+        "original_price": 1649.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -6624,6 +6848,13 @@
         "original_price": 699.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 699.0,
+        "original_price": 699.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -6660,6 +6891,13 @@
         "original_price": 599.0,
         "is_sale": true,
         "discount": 62
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 199.0,
+        "original_price": 599.0,
+        "is_sale": true,
+        "discount": 67
       }
     }
   },
@@ -6755,6 +6993,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 47.0,
+        "original_price": 79.0,
+        "is_sale": true,
+        "discount": 41
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 47.0,
         "original_price": 79.0,
         "is_sale": true,
@@ -6886,6 +7131,13 @@
         "original_price": 429.0,
         "is_sale": true,
         "discount": 45
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 234.0,
+        "original_price": 429.0,
+        "is_sale": true,
+        "discount": 45
       }
     }
   },
@@ -6992,6 +7244,13 @@
         "original_price": 99.0,
         "is_sale": true,
         "discount": 30
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 69.0,
+        "original_price": 99.0,
+        "is_sale": true,
+        "discount": 30
       }
     }
   },
@@ -7077,6 +7336,13 @@
         "original_price": 399.0,
         "is_sale": true,
         "discount": 20
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 319.0,
+        "original_price": 399.0,
+        "is_sale": true,
+        "discount": 20
       }
     }
   },
@@ -7158,6 +7424,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 55.0,
+        "original_price": 79.0,
+        "is_sale": true,
+        "discount": 30
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 55.0,
         "original_price": 79.0,
         "is_sale": true,
@@ -7303,6 +7576,13 @@
         "original_price": 189.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 189.0,
+        "original_price": 189.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -7402,6 +7682,13 @@
         "original_price": 59.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 59.0,
+        "original_price": 59.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -7487,6 +7774,13 @@
         "original_price": 429.0,
         "is_sale": true,
         "discount": 19
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 349.0,
+        "original_price": 429.0,
+        "is_sale": true,
+        "discount": 19
       }
     }
   },
@@ -7558,6 +7852,13 @@
         "original_price": 119.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 59.0,
+        "original_price": 119.0,
+        "is_sale": true,
+        "discount": 50
       }
     }
   },
@@ -7653,6 +7954,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 149.0,
+        "original_price": 149.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 149.0,
         "original_price": 149.0,
         "is_sale": false,
@@ -7777,6 +8085,13 @@
         "original_price": 249.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 249.0,
+        "original_price": 249.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -7879,6 +8194,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 179.0,
+        "original_price": 179.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 179.0,
         "original_price": 179.0,
         "is_sale": false,
@@ -8003,6 +8325,13 @@
         "original_price": 399.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 399.0,
+        "original_price": 399.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -8105,6 +8434,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 1299.0,
+        "original_price": 1299.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 1299.0,
         "original_price": 1299.0,
         "is_sale": false,
@@ -8225,6 +8561,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 299.0,
+        "original_price": 299.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 299.0,
         "original_price": 299.0,
         "is_sale": false,
@@ -8412,6 +8755,13 @@
         "original_price": 199.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 199.0,
+        "original_price": 199.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -8591,6 +8941,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 99.0,
+        "original_price": 99.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 99.0,
         "original_price": 99.0,
         "is_sale": false,
@@ -8778,6 +9135,13 @@
         "original_price": 169.99,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 169.99,
+        "original_price": 169.99,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -8957,6 +9321,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 149.95,
+        "original_price": 149.95,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 149.95,
         "original_price": 149.95,
         "is_sale": false,
@@ -9144,6 +9515,13 @@
         "original_price": 149.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 119.0,
+        "original_price": 149.0,
+        "is_sale": true,
+        "discount": 20
       }
     }
   },
@@ -9323,6 +9701,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 149.95,
+        "original_price": 149.95,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 149.95,
         "original_price": 149.95,
         "is_sale": false,
@@ -9510,6 +9895,13 @@
         "original_price": 899.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 899.0,
+        "original_price": 899.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -9689,6 +10081,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 174.0,
+        "original_price": 249.0,
+        "is_sale": true,
+        "discount": 30
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 174.0,
         "original_price": 249.0,
         "is_sale": true,
@@ -9876,6 +10275,13 @@
         "original_price": 449.0,
         "is_sale": true,
         "discount": 33
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 299.0,
+        "original_price": 449.0,
+        "is_sale": true,
+        "discount": 33
       }
     }
   },
@@ -9957,6 +10363,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 299.0,
+        "original_price": 299.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 299.0,
         "original_price": 299.0,
         "is_sale": false,
@@ -10126,6 +10539,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 149.0,
+        "original_price": 249.0,
+        "is_sale": true,
+        "discount": 40
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 149.0,
         "original_price": 249.0,
         "is_sale": true,
@@ -10313,6 +10733,13 @@
         "original_price": 249.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 249.0,
+        "original_price": 249.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -10471,6 +10898,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 299.0,
+        "original_price": 449.0,
+        "is_sale": true,
+        "discount": 33
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 299.0,
         "original_price": 449.0,
         "is_sale": true,
@@ -10647,6 +11081,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 179.0,
+        "original_price": 179.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 179.0,
         "original_price": 179.0,
         "is_sale": false,
@@ -10834,6 +11275,13 @@
         "original_price": 169.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 169.0,
+        "original_price": 169.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -11010,6 +11458,13 @@
         "original_price": 99.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 99.95,
+        "original_price": 99.95,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -11182,6 +11637,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 299.0,
+        "original_price": 299.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 299.0,
         "original_price": 299.0,
         "is_sale": false,
@@ -11376,6 +11838,13 @@
         "original_price": 849.0,
         "is_sale": true,
         "discount": 20
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 679.0,
+        "original_price": 849.0,
+        "is_sale": true,
+        "discount": 20
       }
     }
   },
@@ -11566,6 +12035,13 @@
         "original_price": 349.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 349.0,
+        "original_price": 349.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -11738,6 +12214,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 389.0,
+        "original_price": 499.0,
+        "is_sale": true,
+        "discount": 22
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 389.0,
         "original_price": 499.0,
         "is_sale": true,
@@ -11961,6 +12444,13 @@
         "original_price": 99.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 99.0,
+        "original_price": 99.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -12088,6 +12578,13 @@
         "original_price": 269.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 269.0,
+        "original_price": 269.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -12194,6 +12691,13 @@
         "original_price": 699.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 269.0,
+        "original_price": 699.0,
+        "is_sale": true,
+        "discount": 62
       }
     }
   },
@@ -12286,6 +12790,13 @@
         "original_price": 869.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 869.0,
+        "original_price": 869.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -12360,6 +12871,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 214.0,
+        "original_price": 299.0,
+        "is_sale": true,
+        "discount": 28
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 214.0,
         "original_price": 299.0,
         "is_sale": true,
@@ -12473,6 +12991,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 179.0,
+        "original_price": 179.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 179.0,
         "original_price": 179.0,
         "is_sale": false,
@@ -12653,6 +13178,13 @@
         "original_price": 239.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 239.0,
+        "original_price": 239.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -12794,6 +13326,13 @@
         "original_price": 549.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 499.0,
+        "original_price": 499.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -12903,6 +13442,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 149.0,
+        "original_price": 199.0,
+        "is_sale": true,
+        "discount": 25
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 149.0,
         "original_price": 199.0,
         "is_sale": true,
@@ -13020,6 +13566,13 @@
         "original_price": 109.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 109.0,
+        "original_price": 109.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -13133,6 +13686,13 @@
         "original_price": 679.0,
         "is_sale": true,
         "discount": 49
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 349.0,
+        "original_price": 679.0,
+        "is_sale": true,
+        "discount": 49
       }
     }
   },
@@ -13218,6 +13778,13 @@
         "original_price": 139.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 139.0,
+        "original_price": 139.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -13299,6 +13866,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 389.0,
+        "original_price": 414.0,
+        "is_sale": true,
+        "discount": 6
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 389.0,
         "original_price": 414.0,
         "is_sale": true,
@@ -13487,6 +14061,13 @@
         "original_price": 279.0,
         "is_sale": true,
         "discount": 4
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 269.0,
+        "original_price": 279.0,
+        "is_sale": true,
+        "discount": 4
       }
     }
   },
@@ -13589,6 +14170,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 1699.0,
+        "original_price": 1699.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 1699.0,
         "original_price": 1699.0,
         "is_sale": false,
@@ -13720,6 +14308,13 @@
         "original_price": 39.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 39.0,
+        "original_price": 39.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -13847,6 +14442,13 @@
         "original_price": 299.0,
         "is_sale": true,
         "discount": 33
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 299.0,
+        "original_price": 299.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -14005,6 +14607,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 279.0,
+        "original_price": 279.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 279.0,
         "original_price": 279.0,
         "is_sale": false,
@@ -14174,6 +14783,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 179.0,
+        "original_price": 179.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 179.0,
         "original_price": 179.0,
         "is_sale": false,
@@ -14361,6 +14977,13 @@
         "original_price": 169.99,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 169.99,
+        "original_price": 169.99,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -14533,6 +15156,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 125.98,
+        "original_price": 125.98,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 125.98,
         "original_price": 125.98,
         "is_sale": false,
@@ -14854,6 +15484,13 @@
         "original_price": 499.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 499.0,
+        "original_price": 499.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -15016,6 +15653,13 @@
         "original_price": 149.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 149.0,
+        "original_price": 149.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -15090,6 +15734,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 499.0,
+        "original_price": 499.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 499.0,
         "original_price": 499.0,
         "is_sale": false,
@@ -15263,6 +15914,13 @@
         "original_price": 159.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 77.0,
+        "original_price": 77.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -15432,6 +16090,13 @@
         "original_price": 849.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 849.0,
+        "original_price": 849.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -15590,6 +16255,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 279.0,
+        "original_price": 279.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 279.0,
         "original_price": 279.0,
         "is_sale": false,
@@ -15946,6 +16618,13 @@
         "original_price": 185.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 185.0,
+        "original_price": 185.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -16104,6 +16783,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 169.0,
+        "original_price": 189.0,
+        "is_sale": true,
+        "discount": 11
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 169.0,
         "original_price": 189.0,
         "is_sale": true,
@@ -16291,6 +16977,13 @@
         "original_price": 299.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 299.0,
+        "original_price": 299.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -16442,6 +17135,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 349.0,
+        "original_price": 349.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 349.0,
         "original_price": 349.0,
         "is_sale": false,
@@ -16604,6 +17304,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 149.0,
+        "original_price": 249.0,
+        "is_sale": true,
+        "discount": 40
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 149.0,
         "original_price": 249.0,
         "is_sale": true,
@@ -16773,6 +17480,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 699.0,
+        "original_price": 699.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 699.0,
         "original_price": 699.0,
         "is_sale": false,
@@ -17017,6 +17731,13 @@
         "original_price": 99.95,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 99.95,
+        "original_price": 99.95,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -17189,6 +17910,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 489.0,
+        "original_price": 489.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 489.0,
         "original_price": 489.0,
         "is_sale": false,
@@ -17412,6 +18140,13 @@
         "original_price": 99.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 99.95,
+        "original_price": 99.95,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -17577,6 +18312,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 895.0,
+        "original_price": 895.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 895.0,
         "original_price": 895.0,
         "is_sale": false,
@@ -17800,6 +18542,13 @@
         "original_price": 99.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 99.95,
+        "original_price": 99.95,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -17990,6 +18739,13 @@
         "original_price": 339.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 339.0,
+        "original_price": 339.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -18173,6 +18929,13 @@
         "original_price": 149.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 149.0,
+        "original_price": 149.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -18345,6 +19108,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 599.0,
+        "original_price": 639.0,
+        "is_sale": true,
+        "discount": 6
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 599.0,
         "original_price": 639.0,
         "is_sale": true,
@@ -18539,6 +19309,13 @@
         "original_price": 479.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 479.0,
+        "original_price": 479.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -18715,6 +19492,13 @@
         "original_price": 489.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 489.0,
+        "original_price": 489.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -18877,6 +19661,13 @@
         "original_price": 449.0,
         "is_sale": true,
         "discount": 33
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 299.0,
+        "original_price": 449.0,
+        "is_sale": true,
+        "discount": 33
       }
     }
   },
@@ -19035,6 +19826,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 579.0,
+        "original_price": 579.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 579.0,
         "original_price": 579.0,
         "is_sale": false,
@@ -19211,6 +20009,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 299.0,
+        "original_price": 299.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 299.0,
         "original_price": 299.0,
         "is_sale": false,
@@ -19398,6 +20203,13 @@
         "original_price": 339.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 339.0,
+        "original_price": 339.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -19406,7 +20218,15 @@
     "brand": "Arlo",
     "category": "Security Camera",
     "url": "https://www.jbhifi.com.au/products/arlo-essentials-outdoor-2k-security-camera-2nd-generation2-pack",
-    "days": {}
+    "days": {
+      "30": {
+        "date": "2026-04-30",
+        "price": 119.0,
+        "original_price": 279.0,
+        "is_sale": true,
+        "discount": 57
+      }
+    }
   },
   "arlo_arlo_ultra_3_4k_outdoor_security_camera": {
     "product_name": "Arlo Ultra 3 4K Outdoor Security Camera",
@@ -19525,6 +20345,13 @@
         "original_price": 279.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 279.0,
+        "original_price": 279.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -19627,6 +20454,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 109.0,
+        "original_price": 179.0,
+        "is_sale": true,
+        "discount": 39
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 109.0,
         "original_price": 179.0,
         "is_sale": true,
@@ -19744,6 +20578,13 @@
         "original_price": 299.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 299.0,
+        "original_price": 299.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -19832,6 +20673,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 279.0,
+        "original_price": 279.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 279.0,
         "original_price": 279.0,
         "is_sale": false,
@@ -19935,6 +20783,13 @@
         "original_price": 119.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 119.0,
+        "original_price": 119.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -20030,6 +20885,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 374.0,
+        "original_price": 374.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 374.0,
         "original_price": 374.0,
         "is_sale": false,
@@ -20136,6 +20998,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 1399.0,
+        "original_price": 1399.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 1399.0,
         "original_price": 1399.0,
         "is_sale": false,
@@ -20256,6 +21125,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 329.0,
+        "original_price": 399.0,
+        "is_sale": true,
+        "discount": 18
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 329.0,
         "original_price": 399.0,
         "is_sale": true,
@@ -20422,6 +21298,13 @@
         "original_price": 399.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 399.0,
+        "original_price": 399.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -20552,6 +21435,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 125.98,
+        "original_price": 125.98,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 125.98,
         "original_price": 125.98,
         "is_sale": false,
@@ -20742,6 +21632,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 319.0,
+        "original_price": 319.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 319.0,
         "original_price": 319.0,
         "is_sale": false,
@@ -20943,6 +21840,13 @@
         "original_price": 699.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 699.0,
+        "original_price": 699.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -21126,6 +22030,13 @@
         "original_price": 349.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 349.0,
+        "original_price": 349.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -21246,6 +22157,13 @@
         "original_price": 1299.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 1299.0,
+        "original_price": 1299.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -21275,6 +22193,13 @@
         "original_price": 97.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 29.0,
+        "original_price": 97.0,
+        "is_sale": true,
+        "discount": 70
       }
     }
   },
@@ -21370,6 +22295,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 149.0,
+        "original_price": 149.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 149.0,
         "original_price": 149.0,
         "is_sale": false,
@@ -21501,6 +22433,13 @@
         "original_price": 329.0,
         "is_sale": true,
         "discount": 24
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 249.0,
+        "original_price": 329.0,
+        "is_sale": true,
+        "discount": 24
       }
     }
   },
@@ -21596,6 +22535,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 59.0,
+        "original_price": 69.0,
+        "is_sale": true,
+        "discount": 14
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 59.0,
         "original_price": 69.0,
         "is_sale": true,
@@ -21713,6 +22659,13 @@
         "original_price": 299.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 299.0,
+        "original_price": 299.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -21788,6 +22741,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 59.0,
+        "original_price": 59.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 59.0,
         "original_price": 59.0,
         "is_sale": false,
@@ -21877,6 +22837,13 @@
         "original_price": 598.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 598.0,
+        "original_price": 598.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -21885,7 +22852,15 @@
     "brand": "eufy",
     "category": "Security Camera",
     "url": "https://www.jbhifi.com.au/products/eufy-security-s340-3k-solocam",
-    "days": {}
+    "days": {
+      "30": {
+        "date": "2026-04-30",
+        "price": 279.0,
+        "original_price": 399.0,
+        "is_sale": true,
+        "discount": 30
+      }
+    }
   },
   "arlo_arlo_essentials_2k_3rd_gen_outdoor_security_camera": {
     "product_name": "Arlo Essentials 2K (3rd Gen) Outdoor Security Camera",
@@ -21997,6 +22972,13 @@
         "original_price": 149.0,
         "is_sale": true,
         "discount": 20
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 119.0,
+        "original_price": 149.0,
+        "is_sale": true,
+        "discount": 20
       }
     }
   },
@@ -22099,6 +23081,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 199.0,
+        "original_price": 199.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 199.0,
         "original_price": 199.0,
         "is_sale": false,
@@ -22209,6 +23198,13 @@
         "original_price": 99.0,
         "is_sale": true,
         "discount": 30
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 69.0,
+        "original_price": 99.0,
+        "is_sale": true,
+        "discount": 30
       }
     }
   },
@@ -22304,6 +23300,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 319.0,
+        "original_price": 399.0,
+        "is_sale": true,
+        "discount": 20
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 319.0,
         "original_price": 399.0,
         "is_sale": true,
@@ -22407,6 +23410,13 @@
         "original_price": 129.0,
         "is_sale": true,
         "discount": 31
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 89.0,
+        "original_price": 129.0,
+        "is_sale": true,
+        "discount": 31
       }
     }
   },
@@ -22495,6 +23505,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 249.0,
+        "original_price": 329.0,
+        "is_sale": true,
+        "discount": 24
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 249.0,
         "original_price": 329.0,
         "is_sale": true,
@@ -22612,6 +23629,13 @@
         "original_price": 219.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 219.0,
+        "original_price": 219.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -22721,6 +23745,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 89.0,
+        "original_price": 89.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 89.0,
         "original_price": 89.0,
         "is_sale": false,
@@ -22845,6 +23876,13 @@
         "original_price": 79.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 79.0,
+        "original_price": 79.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -22961,6 +23999,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 1499.0,
+        "original_price": 1499.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 1499.0,
         "original_price": 1499.0,
         "is_sale": false,
@@ -23107,6 +24152,13 @@
         "original_price": 249.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 249.0,
+        "original_price": 249.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -23202,6 +24254,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 69.0,
+        "original_price": 99.0,
+        "is_sale": true,
+        "discount": 30
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 69.0,
         "original_price": 99.0,
         "is_sale": true,
@@ -23315,6 +24374,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 274.0,
+        "original_price": 295.0,
+        "is_sale": true,
+        "discount": 7
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 274.0,
         "original_price": 295.0,
         "is_sale": true,
@@ -23439,6 +24505,13 @@
         "original_price": 1499.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 1499.0,
+        "original_price": 1499.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -23552,6 +24625,13 @@
         "original_price": 269.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 269.0,
+        "original_price": 269.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -23626,6 +24706,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 69.0,
+        "original_price": 69.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 69.0,
         "original_price": 69.0,
         "is_sale": false,
@@ -23856,6 +24943,13 @@
         "original_price": 249.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 224.0,
+        "original_price": 249.0,
+        "is_sale": true,
+        "discount": 10
       }
     }
   },
@@ -24053,6 +25147,13 @@
         "original_price": 349.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 279.0,
+        "original_price": 349.0,
+        "is_sale": true,
+        "discount": 20
       }
     }
   },
@@ -24257,6 +25358,13 @@
         "original_price": 449.0,
         "is_sale": true,
         "discount": 20
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 359.0,
+        "original_price": 449.0,
+        "is_sale": true,
+        "discount": 20
       }
     }
   },
@@ -24454,6 +25562,13 @@
         "original_price": 229.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 160.01,
+        "original_price": 229.0,
+        "is_sale": true,
+        "discount": 30
       }
     }
   },
@@ -24651,6 +25766,13 @@
         "original_price": 349.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 244.01,
+        "original_price": 349.0,
+        "is_sale": true,
+        "discount": 30
       }
     }
   },
@@ -24834,6 +25956,13 @@
         "original_price": 449.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 359.0,
+        "original_price": 449.0,
+        "is_sale": true,
+        "discount": 20
       }
     }
   },
@@ -25010,6 +26139,13 @@
         "original_price": 579.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 463.0,
+        "original_price": 579.0,
+        "is_sale": true,
+        "discount": 20
       }
     }
   },
@@ -25207,6 +26343,13 @@
         "original_price": 349.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 279.0,
+        "original_price": 349.0,
+        "is_sale": true,
+        "discount": 20
       }
     }
   },
@@ -25362,6 +26505,13 @@
         "original_price": 119.0,
         "is_sale": true,
         "discount": 34
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 79.0,
+        "original_price": 119.0,
+        "is_sale": true,
+        "discount": 34
       }
     }
   },
@@ -25450,6 +26600,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 129.0,
+        "original_price": 129.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 129.0,
         "original_price": 129.0,
         "is_sale": false,
@@ -25574,6 +26731,13 @@
         "original_price": 79.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 79.0,
+        "original_price": 79.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -25680,6 +26844,13 @@
         "original_price": 199.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 199.0,
+        "original_price": 199.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -25761,6 +26932,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 999.0,
+        "original_price": 999.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 999.0,
         "original_price": 999.0,
         "is_sale": false,
@@ -25934,6 +27112,13 @@
         "original_price": 449.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 449.0,
+        "original_price": 449.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -26103,6 +27288,13 @@
         "original_price": 179.0,
         "is_sale": true,
         "discount": 11
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 159.0,
+        "original_price": 179.0,
+        "is_sale": true,
+        "discount": 11
       }
     }
   },
@@ -26258,6 +27450,13 @@
         "original_price": 249.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 249.0,
+        "original_price": 249.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -26374,6 +27573,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 199.0,
+        "original_price": 249.0,
+        "is_sale": true,
+        "discount": 20
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 199.0,
         "original_price": 249.0,
         "is_sale": true,
@@ -26512,6 +27718,13 @@
         "original_price": 99.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 99.0,
+        "original_price": 99.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -26628,6 +27841,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 99.0,
+        "original_price": 99.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 99.0,
         "original_price": 99.0,
         "is_sale": false,
@@ -26801,6 +28021,13 @@
         "original_price": 104.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 104.0,
+        "original_price": 104.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -26970,6 +28197,13 @@
         "original_price": 329.0,
         "is_sale": true,
         "discount": 9
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 299.0,
+        "original_price": 329.0,
+        "is_sale": true,
+        "discount": 9
       }
     }
   },
@@ -27065,6 +28299,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 219.0,
+        "original_price": 219.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 219.0,
         "original_price": 219.0,
         "is_sale": false,
@@ -27206,6 +28447,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 134.0,
+        "original_price": 179.0,
+        "is_sale": true,
+        "discount": 25
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 134.0,
         "original_price": 179.0,
         "is_sale": true,
@@ -27407,6 +28655,13 @@
         "original_price": 499.0,
         "is_sale": true,
         "discount": 10
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 449.0,
+        "original_price": 499.0,
+        "is_sale": true,
+        "discount": 10
       }
     }
   },
@@ -27604,6 +28859,13 @@
         "original_price": 499.0,
         "is_sale": true,
         "discount": 10
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 449.0,
+        "original_price": 499.0,
+        "is_sale": true,
+        "discount": 10
       }
     }
   },
@@ -27755,6 +29017,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 154.0,
+        "original_price": 249.0,
+        "is_sale": true,
+        "discount": 38
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 154.0,
         "original_price": 249.0,
         "is_sale": true,
@@ -27921,6 +29190,13 @@
         "original_price": 249.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 249.0,
+        "original_price": 249.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -28069,6 +29345,13 @@
         "original_price": 79.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 79.0,
+        "original_price": 79.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -28143,6 +29426,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 149.0,
+        "original_price": 149.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 149.0,
         "original_price": 149.0,
         "is_sale": false,
@@ -28337,6 +29627,13 @@
         "original_price": 179.0,
         "is_sale": true,
         "discount": 15
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 152.0,
+        "original_price": 179.0,
+        "is_sale": true,
+        "discount": 15
       }
     }
   },
@@ -28516,6 +29813,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 59.0,
+        "original_price": 79.0,
+        "is_sale": true,
+        "discount": 25
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 59.0,
         "original_price": 79.0,
         "is_sale": true,
@@ -28703,6 +30007,13 @@
         "original_price": 299.0,
         "is_sale": true,
         "discount": 10
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 269.0,
+        "original_price": 299.0,
+        "is_sale": true,
+        "discount": 10
       }
     }
   },
@@ -28875,6 +30186,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 59.0,
+        "original_price": 74.0,
+        "is_sale": true,
+        "discount": 20
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 59.0,
         "original_price": 74.0,
         "is_sale": true,
@@ -29072,6 +30390,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 449.0,
+        "original_price": 599.0,
+        "is_sale": true,
+        "discount": 25
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 449.0,
         "original_price": 599.0,
         "is_sale": true,
@@ -29386,6 +30711,13 @@
         "original_price": 189.0,
         "is_sale": true,
         "discount": 11
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 169.0,
+        "original_price": 189.0,
+        "is_sale": true,
+        "discount": 11
       }
     }
   },
@@ -29583,6 +30915,13 @@
         "original_price": 404.0,
         "is_sale": true,
         "discount": 15
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 343.0,
+        "original_price": 404.0,
+        "is_sale": true,
+        "discount": 15
       }
     }
   },
@@ -29776,6 +31115,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 365.0,
+        "original_price": 489.0,
+        "is_sale": true,
+        "discount": 25
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 365.0,
         "original_price": 489.0,
         "is_sale": true,
@@ -30034,6 +31380,13 @@
         "original_price": 239.0,
         "is_sale": true,
         "discount": 8
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 219.0,
+        "original_price": 239.0,
+        "is_sale": true,
+        "discount": 8
       }
     }
   },
@@ -30220,6 +31573,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 254.0,
+        "original_price": 299.0,
+        "is_sale": true,
+        "discount": 15
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 254.0,
         "original_price": 299.0,
         "is_sale": true,
@@ -30429,6 +31789,13 @@
         "original_price": 379.0,
         "is_sale": true,
         "discount": 11
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 339.0,
+        "original_price": 379.0,
+        "is_sale": true,
+        "discount": 11
       }
     }
   },
@@ -30531,6 +31898,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 49.0,
+        "original_price": 59.0,
+        "is_sale": true,
+        "discount": 17
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 49.0,
         "original_price": 59.0,
         "is_sale": true,
@@ -30714,6 +32088,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 799.0,
+        "original_price": 799.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 799.0,
         "original_price": 799.0,
         "is_sale": false,
@@ -30915,6 +32296,13 @@
         "original_price": 499.0,
         "is_sale": true,
         "discount": 10
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 449.0,
+        "original_price": 499.0,
+        "is_sale": true,
+        "discount": 10
       }
     }
   },
@@ -31112,6 +32500,13 @@
         "original_price": 699.0,
         "is_sale": true,
         "discount": 10
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 629.0,
+        "original_price": 699.0,
+        "is_sale": true,
+        "discount": 10
       }
     }
   },
@@ -31204,6 +32599,13 @@
         "original_price": 149.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 149.0,
+        "original_price": 149.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -31285,6 +32687,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 99.0,
+        "original_price": 179.0,
+        "is_sale": true,
+        "discount": 45
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 99.0,
         "original_price": 179.0,
         "is_sale": true,
@@ -31398,6 +32807,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 189.0,
+        "original_price": 229.0,
+        "is_sale": true,
+        "discount": 17
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 189.0,
         "original_price": 229.0,
         "is_sale": true,
@@ -31553,6 +32969,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 179.0,
+        "original_price": 179.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 179.0,
         "original_price": 179.0,
         "is_sale": false,
@@ -31951,6 +33374,13 @@
         "original_price": 549.0,
         "is_sale": true,
         "discount": 15
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 466.0,
+        "original_price": 549.0,
+        "is_sale": true,
+        "discount": 15
       }
     }
   },
@@ -32046,6 +33476,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 329.0,
+        "original_price": 329.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 329.0,
         "original_price": 329.0,
         "is_sale": false,
@@ -32187,6 +33624,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 167.0,
+        "original_price": 167.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 167.0,
         "original_price": 167.0,
         "is_sale": false,
@@ -32388,6 +33832,13 @@
         "original_price": 279.0,
         "is_sale": true,
         "discount": 25
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 209.0,
+        "original_price": 279.0,
+        "is_sale": true,
+        "discount": 25
       }
     }
   },
@@ -32469,6 +33920,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 399.0,
+        "original_price": 399.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 399.0,
         "original_price": 399.0,
         "is_sale": false,
@@ -32575,6 +34033,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 349.0,
+        "original_price": 349.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 349.0,
         "original_price": 349.0,
         "is_sale": false,
@@ -32741,6 +34206,13 @@
         "original_price": 399.0,
         "is_sale": true,
         "discount": 10
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 359.0,
+        "original_price": 399.0,
+        "is_sale": true,
+        "discount": 10
       }
     }
   },
@@ -32777,6 +34249,13 @@
         "original_price": 499.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 349.0,
+        "original_price": 499.0,
+        "is_sale": true,
+        "discount": 30
       }
     }
   },
@@ -32932,6 +34411,13 @@
         "original_price": 241.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 241.0,
+        "original_price": 241.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -32940,7 +34426,15 @@
     "brand": "eufy",
     "category": "Security Camera",
     "url": "https://www.jbhifi.com.au/products/eufy-security-2k-indoor-camera",
-    "days": {}
+    "days": {
+      "30": {
+        "date": "2026-04-30",
+        "price": 69.0,
+        "original_price": 109.0,
+        "is_sale": true,
+        "discount": 37
+      }
+    }
   },
   "ring_ring_floodlight_cam_pro_2nd_gen_wired_security_camera_white": {
     "product_name": "Ring Floodlight Cam Pro(2nd Gen) Wired Security Camera (White)",
@@ -33027,6 +34521,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 359.0,
+        "original_price": 429.0,
+        "is_sale": true,
+        "discount": 16
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 359.0,
         "original_price": 429.0,
         "is_sale": true,
@@ -33250,6 +34751,13 @@
         "original_price": 249.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 224.0,
+        "original_price": 249.0,
+        "is_sale": true,
+        "discount": 10
       }
     }
   },
@@ -33265,6 +34773,13 @@
         "original_price": 59.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 29.0,
+        "original_price": 59.0,
+        "is_sale": true,
+        "discount": 51
       }
     }
   },
@@ -33381,6 +34896,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 179.0,
+        "original_price": 379.0,
+        "is_sale": true,
+        "discount": 53
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 179.0,
         "original_price": 379.0,
         "is_sale": true,
@@ -33554,6 +35076,13 @@
         "original_price": 79.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 79.0,
+        "original_price": 79.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -33670,6 +35199,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 319.0,
+        "original_price": 319.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 319.0,
         "original_price": 319.0,
         "is_sale": false,
@@ -33825,6 +35361,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 149.0,
+        "original_price": 149.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 149.0,
         "original_price": 149.0,
         "is_sale": false,
@@ -33985,6 +35528,13 @@
         "original_price": 579.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 579.0,
+        "original_price": 579.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -34080,6 +35630,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 999.0,
+        "original_price": 999.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 999.0,
         "original_price": 999.0,
         "is_sale": false,
@@ -34197,6 +35754,13 @@
         "original_price": 179.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 179.0,
+        "original_price": 179.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -34296,6 +35860,13 @@
         "original_price": 769.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 769.0,
+        "original_price": 769.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -34377,6 +35948,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 1599.0,
+        "original_price": 1599.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 1599.0,
         "original_price": 1599.0,
         "is_sale": false,
@@ -34523,6 +36101,13 @@
         "original_price": 189.0,
         "is_sale": true,
         "discount": 32
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 129.0,
+        "original_price": 189.0,
+        "is_sale": true,
+        "discount": 32
       }
     }
   },
@@ -34643,6 +36228,13 @@
         "original_price": 249.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 249.0,
+        "original_price": 249.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -34752,6 +36344,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 1099.0,
+        "original_price": 1099.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 1099.0,
         "original_price": 1099.0,
         "is_sale": false,
@@ -34869,6 +36468,13 @@
         "original_price": 179.0,
         "is_sale": false,
         "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
+        "price": 179.0,
+        "original_price": 179.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -34971,6 +36577,13 @@
       },
       "29": {
         "date": "2026-04-29",
+        "price": 210.0,
+        "original_price": 210.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "30": {
+        "date": "2026-04-30",
         "price": 210.0,
         "original_price": 210.0,
         "is_sale": false,

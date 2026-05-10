@@ -12,7 +12,7 @@
       "sale_price": 69.0,
       "discount_percentage": 36.7,
       "save_amount": 40.0,
-      "duration_days": 43,
+      "duration_days": 44,
       "status": "active"
     },
     {
@@ -57,7 +57,7 @@
       "sale_price": 199.0,
       "discount_percentage": 66.8,
       "save_amount": 400.0,
-      "duration_days": 36,
+      "duration_days": 37,
       "status": "active"
     },
     {
@@ -72,7 +72,7 @@
       "sale_price": 169.0,
       "discount_percentage": 10.6,
       "save_amount": 20.0,
-      "duration_days": 32,
+      "duration_days": 33,
       "status": "active"
     },
     {
@@ -87,7 +87,7 @@
       "sale_price": 189.0,
       "discount_percentage": 17.5,
       "save_amount": 40.0,
-      "duration_days": 31,
+      "duration_days": 32,
       "status": "active"
     },
     {
@@ -117,52 +117,7 @@
       "sale_price": 149.0,
       "discount_percentage": 25.1,
       "save_amount": 50.0,
-      "duration_days": 27,
-      "status": "active"
-    },
-    {
-      "product_id": "arlo_arlo_essential_pan_tilt_2k_outdoor_security_camera",
-      "product_name": "Arlo Essential Pan & Tilt 2K Outdoor Security Camera",
-      "brand": "Arlo",
-      "category": "Security Camera",
-      "url": "https://www.jbhifi.com.au/products/arlo-essential-pan-tilt-2k-outdoor-security-camera",
-      "start_date": "2026-04-16",
-      "end_date": null,
-      "original_price": 119.0,
-      "sale_price": 79.0,
-      "discount_percentage": 33.6,
-      "save_amount": 40.0,
-      "duration_days": 24,
-      "status": "active"
-    },
-    {
-      "product_id": "arlo_arlo_essentials_gen_3_2k_pan_tilt_indoor_security_camera",
-      "product_name": "Arlo Essentials (Gen 3) 2K Pan & Tilt Indoor Security Camera",
-      "brand": "Arlo",
-      "category": "Security Camera",
-      "url": "https://www.jbhifi.com.au/products/arlo-essentials-gen-3-2k-pan-tilt-indoor-security-camera",
-      "start_date": "2026-04-20",
-      "end_date": null,
-      "original_price": 79.0,
-      "sale_price": 47.0,
-      "discount_percentage": 40.5,
-      "save_amount": 32.0,
-      "duration_days": 20,
-      "status": "active"
-    },
-    {
-      "product_id": "arlo_arlo_essentials_2k_3rd_gen_outdoor_security_camera",
-      "product_name": "Arlo Essentials 2K (3rd Gen) Outdoor Security Camera",
-      "brand": "Arlo",
-      "category": "Security Camera",
-      "url": "https://www.jbhifi.com.au/products/arlo-essentials-2k-3rd-gen-outdoor-security-camera",
-      "start_date": "2026-04-20",
-      "end_date": null,
-      "original_price": 149.0,
-      "sale_price": 119.0,
-      "discount_percentage": 20.1,
-      "save_amount": 30.0,
-      "duration_days": 20,
+      "duration_days": 28,
       "status": "active"
     },
     {
@@ -207,7 +162,7 @@
       "sale_price": 69.0,
       "discount_percentage": 30.3,
       "save_amount": 30.0,
-      "duration_days": 14,
+      "duration_days": 15,
       "status": "active"
     },
     {
@@ -222,7 +177,7 @@
       "sale_price": 319.0,
       "discount_percentage": 20.1,
       "save_amount": 80.0,
-      "duration_days": 14,
+      "duration_days": 15,
       "status": "active"
     },
     {
@@ -237,7 +192,7 @@
       "sale_price": 55.0,
       "discount_percentage": 30.4,
       "save_amount": 24.0,
-      "duration_days": 14,
+      "duration_days": 15,
       "status": "active"
     },
     {
@@ -252,7 +207,7 @@
       "sale_price": 149.0,
       "discount_percentage": 40.2,
       "save_amount": 100.0,
-      "duration_days": 14,
+      "duration_days": 15,
       "status": "active"
     },
     {
@@ -267,7 +222,7 @@
       "sale_price": 109.0,
       "discount_percentage": 39.1,
       "save_amount": 70.0,
-      "duration_days": 14,
+      "duration_days": 15,
       "status": "active"
     },
     {
@@ -282,7 +237,7 @@
       "sale_price": 329.0,
       "discount_percentage": 17.5,
       "save_amount": 70.0,
-      "duration_days": 14,
+      "duration_days": 15,
       "status": "active"
     },
     {
@@ -297,7 +252,7 @@
       "sale_price": 249.0,
       "discount_percentage": 24.3,
       "save_amount": 80.0,
-      "duration_days": 14,
+      "duration_days": 15,
       "status": "active"
     },
     {
@@ -312,7 +267,7 @@
       "sale_price": 69.0,
       "discount_percentage": 30.3,
       "save_amount": 30.0,
-      "duration_days": 14,
+      "duration_days": 15,
       "status": "active"
     },
     {
@@ -327,7 +282,7 @@
       "sale_price": 319.0,
       "discount_percentage": 20.1,
       "save_amount": 80.0,
-      "duration_days": 14,
+      "duration_days": 15,
       "status": "active"
     },
     {
@@ -342,7 +297,7 @@
       "sale_price": 89.0,
       "discount_percentage": 31.0,
       "save_amount": 40.0,
-      "duration_days": 14,
+      "duration_days": 15,
       "status": "active"
     },
     {
@@ -357,7 +312,7 @@
       "sale_price": 249.0,
       "discount_percentage": 24.3,
       "save_amount": 80.0,
-      "duration_days": 14,
+      "duration_days": 15,
       "status": "active"
     },
     {
@@ -372,7 +327,7 @@
       "sale_price": 69.0,
       "discount_percentage": 30.3,
       "save_amount": 30.0,
-      "duration_days": 14,
+      "duration_days": 15,
       "status": "active"
     },
     {
@@ -387,7 +342,7 @@
       "sale_price": 359.0,
       "discount_percentage": 16.3,
       "save_amount": 70.0,
-      "duration_days": 14,
+      "duration_days": 15,
       "status": "active"
     },
     {
@@ -402,7 +357,7 @@
       "sale_price": 304.0,
       "discount_percentage": 29.1,
       "save_amount": 125.0,
-      "duration_days": 12,
+      "duration_days": 13,
       "status": "active"
     },
     {
@@ -417,7 +372,7 @@
       "sale_price": 214.0,
       "discount_percentage": 28.4,
       "save_amount": 85.0,
-      "duration_days": 12,
+      "duration_days": 13,
       "status": "active"
     },
     {
@@ -432,7 +387,7 @@
       "sale_price": 349.0,
       "discount_percentage": 48.6,
       "save_amount": 330.0,
-      "duration_days": 12,
+      "duration_days": 13,
       "status": "active"
     },
     {
@@ -447,7 +402,7 @@
       "sale_price": 389.0,
       "discount_percentage": 6.0,
       "save_amount": 25.0,
-      "duration_days": 12,
+      "duration_days": 13,
       "status": "active"
     },
     {
@@ -462,7 +417,7 @@
       "sale_price": 274.0,
       "discount_percentage": 7.1,
       "save_amount": 21.0,
-      "duration_days": 12,
+      "duration_days": 13,
       "status": "active"
     },
     {
@@ -477,7 +432,7 @@
       "sale_price": 99.0,
       "discount_percentage": 44.7,
       "save_amount": 80.0,
-      "duration_days": 12,
+      "duration_days": 13,
       "status": "active"
     },
     {
@@ -492,7 +447,7 @@
       "sale_price": 179.0,
       "discount_percentage": 52.8,
       "save_amount": 200.0,
-      "duration_days": 12,
+      "duration_days": 13,
       "status": "active"
     },
     {
@@ -507,22 +462,7 @@
       "sale_price": 384.0,
       "discount_percentage": 30.1,
       "save_amount": 165.0,
-      "duration_days": 11,
-      "status": "active"
-    },
-    {
-      "product_id": "arlo_arlo_go_2_4g_wi_fi_mobile_security_camera",
-      "product_name": "Arlo Go 2 4G/Wi-Fi Mobile Security Camera",
-      "brand": "Arlo",
-      "category": "Security Camera",
-      "url": "https://www.jbhifi.com.au/products/arlo-go-2-4g-wi-fi-mobile-security-camera",
-      "start_date": "2026-04-29",
-      "end_date": null,
-      "original_price": 429.0,
-      "sale_price": 234.0,
-      "discount_percentage": 45.5,
-      "save_amount": 195.0,
-      "duration_days": 11,
+      "duration_days": 12,
       "status": "active"
     },
     {
@@ -537,7 +477,7 @@
       "sale_price": 349.0,
       "discount_percentage": 18.6,
       "save_amount": 80.0,
-      "duration_days": 11,
+      "duration_days": 12,
       "status": "active"
     },
     {
@@ -552,7 +492,7 @@
       "sale_price": 59.0,
       "discount_percentage": 14.5,
       "save_amount": 10.0,
-      "duration_days": 11,
+      "duration_days": 12,
       "status": "active"
     },
     {
@@ -567,52 +507,7 @@
       "sale_price": 359.0,
       "discount_percentage": 20.0,
       "save_amount": 90.0,
-      "duration_days": 11,
-      "status": "active"
-    },
-    {
-      "product_id": "other_oricom_smart_hd_baby_monitor_with_remote",
-      "product_name": "Oricom Smart HD Baby Monitor with Remote",
-      "brand": "Other",
-      "category": "Baby",
-      "url": "https://www.jbhifi.com.au/products/oricom-smart-hd-baby-monitor-with-remote",
-      "start_date": "2026-04-29",
-      "end_date": null,
-      "original_price": 179.0,
-      "sale_price": 159.0,
-      "discount_percentage": 11.2,
-      "save_amount": 20.0,
-      "duration_days": 11,
-      "status": "active"
-    },
-    {
-      "product_id": "other_oricom_babysense7_breathing_movement_monitor",
-      "product_name": "Oricom BabySense7 Breathing Movement Monitor",
-      "brand": "Other",
-      "category": "Baby",
-      "url": "https://www.jbhifi.com.au/products/oricom-babysense7-breathing-movement-monitor",
-      "start_date": "2026-04-29",
-      "end_date": null,
-      "original_price": 249.0,
-      "sale_price": 199.0,
-      "discount_percentage": 20.1,
-      "save_amount": 50.0,
-      "duration_days": 11,
-      "status": "active"
-    },
-    {
-      "product_id": "other_oricom_smart_remote_5_pan_tilt_baby_monitor",
-      "product_name": "Oricom Smart Remote 5 Pan & Tilt Baby Monitor",
-      "brand": "Other",
-      "category": "Baby",
-      "url": "https://www.jbhifi.com.au/products/oricom-smart-remote-5-pan-tilt-baby-monitor",
-      "start_date": "2026-04-29",
-      "end_date": null,
-      "original_price": 329.0,
-      "sale_price": 299.0,
-      "discount_percentage": 9.1,
-      "save_amount": 30.0,
-      "duration_days": 11,
+      "duration_days": 12,
       "status": "active"
     },
     {
@@ -627,7 +522,7 @@
       "sale_price": 134.0,
       "discount_percentage": 25.1,
       "save_amount": 45.0,
-      "duration_days": 11,
+      "duration_days": 12,
       "status": "active"
     },
     {
@@ -642,292 +537,7 @@
       "sale_price": 449.0,
       "discount_percentage": 10.0,
       "save_amount": 50.0,
-      "duration_days": 11,
-      "status": "active"
-    },
-    {
-      "product_id": "owlet_owlet_dream_sock_baby_monitor_bedtime_blue",
-      "product_name": "Owlet Dream Sock Baby Monitor (Bedtime Blue)",
-      "brand": "Owlet",
-      "category": "Baby",
-      "url": "https://www.jbhifi.com.au/products/owlet-dream-sock-baby-monitor-bedtime-blue",
-      "start_date": "2026-04-29",
-      "end_date": null,
-      "original_price": 499.0,
-      "sale_price": 449.0,
-      "discount_percentage": 10.0,
-      "save_amount": 50.0,
-      "duration_days": 11,
-      "status": "active"
-    },
-    {
-      "product_id": "momcozy_momcozy_s9_pro_wearable_breast_pump_double",
-      "product_name": "Momcozy S9 Pro Wearable Breast Pump (Double)",
-      "brand": "Momcozy",
-      "category": "Baby",
-      "url": "https://www.jbhifi.com.au/products/momcozy-s9-pro-wearable-breast-pump-double",
-      "start_date": "2026-04-29",
-      "end_date": null,
-      "original_price": 179.0,
-      "sale_price": 152.0,
-      "discount_percentage": 15.1,
-      "save_amount": 27.0,
-      "duration_days": 11,
-      "status": "active"
-    },
-    {
-      "product_id": "philips_philips_avent_manual_breast_pump",
-      "product_name": "Philips Avent Manual Breast Pump",
-      "brand": "Philips",
-      "category": "Baby",
-      "url": "https://www.jbhifi.com.au/products/philips-avent-manual-breast-pump",
-      "start_date": "2026-04-29",
-      "end_date": null,
-      "original_price": 79.0,
-      "sale_price": 59.0,
-      "discount_percentage": 25.3,
-      "save_amount": 20.0,
-      "duration_days": 11,
-      "status": "active"
-    },
-    {
-      "product_id": "other_freestyle_mini_hands_free_electric_breast_pump_double",
-      "product_name": "Freestyle Mini Hands-free Electric Breast Pump (Double)",
-      "brand": "Other",
-      "category": "Baby",
-      "url": "https://www.jbhifi.com.au/products/freestyle-mini-hands-free-electric-breast-pump-double",
-      "start_date": "2026-04-29",
-      "end_date": null,
-      "original_price": 299.0,
-      "sale_price": 269.0,
-      "discount_percentage": 10.0,
-      "save_amount": 30.0,
-      "duration_days": 11,
-      "status": "active"
-    },
-    {
-      "product_id": "other_medela_harmony_manual_breast_pump",
-      "product_name": "Medela Harmony Manual Breast Pump",
-      "brand": "Other",
-      "category": "Baby",
-      "url": "https://www.jbhifi.com.au/products/medela-harmony-manual-breast-pump",
-      "start_date": "2026-04-29",
-      "end_date": null,
-      "original_price": 74.0,
-      "sale_price": 59.0,
-      "discount_percentage": 20.3,
-      "save_amount": 15.0,
-      "duration_days": 11,
-      "status": "active"
-    },
-    {
-      "product_id": "philips_philips_avent_hands_free_double_electric_breast_pump",
-      "product_name": "Philips Avent Hands-Free Double Electric Breast Pump",
-      "brand": "Philips",
-      "category": "Baby",
-      "url": "https://www.jbhifi.com.au/products/philips-avent-hands-free-double-electric-breast-pump",
-      "start_date": "2026-04-29",
-      "end_date": null,
-      "original_price": 599.0,
-      "sale_price": 449.0,
-      "discount_percentage": 25.0,
-      "save_amount": 150.0,
-      "duration_days": 11,
-      "status": "active"
-    },
-    {
-      "product_id": "other_freestyle_mini_hands_free_electric_breast_pump_single",
-      "product_name": "Freestyle Mini Hands-free Electric Breast Pump (Single)",
-      "brand": "Other",
-      "category": "Baby",
-      "url": "https://www.jbhifi.com.au/products/freestyle-mini-hands-free-electric-breast-pump-single",
-      "start_date": "2026-04-29",
-      "end_date": null,
-      "original_price": 189.0,
-      "sale_price": 169.0,
-      "discount_percentage": 10.6,
-      "save_amount": 20.0,
-      "duration_days": 11,
-      "status": "active"
-    },
-    {
-      "product_id": "momcozy_momcozy_m9_hands_free_breast_pump_red_double",
-      "product_name": "Momcozy M9 Hands-Free Breast Pump Red (Double)",
-      "brand": "Momcozy",
-      "category": "Baby",
-      "url": "https://www.jbhifi.com.au/products/momcozy-m9-hands-free-breast-pump-red-double",
-      "start_date": "2026-04-29",
-      "end_date": null,
-      "original_price": 404.0,
-      "sale_price": 343.0,
-      "discount_percentage": 15.1,
-      "save_amount": 61.0,
-      "duration_days": 11,
-      "status": "active"
-    },
-    {
-      "product_id": "philips_philips_avent_double_electric_breast_pump",
-      "product_name": "Philips Avent Double Electric Breast Pump",
-      "brand": "Philips",
-      "category": "Baby",
-      "url": "https://www.jbhifi.com.au/products/philips-avent-double-electric-breast-pump",
-      "start_date": "2026-04-29",
-      "end_date": null,
-      "original_price": 489.0,
-      "sale_price": 365.0,
-      "discount_percentage": 25.4,
-      "save_amount": 124.0,
-      "duration_days": 11,
-      "status": "active"
-    },
-    {
-      "product_id": "other_medela_motion_inbra_wearable_breast_pump_single",
-      "product_name": "Medela Motion InBra Wearable Breast Pump (Single)",
-      "brand": "Other",
-      "category": "Baby",
-      "url": "https://www.jbhifi.com.au/products/medela-motion-inbra-wearable-breast-pump-single",
-      "start_date": "2026-04-29",
-      "end_date": null,
-      "original_price": 239.0,
-      "sale_price": 219.0,
-      "discount_percentage": 8.4,
-      "save_amount": 20.0,
-      "duration_days": 11,
-      "status": "active"
-    },
-    {
-      "product_id": "momcozy_momcozy_m5_wearable_breast_pump_double",
-      "product_name": "Momcozy M5 Wearable Breast Pump (Double)",
-      "brand": "Momcozy",
-      "category": "Baby",
-      "url": "https://www.jbhifi.com.au/products/momcozy-m5-wearable-breast-pump-double",
-      "start_date": "2026-04-29",
-      "end_date": null,
-      "original_price": 299.0,
-      "sale_price": 254.0,
-      "discount_percentage": 15.1,
-      "save_amount": 45.0,
-      "duration_days": 11,
-      "status": "active"
-    },
-    {
-      "product_id": "other_medela_motion_inbra_wearable_breast_pump_double",
-      "product_name": "Medela Motion InBra Wearable Breast Pump (Double)",
-      "brand": "Other",
-      "category": "Baby",
-      "url": "https://www.jbhifi.com.au/products/medela-motion-inbra-wearable-breast-pump-double",
-      "start_date": "2026-04-29",
-      "end_date": null,
-      "original_price": 379.0,
-      "sale_price": 339.0,
-      "discount_percentage": 10.6,
-      "save_amount": 40.0,
-      "duration_days": 11,
-      "status": "active"
-    },
-    {
-      "product_id": "momcozy_momcozy_large_capacity_baby_wipe_warmer",
-      "product_name": "Momcozy Large Capacity Baby Wipe Warmer",
-      "brand": "Momcozy",
-      "category": "Baby",
-      "url": "https://www.jbhifi.com.au/products/momcozy-large-capacity-baby-wipe-warmer",
-      "start_date": "2026-04-29",
-      "end_date": null,
-      "original_price": 59.0,
-      "sale_price": 49.0,
-      "discount_percentage": 16.9,
-      "save_amount": 10.0,
-      "duration_days": 11,
-      "status": "active"
-    },
-    {
-      "product_id": "owlet_owlet_dream_sock_baby_monitor_dusty_rose",
-      "product_name": "Owlet Dream Sock Baby Monitor (Dusty Rose)",
-      "brand": "Owlet",
-      "category": "Baby",
-      "url": "https://www.jbhifi.com.au/products/owlet-dream-sock-baby-monitor-dusty-rose",
-      "start_date": "2026-04-29",
-      "end_date": null,
-      "original_price": 499.0,
-      "sale_price": 449.0,
-      "discount_percentage": 10.0,
-      "save_amount": 50.0,
-      "duration_days": 11,
-      "status": "active"
-    },
-    {
-      "product_id": "other_dream_sight_dream_sock_duo_baby_monitor_mint",
-      "product_name": "Dream Sight & Dream Sock Duo Baby Monitor (Mint)",
-      "brand": "Other",
-      "category": "Baby",
-      "url": "https://www.jbhifi.com.au/products/dream-sight-dream-sock-duo-baby-monitor-mint",
-      "start_date": "2026-04-29",
-      "end_date": null,
-      "original_price": 699.0,
-      "sale_price": 629.0,
-      "discount_percentage": 10.0,
-      "save_amount": 70.0,
-      "duration_days": 11,
-      "status": "active"
-    },
-    {
-      "product_id": "momcozy_momcozy_kleanpal_pro_baby_bottle_washer",
-      "product_name": "Momcozy KleanPal Pro Baby Bottle Washer",
-      "brand": "Momcozy",
-      "category": "Baby",
-      "url": "https://www.jbhifi.com.au/products/momcozy-kleanpal-pro-baby-bottle-washer",
-      "start_date": "2026-04-29",
-      "end_date": null,
-      "original_price": 549.0,
-      "sale_price": 466.0,
-      "discount_percentage": 15.1,
-      "save_amount": 83.0,
-      "duration_days": 11,
-      "status": "active"
-    },
-    {
-      "product_id": "philips_philips_avent_single_electric_breast_pump",
-      "product_name": "Philips Avent Single Electric Breast Pump",
-      "brand": "Philips",
-      "category": "Baby",
-      "url": "https://www.jbhifi.com.au/products/philips-avent-single-electric-breast-pump",
-      "start_date": "2026-04-29",
-      "end_date": null,
-      "original_price": 279.0,
-      "sale_price": 209.0,
-      "discount_percentage": 25.1,
-      "save_amount": 70.0,
-      "duration_days": 11,
-      "status": "active"
-    },
-    {
-      "product_id": "other_oricom_5”_smart_hd_baby_monitor_with_stand",
-      "product_name": "Oricom 5” Smart HD Baby Monitor with Stand",
-      "brand": "Other",
-      "category": "Baby",
-      "url": "https://www.jbhifi.com.au/products/oricom-5-smart-hd-baby-monitor-with-stand",
-      "start_date": "2026-04-29",
-      "end_date": null,
-      "original_price": 399.0,
-      "sale_price": 359.0,
-      "discount_percentage": 10.0,
-      "save_amount": 40.0,
-      "duration_days": 11,
-      "status": "active"
-    },
-    {
-      "product_id": "philips_philips_avent_connected_baby_monitor",
-      "product_name": "Philips Avent Connected Baby Monitor",
-      "brand": "Philips",
-      "category": "Baby",
-      "url": "https://www.jbhifi.com.au/products/philips-avent-connected-baby-monitor-1",
-      "start_date": "2026-04-29",
-      "end_date": null,
-      "original_price": 189.0,
-      "sale_price": 129.0,
-      "discount_percentage": 31.7,
-      "save_amount": 60.0,
-      "duration_days": 11,
+      "duration_days": 12,
       "status": "active"
     },
     {
@@ -942,7 +552,7 @@
       "sale_price": 223.0,
       "discount_percentage": 20.1,
       "save_amount": 56.0,
-      "duration_days": 10,
+      "duration_days": 11,
       "status": "active"
     },
     {
@@ -957,7 +567,7 @@
       "sale_price": 59.0,
       "discount_percentage": 50.4,
       "save_amount": 60.0,
-      "duration_days": 10,
+      "duration_days": 11,
       "status": "active"
     },
     {
@@ -972,7 +582,7 @@
       "sale_price": 269.0,
       "discount_percentage": 61.5,
       "save_amount": 430.0,
-      "duration_days": 10,
+      "duration_days": 11,
       "status": "active"
     },
     {
@@ -1002,7 +612,7 @@
       "sale_price": 29.0,
       "discount_percentage": 70.1,
       "save_amount": 68.0,
-      "duration_days": 10,
+      "duration_days": 11,
       "status": "active"
     },
     {
@@ -1017,7 +627,7 @@
       "sale_price": 279.0,
       "discount_percentage": 30.1,
       "save_amount": 120.0,
-      "duration_days": 10,
+      "duration_days": 11,
       "status": "active"
     },
     {
@@ -1032,7 +642,7 @@
       "sale_price": 224.0,
       "discount_percentage": 10.0,
       "save_amount": 25.0,
-      "duration_days": 10,
+      "duration_days": 11,
       "status": "active"
     },
     {
@@ -1047,7 +657,7 @@
       "sale_price": 279.0,
       "discount_percentage": 20.1,
       "save_amount": 70.0,
-      "duration_days": 10,
+      "duration_days": 11,
       "status": "active"
     },
     {
@@ -1062,7 +672,7 @@
       "sale_price": 160.01,
       "discount_percentage": 30.1,
       "save_amount": 68.99,
-      "duration_days": 10,
+      "duration_days": 11,
       "status": "active"
     },
     {
@@ -1077,7 +687,7 @@
       "sale_price": 244.01,
       "discount_percentage": 30.1,
       "save_amount": 104.99,
-      "duration_days": 10,
+      "duration_days": 11,
       "status": "active"
     },
     {
@@ -1092,7 +702,7 @@
       "sale_price": 359.0,
       "discount_percentage": 20.0,
       "save_amount": 90.0,
-      "duration_days": 10,
+      "duration_days": 11,
       "status": "active"
     },
     {
@@ -1107,7 +717,7 @@
       "sale_price": 463.0,
       "discount_percentage": 20.0,
       "save_amount": 116.0,
-      "duration_days": 10,
+      "duration_days": 11,
       "status": "active"
     },
     {
@@ -1122,7 +732,7 @@
       "sale_price": 279.0,
       "discount_percentage": 20.1,
       "save_amount": 70.0,
-      "duration_days": 10,
+      "duration_days": 11,
       "status": "active"
     },
     {
@@ -1137,7 +747,7 @@
       "sale_price": 349.0,
       "discount_percentage": 30.1,
       "save_amount": 150.0,
-      "duration_days": 10,
+      "duration_days": 11,
       "status": "active"
     },
     {
@@ -1152,7 +762,7 @@
       "sale_price": 224.0,
       "discount_percentage": 10.0,
       "save_amount": 25.0,
-      "duration_days": 10,
+      "duration_days": 11,
       "status": "active"
     },
     {
@@ -1167,7 +777,7 @@
       "sale_price": 29.0,
       "discount_percentage": 50.8,
       "save_amount": 30.0,
-      "duration_days": 10,
+      "duration_days": 11,
       "status": "active"
     },
     {
@@ -1182,7 +792,7 @@
       "sale_price": 899.0,
       "discount_percentage": 10.0,
       "save_amount": 100.0,
-      "duration_days": 9,
+      "duration_days": 10,
       "status": "active"
     },
     {
@@ -1197,7 +807,7 @@
       "sale_price": 199.0,
       "discount_percentage": 28.7,
       "save_amount": 80.0,
-      "duration_days": 9,
+      "duration_days": 10,
       "status": "active"
     },
     {
@@ -1212,7 +822,7 @@
       "sale_price": 799.0,
       "discount_percentage": 27.3,
       "save_amount": 300.0,
-      "duration_days": 6,
+      "duration_days": 7,
       "status": "active"
     },
     {
@@ -1227,7 +837,7 @@
       "sale_price": 449.0,
       "discount_percentage": 25.0,
       "save_amount": 150.0,
-      "duration_days": 6,
+      "duration_days": 7,
       "status": "active"
     },
     {
@@ -1242,7 +852,7 @@
       "sale_price": 479.0,
       "discount_percentage": 20.0,
       "save_amount": 120.0,
-      "duration_days": 6,
+      "duration_days": 7,
       "status": "active"
     },
     {
@@ -1272,7 +882,7 @@
       "sale_price": 999.0,
       "discount_percentage": 23.1,
       "save_amount": 300.0,
-      "duration_days": 6,
+      "duration_days": 7,
       "status": "active"
     },
     {
@@ -1287,7 +897,7 @@
       "sale_price": 359.0,
       "discount_percentage": 20.0,
       "save_amount": 90.0,
-      "duration_days": 6,
+      "duration_days": 7,
       "status": "active"
     },
     {
@@ -1302,7 +912,7 @@
       "sale_price": 79.0,
       "discount_percentage": 43.2,
       "save_amount": 60.0,
-      "duration_days": 6,
+      "duration_days": 7,
       "status": "active"
     },
     {
@@ -1317,7 +927,7 @@
       "sale_price": 1319.0,
       "discount_percentage": 20.0,
       "save_amount": 330.0,
-      "duration_days": 6,
+      "duration_days": 7,
       "status": "active"
     },
     {
@@ -1332,7 +942,7 @@
       "sale_price": 154.0,
       "discount_percentage": 42.8,
       "save_amount": 115.0,
-      "duration_days": 6,
+      "duration_days": 7,
       "status": "active"
     },
     {
@@ -1347,7 +957,7 @@
       "sale_price": 229.0,
       "discount_percentage": 17.9,
       "save_amount": 50.0,
-      "duration_days": 6,
+      "duration_days": 7,
       "status": "active"
     },
     {
@@ -1362,7 +972,7 @@
       "sale_price": 397.0,
       "discount_percentage": 16.8,
       "save_amount": 80.0,
-      "duration_days": 4,
+      "duration_days": 5,
       "status": "active"
     },
     {
@@ -1377,7 +987,7 @@
       "sale_price": 729.0,
       "discount_percentage": 47.9,
       "save_amount": 670.0,
-      "duration_days": 4,
+      "duration_days": 5,
       "status": "active"
     },
     {
@@ -1392,7 +1002,7 @@
       "sale_price": 139.0,
       "discount_percentage": 24.9,
       "save_amount": 46.0,
-      "duration_days": 2,
+      "duration_days": 3,
       "status": "active"
     }
   ],
@@ -4020,6 +3630,396 @@
       "discount_percentage": 6.3,
       "save_amount": 40.0,
       "duration_days": 14,
+      "status": "ended"
+    },
+    {
+      "product_id": "arlo_arlo_essentials_gen_3_2k_pan_tilt_indoor_security_camera",
+      "product_name": "Arlo Essentials (Gen 3) 2K Pan & Tilt Indoor Security Camera",
+      "brand": "Arlo",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/arlo-essentials-gen-3-2k-pan-tilt-indoor-security-camera",
+      "start_date": "2026-04-20",
+      "end_date": "2026-05-10",
+      "original_price": 79.0,
+      "sale_price": 47.0,
+      "discount_percentage": 40.5,
+      "save_amount": 32.0,
+      "duration_days": 20,
+      "status": "ended"
+    },
+    {
+      "product_id": "arlo_arlo_go_2_4g_wi_fi_mobile_security_camera",
+      "product_name": "Arlo Go 2 4G/Wi-Fi Mobile Security Camera",
+      "brand": "Arlo",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/arlo-go-2-4g-wi-fi-mobile-security-camera",
+      "start_date": "2026-04-29",
+      "end_date": "2026-05-10",
+      "original_price": 429.0,
+      "sale_price": 234.0,
+      "discount_percentage": 45.5,
+      "save_amount": 195.0,
+      "duration_days": 11,
+      "status": "ended"
+    },
+    {
+      "product_id": "arlo_arlo_essentials_2k_3rd_gen_outdoor_security_camera",
+      "product_name": "Arlo Essentials 2K (3rd Gen) Outdoor Security Camera",
+      "brand": "Arlo",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/arlo-essentials-2k-3rd-gen-outdoor-security-camera",
+      "start_date": "2026-04-20",
+      "end_date": "2026-05-10",
+      "original_price": 149.0,
+      "sale_price": 119.0,
+      "discount_percentage": 20.1,
+      "save_amount": 30.0,
+      "duration_days": 20,
+      "status": "ended"
+    },
+    {
+      "product_id": "arlo_arlo_essential_pan_tilt_2k_outdoor_security_camera",
+      "product_name": "Arlo Essential Pan & Tilt 2K Outdoor Security Camera",
+      "brand": "Arlo",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/arlo-essential-pan-tilt-2k-outdoor-security-camera",
+      "start_date": "2026-04-16",
+      "end_date": "2026-05-10",
+      "original_price": 119.0,
+      "sale_price": 79.0,
+      "discount_percentage": 33.6,
+      "save_amount": 40.0,
+      "duration_days": 24,
+      "status": "ended"
+    },
+    {
+      "product_id": "other_oricom_smart_hd_baby_monitor_with_remote",
+      "product_name": "Oricom Smart HD Baby Monitor with Remote",
+      "brand": "Other",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/oricom-smart-hd-baby-monitor-with-remote",
+      "start_date": "2026-04-29",
+      "end_date": "2026-05-10",
+      "original_price": 179.0,
+      "sale_price": 159.0,
+      "discount_percentage": 11.2,
+      "save_amount": 20.0,
+      "duration_days": 11,
+      "status": "ended"
+    },
+    {
+      "product_id": "other_oricom_babysense7_breathing_movement_monitor",
+      "product_name": "Oricom BabySense7 Breathing Movement Monitor",
+      "brand": "Other",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/oricom-babysense7-breathing-movement-monitor",
+      "start_date": "2026-04-29",
+      "end_date": "2026-05-10",
+      "original_price": 249.0,
+      "sale_price": 199.0,
+      "discount_percentage": 20.1,
+      "save_amount": 50.0,
+      "duration_days": 11,
+      "status": "ended"
+    },
+    {
+      "product_id": "other_oricom_smart_remote_5_pan_tilt_baby_monitor",
+      "product_name": "Oricom Smart Remote 5 Pan & Tilt Baby Monitor",
+      "brand": "Other",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/oricom-smart-remote-5-pan-tilt-baby-monitor",
+      "start_date": "2026-04-29",
+      "end_date": "2026-05-10",
+      "original_price": 329.0,
+      "sale_price": 299.0,
+      "discount_percentage": 9.1,
+      "save_amount": 30.0,
+      "duration_days": 11,
+      "status": "ended"
+    },
+    {
+      "product_id": "owlet_owlet_dream_sock_baby_monitor_bedtime_blue",
+      "product_name": "Owlet Dream Sock Baby Monitor (Bedtime Blue)",
+      "brand": "Owlet",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/owlet-dream-sock-baby-monitor-bedtime-blue",
+      "start_date": "2026-04-29",
+      "end_date": "2026-05-10",
+      "original_price": 499.0,
+      "sale_price": 449.0,
+      "discount_percentage": 10.0,
+      "save_amount": 50.0,
+      "duration_days": 11,
+      "status": "ended"
+    },
+    {
+      "product_id": "momcozy_momcozy_s9_pro_wearable_breast_pump_double",
+      "product_name": "Momcozy S9 Pro Wearable Breast Pump (Double)",
+      "brand": "Momcozy",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/momcozy-s9-pro-wearable-breast-pump-double",
+      "start_date": "2026-04-29",
+      "end_date": "2026-05-10",
+      "original_price": 179.0,
+      "sale_price": 152.0,
+      "discount_percentage": 15.1,
+      "save_amount": 27.0,
+      "duration_days": 11,
+      "status": "ended"
+    },
+    {
+      "product_id": "philips_philips_avent_manual_breast_pump",
+      "product_name": "Philips Avent Manual Breast Pump",
+      "brand": "Philips",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/philips-avent-manual-breast-pump",
+      "start_date": "2026-04-29",
+      "end_date": "2026-05-10",
+      "original_price": 79.0,
+      "sale_price": 59.0,
+      "discount_percentage": 25.3,
+      "save_amount": 20.0,
+      "duration_days": 11,
+      "status": "ended"
+    },
+    {
+      "product_id": "other_freestyle_mini_hands_free_electric_breast_pump_double",
+      "product_name": "Freestyle Mini Hands-free Electric Breast Pump (Double)",
+      "brand": "Other",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/freestyle-mini-hands-free-electric-breast-pump-double",
+      "start_date": "2026-04-29",
+      "end_date": "2026-05-10",
+      "original_price": 299.0,
+      "sale_price": 269.0,
+      "discount_percentage": 10.0,
+      "save_amount": 30.0,
+      "duration_days": 11,
+      "status": "ended"
+    },
+    {
+      "product_id": "other_medela_harmony_manual_breast_pump",
+      "product_name": "Medela Harmony Manual Breast Pump",
+      "brand": "Other",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/medela-harmony-manual-breast-pump",
+      "start_date": "2026-04-29",
+      "end_date": "2026-05-10",
+      "original_price": 74.0,
+      "sale_price": 59.0,
+      "discount_percentage": 20.3,
+      "save_amount": 15.0,
+      "duration_days": 11,
+      "status": "ended"
+    },
+    {
+      "product_id": "philips_philips_avent_hands_free_double_electric_breast_pump",
+      "product_name": "Philips Avent Hands-Free Double Electric Breast Pump",
+      "brand": "Philips",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/philips-avent-hands-free-double-electric-breast-pump",
+      "start_date": "2026-04-29",
+      "end_date": "2026-05-10",
+      "original_price": 599.0,
+      "sale_price": 449.0,
+      "discount_percentage": 25.0,
+      "save_amount": 150.0,
+      "duration_days": 11,
+      "status": "ended"
+    },
+    {
+      "product_id": "other_freestyle_mini_hands_free_electric_breast_pump_single",
+      "product_name": "Freestyle Mini Hands-free Electric Breast Pump (Single)",
+      "brand": "Other",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/freestyle-mini-hands-free-electric-breast-pump-single",
+      "start_date": "2026-04-29",
+      "end_date": "2026-05-10",
+      "original_price": 189.0,
+      "sale_price": 169.0,
+      "discount_percentage": 10.6,
+      "save_amount": 20.0,
+      "duration_days": 11,
+      "status": "ended"
+    },
+    {
+      "product_id": "momcozy_momcozy_m9_hands_free_breast_pump_red_double",
+      "product_name": "Momcozy M9 Hands-Free Breast Pump Red (Double)",
+      "brand": "Momcozy",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/momcozy-m9-hands-free-breast-pump-red-double",
+      "start_date": "2026-04-29",
+      "end_date": "2026-05-10",
+      "original_price": 404.0,
+      "sale_price": 343.0,
+      "discount_percentage": 15.1,
+      "save_amount": 61.0,
+      "duration_days": 11,
+      "status": "ended"
+    },
+    {
+      "product_id": "philips_philips_avent_double_electric_breast_pump",
+      "product_name": "Philips Avent Double Electric Breast Pump",
+      "brand": "Philips",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/philips-avent-double-electric-breast-pump",
+      "start_date": "2026-04-29",
+      "end_date": "2026-05-10",
+      "original_price": 489.0,
+      "sale_price": 365.0,
+      "discount_percentage": 25.4,
+      "save_amount": 124.0,
+      "duration_days": 11,
+      "status": "ended"
+    },
+    {
+      "product_id": "other_medela_motion_inbra_wearable_breast_pump_single",
+      "product_name": "Medela Motion InBra Wearable Breast Pump (Single)",
+      "brand": "Other",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/medela-motion-inbra-wearable-breast-pump-single",
+      "start_date": "2026-04-29",
+      "end_date": "2026-05-10",
+      "original_price": 239.0,
+      "sale_price": 219.0,
+      "discount_percentage": 8.4,
+      "save_amount": 20.0,
+      "duration_days": 11,
+      "status": "ended"
+    },
+    {
+      "product_id": "momcozy_momcozy_m5_wearable_breast_pump_double",
+      "product_name": "Momcozy M5 Wearable Breast Pump (Double)",
+      "brand": "Momcozy",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/momcozy-m5-wearable-breast-pump-double",
+      "start_date": "2026-04-29",
+      "end_date": "2026-05-10",
+      "original_price": 299.0,
+      "sale_price": 254.0,
+      "discount_percentage": 15.1,
+      "save_amount": 45.0,
+      "duration_days": 11,
+      "status": "ended"
+    },
+    {
+      "product_id": "other_medela_motion_inbra_wearable_breast_pump_double",
+      "product_name": "Medela Motion InBra Wearable Breast Pump (Double)",
+      "brand": "Other",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/medela-motion-inbra-wearable-breast-pump-double",
+      "start_date": "2026-04-29",
+      "end_date": "2026-05-10",
+      "original_price": 379.0,
+      "sale_price": 339.0,
+      "discount_percentage": 10.6,
+      "save_amount": 40.0,
+      "duration_days": 11,
+      "status": "ended"
+    },
+    {
+      "product_id": "momcozy_momcozy_large_capacity_baby_wipe_warmer",
+      "product_name": "Momcozy Large Capacity Baby Wipe Warmer",
+      "brand": "Momcozy",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/momcozy-large-capacity-baby-wipe-warmer",
+      "start_date": "2026-04-29",
+      "end_date": "2026-05-10",
+      "original_price": 59.0,
+      "sale_price": 49.0,
+      "discount_percentage": 16.9,
+      "save_amount": 10.0,
+      "duration_days": 11,
+      "status": "ended"
+    },
+    {
+      "product_id": "owlet_owlet_dream_sock_baby_monitor_dusty_rose",
+      "product_name": "Owlet Dream Sock Baby Monitor (Dusty Rose)",
+      "brand": "Owlet",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/owlet-dream-sock-baby-monitor-dusty-rose",
+      "start_date": "2026-04-29",
+      "end_date": "2026-05-10",
+      "original_price": 499.0,
+      "sale_price": 449.0,
+      "discount_percentage": 10.0,
+      "save_amount": 50.0,
+      "duration_days": 11,
+      "status": "ended"
+    },
+    {
+      "product_id": "other_dream_sight_dream_sock_duo_baby_monitor_mint",
+      "product_name": "Dream Sight & Dream Sock Duo Baby Monitor (Mint)",
+      "brand": "Other",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/dream-sight-dream-sock-duo-baby-monitor-mint",
+      "start_date": "2026-04-29",
+      "end_date": "2026-05-10",
+      "original_price": 699.0,
+      "sale_price": 629.0,
+      "discount_percentage": 10.0,
+      "save_amount": 70.0,
+      "duration_days": 11,
+      "status": "ended"
+    },
+    {
+      "product_id": "momcozy_momcozy_kleanpal_pro_baby_bottle_washer",
+      "product_name": "Momcozy KleanPal Pro Baby Bottle Washer",
+      "brand": "Momcozy",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/momcozy-kleanpal-pro-baby-bottle-washer",
+      "start_date": "2026-04-29",
+      "end_date": "2026-05-10",
+      "original_price": 549.0,
+      "sale_price": 466.0,
+      "discount_percentage": 15.1,
+      "save_amount": 83.0,
+      "duration_days": 11,
+      "status": "ended"
+    },
+    {
+      "product_id": "philips_philips_avent_single_electric_breast_pump",
+      "product_name": "Philips Avent Single Electric Breast Pump",
+      "brand": "Philips",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/philips-avent-single-electric-breast-pump",
+      "start_date": "2026-04-29",
+      "end_date": "2026-05-10",
+      "original_price": 279.0,
+      "sale_price": 209.0,
+      "discount_percentage": 25.1,
+      "save_amount": 70.0,
+      "duration_days": 11,
+      "status": "ended"
+    },
+    {
+      "product_id": "other_oricom_5”_smart_hd_baby_monitor_with_stand",
+      "product_name": "Oricom 5” Smart HD Baby Monitor with Stand",
+      "brand": "Other",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/oricom-5-smart-hd-baby-monitor-with-stand",
+      "start_date": "2026-04-29",
+      "end_date": "2026-05-10",
+      "original_price": 399.0,
+      "sale_price": 359.0,
+      "discount_percentage": 10.0,
+      "save_amount": 40.0,
+      "duration_days": 11,
+      "status": "ended"
+    },
+    {
+      "product_id": "philips_philips_avent_connected_baby_monitor",
+      "product_name": "Philips Avent Connected Baby Monitor",
+      "brand": "Philips",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/philips-avent-connected-baby-monitor-1",
+      "start_date": "2026-04-29",
+      "end_date": "2026-05-10",
+      "original_price": 189.0,
+      "sale_price": 129.0,
+      "discount_percentage": 31.7,
+      "save_amount": 60.0,
+      "duration_days": 11,
       "status": "ended"
     }
   ]

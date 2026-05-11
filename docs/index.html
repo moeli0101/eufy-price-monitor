@@ -12,828 +12,605 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-            background: #0d1117;
-            padding: 20px;
-            color: #e6edf3;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+            background: #ffffff;
+            color: #1f2328;
+            font-size: 14px;
+            line-height: 1.5;
+            padding: 0;
         }
 
         .container {
-            max-width: 1800px;
+            max-width: 1280px;
             margin: 0 auto;
+            padding: 0 24px;
         }
 
-        .header {
-            background: #161b22;
-            padding: 30px;
-            border-radius: 6px;
-            border: 1px solid #30363d;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.4);
-            margin-bottom: 20px;
-        }
-
-        .header h1 {
-            font-size: 24px;
-            color: #e6edf3;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .subtitle {
-            color: #8b949e;
-            font-size: 15px;
-        }
-
-        .filters {
-            background: #161b22;
-            padding: 20px;
-            border-radius: 6px;
-            border: 1px solid #30363d;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.4);
-            margin-bottom: 20px;
-        }
-
-        .filter-section {
-            margin-bottom: 15px;
-        }
-
-        .filter-section:last-child {
-            margin-bottom: 0;
-        }
-
-        .filter-label {
-            font-size: 13px;
-            font-weight: 600;
-            color: #8b949e;
-            margin-bottom: 10px;
-            display: block;
-        }
-
-        .filter-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .filter-btn {
-            padding: 8px 16px;
-            border: 1px solid #30363d;
-            background: transparent;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 13px;
-            font-weight: 600;
-            transition: all 0.2s;
-            color: #8b949e;
-        }
-
-        .filter-btn:hover {
-            border-color: #58a6ff;
-            color: #58a6ff;
-        }
-
-        .filter-btn.active {
-            background: #1f6feb;
-            border-color: #1f6feb;
-            color: white;
-        }
-
-        .clear-filters {
-            margin-top: 10px;
-            padding: 8px 16px;
-            background: #21262d;
-            color: #f85149;
-            border: 1px solid #f85149;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 13px;
-            font-weight: 600;
-        }
-
-        .clear-filters:hover {
-            background: #f85149;
-            color: white;
-        }
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .stat-card {
-            background: #161b22;
-            padding: 20px;
-            border-radius: 6px;
-            border: 1px solid #30363d;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.4);
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 32px;
-            font-weight: 700;
-            color: #58a6ff;
-            margin-bottom: 5px;
-        }
-
-        .stat-label {
-            color: #8b949e;
-            font-size: 13px;
-            font-weight: 500;
-        }
-
-        /* 异动统计卡片 - 高亮显示 */
-        .stat-card.highlight {
-            background: #161b22;
-            border: 1px solid #30363d;
-            color: #e6edf3;
-            grid-column: span 2;
-            padding: 30px;
-        }
-
-        .stat-card.highlight .stat-number {
-            color: #58a6ff;
-            font-size: 28px;
-            margin-bottom: 8px;
-        }
-
-        .stat-card.highlight .stat-label {
-            color: #8b949e;
-            font-size: 14px;
-        }
-
-        .highlight-title {
-            text-align: center;
-            margin-bottom: 8px;
-        }
-
-        .highlight-subtitle {
-            text-align: center;
-            font-size: 13px;
-            color: #8b949e;
-            margin-bottom: 20px;
-        }
-
-        .change-stats {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid #30363d;
-        }
-
-        .change-item {
-            text-align: center;
-            padding: 15px 25px;
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 6px;
-            transition: all 0.2s;
-            min-width: 120px;
-        }
-
-        .change-item:hover {
-            border-color: #58a6ff;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(88,166,255,0.15);
-        }
-
-        .change-number {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 5px;
-            color: #58a6ff;
-        }
-
-        .change-label {
-            font-size: 12px;
-            color: #8b949e;
-            font-weight: 500;
-        }
-
-        .highlight-footer {
-            text-align: center;
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid #30363d;
-            font-size: 13px;
-            color: #58a6ff;
-            font-weight: 600;
-        }
-
-        /* 价格变动产品列表 */
-        .price-changes-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .change-section {
-            background: #161b22;
-            border-radius: 6px;
-            padding: 20px;
-            border: 1px solid #30363d;
-        }
-
-        .change-section-header {
-            font-size: 16px;
-            font-weight: 700;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #30363d;
+        /* Top Banner - thin header bar */
+        .top-banner {
+            background: #ffffff;
+            border-bottom: 1px solid #d0d7de;
+            padding: 12px 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
-        .change-section-header.decreased {
-            color: #3fb950;
+        .banner-left {
+            display: flex;
+            gap: 30px;
+            align-items: center;
         }
-
-        .change-section-header.increased {
-            color: #f85149;
-        }
-
-        .change-section-header.promo {
-            color: #d29922;
-        }
-
-        .product-list {
-            max-height: 400px;
-            overflow-y: auto;
-        }
-
-        .product-item {
-            padding: 12px;
-            margin-bottom: 8px;
-            background: #21262d;
-            border-radius: 6px;
+        .banner-item {
             font-size: 13px;
-            transition: all 0.2s;
+            color: #656d76;
+            display: flex;
+            align-items: center;
+            gap: 6px;
         }
-
-        .product-item:hover {
-            background: #2d333b;
-            transform: translateX(4px);
-        }
-
-        .product-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .product-name {
+        .banner-item strong {
+            color: #1f2328;
             font-weight: 600;
-            color: #e6edf3;
-            margin-bottom: 6px;
-            display: block;
+        }
+        .banner-contact {
+            font-size: 13px;
+            color: #656d76;
+        }
+        .banner-contact a {
+            color: #0969da;
             text-decoration: none;
         }
-
-        .product-name:hover {
-            color: #58a6ff;
+        .banner-contact a:hover {
+            text-decoration: underline;
         }
 
+        /* Header */
+        .header {
+            padding: 24px 0 16px;
+            border-bottom: 1px solid #d0d7de;
+            margin-bottom: 16px;
+            background: transparent;
+            box-shadow: none;
+            border-radius: 0;
+        }
+        .header h1 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1f2328;
+            margin-bottom: 4px;
+        }
+        .subtitle {
+            font-size: 13px;
+            color: #656d76;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 0;
+            border-bottom: 1px solid #d0d7de;
+            margin-bottom: 16px;
+            background: transparent;
+            box-shadow: none;
+            border-radius: 0;
+            padding: 0;
+        }
+        .tab-btn {
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #656d76;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+            margin-bottom: -1px;
+        }
+        .tab-btn:hover {
+            color: #1f2328;
+            background: #f6f8fa;
+            border-radius: 6px 6px 0 0;
+        }
+        .tab-btn.active {
+            color: #1f2328;
+            font-weight: 600;
+            border-bottom-color: #fd8c73;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Filters */
+        .filters {
+            background: #f6f8fa;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            padding: 12px 16px;
+            margin-bottom: 16px;
+        }
+        .filter-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+        }
+        .filter-section:last-of-type {
+            margin-bottom: 0;
+        }
+        .filter-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #656d76;
+            min-width: 60px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        .filter-btn {
+            padding: 4px 12px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #1f2328;
+            background: #ffffff;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: none;
+        }
+        .filter-btn:hover {
+            background: #f6f8fa;
+            border-color: #0969da;
+            color: #0969da;
+        }
+        .filter-btn.active {
+            background: #0969da;
+            border-color: #0969da;
+            color: #ffffff;
+        }
+        .clear-filters {
+            padding: 4px 12px;
+            font-size: 13px;
+            background: #ffffff;
+            border: 1px solid #cf222e;
+            border-radius: 6px;
+            color: #cf222e;
+            cursor: pointer;
+            font-weight: 500;
+        }
+        .clear-filters:hover {
+            background: #cf222e;
+            color: #ffffff;
+        }
+
+        /* Stats */
+        .stats {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .stat-card {
+            flex: 1;
+            background: #f6f8fa;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            padding: 16px;
+            text-align: center;
+            box-shadow: none;
+        }
+        .stat-number {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0969da;
+            margin-bottom: 4px;
+        }
+        .stat-label {
+            font-size: 12px;
+            color: #656d76;
+            font-weight: 500;
+        }
+        .stat-card.highlight {
+            grid-column: span 2;
+        }
+
+        /* Category sections */
+        .category-section {
+            background: #ffffff;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+        .category-section.hidden {
+            display: none;
+        }
+        .category-header {
+            padding: 12px 16px;
+            border-bottom: 1px solid #d0d7de;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #f6f8fa;
+        }
+        .category-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .category-icon {
+            font-size: 16px;
+            margin-right: 8px;
+        }
+        .category-name {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1f2328;
+        }
+        .category-count {
+            font-size: 12px;
+            font-weight: 600;
+            color: #ffffff;
+            background: #0969da;
+            padding: 2px 8px;
+            border-radius: 20px;
+        }
+
+        /* Price bands */
+        .price-band {
+            margin-bottom: 0;
+        }
+        .band-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: #656d76;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 8px 12px;
+            border-bottom: 1px solid #d0d7de;
+        }
+
+        /* Product table */
+        .product-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .product-table thead tr {
+            background: #f6f8fa;
+        }
+        .product-table th {
+            padding: 8px 12px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+            color: #656d76;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid #d0d7de;
+            white-space: nowrap;
+        }
+        .product-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #d0d7de;
+            font-size: 13px;
+            color: #1f2328;
+            vertical-align: middle;
+        }
+        .product-table tr:hover td {
+            background: #f6f8fa;
+        }
+        .product-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Brand badges */
+        .brand-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .brand-badge.eufy {
+            background: #dafbe1;
+            color: #1a7f37;
+            border: 1px solid #1a7f3740;
+        }
+        .brand-badge.arlo {
+            background: #ddf4ff;
+            color: #0969da;
+            border: 1px solid #0969da40;
+        }
+        .brand-badge.ring {
+            background: #fff8c5;
+            color: #9a6700;
+            border: 1px solid #9a670040;
+        }
+        .brand-badge.google-nest {
+            background: #ffebe9;
+            color: #cf222e;
+            border: 1px solid #cf222e40;
+        }
+        .brand-badge.tp-link {
+            background: #fbefff;
+            color: #8250df;
+            border: 1px solid #8250df40;
+        }
+        .brand-badge.swann,
+        .brand-badge.other,
+        .brand-badge.yale,
+        .brand-badge.vtech,
+        .brand-badge.owlet,
+        .brand-badge.momcozy,
+        .brand-badge.philips,
+        .brand-badge.nanit {
+            background: #f6f8fa;
+            color: #656d76;
+            border: 1px solid #d0d7de;
+        }
+
+        /* Discount & price */
+        .discount-badge {
+            display: inline-block;
+            padding: 2px 6px;
+            background: #ffebe9;
+            color: #cf222e;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            border: 1px solid #cf222e40;
+        }
+        .price-current {
+            font-size: 15px;
+            font-weight: 700;
+            color: #1a7f37;
+        }
+        .price-current.no-discount {
+            color: #1f2328;
+        }
+        .price-was {
+            font-size: 12px;
+            color: #656d76;
+            text-decoration: line-through;
+        }
+        .product-link {
+            color: #0969da;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .product-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Timestamp & empty states */
+        .timestamp {
+            text-align: center;
+            color: #656d76;
+            font-size: 12px;
+            margin-top: 16px;
+        }
+        .no-data, .no-results {
+            padding: 48px;
+            text-align: center;
+            color: #656d76;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+        }
+
+        /* Price changes container */
+        .price-changes-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .change-section {
+            background: #ffffff;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .change-section-header {
+            padding: 10px 12px;
+            font-size: 13px;
+            font-weight: 600;
+            border-bottom: 1px solid #d0d7de;
+            background: #f6f8fa;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .change-section-header.decreased {
+            color: #1a7f37;
+        }
+        .change-section-header.increased {
+            color: #cf222e;
+        }
+        .change-section-header.promo {
+            color: #9a6700;
+        }
+        .product-list {
+            padding: 4px 0;
+            max-height: 360px;
+            overflow-y: auto;
+        }
+        .product-item {
+            padding: 8px 12px;
+            border-bottom: 1px solid #d0d7de;
+            font-size: 13px;
+        }
+        .product-item:last-child {
+            border-bottom: none;
+        }
+        .product-item:hover {
+            background: #f6f8fa;
+        }
+        .product-name {
+            color: #0969da;
+            font-weight: 500;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .product-name:hover {
+            text-decoration: underline;
+        }
         .product-price-change {
             display: flex;
             justify-content: space-between;
             align-items: center;
             font-size: 12px;
         }
-
         .price-old {
             text-decoration: line-through;
-            color: #8b949e;
+            color: #656d76;
         }
-
         .price-new {
             font-weight: 700;
-            color: #58a6ff;
+            color: #0969da;
         }
-
         .price-diff {
+            font-size: 12px;
             font-weight: 700;
-            padding: 2px 8px;
+            padding: 1px 6px;
             border-radius: 4px;
         }
-
         .price-diff.down {
-            background: rgba(63,185,80,0.15);
-            color: #3fb950;
+            background: #dafbe1;
+            color: #1a7f37;
         }
-
         .price-diff.up {
-            background: rgba(248,81,73,0.15);
-            color: #f85149;
+            background: #ffebe9;
+            color: #cf222e;
         }
-
         .empty-list {
+            padding: 20px;
             text-align: center;
-            padding: 30px;
-            color: #8b949e;
-            font-size: 14px;
-        }
-
-        /* 类别区域 */
-        .category-section {
-            background: #161b22;
-            padding: 25px;
-            border-radius: 6px;
-            border: 1px solid #30363d;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.4);
-            margin-bottom: 25px;
-        }
-
-        .category-section.hidden {
-            display: none;
-        }
-
-        .category-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #30363d;
-            margin-bottom: 20px;
-        }
-
-        .category-title {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .category-icon {
-            font-size: 32px;
-        }
-
-        .category-name {
-            font-size: 24px;
-            font-weight: 700;
-            color: #e6edf3;
-        }
-
-        .category-count {
-            background: #1f6feb;
-            color: white;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 700;
-        }
-
-        /* 价格区间分组 */
-        .price-band {
-            margin-bottom: 25px;
-        }
-
-        .price-band:last-child {
-            margin-bottom: 0;
-        }
-
-        .band-title {
-            font-size: 12px;
-            font-weight: 700;
-            color: #8b949e;
-            margin-bottom: 12px;
-            padding-left: 5px;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 12px;
-        }
-
-        .product-card {
-            background: #161b22;
-            border-radius: 6px;
-            padding: 12px;
-            transition: all 0.2s;
-            cursor: pointer;
-            border: 1px solid #30363d;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .product-card:hover {
-            border-color: #58a6ff;
-            box-shadow: 0 0 0 1px #58a6ff;
-        }
-
-        .product-card.eufy {
-            border-left: 3px solid #3fb950;
-        }
-
-        .product-card.arlo {
-            border-left: 3px solid #58a6ff;
-        }
-
-        .product-card.ring {
-            border-left: 3px solid #d29922;
-        }
-
-        .product-card.google-nest {
-            border-left: 3px solid #f85149;
-        }
-
-        .product-card.tp-link {
-            border-left: 3px solid #bc8cff;
-        }
-
-        .product-card.yale {
-            border-left: 3px solid #a5d6ff;
-        }
-
-        .product-card.other {
-            border-left: 3px solid #8b949e;
-        }
-
-        .product-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 8px;
-            gap: 8px;
-        }
-
-        .brand-badge {
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-            flex-shrink: 0;
-        }
-
-        .brand-badge.eufy {
-            background: rgba(63,185,80,0.15);
-            color: #3fb950;
-        }
-
-        .brand-badge.arlo {
-            background: rgba(88,166,255,0.15);
-            color: #58a6ff;
-        }
-
-        .brand-badge.ring {
-            background: rgba(210,153,34,0.15);
-            color: #d29922;
-        }
-
-        .brand-badge.google-nest {
-            background: rgba(248,81,73,0.15);
-            color: #f85149;
-        }
-
-        .brand-badge.tp-link {
-            background: rgba(188,140,255,0.15);
-            color: #bc8cff;
-        }
-
-        .brand-badge.yale {
-            background: rgba(165,214,255,0.15);
-            color: #a5d6ff;
-        }
-
-        .brand-badge.other {
-            background: rgba(139,148,158,0.15);
-            color: #8b949e;
-        }
-
-        .discount-badge {
-            background: #f85149;
-            color: white;
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-size: 11px;
-            font-weight: 700;
-        }
-
-        .product-name {
-            font-size: 13px;
-            font-weight: 600;
-            color: #e6edf3;
-            line-height: 1.4;
-            margin-bottom: 8px;
-            flex: 1;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        .product-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            gap: 8px;
-            margin-top: auto;
-        }
-
-        .product-meta {
-            font-size: 11px;
-            color: #8b949e;
-        }
-
-        .product-prices {
-            text-align: right;
-        }
-
-        .price-was {
-            font-size: 11px;
-            color: #8b949e;
-            text-decoration: line-through;
-            margin-bottom: 2px;
-        }
-
-        .price-current {
-            font-size: 20px;
-            font-weight: 700;
-            color: #3fb950;
-        }
-
-        .price-current.no-discount {
-            color: #e6edf3;
-        }
-
-        .timestamp {
-            text-align: center;
-            color: #8b949e;
-            margin-top: 20px;
-            font-size: 12px;
-        }
-
-        .no-data, .no-results {
-            text-align: center;
-            padding: 60px 20px;
-            background: #161b22;
-            border-radius: 6px;
-            color: #8b949e;
-            border: 1px solid #30363d;
-        }
-
-        /* Tab 导航样式 */
-        .tabs {
-            background: #161b22;
-            padding: 0 20px;
-            border-radius: 6px 6px 0 0;
-            border: 1px solid #30363d;
-            border-bottom: none;
-            margin-bottom: 0;
-            display: flex;
-            gap: 0;
-        }
-
-        .tab-btn {
-            padding: 18px 32px;
-            border: none;
-            background: transparent;
-            font-size: 16px;
-            font-weight: 600;
-            color: #8b949e;
-            cursor: pointer;
-            border-bottom: 3px solid transparent;
-            transition: all 0.3s;
-        }
-
-        .tab-btn:hover {
-            color: #58a6ff;
-        }
-
-        .tab-btn.active {
-            color: #e6edf3;
-            border-bottom-color: #f78166;
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-
-        /* Top Banner */
-        .top-banner {
-            background: #161b22;
-            color: #e6edf3;
-            padding: 15px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin: -20px -20px 20px -20px;
-            border-bottom: 1px solid #30363d;
-        }
-
-        .banner-left {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
-
-        .banner-item {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            font-size: 14px;
-        }
-
-        .banner-item strong {
-            font-size: 16px;
-            font-weight: 700;
-        }
-
-        .banner-contact {
+            color: #656d76;
             font-size: 13px;
         }
 
-        .banner-contact a {
-            color: #58a6ff;
-            text-decoration: underline;
-            font-weight: 600;
-        }
-
-        .banner-contact a:hover {
-            color: #79c0ff;
-        }
-
-        /* Price Tracker Styles */
+        /* Tracker controls */
         .tracker-controls {
-            background: #161b22;
-            padding: 20px;
+            background: #f6f8fa;
+            border: 1px solid #d0d7de;
             border-radius: 6px;
-            border: 1px solid #30363d;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.4);
-            margin-bottom: 20px;
+            padding: 16px;
+            margin-bottom: 16px;
         }
-
         .tracker-section-title {
-            font-size: 16px;
-            font-weight: 700;
-            color: #e6edf3;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1f2328;
+            margin-bottom: 12px;
         }
 
-        .tracker-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-
-        .tracker-card {
-            background: #161b22;
-            padding: 20px;
+        /* Tracker search & dropdown */
+        #tracker-search-input {
+            width: 100%;
+            padding: 5px 12px;
+            font-size: 14px;
+            border: 1px solid #d0d7de;
             border-radius: 6px;
-            border: 1px solid #30363d;
-            border-left: 4px solid #30363d;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .tracker-card:hover {
-            box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-            transform: translateY(-2px);
-        }
-
-        .tracker-card.selected {
-            border-left-color: #58a6ff;
-            background: #1c2a3a;
-        }
-
-        .tracker-card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 10px;
-        }
-
-        .tracker-card-title {
-            font-size: 14px;
-            font-weight: 700;
-            color: #e6edf3;
-            flex: 1;
-            line-height: 1.4;
-        }
-
-        .tracker-card-checkbox {
-            width: 20px;
-            height: 20px;
-            border: 2px solid #30363d;
-            border-radius: 4px;
-            cursor: pointer;
-            flex-shrink: 0;
-            margin-left: 10px;
-            position: relative;
-            transition: all 0.2s;
-        }
-
-        .tracker-card.selected .tracker-card-checkbox {
-            background: #58a6ff;
-            border-color: #58a6ff;
-        }
-
-        .tracker-card.selected .tracker-card-checkbox::after {
-            content: '✓';
-            position: absolute;
-            color: white;
-            font-size: 14px;
-            font-weight: bold;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .tracker-card-info {
-            display: flex;
-            gap: 10px;
-            font-size: 12px;
-            color: #8b949e;
+            color: #1f2328;
+            background: #ffffff;
+            outline: none;
             margin-bottom: 8px;
+            font-family: inherit;
+        }
+        #tracker-search-input:focus {
+            border-color: #0969da;
+            box-shadow: 0 0 0 3px #0969da1a;
+        }
+        #tracker-dropdown-list {
+            background: #ffffff;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            max-height: 240px;
+            overflow-y: auto;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+        #tracker-selected-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 12px;
         }
 
-        .tracker-card-price {
-            font-size: 18px;
-            font-weight: 700;
-            color: #3fb950;
+        /* Chart container */
+        #tracker-chartContainer {
+            background: #ffffff;
+            border: 1px solid #d0d7de;
+            border-radius: 6px;
+            padding: 24px;
+            margin-top: 16px;
+            min-height: 200px;
+        }
+        .empty-state {
+            text-align: center;
+            padding: 48px 20px;
+            color: #656d76;
+        }
+        .empty-state-icon {
+            font-size: 40px;
+            margin-bottom: 12px;
         }
 
-        .tracker-card-price.on-sale {
-            color: #f85149;
-        }
-
+        /* Export buttons */
         .export-buttons {
             display: flex;
             gap: 10px;
             margin-top: 15px;
         }
-
         .export-btn {
-            padding: 10px 20px;
-            background: #1f6feb;
+            padding: 5px 16px;
+            font-size: 14px;
+            font-weight: 500;
+            background: #0969da;
             color: white;
             border: none;
             border-radius: 6px;
             cursor: pointer;
-            font-size: 14px;
-            font-weight: 600;
-            transition: all 0.2s;
         }
-
         .export-btn:hover {
-            background: #388bfd;
-            transform: translateY(-1px);
+            background: #0550ae;
         }
-
         .export-btn.secondary {
-            background: #21262d;
-            border: 1px solid #30363d;
+            background: #f6f8fa;
+            color: #1f2328;
+            border: 1px solid #d0d7de;
         }
-
         .export-btn.secondary:hover {
-            background: #30363d;
+            background: #eaeef2;
         }
 
-        #tracker-chartContainer {
-            background: #161b22;
-            padding: 30px;
-            border-radius: 6px;
-            border: 1px solid #30363d;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.4);
-            margin-top: 20px;
+        /* Hide old tracker grid */
+        .tracker-grid {
+            display: none;
+        }
+        .tracker-card, .tracker-card.selected {
+            display: none;
         }
 
-        .empty-state {
-            text-align: center;
-            padding: 60px 20px;
-            color: #8b949e;
-            background: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 6px;
+        /* Legacy card styles (hidden, kept for JS compatibility) */
+        .product-grid {
+            display: none;
         }
-
-        .empty-state-icon {
-            font-size: 64px;
-            margin-bottom: 20px;
+        .product-card {
+            display: none;
         }
-
-        .empty-state p {
-            font-size: 16px;
-            color: #8b949e;
+        .product-top, .product-bottom, .product-meta, .product-prices {
+            display: none;
         }
-
+        .highlight-title, .highlight-subtitle, .change-stats, .change-item,
+        .change-number, .change-label, .highlight-footer {
+            display: none;
+        }
     </style>
     <!-- Chart.js for price trends -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -4088,28 +3865,20 @@
         }
 
         function updateStats(data) {
-            const cameras = data.filter(p => (p.category || 'Security Camera') === 'Security Camera');
-            const doorbells = data.filter(p => p.category === 'Video Doorbell');
-            const locks = data.filter(p => p.category === 'Smart Lock');
+            const total = data.length;
+            const onSale = data.filter(p => p.was_price && p.was_price > p.price).length;
+            const eufy = data.filter(p => p.brand === 'eufy').length;
+            const cats = [...new Set(data.map(p => p.category || 'Security Camera'))].length;
 
-            document.querySelector('.stats').innerHTML = `
-                <div class="stat-card">
-                    <div class="stat-number">${data.length}</div>
-                    <div class="stat-label">显示产品</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" style="color: #2196f3">${cameras.length}</div>
-                    <div class="stat-label">📷 Camera</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" style="color: #ff9800">${doorbells.length}</div>
-                    <div class="stat-label">🔔 Doorbell</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" style="color: #9c27b0">${locks.length}</div>
-                    <div class="stat-label">🔐 Lock</div>
-                </div>
-            `;
+            const statsEl = document.querySelector('.stats');
+            if (statsEl) {
+                statsEl.innerHTML = `
+                    <div class="stat-card"><div class="stat-number">${total}</div><div class="stat-label">监控产品</div></div>
+                    <div class="stat-card"><div class="stat-number" style="color:#1a7f37">${onSale}</div><div class="stat-label">促销中</div></div>
+                    <div class="stat-card"><div class="stat-number">${eufy}</div><div class="stat-label">eufy 产品</div></div>
+                    <div class="stat-card"><div class="stat-number">${cats}</div><div class="stat-label">品类</div></div>
+                `;
+            }
         }
 
         function updateCategories(data) {
@@ -4142,62 +3911,51 @@
 
         function renderCategory(categoryName, info) {
             const products = info.products.sort((a, b) => a.price - b.price);
+            const rows = products.map(product => renderProductRow(product)).join('');
 
-            // 按价格区间分组
-            const priceBands = {
-                '$0-$200': products.filter(p => p.price < 200),
-                '$200-$400': products.filter(p => p.price >= 200 && p.price < 400),
-                '$400-$700': products.filter(p => p.price >= 400 && p.price < 700),
-                '$700-$1200': products.filter(p => p.price >= 700 && p.price < 1200),
-                '$1200+': products.filter(p => p.price >= 1200)
-            };
-
-            const bandsHTML = Object.entries(priceBands)
-                .filter(([_, prods]) => prods.length > 0)
-                .map(([bandName, prods]) => `
-                    <div class="price-band">
-                        <div class="band-title">${bandName} (${prods.length}款)</div>
-                        <div class="product-grid">
-                            ${prods.map(product => renderProductCard(product)).join('')}
-                        </div>
-                    </div>
-                `).join('');
+            const categoryIcons = { 'Security Camera': '📷', 'Video Doorbell': '🔔', 'Smart Lock': '🔐', 'Baby': '🍼' };
 
             return `
                 <div class="category-section">
                     <div class="category-header">
                         <div class="category-title">
-                            <span class="category-icon">${info.icon}</span>
+                            <span class="category-icon">${categoryIcons[categoryName] || '📦'}</span>
                             <span class="category-name">${categoryName}</span>
                         </div>
-                        <span class="category-count">${products.length} 款产品</span>
+                        <span class="category-count">${products.length}</span>
                     </div>
-                    ${bandsHTML}
-                </div>
-            `;
+                    <table class="product-table">
+                        <thead>
+                            <tr>
+                                <th>产品名称</th>
+                                <th>品牌</th>
+                                <th>当前价格</th>
+                                <th>原价</th>
+                                <th>折扣</th>
+                            </tr>
+                        </thead>
+                        <tbody>${rows}</tbody>
+                    </table>
+                </div>`;
         }
 
         function renderProductCard(product) {
-            const brandClass = (product.brand || 'eufy').toLowerCase().replace(' ', '-');
+            return renderProductRow(product);
+        }
+
+        function renderProductRow(product) {
+            const brandClass = (product.brand || 'other').toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
             const hasDiscount = product.was_price && product.was_price > product.price;
-            const priceClass = hasDiscount ? '' : 'no-discount';
+            const priceColorClass = hasDiscount ? 'price-current' : 'price-current no-discount';
 
             return `
-                <div class="product-card ${brandClass}" onclick="window.open('${product.url}', '_blank')">
-                    <div class="product-top">
-                        <span class="brand-badge ${brandClass}">${product.brand || 'eufy'}</span>
-                        ${hasDiscount ? `<span class="discount-badge">${product.discount_percent}% OFF</span>` : ''}
-                    </div>
-                    <div class="product-name">${product.name}</div>
-                    <div class="product-bottom">
-                        <div class="product-meta">JB Hi-Fi</div>
-                        <div class="product-prices">
-                            ${hasDiscount ? `<div class="price-was">$${product.was_price.toFixed(0)}</div>` : ''}
-                            <div class="price-current ${priceClass}">$${product.price.toFixed(0)}</div>
-                        </div>
-                    </div>
-                </div>
-            `;
+                <tr>
+                    <td><a href="${product.url}" target="_blank" class="product-link">${product.name}</a></td>
+                    <td><span class="brand-badge ${brandClass}">${product.brand || 'Other'}</span></td>
+                    <td class="${priceColorClass}">A$${product.price ? product.price.toFixed(2) : '--'}</td>
+                    <td>${hasDiscount ? `<span class="price-was">A$${product.was_price.toFixed(2)}</span>` : '--'}</td>
+                    <td>${hasDiscount ? `<span class="discount-badge">-${product.discount_percent}%</span>` : '--'}</td>
+                </tr>`;
         }
 
         function renderDashboard(data) {
@@ -4265,13 +4023,12 @@
 
                 <!-- 产品搜索下拉选择（替代原来的卡片网格）-->
                 <div style="margin-bottom: 16px;">
-                    <p style="color: #8b949e; margin-bottom: 12px; font-size: 13px;">
+                    <p style="color: #656d76; margin-bottom: 12px; font-size: 13px;">
                         <span id="tracker-product-count">0</span> 个产品 | 最多同时对比 5 个产品
                     </p>
                     <input type="text" id="tracker-search-input" placeholder="搜索产品名称..."
-                        style="width: 100%; padding: 8px 12px; background: #0d1117; border: 1px solid #30363d; border-radius: 6px; color: #e6edf3; font-size: 14px; margin-bottom: 8px; outline: none;"
                         oninput="filterTrackerDropdown(this.value)">
-                    <div id="tracker-dropdown-list" style="background: #0d1117; border: 1px solid #30363d; border-radius: 6px; max-height: 240px; overflow-y: auto;"></div>
+                    <div id="tracker-dropdown-list"></div>
                 </div>
 
                 <!-- 已选产品标签 -->
@@ -4323,7 +4080,7 @@
         let trackerHistory = {};
         let trackerSelectedProducts = [];
         let trackerChart = null;
-        const trackerColors = ['#3498db', '#2ecc71', '#e74c3c', '#f39c12', '#9b59b6'];
+        const trackerColors = ['#0969da', '#1a7f37', '#cf222e', '#9a6700', '#8250df'];
         let trackerFilters = {
             brand: 'all',
             category: 'all',
@@ -4381,9 +4138,9 @@
             } catch (error) {
                 console.error('数据加载失败:', error);
                 document.getElementById('tracker-productCards').innerHTML = `
-                    <div style="padding: 40px; text-align: center; color: #e74c3c; grid-column: 1 / -1;">
+                    <div style="padding: 40px; text-align: center; color: #cf222e; grid-column: 1 / -1;">
                         <p style="font-size: 18px; margin-bottom: 10px;">⚠️ 数据加载失败</p>
-                        <p style="font-size: 14px; color: #666;">${error.message}</p>
+                        <p style="font-size: 14px; color: #656d76;">${error.message}</p>
                     </div>
                 `;
             }
@@ -4486,7 +4243,7 @@
 
                 return products.slice(0, 10).map(product => {
                     const dateRange = product.startDate && product.endDate
-                        ? `<div style="color: #999; font-size: 11px; margin-top: 4px;">📅 ${formatDate(product.startDate)} → ${formatDate(product.endDate)}</div>`
+                        ? `<div style="color: #656d76; font-size: 11px; margin-top: 4px;">📅 ${formatDate(product.startDate)} → ${formatDate(product.endDate)}</div>`
                         : '';
 
                     if (type === 'decreased') {
@@ -4535,8 +4292,8 @@
 
             const statsContainer = document.getElementById('tracker-stats-container');
             statsContainer.innerHTML = `
-                <div style="text-align: center; margin-bottom: 15px; padding: 12px; background: #f8f9ff; border-radius: 8px; border: 1px solid #e8ebf7;">
-                    <span style="color: #667eea; font-weight: 600; font-size: 14px;">📅 统计时间范围：${timeRangeText} (过去7天)</span>
+                <div style="text-align: center; margin-bottom: 15px; padding: 12px; background: #f6f8fa; border-radius: 6px; border: 1px solid #d0d7de;">
+                    <span style="color: #656d76; font-weight: 600; font-size: 14px;">📅 统计时间范围：${timeRangeText} (过去7天)</span>
                 </div>
                 <div class="stats" style="margin-bottom: 20px;">
                     <div class="stat-card">
@@ -4544,15 +4301,15 @@
                         <div class="stat-label">筛选产品</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number" style="color: #4caf50">${weeklyChanges.decreased}</div>
+                        <div class="stat-number" style="color: #1a7f37">${weeklyChanges.decreased}</div>
                         <div class="stat-label">🔻 MSRP降价</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number" style="color: #ff5722">${weeklyChanges.increased}</div>
+                        <div class="stat-number" style="color: #cf222e">${weeklyChanges.increased}</div>
                         <div class="stat-label">🔺 MSRP涨价</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number" style="color: #ff9800">${weeklyChanges.newPromo}</div>
+                        <div class="stat-number" style="color: #9a6700">${weeklyChanges.newPromo}</div>
                         <div class="stat-label">🏷️ 新促销</div>
                     </div>
                 </div>
@@ -4561,9 +4318,9 @@
                     <div class="change-section">
                         <div class="change-section-header decreased">
                             🔻 MSRP降价
-                            <span style="font-size: 14px; color: #999;">(${weeklyChanges.decreased}个)</span>
+                            <span style="font-size: 14px; color: #656d76;">(${weeklyChanges.decreased}个)</span>
                         </div>
-                        <div style="font-size: 11px; color: #999; margin-bottom: 10px;">建议零售价降低</div>
+                        <div style="font-size: 11px; color: #656d76; margin-bottom: 10px;">建议零售价降低</div>
                         <div class="product-list">
                             ${generateProductList(weeklyChanges.decreasedProducts, 'decreased')}
                         </div>
@@ -4572,9 +4329,9 @@
                     <div class="change-section">
                         <div class="change-section-header increased">
                             🔺 MSRP涨价
-                            <span style="font-size: 14px; color: #999;">(${weeklyChanges.increased}个)</span>
+                            <span style="font-size: 14px; color: #656d76;">(${weeklyChanges.increased}个)</span>
                         </div>
-                        <div style="font-size: 11px; color: #999; margin-bottom: 10px;">建议零售价上涨</div>
+                        <div style="font-size: 11px; color: #656d76; margin-bottom: 10px;">建议零售价上涨</div>
                         <div class="product-list">
                             ${generateProductList(weeklyChanges.increasedProducts, 'increased')}
                         </div>
@@ -4583,9 +4340,9 @@
                     <div class="change-section">
                         <div class="change-section-header promo">
                             🏷️ 新增促销
-                            <span style="font-size: 14px; color: #999;">(${weeklyChanges.newPromo}个)</span>
+                            <span style="font-size: 14px; color: #656d76;">(${weeklyChanges.newPromo}个)</span>
                         </div>
-                        <div style="font-size: 11px; color: #999; margin-bottom: 10px;">MSRP不变，新增折扣</div>
+                        <div style="font-size: 11px; color: #656d76; margin-bottom: 10px;">MSRP不变，新增折扣</div>
                         <div class="product-list">
                             ${generateProductList(weeklyChanges.newPromoProducts, 'promo')}
                         </div>
@@ -4669,7 +4426,7 @@
 
             if (trackerAllProducts.length === 0) {
                 container.innerHTML = `
-                    <div style="padding: 40px; text-align: center; color: #95a5a6; grid-column: 1 / -1;">
+                    <div style="padding: 40px; text-align: center; color: #656d76; grid-column: 1 / -1;">
                         <p style="font-size: 18px;">😊 暂无产品数据</p>
                     </div>
                 `;
@@ -4678,9 +4435,9 @@
 
             if (filteredProducts.length === 0) {
                 container.innerHTML = `
-                    <div style="padding: 40px; text-align: center; color: #95a5a6; grid-column: 1 / -1;">
+                    <div style="padding: 40px; text-align: center; color: #656d76; grid-column: 1 / -1;">
                         <p style="font-size: 18px;">😊 没有符合筛选条件的产品</p>
-                        <p style="font-size: 14px; color: #666; margin-top: 10px;">请调整筛选条件</p>
+                        <p style="font-size: 14px; color: #656d76; margin-top: 10px;">请调整筛选条件</p>
                     </div>
                 `;
                 return;
@@ -4709,7 +4466,7 @@
                         <div class="tracker-card-price ${product.is_on_sale ? 'on-sale' : ''}">
                             $${product.current_price}${product.is_on_sale ? ' 🔥' : ''}
                         </div>
-                        ${!hasHistory ? '<div style="font-size: 11px; color: #ff9800; margin-top: 5px;">📊 新产品，数据积累中...</div>' : ''}
+                        ${!hasHistory ? '<div style="font-size: 11px; color: #9a6700; margin-top: 5px;">📊 新产品，数据积累中...</div>' : ''}
                     </div>
                 `;
             }).join('');
@@ -4829,7 +4586,7 @@
                             display: true,
                             text: '价格趋势对比',
                             font: { size: 18, weight: 'bold' },
-                            color: '#2c3e50'
+                            color: '#1f2328'
                         },
                         legend: {
                             display: true,
@@ -4965,7 +4722,7 @@
             const list = document.getElementById('tracker-dropdown-list');
             if (!products) products = getFilteredProducts();
             if (products.length === 0) {
-                list.innerHTML = '<div style="padding: 12px 16px; color: #8b949e; font-size: 13px;">无匹配产品</div>';
+                list.innerHTML = '<div style="padding: 12px 16px; color: #656d76; font-size: 13px;">无匹配产品</div>';
                 return;
             }
             list.innerHTML = products.map(p => {
@@ -4973,14 +4730,14 @@
                 const hasHistory = trackerHistory[p.id] && trackerHistory[p.id].price_history.length > 0;
                 const disabled = !hasHistory;
                 return `<div onclick="${disabled ? '' : `selectFromDropdown('${p.id}')`}"
-                    style="padding: 10px 16px; cursor: ${disabled ? 'not-allowed' : 'pointer'}; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #21262d; opacity: ${disabled ? 0.4 : 1}; background: ${isSelected ? '#1c2a3a' : 'transparent'};"
-                    onmouseover="if(!${disabled}) this.style.background='#21262d'"
-                    onmouseout="this.style.background='${isSelected ? '#1c2a3a' : 'transparent'}'">
+                    style="padding: 10px 16px; cursor: ${disabled ? 'not-allowed' : 'pointer'}; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #d0d7de; opacity: ${disabled ? 0.4 : 1}; background: ${isSelected ? '#ddf4ff' : 'transparent'};"
+                    onmouseover="if(!${disabled}) this.style.background='#f6f8fa'"
+                    onmouseout="this.style.background='${isSelected ? '#ddf4ff' : 'transparent'}'">
                     <div>
-                        <div style="font-size: 13px; color: #e6edf3;">${p.product_name}</div>
-                        <div style="font-size: 11px; color: #8b949e;">${p.brand} · ${p.category} · $${p.current_price || '--'}</div>
+                        <div style="font-size: 13px; color: #1f2328;">${p.product_name}</div>
+                        <div style="font-size: 11px; color: #656d76;">${p.brand} · ${p.category} · $${p.current_price || '--'}</div>
                     </div>
-                    ${isSelected ? '<span style="color: #3fb950; font-size: 12px;">✓ 已选</span>' : (disabled ? '<span style="font-size: 11px; color: #8b949e;">积累中</span>' : '')}
+                    ${isSelected ? '<span style="color: #1a7f37; font-size: 12px;">✓ 已选</span>' : (disabled ? '<span style="font-size: 11px; color: #656d76;">积累中</span>' : '')}
                 </div>`;
             }).join('');
         }
@@ -4999,9 +4756,9 @@
                 return;
             }
             container.innerHTML = trackerSelectedProducts.map(p => `
-                <div style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; background: #1c2a3a; border: 1px solid #58a6ff; border-radius: 20px; font-size: 12px; color: #58a6ff;">
+                <div style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; background: #ddf4ff; border: 1px solid #0969da; border-radius: 20px; font-size: 12px; color: #0969da;">
                     ${p.product_name.length > 30 ? p.product_name.substring(0, 30) + '…' : p.product_name}
-                    <span onclick="selectFromDropdown('${p.id}')" style="cursor: pointer; color: #8b949e; font-size: 14px; line-height: 1;">×</span>
+                    <span onclick="selectFromDropdown('${p.id}')" style="cursor: pointer; color: #656d76; font-size: 14px; line-height: 1;">×</span>
                 </div>
             `).join('');
         }

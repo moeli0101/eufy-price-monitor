@@ -4317,10 +4317,12 @@
                 // 标准化产品数据格式并添加ID
                 trackerAllProducts = rawProducts.map(product => {
                     // 根据产品名称和品牌生成ID（与price_history的key匹配）
-                    const id = (product.brand + '_' + product.name)
-                        .toLowerCase()
-                        .replace(/[^a-z0-9]+/g, '_')
+                    let cleanName = product.name.toLowerCase()
+                        .replace(/[ \-\/\(\),\.&]/g, '_')
+                        .replace(/_+/g, '_')
                         .replace(/^_+|_+$/g, '');
+                    if (cleanName.length > 60) cleanName = cleanName.substring(0, 60);
+                    const id = product.brand.toLowerCase() + '_' + cleanName;
 
                     // 从price_history获取is_on_sale信息
                     let isOnSale = false;

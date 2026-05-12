@@ -2919,30 +2919,21 @@
         }
 
         function updateStats(data) {
-            const cameras = data.filter(p => (p.category || 'Security Camera') === 'Security Camera');
-            const doorbells = data.filter(p => p.category === 'Video Doorbell');
-            const locks = data.filter(p => p.category === 'Smart Lock');
+            const total = data.length;
+            const onSale = data.filter(p => p.was_price && p.was_price > p.price).length;
+            const eufy = data.filter(p => p.brand === 'eufy').length;
+            const cats = [...new Set(data.map(p => p.category || 'Security Camera'))].length;
 
-            document.querySelector('.stats').innerHTML = `
-                <div class="stat-card">
-                    <div class="stat-number">${data.length}</div>
-                    <div class="stat-label">显示产品</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" style="color: #2196f3">${cameras.length}</div>
-                    <div class="stat-label">📷 Camera</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" style="color: #ff9800">${doorbells.length}</div>
-                    <div class="stat-label">🔔 Doorbell</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number" style="color: #9c27b0">${locks.length}</div>
-                    <div class="stat-label">🔐 Lock</div>
-                </div>
-            `;
+            const statsEl = document.querySelector('.stats');
+            if (statsEl) {
+                statsEl.innerHTML = `
+                    <div class="stat-card"><div class="stat-number">${total}</div><div class="stat-label">监控产品</div></div>
+                    <div class="stat-card"><div class="stat-number" style="color:#1a7f37">${onSale}</div><div class="stat-label">促销中</div></div>
+                    <div class="stat-card"><div class="stat-number">${eufy}</div><div class="stat-label">eufy 产品</div></div>
+                    <div class="stat-card"><div class="stat-number">${cats}</div><div class="stat-label">品类</div></div>
+                `;
+            }
         }
-
         function updateCategories(data) {
             const categories = {
                 'Security Camera': { icon: '📷', products: [] },
@@ -2973,64 +2964,51 @@
 
         function renderCategory(categoryName, info) {
             const products = info.products.sort((a, b) => a.price - b.price);
+            const rows = products.map(product => renderProductRow(product)).join('');
 
-            // 按价格区间分组
-            const priceBands = {
-                '$0-$200': products.filter(p => p.price < 200),
-                '$200-$400': products.filter(p => p.price >= 200 && p.price < 400),
-                '$400-$700': products.filter(p => p.price >= 400 && p.price < 700),
-                '$700-$1200': products.filter(p => p.price >= 700 && p.price < 1200),
-                '$1200+': products.filter(p => p.price >= 1200)
-            };
-
-            const bandsHTML = Object.entries(priceBands)
-                .filter(([_, prods]) => prods.length > 0)
-                .map(([bandName, prods]) => `
-                    <div class="price-band">
-                        <div class="band-title">${bandName} (${prods.length}款)</div>
-                        <div class="product-grid">
-                            ${prods.map(product => renderProductCard(product)).join('')}
-                        </div>
-                    </div>
-                `).join('');
+            const categoryIcons = { 'Security Camera': '📷', 'Video Doorbell': '🔔', 'Smart Lock': '🔐', 'Baby': '🍼' };
 
             return `
                 <div class="category-section">
                     <div class="category-header">
                         <div class="category-title">
-                            <span class="category-icon">${info.icon}</span>
+                            <span class="category-icon">${categoryIcons[categoryName] || '📦'}</span>
                             <span class="category-name">${categoryName}</span>
                         </div>
-                        <span class="category-count">${products.length} 款产品</span>
+                        <span class="category-count">${products.length}</span>
                     </div>
-                    ${bandsHTML}
-                </div>
-            `;
+                    <table class="product-table">
+                        <thead>
+                            <tr>
+                                <th>产品名称</th>
+                                <th>品牌</th>
+                                <th>当前价格</th>
+                                <th>原价</th>
+                                <th>折扣</th>
+                            </tr>
+                        </thead>
+                        <tbody>${rows}</tbody>
+                    </table>
+                </div>`;
+        }
+        function renderProductCard(product) {
+            return renderProductRow(product);
         }
 
-        function renderProductCard(product) {
-            const brandClass = (product.brand || 'eufy').toLowerCase().replace(' ', '-');
+        function renderProductRow(product) {
+            const brandClass = (product.brand || 'other').toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
             const hasDiscount = product.was_price && product.was_price > product.price;
-            const priceClass = hasDiscount ? '' : 'no-discount';
+            const priceColorClass = hasDiscount ? 'price-current' : 'price-current no-discount';
 
             return `
-                <div class="product-card ${brandClass}" onclick="window.open('${product.url}', '_blank')">
-                    <div class="product-top">
-                        <span class="brand-badge ${brandClass}">${product.brand || 'eufy'}</span>
-                        ${hasDiscount ? `<span class="discount-badge">${product.discount_percent}% OFF</span>` : ''}
-                    </div>
-                    <div class="product-name">${product.name}</div>
-                    <div class="product-bottom">
-                        <div class="product-meta">JB Hi-Fi</div>
-                        <div class="product-prices">
-                            ${hasDiscount ? `<div class="price-was">$${product.was_price.toFixed(0)}</div>` : ''}
-                            <div class="price-current ${priceClass}">$${product.price.toFixed(0)}</div>
-                        </div>
-                    </div>
-                </div>
-            `;
+                <tr>
+                    <td><a href="${product.url}" target="_blank" class="product-link">${product.name}</a></td>
+                    <td><span class="brand-badge ${brandClass}">${product.brand || 'Other'}</span></td>
+                    <td class="${priceColorClass}">A$${product.price ? product.price.toFixed(2) : '--'}</td>
+                    <td>${hasDiscount ? `<span class="price-was">A$${product.was_price.toFixed(2)}</span>` : '--'}</td>
+                    <td>${hasDiscount ? `<span class="discount-badge">-${product.discount_percent}%</span>` : '--'}</td>
+                </tr>`;
         }
-
         function renderDashboard(data) {
             const validData = data.filter(p => p.status === 'success' && p.price);
 
@@ -3062,7 +3040,7 @@
             <div class="tracker-controls">
                 <h3 class="tracker-section-title">📊 选择产品进行价格追踪对比</h3>
 
-                <!-- 筛选器 -->
+                <!-- 筛选器保持不变 -->
                 <div class="filters" style="margin-bottom: 20px;">
                     <div class="filter-section">
                         <span class="filter-label">品牌筛选</span>
@@ -3094,23 +3072,36 @@
                     </div>
                 </div>
 
-                <p style="color: #666; margin-bottom: 20px; font-size: 14px;">
-                    <span id="tracker-product-count">0</span> 个产品 | 点击产品卡片选择/取消选择，最多可同时对比 5 个产品的价格变化趋势
-                </p>
-                <div class="tracker-grid" id="tracker-productCards"></div>
+                <!-- 产品搜索下拉选择（替代原来的卡片网格）-->
+                <div style="margin-bottom: 16px;">
+                    <p style="color: #656d76; margin-bottom: 12px; font-size: 13px;">
+                        <span id="tracker-product-count">0</span> 个产品 | 最多同时对比 5 个产品
+                    </p>
+                    <input type="text" id="tracker-search-input" placeholder="搜索产品名称..."
+                        oninput="filterTrackerDropdown(this.value)">
+                    <div id="tracker-dropdown-list"></div>
+                </div>
 
+                <!-- 已选产品标签 -->
+                <div id="tracker-selected-tags" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px;"></div>
+
+                <!-- 导出按钮保持不变 -->
                 <div class="export-buttons" id="export-buttons" style="display: none;">
                     <button class="export-btn" onclick="exportData('json')">📥 导出 JSON</button>
                     <button class="export-btn secondary" onclick="exportData('csv')">📥 导出 CSV</button>
                 </div>
             </div>
 
+            <!-- 图表移到这里（上方）-->
             <div id="tracker-chartContainer">
                 <div class="empty-state">
                     <div class="empty-state-icon">📈</div>
                     <p>请选择产品开始追踪价格变化</p>
                 </div>
             </div>
+
+            <!-- 隐藏的产品卡片容器（保留供JS使用，不显示）-->
+            <div class="tracker-grid" id="tracker-productCards" style="display: none;"></div>
         </div>
 
     <script>
@@ -3140,7 +3131,7 @@
         let trackerHistory = {};
         let trackerSelectedProducts = [];
         let trackerChart = null;
-        const trackerColors = ['#3498db', '#2ecc71', '#e74c3c', '#f39c12', '#9b59b6'];
+        const trackerColors = ['#0969da', '#1a7f37', '#cf222e', '#9a6700', '#8250df'];
         let trackerFilters = {
             brand: 'all',
             category: 'all',
@@ -3757,7 +3748,73 @@
             URL.revokeObjectURL(url);
         }
 
-    </script>
+        function filterTrackerDropdown(query) {
+            const filtered = getFilteredProducts().filter(p =>
+                !query || p.product_name.toLowerCase().includes(query.toLowerCase()) ||
+                p.brand.toLowerCase().includes(query.toLowerCase())
+            );
+            renderTrackerDropdown(filtered);
+        }
+
+        function renderTrackerDropdown(products) {
+            const list = document.getElementById('tracker-dropdown-list');
+            if (!products) products = getFilteredProducts();
+            if (products.length === 0) {
+                list.innerHTML = '<div style="padding: 12px 16px; color: #656d76; font-size: 13px;">无匹配产品</div>';
+                return;
+            }
+            list.innerHTML = products.map(p => {
+                const isSelected = trackerSelectedProducts.some(s => s.id === p.id);
+                const hasHistory = trackerHistory[p.id] && trackerHistory[p.id].price_history.length > 0;
+                const disabled = !hasHistory;
+                return `<div onclick="${disabled ? '' : `selectFromDropdown('${p.id}')`}"
+                    style="padding: 10px 16px; cursor: ${disabled ? 'not-allowed' : 'pointer'}; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #d0d7de; opacity: ${disabled ? 0.4 : 1}; background: ${isSelected ? '#ddf4ff' : 'transparent'};"
+                    onmouseover="if(!${disabled}) this.style.background='#f6f8fa'"
+                    onmouseout="this.style.background='${isSelected ? '#ddf4ff' : 'transparent'}'">
+                    <div>
+                        <div style="font-size: 13px; color: #1f2328;">${p.product_name}</div>
+                        <div style="font-size: 11px; color: #656d76;">${p.brand} · ${p.category} · $${p.current_price || '--'}</div>
+                    </div>
+                    ${isSelected ? '<span style="color: #1a7f37; font-size: 12px;">✓ 已选</span>' : (disabled ? '<span style="font-size: 11px; color: #656d76;">积累中</span>' : '')}
+                </div>`;
+            }).join('');
+        }
+
+        function selectFromDropdown(productId) {
+            toggleProductSelection(productId);
+            renderTrackerDropdown();
+            renderSelectedTags();
+        }
+
+        function renderSelectedTags() {
+            const container = document.getElementById('tracker-selected-tags');
+            if (!container) return;
+            if (trackerSelectedProducts.length === 0) {
+                container.innerHTML = '';
+                return;
+            }
+            container.innerHTML = trackerSelectedProducts.map(p => `
+                <div style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; background: #ddf4ff; border: 1px solid #0969da; border-radius: 20px; font-size: 12px; color: #0969da;">
+                    ${p.product_name.length > 30 ? p.product_name.substring(0, 30) + '…' : p.product_name}
+                    <span onclick="selectFromDropdown('${p.id}')" style="cursor: pointer; color: #656d76; font-size: 14px; line-height: 1;">×</span>
+                </div>
+            `).join('');
+        }
+
+        // 页面加载时自动初始化tracker数据
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', function() {
+                console.log('🚀 自动加载tracker数据...');
+                loadTrackerData();
+                window.trackerLoaded = true;
+            });
+        } else {
+            // DOMContentLoaded已经触发
+            console.log('🚀 页面已加载，立即加载tracker数据...');
+            loadTrackerData();
+            window.trackerLoaded = true;
+        }
+</script>
 
     <script>
         // 页面加载时自动初始化tracker数据

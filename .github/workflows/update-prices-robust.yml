@@ -73,6 +73,13 @@ jobs:
           echo "尝试使用昨天的数据..."
           exit 1
 
+      - name: Auto discover new products
+        continue-on-error: true
+        run: |
+          cd price_monitor
+          python auto_discover.py 2>&1 | tee discover.log
+          echo "✅ 新品发现完成"
+
       - name: Copy data to docs (with error handling)
         run: |
           cd price_monitor

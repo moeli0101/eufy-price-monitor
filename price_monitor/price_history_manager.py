@@ -69,15 +69,21 @@ class PriceHistoryManager:
             }
             print(f'  新产品: {product_data["name"]}')
 
-        # 检查今天是否已有记录
         history_list = self.history[product_id]['price_history']
+        current_price = product_data.get('price')
 
-        # 如果今天已有记录，更新它；否则添加新记录
+        # 异常价格检测：新价格与最近有效价格偏差超过50%时跳过写入
+        if current_price and len(history_list) >= 2:
+            recent_prices = [r['price'] for r in history_list[-5:] if r.get('price')]
+            if recent_prices:
+                median_price = sorted(recent_prices)[len(recent_prices) // 2]
+                if median_price and abs(current_price - median_price) / median_price > 0.5:
+                    print(f'  ⚠️  异常价格跳过: {product_data["name"][:40]} ${current_price} (近期中位价 ${median_price})')
+                    return product_id
+
         if history_list and history_list[-1]['date'] == today:
-            # 更新今天的记录
             history_list[-1] = self._create_price_record(today, product_data)
         else:
-            # 添加新的记录
             history_list.append(self._create_price_record(today, product_data))
 
         return product_id

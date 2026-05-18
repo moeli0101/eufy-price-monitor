@@ -74,88 +74,77 @@ def generate_product_list_from_history():
 def extract_price(page):
     try:
         time.sleep(3.0)
+        import re, json as _json
 
+        content = page.content()
         current_price = None
         was_price = None
 
-        # 优先用 strikethrough 判断促销结构：有划线价时 ticket-price 是促销价，无时是 MSRP
+        # 1. JSON-LD（最可靠，JB Hi-Fi 每个产品页都有）
         try:
-            strike = page.locator('[data-testid="floating-header-strikethrough-price"]').first
-            has_strike = strike.count() > 0 and strike.inner_text().strip() != ""
-        except Exception:
-            has_strike = False
-
-        # ticket-price：有划线价时是实际售价，无划线价时也是售价（MSRP=售价）
-        try:
-            ticket = page.locator('[data-testid="ticket-price"]').first
-            if ticket.count() > 0:
-                text = ticket.inner_text().strip().replace(",", "").replace("$", "")
-                if text:
-                    current_price = float(text)
-        except Exception:
-            pass
-
-        # 2. Fallback：price-tag 类
-        if current_price is None:
-            try:
-                for sel in [
-                    ".price-tag__price",
-                    '[class*="price-tag"]',
-                    '[class*="PriceTag"]',
-                ]:
-                    elems = page.locator(sel)
-                    if elems.count() > 0:
-                        text = (
-                            elems.first.inner_text()
-                            .strip()
-                            .replace(",", "")
-                            .replace("$", "")
-                        )
-                        if text:
-                            current_price = float(text)
-                            break
-            except Exception:
-                pass
-
-        # 3. Fallback：JSON-LD 结构化数据（最可靠）
-        if current_price is None:
-            try:
-                import re
-
-                content = page.content()
-                ld_matches = re.findall(r'"price"\s*:\s*"?([\d.]+)"?', content)
-                if ld_matches:
-                    for price_str in ld_matches:
-                        val = float(price_str)
-                        if 1 < val < 50000:
-                            current_price = val
-                            break
-            except Exception:
-                pass
-
-        # 4. 抓取原价（划线价）
-        try:
-            strike = page.locator(
-                '[data-testid="floating-header-strikethrough-price"]'
-            ).first
-            if strike.count() > 0:
-                text = strike.inner_text().strip().replace(",", "").replace("$", "")
-                if text:
-                    was_price = float(text)
+            ld_blocks = re.findall(
+                r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+                content, re.DOTALL | re.IGNORECASE
+            )
+            for block in ld_blocks:
+                try:
+                    obj = _json.loads(block.strip())
+                    offers = obj.get('offers') or (obj.get('@graph') or [{}])[0].get('offers')
+                    if isinstance(offers, list):
+                        offers = offers[0]
+                    if isinstance(offers, dict):
+                        price_val = offers.get('price') or offers.get('lowPrice')
+                        if price_val:
+                            p = float(str(price_val).replace(',', ''))
+                            if 1 < p < 50000:
+                                current_price = p
+                                break
+                except Exception:
+                    pass
         except Exception:
             pass
 
-        if current_price and 1 < current_price < 50000:
-            result = {"price": current_price}
-            if (was_price and was_price > current_price
-                    and was_price < current_price * 5):
-                result["was_price"] = was_price
-                result["discount_percent"] = round(
-                    (was_price - current_price) / was_price * 100
-                )
-            return result
+        # 2. Fallback：ticket-price DOM 元素
+        if current_price is None:
+            try:
+                ticket = page.locator('[data-testid="ticket-price"]').first
+                if ticket.count() > 0:
+                    text = ticket.inner_text().strip().replace(',', '').replace('$', '')
+                    if text:
+                        p = float(text)
+                        if 1 < p < 50000:
+                            current_price = p
+            except Exception:
+                pass
 
-        return None
+        if current_price is None:
+            return None
+
+        # was_price：只从 JSON-LD 里取，不从 DOM 取（DOM 不可靠）
+        try:
+            for block in ld_blocks:
+                try:
+                    obj = _json.loads(block.strip())
+                    offers = obj.get('offers') or (obj.get('@graph') or [{}])[0].get('offers')
+                    if isinstance(offers, list):
+                        offers = offers[0]
+                    if isinstance(offers, dict):
+                        high = offers.get('highPrice')
+                        if high:
+                            h = float(str(high).replace(',', ''))
+                            if h > current_price and h < current_price * 3:
+                                was_price = h
+                            break
+                except Exception:
+                    pass
+        except Exception:
+            pass
+
+        result = {'price': current_price}
+        if was_price:
+            result['was_price'] = was_price
+            result['discount_percent'] = round((was_price - current_price) / was_price * 100)
+        return result
 
     except Exception:
         return None

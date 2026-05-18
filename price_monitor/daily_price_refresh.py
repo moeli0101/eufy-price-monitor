@@ -145,10 +145,10 @@ def extract_price(page):
         except Exception:
             pass
 
-        # 验证价格合理性（JB Hi-Fi 产品价格范围）
         if current_price and 1 < current_price < 50000:
             result = {"price": current_price}
-            if was_price and was_price > current_price:
+            if (was_price and was_price > current_price
+                    and was_price < current_price * 5):
                 result["was_price"] = was_price
                 result["discount_percent"] = round(
                     (was_price - current_price) / was_price * 100

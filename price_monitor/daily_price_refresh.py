@@ -72,17 +72,20 @@ def generate_product_list_from_history():
 
 
 def extract_price(page):
-    """
-    提取价格 - 多选择器 fallback，同时获取原价和促销价
-    选择器按优先级排列，任意一个成功即返回
-    """
     try:
-        time.sleep(1.5)
+        time.sleep(3.0)
 
         current_price = None
         was_price = None
 
-        # 1. 主选择器：ticket-price（JB Hi-Fi 现价）
+        # 优先用 strikethrough 判断促销结构：有划线价时 ticket-price 是促销价，无时是 MSRP
+        try:
+            strike = page.locator('[data-testid="floating-header-strikethrough-price"]').first
+            has_strike = strike.count() > 0 and strike.inner_text().strip() != ""
+        except Exception:
+            has_strike = False
+
+        # ticket-price：有划线价时是实际售价，无划线价时也是售价（MSRP=售价）
         try:
             ticket = page.locator('[data-testid="ticket-price"]').first
             if ticket.count() > 0:
@@ -120,7 +123,6 @@ def extract_price(page):
                 import re
 
                 content = page.content()
-                # JB Hi-Fi 页面里有 JSON-LD 包含价格
                 ld_matches = re.findall(r'"price"\s*:\s*"?([\d.]+)"?', content)
                 if ld_matches:
                     for price_str in ld_matches:

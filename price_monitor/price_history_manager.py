@@ -77,7 +77,7 @@ class PriceHistoryManager:
             recent_prices = [r['price'] for r in history_list[-5:] if r.get('price')]
             if recent_prices:
                 median_price = sorted(recent_prices)[len(recent_prices) // 2]
-                if median_price and abs(current_price - median_price) / median_price > 0.5:
+                if median_price and abs(current_price - median_price) / median_price > 0.3:
                     print(f'  ⚠️  异常价格跳过: {product_data["name"][:40]} ${current_price} (近期中位价 ${median_price})')
                     return product_id
 

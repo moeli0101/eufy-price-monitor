@@ -81,27 +81,30 @@ class PriceHistoryManager:
                     print(f'  ⚠️  异常价格跳过: {product_data["name"][:40]} ${current_price} (近期中位价 ${median_price})')
                     return product_id
 
+        prev_original = history_list[-1].get('original_price') if history_list else None
+
         if history_list and history_list[-1]['date'] == today:
-            history_list[-1] = self._create_price_record(today, product_data)
+            history_list[-1] = self._create_price_record(today, product_data, prev_original)
         else:
-            history_list.append(self._create_price_record(today, product_data))
+            history_list.append(self._create_price_record(today, product_data, prev_original))
 
         return product_id
 
-    def _create_price_record(self, date, product_data):
-        """创建价格记录"""
+    def _create_price_record(self, date, product_data, prev_original_price=None):
         current_price = product_data.get('price')
         was_price = product_data.get('was_price')
 
-        # 如果有促销价，说明正在促销
         if was_price and was_price > current_price:
             is_on_sale = True
             original_price = was_price
             discount_percentage = product_data.get('discount_percent', 0)
         else:
             is_on_sale = False
-            original_price = current_price
             discount_percentage = 0
+            if prev_original_price and prev_original_price >= current_price:
+                original_price = prev_original_price
+            else:
+                original_price = current_price
 
         return {
             'date': date,

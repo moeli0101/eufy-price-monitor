@@ -1872,33 +1872,33 @@
       {
         "date": "2026-05-15",
         "price": 1564.0,
-        "original_price": 2499.0,
+        "original_price": 1999.0,
         "is_on_sale": true,
-        "discount_percentage": 37,
+        "discount_percentage": 22,
         "status": "success"
       },
       {
         "date": "2026-05-16",
         "price": 1564.0,
-        "original_price": 2499.0,
+        "original_price": 1999.0,
         "is_on_sale": true,
-        "discount_percentage": 37,
+        "discount_percentage": 22,
         "status": "success"
       },
       {
         "date": "2026-05-17",
         "price": 1564.0,
-        "original_price": 2499.0,
+        "original_price": 1999.0,
         "is_on_sale": true,
-        "discount_percentage": 37,
+        "discount_percentage": 22,
         "status": "success"
       },
       {
         "date": "2026-05-18",
         "price": 1564.0,
-        "original_price": 2499.0,
+        "original_price": 1999.0,
         "is_on_sale": true,
-        "discount_percentage": 37,
+        "discount_percentage": 22,
         "status": "success"
       }
     ]
@@ -2344,33 +2344,33 @@
       {
         "date": "2026-05-15",
         "price": 1094.0,
-        "original_price": 1599.0,
+        "original_price": 1299.0,
         "is_on_sale": true,
-        "discount_percentage": 32,
+        "discount_percentage": 16,
         "status": "success"
       },
       {
         "date": "2026-05-16",
         "price": 1094.0,
-        "original_price": 1599.0,
+        "original_price": 1299.0,
         "is_on_sale": true,
-        "discount_percentage": 32,
+        "discount_percentage": 16,
         "status": "success"
       },
       {
         "date": "2026-05-17",
         "price": 1094.0,
-        "original_price": 1599.0,
+        "original_price": 1299.0,
         "is_on_sale": true,
-        "discount_percentage": 32,
+        "discount_percentage": 16,
         "status": "success"
       },
       {
         "date": "2026-05-18",
         "price": 1094.0,
-        "original_price": 1599.0,
+        "original_price": 1299.0,
         "is_on_sale": true,
-        "discount_percentage": 32,
+        "discount_percentage": 16,
         "status": "success"
       }
     ]
@@ -19136,8 +19136,8 @@
       {
         "date": "2026-05-14",
         "price": 249.0,
-        "original_price": 349.0,
-        "is_on_sale": true,
+        "original_price": 249.0,
+        "is_on_sale": false,
         "discount_percentage": 29,
         "status": "success"
       },

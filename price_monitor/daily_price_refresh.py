@@ -80,31 +80,48 @@ def extract_price(page):
         current_price = None
         was_price = None
 
-        # 1. JSON-LD（最可靠，JB Hi-Fi 每个产品页都有）
+        # 1. JB Hi-Fi 内嵌定价数据（最准确，含 CoreTicketPrice=MSRP 和 Price=售价）
         try:
-            ld_blocks = re.findall(
-                r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
-                content, re.DOTALL | re.IGNORECASE
+            match = re.search(
+                r'"CoreTicketPrice"\s*:\s*([\d.]+).*?"Price"\s*:\s*\{"DisplayPriceInc"\s*:\s*([\d.]+)',
+                content, re.DOTALL
             )
-            for block in ld_blocks:
-                try:
-                    obj = _json.loads(block.strip())
-                    offers = obj.get('offers') or (obj.get('@graph') or [{}])[0].get('offers')
-                    if isinstance(offers, list):
-                        offers = offers[0]
-                    if isinstance(offers, dict):
-                        price_val = offers.get('price') or offers.get('lowPrice')
-                        if price_val:
-                            p = float(str(price_val).replace(',', ''))
-                            if 1 < p < 50000:
-                                current_price = p
-                                break
-                except Exception:
-                    pass
+            if match:
+                msrp = float(match.group(1))
+                price = float(match.group(2))
+                if 1 < price < 50000 and 1 < msrp < 50000:
+                    current_price = price
+                    if msrp > price:
+                        was_price = msrp
         except Exception:
             pass
 
-        # 2. Fallback：ticket-price DOM 元素
+        # 2. JSON-LD fallback（获取售价）
+        if current_price is None:
+            try:
+                ld_blocks = re.findall(
+                    r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+                    content, re.DOTALL | re.IGNORECASE
+                )
+                for block in ld_blocks:
+                    try:
+                        obj = _json.loads(block.strip())
+                        offers = obj.get('offers')
+                        if isinstance(offers, list):
+                            offers = offers[0]
+                        if isinstance(offers, dict):
+                            price_val = offers.get('price')
+                            if price_val:
+                                p = float(str(price_val).replace(',', ''))
+                                if 1 < p < 50000:
+                                    current_price = p
+                                    break
+                    except Exception:
+                        pass
+            except Exception:
+                pass
+
+        # 3. DOM fallback（ticket-price）
         if current_price is None:
             try:
                 ticket = page.locator('[data-testid="ticket-price"]').first
@@ -120,28 +137,8 @@ def extract_price(page):
         if current_price is None:
             return None
 
-        # was_price：只从 JSON-LD 里取，不从 DOM 取（DOM 不可靠）
-        try:
-            for block in ld_blocks:
-                try:
-                    obj = _json.loads(block.strip())
-                    offers = obj.get('offers') or (obj.get('@graph') or [{}])[0].get('offers')
-                    if isinstance(offers, list):
-                        offers = offers[0]
-                    if isinstance(offers, dict):
-                        high = offers.get('highPrice')
-                        if high:
-                            h = float(str(high).replace(',', ''))
-                            if h > current_price and h < current_price * 3:
-                                was_price = h
-                            break
-                except Exception:
-                    pass
-        except Exception:
-            pass
-
         result = {'price': current_price}
-        if was_price:
+        if was_price and was_price > current_price and was_price < current_price * 4:
             result['was_price'] = was_price
             result['discount_percent'] = round((was_price - current_price) / was_price * 100)
         return result

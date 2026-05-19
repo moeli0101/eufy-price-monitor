@@ -1,187 +1,100 @@
 ======================================================================
 🤖 每日价格自动刷新（固定产品列表版）
-⏰ 运行时间: 2026-05-19 03:26:40
+⏰ 运行时间: 2026-05-19 19:41:03
 ======================================================================
-📋 加载固定产品列表: 319 个产品
+📋 加载固定产品列表: 326 个产品
 
 📊 产品列表统计:
-  总计: 319 款
+  总计: 326 款
 
 📂 品类分布:
-  Baby: 60 款
-  Security Camera: 174 款
-  Smart Lock: 50 款
-  Video Doorbell: 35 款
+  Baby: 61 款
+  Security Camera: 176 款
+  Smart Lock: 51 款
+  Video Doorbell: 38 款
 
 🏷️  主要品牌:
-  Other: 73 款
-  eufy: 71 款
+  Other: 76 款
+  eufy: 73 款
   Swann: 43 款
-  Ring: 38 款
+  Ring: 40 款
   TP-Link: 35 款
   Arlo: 22 款
   Momcozy: 10 款
   VTech: 7 款
 
-💰 抓取价格 (319 款)...
-  进度: 1/319 | 成功:0 失败:0 成功率:0%
-  进度: 10/319 | 成功:9 失败:0 成功率:100%
-  进度: 20/319 | 成功:19 失败:0 成功率:100%
-  进度: 30/319 | 成功:28 失败:1 成功率:97%
-  进度: 40/319 | 成功:38 失败:1 成功率:97%
-  进度: 50/319 | 成功:48 失败:1 成功率:98%
-  进度: 60/319 | 成功:58 失败:1 成功率:98%
-  进度: 70/319 | 成功:68 失败:1 成功率:99%
-  进度: 80/319 | 成功:77 失败:2 成功率:97%
-  进度: 90/319 | 成功:86 失败:3 成功率:97%
-  进度: 100/319 | 成功:95 失败:4 成功率:96%
-  进度: 110/319 | 成功:103 失败:6 成功率:94%
-  进度: 120/319 | 成功:111 失败:8 成功率:93%
-  进度: 130/319 | 成功:120 失败:9 成功率:93%
-  进度: 140/319 | 成功:130 失败:9 成功率:94%
-  进度: 150/319 | 成功:139 失败:10 成功率:93%
-  进度: 160/319 | 成功:148 失败:11 成功率:93%
-  进度: 170/319 | 成功:156 失败:13 成功率:92%
-  进度: 180/319 | 成功:165 失败:14 成功率:92%
-  进度: 190/319 | 成功:174 失败:15 成功率:92%
-  进度: 200/319 | 成功:183 失败:16 成功率:92%
-  进度: 210/319 | 成功:191 失败:18 成功率:91%
-  进度: 220/319 | 成功:200 失败:19 成功率:91%
-  进度: 230/319 | 成功:209 失败:20 成功率:91%
-  进度: 240/319 | 成功:217 失败:22 成功率:91%
-  进度: 250/319 | 成功:226 失败:23 成功率:91%
-  进度: 260/319 | 成功:236 失败:23 成功率:91%
-  进度: 270/319 | 成功:246 失败:23 成功率:91%
-  进度: 280/319 | 成功:256 失败:23 成功率:92%
-  进度: 290/319 | 成功:266 失败:23 成功率:92%
-  进度: 300/319 | 成功:276 失败:23 成功率:92%
-  进度: 310/319 | 成功:286 失败:23 成功率:93%
+💰 抓取价格 (326 款)...
+  进度: 1/326 | 成功:0 失败:0 成功率:0%
+  进度: 10/326 | 成功:9 失败:0 成功率:100%
+  进度: 20/326 | 成功:19 失败:0 成功率:100%
+  进度: 30/326 | 成功:28 失败:1 成功率:97%
+  进度: 40/326 | 成功:38 失败:1 成功率:97%
+  进度: 50/326 | 成功:48 失败:1 成功率:98%
+  进度: 60/326 | 成功:58 失败:1 成功率:98%
+  进度: 70/326 | 成功:68 失败:1 成功率:99%
+  进度: 80/326 | 成功:77 失败:2 成功率:97%
+  进度: 90/326 | 成功:86 失败:3 成功率:97%
+  进度: 100/326 | 成功:95 失败:4 成功率:96%
+  进度: 110/326 | 成功:103 失败:6 成功率:94%
+  进度: 120/326 | 成功:111 失败:8 成功率:93%
+  进度: 130/326 | 成功:120 失败:9 成功率:93%
+  进度: 140/326 | 成功:130 失败:9 成功率:94%
+  进度: 150/326 | 成功:139 失败:10 成功率:93%
+  进度: 160/326 | 成功:148 失败:11 成功率:93%
+  进度: 170/326 | 成功:156 失败:13 成功率:92%
+  进度: 180/326 | 成功:166 失败:13 成功率:93%
+  进度: 190/326 | 成功:175 失败:14 成功率:93%
+  进度: 200/326 | 成功:184 失败:15 成功率:92%
+  进度: 210/326 | 成功:192 失败:17 成功率:92%
+  进度: 220/326 | 成功:201 失败:18 成功率:92%
+  进度: 230/326 | 成功:210 失败:19 成功率:92%
+  进度: 240/326 | 成功:218 失败:21 成功率:91%
+  进度: 250/326 | 成功:227 失败:22 成功率:91%
+  进度: 260/326 | 成功:237 失败:22 成功率:92%
+  进度: 270/326 | 成功:247 失败:22 成功率:92%
+  进度: 280/326 | 成功:257 失败:22 成功率:92%
+  进度: 290/326 | 成功:267 失败:22 成功率:92%
+  进度: 300/326 | 成功:277 失败:22 成功率:93%
+  进度: 310/326 | 成功:287 失败:22 成功率:93%
+  进度: 320/326 | 成功:297 失败:22 成功率:93%
 
 📊 更新历史数据和检测促销...
-✅ 加载历史数据: 313 个产品
-✅ 加载促销记录: 7 活跃, 359 历史
-  🔥 新促销: eufy S3 Pro Security Camera Kit (4 Pack) (21.8% OFF)
-  🔥 新促销: eufy Security C210 2K SoloCam (13.4% OFF)
-  🔥 新促销: eufy E40 Essential Security Camera Kit with Homebase 2 (4 Pack) (27.3% OFF)
-  🔥 新促销: eufy E42 Security Camera Kit (4 Pack) (33.4% OFF)
-  🔥 新促销: eufy E40 Essential Security Camera Kit with Homebase 2 (2 Pack) (25.0% OFF)
-  🔥 新促销: eufy SoloCam S340 Security Camera (26.7% OFF)
-  🔥 新促销: eufy E40 NVR POE Bullet Add-on Security Camera (20.1% OFF)
-  🔥 新促销: eufy EufyCam S4 Security Camera (2 Pack) (21.2% OFF)
-  🔥 新促销: eufy Security EufyCam Solo S40 Spotlight 2K Solar (Wireless) (29.1% OFF)
-  🔥 新促销: eufy E42 Security Camera Kit (2 Pack) (22.5% OFF)
-  🔥 新促销: eufy S4 Max NVR POE 24/7 Security Camera System [4 PTZ Cameras] (20.0% OFF)
-  🔥 新促销: eufy Security Solocam S220 (1 Pack) (21.7% OFF)
-  🔥 新促销: eufy Security S330 4G/Wi-Fi Camera (20.0% OFF)
-  🔥 新促销: eufy E40 Essential Add On Security Camera (23.4% OFF)
-  🔥 新促销: eufy E41 NVR POE 24/7 Security System [4 x Turret Cameras] (23.1% OFF)
-  🔥 新促销: eufy EufyCam S4 Security Camera (17.9% OFF)
-  🔥 新促销: eufy Security E340 Dual Camera Video Doorbell (14.3% OFF)
-  🔥 新促销: eufy Security 2k Indoor Pan & Tilt Camera (43.2% OFF)
-  🔥 新促销: eufy S340 SOLOCAM Security Camera with Homebase (2 Pack) (33.4% OFF)
-  🔥 新促销: eufy S4 NVR POE 24/7 Security System [2 x PTZ + 2 x Turret Cameras] (20.0% OFF)
-  🔥 新促销: Arlo Ultra 2 4K UHD Wire-Free Security Spotlight Camera System – 2 Cameras & Smart Hub (66.8% OFF)
-  🔥 新促销: TP-Link Tapo 2K 3MP Smart Wire-Free Security System (4-pack) (18.6% OFF)
-  🔥 新促销: TP-Link Tapo 2K Outdoor Security Wi-Fi Camera (50.4% OFF)
-  🔥 新促销: Swann MaxRanger V2 Security Camera Kit (4 Pack) (19.6% OFF)
-  🔥 新促销: eufy C220 V2 Indoor Security Camera (20.2% OFF)
-  🔥 新促销: Arlo Pro 3 Wireless 2K Floodlight Camera (42.8% OFF)
+✅ 加载历史数据: 314 个产品
+✅ 加载促销记录: 110 活跃, 360 历史
+  ✅ 促销结束: eufy S3 Pro Security Camera Kit (4 Pack) (持续 1 天)
+  ✅ 促销结束: eufy S3 Pro Security Camera Kit (2 Pack) (持续 1 天)
+  ✅ 促销结束: eufy Security Solocam S220 (1 Pack) (持续 1 天)
+  ✅ 促销结束: eufy Security S330 4G/Wi-Fi Camera (持续 1 天)
   ⚠️  异常价格跳过: Arlo Essential Security Camera Kit with  $699.0 (近期中位价 $269.0)
-  🔥 新促销: Arlo Pro 6 2K Outdoor Solar Security Camera Kit + 12M Subscription(4 Pack) (25.3% OFF)
-  🔥 新促销: Ring Stick Up Cam Pro Plug-in (White) (28.4% OFF)
-  🔥 新促销: TP-Link Tapo 3K Solar-Powered Pan & Tilt Security Camera Kit (40.2% OFF)
-  🔥 新促销: TP-Link Tapo 2K Smart Wire-Free Security Camera (4-pack) (48.6% OFF)
-  🔥 新促销: Swann 2K Home Wired DVR Security Camera Kit (4 Pack) (35.1% OFF)
-  🔥 新促销: Swann Swannforce 1080P DVR 65GB Security Camera (4 Pack) (32.6% OFF)
-  🔥 新促销: Swann MaxRanger V2 Security Camera Kit (6 Pack) (20.6% OFF)
-  🔥 新促销: eufy C31 Video Doorbell (16.7% OFF)
-  🔥 新促销: eufy Security Slim 1080P Wireless Doorbell with Homebase Mini Repeater (28.7% OFF)
-  🔥 新促销: Arlo Essentials 2K Video Doorbell (2nd Generation) (38.8% OFF)
-  🔥 新促销: eufy Security Dual Cam Wireless 2K Video Doorbell (20.0% OFF)
-  🔥 新促销: eufy C30 Video Doorbell (13.4% OFF)
-  🔥 新促销: Uniden App Cam Solo X2K Wirefree Video Door Bell (51.6% OFF)
-  🔥 新促销: Uniden SOLO X2K Door Bell Plus (24.9% OFF)
-  🔥 新促销: TP-Link Tapo 2K Wireless Video Doorbell with Hub (26.2% OFF)
-  🔥 新促销: Swann Buddy 4K Video Doorbell with Chime (28.4% OFF)
-  🔥 新促销: Swann MaxRanger4K Long-Range Wireless Video Doorbell (Add-On) (20.1% OFF)
-  🔥 新促销: Swann 6K Pro Series NVR Securtiy Camera System [4 Cameras] (47.9% OFF)
-  🔥 新促销: eufy Video Doorbell 2K Wireless with Homebase 2 (12.5% OFF)
-  🔥 新促销: eufy Smart Lever Lock C33 (Black) (14.0% OFF)
-  🔥 新促销: Arlo Ultra 3 4K Outdoor Security Camera Kit + 12M Subscription (4 Pack) (23.1% OFF)
-  🔥 新促销: eufy Security S340 3K SoloCam (30.1% OFF)
-  🔥 新促销: TP-Link Tapo 3K Indoor/Outdoor Home Security Wi-Fi Camera (20.2% OFF)
-  🔥 新促销: Ring Floodlight Cam Wired Pro (White) (21.5% OFF)
-  🔥 新促销: Swann MaxTrak 4K AI Auto Tracking Long Range Security Camera System (4 Pack) (20.7% OFF)
-  🔥 新促销: Swann EVO 2K Pan and Tilt Indoor WiFi Camera (20.3% OFF)
-  🔥 新促销: Swann 4K AdvancedX Series NVR Security System [6 Camera Kit] (20.0% OFF)
-  🔥 新促销: Uniden BW2511 2.8" Baby Monitor (24.0% OFF)
-  🔥 新促销: Ring Floodlight Security Camera Pro 2K Wired (White) (44.7% OFF)
-  🔥 新促销: TP-Link Tapo C460 4K Solar-Powered Security Camera Kit (32.3% OFF)
-  🔥 新促销: Uniden BW3531 4.3" Baby Monito With Pan & Tilt Camera (18.0% OFF)
-  🔥 新促销: Swann EVO 2K Solar Outdoor Security Camera (2 Pack) (40.1% OFF)
-  🔥 新促销: Aqara Smart Door Lock U100 with E1 Hub Kit (Silver) (30.1% OFF)
-  🔥 新促销: Uniden BW4501 4.3” FULL HD Baby Monitor and Clamp Camera (22.8% OFF)
-  🔥 新促销: eufy Security 2K Indoor Camera (36.7% OFF)
-  🔥 新促销: TP-Link Tapo Smart 2K Wire-Free Security Camera System (2 Pack) (52.8% OFF)
-  🔥 新促销: Swann MaxRanger4K Pro Security System Camera Kit (4 Pack) (20.0% OFF)
-  🔥 新促销: eufy Security eufyCam 3C 4K (Add-on Camera) (43.0% OFF)
-  🔥 新促销: eufy Security 4G Starlight Camera (43.9% OFF)
-  🔥 新促销: eufy Security Solocam S220 with Homebase (4 Pack) (33.4% OFF)
+  ✅ 促销结束: eufy Smart Lever Lock C33 (Black) (持续 1 天)
+  🔥 新促销: eufy S3 Pro Security Camera Kit (4 Pack) (37.4% OFF)
   🔥 新促销: eufy S3 Pro Security Camera Kit (2 Pack) (31.6% OFF)
-  🔥 新促销: Eufy Security Cam3 4K Security Camera (3 Pack) (40.0% OFF)
-  🔥 新促销: Arlo Pro 5 2K Spotlight Security Camera (2-Pack) (49.8% OFF)
-  🔥 新促销: Arlo Pro 5 2K Spotlight Security Camera (37.0% OFF)
-  🔥 新促销: Arlo Essential Indoor 2K Camera (2nd Generation) (54.0% OFF)
-  🔥 新促销: Ring 2-Pack Outdoor Security Camera [Stick Up Cam] Battery (White) (10.1% OFF)
-  🔥 新促销: Ring Stick Up Cam Pro Battery (Black) (28.4% OFF)
-  🔥 新促销: Ring Stick Up Cam Battery (White) (41.9% OFF)
-  🔥 新促销: Ring Stick Up Cam Battery 4 Pack (White) (23.4% OFF)
-  🔥 新促销: Arlo Ultra 2 4K UHD Wire-Free Security Spotlight Camera (Addon) (53.1% OFF)
   ⚠️  异常价格跳过: Arlo Ultra 2 4K UHD Wire-Free Security S $419.0 (近期中位价 $199.0)
   ⚠️  异常价格跳过: Swann MaxTrak 4K AI Auto Tracking Long R $619.0 (近期中位价 $1189.0)
-  🔥 新促销: Swann Evo 2K Indoor Pan & Tilt WiFi Camera (2 Pack) (51.6% OFF)
-  🔥 新促销: Swann Xtreem4K Wireless Security Camera with 32GB Micro SD & Cloud Storage (Single) (33.0% OFF)
-  🔥 新促销: Swann Enforcer 1080p Full HD DVR Security System (8 Ch/6 Cameras) (54.4% OFF)
-  🔥 新促销: Swann 6K NVR 2TB Security Camera (4 Pack) (54.6% OFF)
-  🔥 新促销: Swann AllSecure4K Wireless Camera (Add-on) (70.5% OFF)
-  🔥 新促销: Swann Xtreem 1080p Wireless Security Camera (2 Pack) (73.7% OFF)
-  🔥 新促销: Swann 4K Master Series NVR Security Camera Kit (4 Pack) (47.0% OFF)
-  🔥 新促销: MaxRanger4K Pro Security System Camera Kit (6 Pack) (20.0% OFF)
-  🔥 新促销: Swann Xtreem 1080p Wireless Security Camera (Single) (73.9% OFF)
-  🔥 新促销: Swann Full HD Thermal Sensing Dome Security Camera (Add-on Camera) (34.7% OFF)
-  🔥 新促销: Swann 4 Camera 4 Channel 4K Ultra HD 1TB DVR Security System (64.8% OFF)
-  🔥 新促销: Swann Wi-Fi Pan & Tilt Indoor Camera with 32GB SD Card (59.8% OFF)
   ⚠️  异常价格跳过: TP-Link Tapo 2K Outdoor Security Wi-Fi C $98.0 (近期中位价 $59.0)
-  🔥 新促销: TP-Link Tapo 2K Smart Wire-Free Security Camera (2-pack) (43.0% OFF)
-  🔥 新促销: Tapo 2K Solar-Powered Dual-Lens Pan/Tilt Security Camera Kit (25.1% OFF)
-  🔥 新促销: TP-Link Tapo 2K Pan & Tilt Wi-Fi Security Camera (59.3% OFF)
-  🔥 新促销: TP-Link Tapo 2K Smart Wire-Free Security Camera (55.9% OFF)
-  🔥 新促销: TP-Link Tapo 2K Outdoor Pan/Tilt Security Wi-Fi Camera (48.1% OFF)
-  🔥 新促销: TP-Link Tapo 3MP Outdoor Wired Security Wi-Fi Camera (50.7% OFF)
-  🔥 新促销: TP-Link Tapo 2K Indoor/Outdoor Wi-Fi Home Security Camera (44.3% OFF)
-  🔥 新促销: TP-Link Tapo Tapo 2K Wi-Fi Security Camera (51.0% OFF)
-  🔥 新促销: Ring Video Doorbell Elite (33.1% OFF)
-  🔥 新促销: Uniden App Cam X25 PT Indoor 2k Super HD Motion Tracking Camera (25.0% OFF)
-  🔥 新促销: Yale YDM 7220 Smart Door Lock (31.3% OFF)
-  🔥 新促销: Yale YDM 3109A Smart Door Lock (30.3% OFF)
-  🔥 新促销: eufy Smart Lever Lock C33 (Nickel) (20.1% OFF)
-  🔥 新促销: eufy E41 NVR POE Turret Add-on Security Camera (20.1% OFF)
-  新产品: There was a problem loading this website
-  🔥 新促销: There was a problem loading this website (72.3% OFF)
   ✅ 促销结束: There was a problem loading this website (持续 1 天)
   🔥 新促销: There was a problem loading this website (24.9% OFF)
-✅ 历史数据已保存: 314 个产品
+  新产品: Eufy Security S120 Solar Wall Light & Camera
+  🔥 新促销: Eufy Security S120 Solar Wall Light & Camera (47.8% OFF)
+  新产品: eufy S3 Pro Add On Security Camera
+  新产品: Ring Wired Video Doorbell Plus Plug-In
+  新产品: Reolink 12MP PoE Security System CCTV 16-Channel NVR with 2 POE Video Doorbell
+  新产品: Ring Wired Video Doorbell Pro DIN Rail
+  新产品: Gecko TSA Smart Lock Bluetooth Tracker
+  🔥 新促销: Gecko TSA Smart Lock Bluetooth Tracker (52.4% OFF)
+  新产品: Faleemi FS1 Wireless Security, Baby Monitor Camera
+✅ 历史数据已保存: 321 个产品
 ✅ 促销记录已保存
-  历史记录: 314 个产品
-  促销中: 108 款
+  历史记录: 321 个产品
+  促销中: 106 款
 
 ======================================================================
 ✅ 完成！
-  成功: 296/319 (93%)
-  失败: 23 款
+  成功: 304/326 (93%)
+  失败: 22 款
   数据已保存到: price_results_latest.json
 ======================================================================
 
 📅 生成促销日历...
 ✅ 日历数据已保存到: promotion_calendar.json
-  生成了 314 个产品的日历
+  生成了 321 个产品的日历

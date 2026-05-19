@@ -529,30 +529,30 @@
       "15": {
         "date": "2026-05-15",
         "price": 1564.0,
-        "original_price": 2499.0,
+        "original_price": 1999.0,
         "is_sale": true,
-        "discount": 37
+        "discount": 22
       },
       "16": {
         "date": "2026-05-16",
         "price": 1564.0,
-        "original_price": 2499.0,
+        "original_price": 1999.0,
         "is_sale": true,
-        "discount": 37
+        "discount": 22
       },
       "17": {
         "date": "2026-05-17",
         "price": 1564.0,
-        "original_price": 2499.0,
+        "original_price": 1999.0,
         "is_sale": true,
-        "discount": 37
+        "discount": 22
       },
       "18": {
         "date": "2026-05-18",
         "price": 1564.0,
-        "original_price": 2499.0,
+        "original_price": 1999.0,
         "is_sale": true,
-        "discount": 37
+        "discount": 22
       },
       "19": {
         "date": "2026-05-19",
@@ -670,30 +670,30 @@
       "15": {
         "date": "2026-05-15",
         "price": 1094.0,
-        "original_price": 1599.0,
+        "original_price": 1299.0,
         "is_sale": true,
-        "discount": 32
+        "discount": 16
       },
       "16": {
         "date": "2026-05-16",
         "price": 1094.0,
-        "original_price": 1599.0,
+        "original_price": 1299.0,
         "is_sale": true,
-        "discount": 32
+        "discount": 16
       },
       "17": {
         "date": "2026-05-17",
         "price": 1094.0,
-        "original_price": 1599.0,
+        "original_price": 1299.0,
         "is_sale": true,
-        "discount": 32
+        "discount": 16
       },
       "18": {
         "date": "2026-05-18",
         "price": 1094.0,
-        "original_price": 1599.0,
+        "original_price": 1299.0,
         "is_sale": true,
-        "discount": 32
+        "discount": 16
       },
       "19": {
         "date": "2026-05-19",
@@ -1670,10 +1670,10 @@
       },
       "19": {
         "date": "2026-05-19",
-        "price": 329.0,
+        "price": 349.0,
         "original_price": 449.0,
         "is_sale": true,
-        "discount": 27
+        "discount": 22
       }
     }
   },
@@ -2770,10 +2770,10 @@
       },
       "19": {
         "date": "2026-05-19",
-        "price": 195.0,
+        "price": 249.0,
         "original_price": 249.0,
-        "is_sale": true,
-        "discount": 22
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -2911,10 +2911,10 @@
       },
       "19": {
         "date": "2026-05-19",
-        "price": 479.0,
+        "price": 599.0,
         "original_price": 599.0,
-        "is_sale": true,
-        "discount": 20
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -6241,8 +6241,8 @@
       "14": {
         "date": "2026-05-14",
         "price": 249.0,
-        "original_price": 349.0,
-        "is_sale": true,
+        "original_price": 249.0,
+        "is_sale": false,
         "discount": 29
       },
       "15": {
@@ -18232,10 +18232,10 @@
       },
       "19": {
         "date": "2026-05-19",
-        "price": 300.0,
+        "price": 349.0,
         "original_price": 349.0,
-        "is_sale": true,
-        "discount": 14
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -23274,6 +23274,13 @@
       },
       "6": {
         "date": "2026-05-06",
+        "price": 79.0,
+        "original_price": 79.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "19": {
+        "date": "2026-05-19",
         "price": 79.0,
         "original_price": 79.0,
         "is_sale": false,
@@ -34450,6 +34457,111 @@
         "original_price": 329.0,
         "is_sale": true,
         "discount": 25
+      }
+    }
+  },
+  "eufy_eufy_security_s120_solar_wall_light_camera": {
+    "product_name": "Eufy Security S120 Solar Wall Light & Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-s120-solar-wall-light-camera",
+    "days": {
+      "19": {
+        "date": "2026-05-19",
+        "price": 130.0,
+        "original_price": 249.0,
+        "is_sale": true,
+        "discount": 48
+      }
+    }
+  },
+  "eufy_eufy_s3_pro_add_on_security_camera": {
+    "product_name": "eufy S3 Pro Add On Security Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/eufy-s3-pro-add-on-security-camera",
+    "days": {
+      "19": {
+        "date": "2026-05-19",
+        "price": 699.0,
+        "original_price": 699.0,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
+  },
+  "ring_ring_wired_video_doorbell_plus_plug_in": {
+    "product_name": "Ring Wired Video Doorbell Plus Plug-In",
+    "brand": "Ring",
+    "category": "Video Doorbell",
+    "url": "https://www.jbhifi.com.au/products/ring-wired-video-doorbell-plus-plug-in",
+    "days": {
+      "19": {
+        "date": "2026-05-19",
+        "price": 249.0,
+        "original_price": 249.0,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
+  },
+  "other_reolink_12mp_poe_security_system_cctv_16_channel_nvr_with_2_": {
+    "product_name": "Reolink 12MP PoE Security System CCTV 16-Channel NVR with 2 POE Video Doorbell",
+    "brand": "Other",
+    "category": "Video Doorbell",
+    "url": "https://www.jbhifi.com.au/products/reolink-12mp-poe-security-system-cctv-16-channel-nvr-with-2-poe-video-doorbell",
+    "days": {
+      "19": {
+        "date": "2026-05-19",
+        "price": 2169.99,
+        "original_price": 2169.99,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
+  },
+  "ring_ring_wired_video_doorbell_pro_din_rail": {
+    "product_name": "Ring Wired Video Doorbell Pro DIN Rail",
+    "brand": "Ring",
+    "category": "Video Doorbell",
+    "url": "https://www.jbhifi.com.au/products/ring-wired-video-doorbell-pro-din-rail",
+    "days": {
+      "19": {
+        "date": "2026-05-19",
+        "price": 399.0,
+        "original_price": 399.0,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
+  },
+  "other_gecko_tsa_smart_lock_bluetooth_tracker": {
+    "product_name": "Gecko TSA Smart Lock Bluetooth Tracker",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "url": "https://www.jbhifi.com.au/products/gecko-tsa-smart-lock-bluetooth-tracker",
+    "days": {
+      "19": {
+        "date": "2026-05-19",
+        "price": 19.0,
+        "original_price": 39.95,
+        "is_sale": true,
+        "discount": 52
+      }
+    }
+  },
+  "other_faleemi_fs1_wireless_security_baby_monitor_camera": {
+    "product_name": "Faleemi FS1 Wireless Security, Baby Monitor Camera",
+    "brand": "Other",
+    "category": "Baby",
+    "url": "https://www.jbhifi.com.au/products/faleemi-fs1-wireless-security-baby-monitor-camera",
+    "days": {
+      "19": {
+        "date": "2026-05-19",
+        "price": 59.95,
+        "original_price": 59.95,
+        "is_sale": false,
+        "discount": 0
       }
     }
   }

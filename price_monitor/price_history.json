@@ -5807,10 +5807,10 @@
       },
       {
         "date": "2026-05-19",
-        "price": 329.0,
+        "price": 349.0,
         "original_price": 449.0,
         "is_on_sale": true,
-        "discount_percentage": 27,
+        "discount_percentage": 22,
         "status": "success"
       }
     ]
@@ -9567,10 +9567,10 @@
       },
       {
         "date": "2026-05-19",
-        "price": 195.0,
+        "price": 249.0,
         "original_price": 249.0,
-        "is_on_sale": true,
-        "discount_percentage": 22,
+        "is_on_sale": false,
+        "discount_percentage": 0,
         "status": "success"
       }
     ]
@@ -10047,10 +10047,10 @@
       },
       {
         "date": "2026-05-19",
-        "price": 479.0,
+        "price": 599.0,
         "original_price": 599.0,
-        "is_on_sale": true,
-        "discount_percentage": 20,
+        "is_on_sale": false,
+        "discount_percentage": 0,
         "status": "success"
       }
     ]
@@ -54355,10 +54355,10 @@
       },
       {
         "date": "2026-05-19",
-        "price": 300.0,
+        "price": 349.0,
         "original_price": 349.0,
-        "is_on_sale": true,
-        "discount_percentage": 14,
+        "is_on_sale": false,
+        "discount_percentage": 0,
         "status": "success"
       }
     ]
@@ -66443,6 +66443,14 @@
       },
       {
         "date": "2026-05-06",
+        "price": 79.0,
+        "original_price": 79.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      },
+      {
+        "date": "2026-05-19",
         "price": 79.0,
         "original_price": 79.0,
         "is_on_sale": false,
@@ -92174,6 +92182,125 @@
         "original_price": 329.0,
         "is_on_sale": true,
         "discount_percentage": 25,
+        "status": "success"
+      }
+    ]
+  },
+  "eufy_eufy_security_s120_solar_wall_light_camera": {
+    "product_name": "Eufy Security S120 Solar Wall Light & Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-s120-solar-wall-light-camera",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-05-19",
+        "price": 130.0,
+        "original_price": 249.0,
+        "is_on_sale": true,
+        "discount_percentage": 48,
+        "status": "success"
+      }
+    ]
+  },
+  "eufy_eufy_s3_pro_add_on_security_camera": {
+    "product_name": "eufy S3 Pro Add On Security Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/eufy-s3-pro-add-on-security-camera",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-05-19",
+        "price": 699.0,
+        "original_price": 699.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "ring_ring_wired_video_doorbell_plus_plug_in": {
+    "product_name": "Ring Wired Video Doorbell Plus Plug-In",
+    "brand": "Ring",
+    "category": "Video Doorbell",
+    "url": "https://www.jbhifi.com.au/products/ring-wired-video-doorbell-plus-plug-in",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-05-19",
+        "price": 249.0,
+        "original_price": 249.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "other_reolink_12mp_poe_security_system_cctv_16_channel_nvr_with_2_": {
+    "product_name": "Reolink 12MP PoE Security System CCTV 16-Channel NVR with 2 POE Video Doorbell",
+    "brand": "Other",
+    "category": "Video Doorbell",
+    "url": "https://www.jbhifi.com.au/products/reolink-12mp-poe-security-system-cctv-16-channel-nvr-with-2-poe-video-doorbell",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-05-19",
+        "price": 2169.99,
+        "original_price": 2169.99,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "ring_ring_wired_video_doorbell_pro_din_rail": {
+    "product_name": "Ring Wired Video Doorbell Pro DIN Rail",
+    "brand": "Ring",
+    "category": "Video Doorbell",
+    "url": "https://www.jbhifi.com.au/products/ring-wired-video-doorbell-pro-din-rail",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-05-19",
+        "price": 399.0,
+        "original_price": 399.0,
+        "is_on_sale": false,
+        "discount_percentage": 0,
+        "status": "success"
+      }
+    ]
+  },
+  "other_gecko_tsa_smart_lock_bluetooth_tracker": {
+    "product_name": "Gecko TSA Smart Lock Bluetooth Tracker",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "url": "https://www.jbhifi.com.au/products/gecko-tsa-smart-lock-bluetooth-tracker",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-05-19",
+        "price": 19.0,
+        "original_price": 39.95,
+        "is_on_sale": true,
+        "discount_percentage": 52,
+        "status": "success"
+      }
+    ]
+  },
+  "other_faleemi_fs1_wireless_security_baby_monitor_camera": {
+    "product_name": "Faleemi FS1 Wireless Security, Baby Monitor Camera",
+    "brand": "Other",
+    "category": "Baby",
+    "url": "https://www.jbhifi.com.au/products/faleemi-fs1-wireless-security-baby-monitor-camera",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-05-19",
+        "price": 59.95,
+        "original_price": 59.95,
+        "is_on_sale": false,
+        "discount_percentage": 0,
         "status": "success"
       }
     ]

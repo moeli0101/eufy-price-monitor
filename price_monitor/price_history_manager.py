@@ -101,10 +101,12 @@ class PriceHistoryManager:
         else:
             candidate_original = current_price
 
-        if (prev_original_price and prev_original_price > 0
-                and candidate_original > prev_original_price * 1.15
-                and candidate_original != prev_original_price):
-            original_price = prev_original_price
+        if prev_original_price and prev_original_price > 0:
+            change = (candidate_original - prev_original_price) / prev_original_price
+            if abs(change) > 0.10 and candidate_original != prev_original_price:
+                original_price = prev_original_price
+            else:
+                original_price = candidate_original
         else:
             original_price = candidate_original
 

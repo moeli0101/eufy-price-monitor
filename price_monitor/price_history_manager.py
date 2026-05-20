@@ -95,16 +95,21 @@ class PriceHistoryManager:
         was_price = product_data.get('was_price')
 
         if was_price and was_price > current_price:
-            is_on_sale = True
-            original_price = was_price
-            discount_percentage = product_data.get('discount_percent', 0)
+            candidate_original = was_price
+        elif prev_original_price and prev_original_price >= current_price:
+            candidate_original = prev_original_price
         else:
-            is_on_sale = False
-            discount_percentage = 0
-            if prev_original_price and prev_original_price >= current_price:
-                original_price = prev_original_price
-            else:
-                original_price = current_price
+            candidate_original = current_price
+
+        if (prev_original_price and prev_original_price > 0
+                and candidate_original > prev_original_price * 1.15
+                and candidate_original != prev_original_price):
+            original_price = prev_original_price
+        else:
+            original_price = candidate_original
+
+        is_on_sale = original_price > current_price
+        discount_percentage = round((original_price - current_price) / original_price * 100) if is_on_sale else 0
 
         return {
             'date': date,

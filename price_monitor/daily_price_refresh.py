@@ -80,19 +80,20 @@ def extract_price(page):
         current_price = None
         was_price = None
 
-        # 1. JB Hi-Fi 内嵌定价数据（最准确，含 CoreTicketPrice=MSRP 和 Price=售价）
+        # 1. variant-button 属性（最准确：data-price=售价，data-core-price=TICKET原价）
         try:
-            match = re.search(
-                r'"CoreTicketPrice"\s*:\s*([\d.]+).*?"Price"\s*:\s*\{"DisplayPriceInc"\s*:\s*([\d.]+)',
-                content, re.DOTALL
-            )
-            if match:
-                msrp = float(match.group(1))
-                price = float(match.group(2))
-                if 1 < price < 50000 and 1 < msrp < 50000:
-                    current_price = price
-                    if msrp > price:
-                        was_price = msrp
+            btn = page.locator('[data-test-id="variant-button"].current').first
+            if btn.count() > 0:
+                p_str = btn.get_attribute('data-price')
+                c_str = btn.get_attribute('data-core-price')
+                if p_str:
+                    p = float(p_str)
+                    if 1 < p < 50000:
+                        current_price = p
+                if c_str:
+                    c = float(c_str)
+                    if c > current_price:
+                        was_price = c
         except Exception:
             pass
 

@@ -76,11 +76,10 @@ def extract_price(page):
         time.sleep(3.0)
         import re, json as _json
 
-        content = page.content()
         current_price = None
         was_price = None
 
-        # 1. variant-button 属性（最准确：data-price=售价，data-core-price=TICKET原价）
+        # 优先：variant-button.current（有变体选择的产品，数据最可靠）
         try:
             btn = page.locator('[data-test-id="variant-button"].current').first
             if btn.count() > 0:
@@ -92,37 +91,12 @@ def extract_price(page):
                         current_price = p
                 if c_str:
                     c = float(c_str)
-                    if c > current_price:
+                    if current_price and 1 < c < 50000 and c > current_price:
                         was_price = c
         except Exception:
             pass
 
-        # 2. JSON-LD fallback（获取售价）
-        if current_price is None:
-            try:
-                ld_blocks = re.findall(
-                    r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
-                    content, re.DOTALL | re.IGNORECASE
-                )
-                for block in ld_blocks:
-                    try:
-                        obj = _json.loads(block.strip())
-                        offers = obj.get('offers')
-                        if isinstance(offers, list):
-                            offers = offers[0]
-                        if isinstance(offers, dict):
-                            price_val = offers.get('price')
-                            if price_val:
-                                p = float(str(price_val).replace(',', ''))
-                                if 1 < p < 50000:
-                                    current_price = p
-                                    break
-                    except Exception:
-                        pass
-            except Exception:
-                pass
-
-        # 3. DOM fallback（ticket-price）
+        # fallback：ticket-price DOM（单SKU产品）
         if current_price is None:
             try:
                 ticket = page.locator('[data-testid="ticket-price"]').first
@@ -135,11 +109,35 @@ def extract_price(page):
             except Exception:
                 pass
 
+        # fallback：JSON-LD（最后手段）
+        if current_price is None:
+            try:
+                content = page.content()
+                ld_blocks = re.findall(
+                    r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
+                    content, re.DOTALL | re.IGNORECASE
+                )
+                for block in ld_blocks:
+                    try:
+                        obj = _json.loads(block.strip())
+                        offers = obj.get('offers')
+                        if isinstance(offers, list):
+                            offers = offers[0]
+                        if isinstance(offers, dict) and offers.get('price'):
+                            p = float(str(offers['price']).replace(',', ''))
+                            if 1 < p < 50000:
+                                current_price = p
+                                break
+                    except Exception:
+                        pass
+            except Exception:
+                pass
+
         if current_price is None:
             return None
 
         result = {'price': current_price}
-        if was_price and was_price > current_price and was_price < current_price * 4:
+        if was_price:
             result['was_price'] = was_price
             result['discount_percent'] = round((was_price - current_price) / was_price * 100)
         return result

@@ -78,10 +78,9 @@ def extract_price(page):
 
         current_price = None
         was_price = None
-
         content = page.content()
 
-        # 多SKU产品：variant-button.current 最准确
+        # 多SKU产品：variant-button.current（data-price=售价，data-core-price=MSRP）
         try:
             btn = page.locator('[data-test-id="variant-button"].current').first
             if btn.count() > 0:
@@ -98,7 +97,23 @@ def extract_price(page):
         except Exception:
             pass
 
-        # 单SKU产品：ticket-price(售价) + CoreTicketPrice(MSRP)
+        # 单SKU产品：解析 TieredDetails Price 块
+        if current_price is None:
+            try:
+                m = re.search(r'"Price":\{([^}]+)\}', content)
+                if m:
+                    price_obj = _json.loads('{' + m.group(1) + '}')
+                    display = price_obj.get('DisplayPriceInc')
+                    save = price_obj.get('SaveAmount', 0)
+                    core = price_obj.get('CoreTicketPrice')
+                    if display and 1 < display < 50000:
+                        current_price = display
+                        if core and core > display and save <= 0:
+                            was_price = core
+            except Exception:
+                pass
+
+        # Fallback：ticket-price DOM
         if current_price is None:
             try:
                 ticket = page.locator('[data-testid="ticket-price"]').first
@@ -108,18 +123,10 @@ def extract_price(page):
                         p = float(text)
                         if 1 < p < 50000:
                             current_price = p
-                            m = re.search(
-                                r'"TieredDetails":\[\].*?"DisplayPriceInc":([\d.]+).*?"CoreTicketPrice":([\d.]+)',
-                                content, re.DOTALL
-                            )
-                            if m:
-                                core = float(m.group(2))
-                                if 1 < core < 50000 and core > current_price:
-                                    was_price = core
             except Exception:
                 pass
 
-        # 最终fallback：JSON-LD
+        # 最终 fallback：JSON-LD
         if current_price is None:
             try:
                 ld_blocks = re.findall(
@@ -153,7 +160,6 @@ def extract_price(page):
 
     except Exception:
         return None
-
 
 def scrape_single_product(browser, product, max_retries=3):
     """

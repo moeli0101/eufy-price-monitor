@@ -79,7 +79,9 @@ def extract_price(page):
         current_price = None
         was_price = None
 
-        # 优先：variant-button.current（有变体选择的产品，数据最可靠）
+        content = page.content()
+
+        # 多SKU产品：variant-button.current 最准确
         try:
             btn = page.locator('[data-test-id="variant-button"].current').first
             if btn.count() > 0:
@@ -96,7 +98,7 @@ def extract_price(page):
         except Exception:
             pass
 
-        # fallback：ticket-price DOM（单SKU产品）
+        # 单SKU产品：ticket-price(售价) + CoreTicketPrice(MSRP)
         if current_price is None:
             try:
                 ticket = page.locator('[data-testid="ticket-price"]').first
@@ -106,13 +108,20 @@ def extract_price(page):
                         p = float(text)
                         if 1 < p < 50000:
                             current_price = p
+                            m = re.search(
+                                r'"TieredDetails":\[\].*?"DisplayPriceInc":([\d.]+).*?"CoreTicketPrice":([\d.]+)',
+                                content, re.DOTALL
+                            )
+                            if m:
+                                core = float(m.group(2))
+                                if 1 < core < 50000 and core > current_price:
+                                    was_price = core
             except Exception:
                 pass
 
-        # fallback：JSON-LD（最后手段）
+        # 最终fallback：JSON-LD
         if current_price is None:
             try:
-                content = page.content()
                 ld_blocks = re.findall(
                     r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
                     content, re.DOTALL | re.IGNORECASE

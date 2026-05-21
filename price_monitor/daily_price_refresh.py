@@ -100,6 +100,14 @@ def extract_price(page):
         # 单SKU产品：解析 TieredDetails Price 块
         if current_price is None:
             try:
+                is_clearance = False
+                try:
+                    banner = page.locator('[data-testid="pdp-banner-tag"]').first
+                    if banner.count() > 0 and 'clearance' in banner.inner_text().lower():
+                        is_clearance = True
+                except Exception:
+                    pass
+
                 m = re.search(r'"Price":\{([^}]+)\}', content)
                 if m:
                     price_obj = _json.loads('{' + m.group(1) + '}')
@@ -108,7 +116,7 @@ def extract_price(page):
                     core = price_obj.get('CoreTicketPrice')
                     if display and 1 < display < 50000:
                         current_price = display
-                        if core and core > display and save <= 0:
+                        if not is_clearance and core and core > display and save <= 0:
                             was_price = core
             except Exception:
                 pass

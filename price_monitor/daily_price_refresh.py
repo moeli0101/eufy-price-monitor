@@ -118,11 +118,11 @@ def extract_price(page):
                     core = price_obj.get('CoreTicketPrice')
                     if display and 1 < display < 50000:
                         current_price = display
-                        # 只有页面真正显示划线价（DisplayWasPrice=true 或 SaveAmount<0 代表实际折扣）
-                        # 且非 Clearance 时，才采信 CoreTicketPrice 作为 MSRP
-                        has_visible_discount = display_was or (save < 0 and core and core > display)
-                        if not is_clearance and has_visible_discount and core and core > display:
-                            was_price = core
+                        if core and core > display:
+                            if is_clearance:
+                                was_price = core if (save < 0 and display_was) else None
+                            else:
+                                was_price = core
             except Exception:
                 pass
 

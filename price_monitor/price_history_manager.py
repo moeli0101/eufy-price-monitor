@@ -99,20 +99,20 @@ class PriceHistoryManager:
         was_price = product_data.get('was_price')
 
         if was_price and was_price > current_price:
-            candidate_original = was_price
-        elif prev_original_price and prev_original_price >= current_price:
-            candidate_original = prev_original_price
-        else:
-            candidate_original = current_price
-
-        if prev_original_price and prev_original_price > 0:
-            change = (candidate_original - prev_original_price) / prev_original_price
-            if abs(change) > 0.10 and candidate_original != prev_original_price:
+            # 最高优先级：爬虫明确提取到了划线价
+            # 仅在此处保留 10% 异常检查，防止脏数据写入
+            if (prev_original_price and prev_original_price > 0
+                    and abs(was_price - prev_original_price) / prev_original_price > 0.10):
                 original_price = prev_original_price
             else:
-                original_price = candidate_original
+                original_price = was_price
+        elif prev_original_price and prev_original_price >= current_price:
+            # 中优先级：was_price 为 None，继承历史 original_price
+            # 覆盖 Clearance/单SKU 无划线价的场景，永远保留第一次入库的真实 MSRP
+            original_price = prev_original_price
         else:
-            original_price = candidate_original
+            # 最低优先级：全新商品且无打折，原价=售价
+            original_price = current_price
 
         is_on_sale = original_price > current_price
         discount_percentage = round((original_price - current_price) / original_price * 100) if is_on_sale else 0

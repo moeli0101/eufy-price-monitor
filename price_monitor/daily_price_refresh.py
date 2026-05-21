@@ -80,7 +80,16 @@ def extract_price(page):
         was_price = None
         content = page.content()
 
-        # 多SKU产品：variant-button.current（data-price=售价，data-core-price=MSRP）
+        # 判断是否 Clearance 商品（页面明确标注）
+        is_clearance = False
+        try:
+            banner = page.locator('[data-testid="pdp-banner-tag"]').first
+            if banner.count() > 0 and 'clearance' in banner.inner_text().lower():
+                is_clearance = True
+        except Exception:
+            pass
+
+        # 多SKU产品：variant-button.current
         try:
             btn = page.locator('[data-test-id="variant-button"].current').first
             if btn.count() > 0:
@@ -90,7 +99,7 @@ def extract_price(page):
                     p = float(p_str)
                     if 1 < p < 50000:
                         current_price = p
-                if c_str:
+                if not is_clearance and c_str:
                     c = float(c_str)
                     if current_price and 1 < c < 50000 and c > current_price:
                         was_price = c
@@ -100,23 +109,19 @@ def extract_price(page):
         # 单SKU产品：解析 TieredDetails Price 块
         if current_price is None:
             try:
-                is_clearance = False
-                try:
-                    banner = page.locator('[data-testid="pdp-banner-tag"]').first
-                    if banner.count() > 0 and 'clearance' in banner.inner_text().lower():
-                        is_clearance = True
-                except Exception:
-                    pass
-
                 m = re.search(r'"Price":\{([^}]+)\}', content)
                 if m:
                     price_obj = _json.loads('{' + m.group(1) + '}')
                     display = price_obj.get('DisplayPriceInc')
+                    display_was = price_obj.get('DisplayWasPrice', False)
                     save = price_obj.get('SaveAmount', 0)
                     core = price_obj.get('CoreTicketPrice')
                     if display and 1 < display < 50000:
                         current_price = display
-                        if not is_clearance and core and core > display and save <= 0:
+                        # 只有页面真正显示划线价（DisplayWasPrice=true 或 SaveAmount<0 代表实际折扣）
+                        # 且非 Clearance 时，才采信 CoreTicketPrice 作为 MSRP
+                        has_visible_discount = display_was or (save < 0 and core and core > display)
+                        if not is_clearance and has_visible_discount and core and core > display:
                             was_price = core
             except Exception:
                 pass

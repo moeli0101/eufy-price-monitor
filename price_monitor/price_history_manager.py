@@ -48,10 +48,14 @@ class PriceHistoryManager:
         return f"{brand.lower()}_{clean_name}"
 
     def update_price(self, product_data):
-        """更新产品价格"""
         today = datetime.now().strftime("%Y-%m-%d")
 
-        # 生成产品ID
+        name = product_data.get('name', '')
+        error_keywords = ['problem loading', 'error', '404', 'not found', 'page not found', 'access denied']
+        if any(kw in name.lower() for kw in error_keywords):
+            print(f'  ⚠️  跳过错误页面产品: {name[:50]}')
+            return None
+
         product_id = self.generate_product_id(
             product_data['name'],
             product_data['brand']

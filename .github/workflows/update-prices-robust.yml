@@ -210,6 +210,16 @@ jobs:
           echo "❌ 推送失败，已重试3次"
           exit 1
 
+      - name: Send Feishu notification
+        if: success()
+        env:
+          FEISHU_APP_ID: ${{ secrets.FEISHU_APP_ID }}
+          FEISHU_APP_SECRET: ${{ secrets.FEISHU_APP_SECRET }}
+          FEISHU_CHAT_ID: ${{ secrets.FEISHU_CHAT_ID }}
+        run: |
+          cd price_monitor
+          python notify_feishu.py || echo "⚠️ 飞书通知失败，不影响主流程"
+
       - name: Upload logs on failure
         if: failure()
         uses: actions/upload-artifact@v4

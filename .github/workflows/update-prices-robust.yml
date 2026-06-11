@@ -11,7 +11,7 @@ permissions:
 jobs:
   update-prices:
     runs-on: ubuntu-latest
-    timeout-minutes: 60  # 设置超时，避免无限等待
+    timeout-minutes: 120
 
     steps:
       - name: Checkout code

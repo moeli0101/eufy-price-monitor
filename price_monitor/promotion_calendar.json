@@ -8966,6 +8966,13 @@
         "original_price": 399,
         "is_sale": true,
         "discount": 25
+      },
+      "11": {
+        "date": "2026-06-11",
+        "price": 299,
+        "original_price": 399,
+        "is_sale": true,
+        "discount": 25
       }
     }
   },
@@ -9009,6 +9016,13 @@
         "original_price": 369.0,
         "is_sale": false,
         "discount": 0
+      },
+      "11": {
+        "date": "2026-06-11",
+        "price": 369,
+        "original_price": 369.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -9034,6 +9048,13 @@
       },
       "3": {
         "date": "2026-06-03",
+        "price": 199,
+        "original_price": 269,
+        "is_sale": true,
+        "discount": 26
+      },
+      "11": {
+        "date": "2026-06-11",
         "price": 199,
         "original_price": 269,
         "is_sale": true,
@@ -9102,6 +9123,13 @@
         "original_price": 39.0,
         "is_sale": false,
         "discount": 0
+      },
+      "11": {
+        "date": "2026-06-11",
+        "price": 39,
+        "original_price": 39.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -9131,6 +9159,13 @@
         "original_price": 99.0,
         "is_sale": false,
         "discount": 0
+      },
+      "11": {
+        "date": "2026-06-11",
+        "price": 99,
+        "original_price": 99.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -9139,7 +9174,15 @@
     "brand": "Other",
     "category": "Security Camera",
     "url": "https://www.jbhifi.com.au/products/uniden-app-cam-x25-pt-indoor-2k-super-hd-motion-tracking-camera",
-    "days": {}
+    "days": {
+      "11": {
+        "date": "2026-06-11",
+        "price": 52,
+        "original_price": 72,
+        "is_sale": true,
+        "discount": 28
+      }
+    }
   },
   "yale_yale_ydm_7220_smart_door_lock": {
     "product_name": "Yale YDM 7220 Smart Door Lock",
@@ -9181,6 +9224,13 @@
         "original_price": 349,
         "is_sale": true,
         "discount": 20
+      },
+      "11": {
+        "date": "2026-06-11",
+        "price": 279,
+        "original_price": 349,
+        "is_sale": true,
+        "discount": 20
       }
     }
   },
@@ -9217,6 +9267,13 @@
         "original_price": 79,
         "is_sale": true,
         "discount": 19
+      },
+      "11": {
+        "date": "2026-06-11",
+        "price": 64,
+        "original_price": 79,
+        "is_sale": true,
+        "discount": 19
       }
     }
   },
@@ -9249,6 +9306,13 @@
       },
       "10": {
         "date": "2026-06-10",
+        "price": 79,
+        "original_price": 79.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "11": {
+        "date": "2026-06-11",
         "price": 79,
         "original_price": 79.0,
         "is_sale": false,
@@ -9292,6 +9356,13 @@
       },
       "10": {
         "date": "2026-06-10",
+        "price": 49,
+        "original_price": 49.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "11": {
+        "date": "2026-06-11",
         "price": 49,
         "original_price": 49.0,
         "is_sale": false,
@@ -9361,6 +9432,13 @@
         "original_price": 89.0,
         "is_sale": false,
         "discount": 0
+      },
+      "11": {
+        "date": "2026-06-11",
+        "price": 89,
+        "original_price": 89.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -9397,6 +9475,13 @@
         "original_price": 42,
         "is_sale": false,
         "discount": 0
+      },
+      "11": {
+        "date": "2026-06-11",
+        "price": 42,
+        "original_price": 42,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -9429,6 +9514,13 @@
       },
       "10": {
         "date": "2026-06-10",
+        "price": 17.99,
+        "original_price": 25,
+        "is_sale": true,
+        "discount": 28
+      },
+      "11": {
+        "date": "2026-06-11",
         "price": 17.99,
         "original_price": 25,
         "is_sale": true,
@@ -9527,6 +9619,13 @@
         "original_price": 249.0,
         "is_sale": false,
         "discount": 0
+      },
+      "11": {
+        "date": "2026-06-11",
+        "price": 249,
+        "original_price": 249.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -9559,6 +9658,13 @@
       },
       "10": {
         "date": "2026-06-10",
+        "price": 2119.99,
+        "original_price": 2169.99,
+        "is_sale": true,
+        "discount": 2
+      },
+      "11": {
+        "date": "2026-06-11",
         "price": 2119.99,
         "original_price": 2169.99,
         "is_sale": true,
@@ -9599,6 +9705,13 @@
         "original_price": 399.0,
         "is_sale": false,
         "discount": 0
+      },
+      "11": {
+        "date": "2026-06-11",
+        "price": 399,
+        "original_price": 399.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -9631,6 +9744,13 @@
       },
       "10": {
         "date": "2026-06-10",
+        "price": 19,
+        "original_price": 39.95,
+        "is_sale": true,
+        "discount": 52
+      },
+      "11": {
+        "date": "2026-06-11",
         "price": 19,
         "original_price": 39.95,
         "is_sale": true,
@@ -10058,6 +10178,21 @@
         "date": "2026-06-11",
         "price": 224,
         "original_price": 224,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
+  },
+  "other_zigbang_previously_samsung_shp_r80_smart_lock": {
+    "product_name": "Zigbang (Previously Samsung) SHP-R80 Smart Lock",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "url": "https://www.jbhifi.com.au/products/zigbang-previously-samsung-shp-r80-smart-lock",
+    "days": {
+      "11": {
+        "date": "2026-06-11",
+        "price": 716,
+        "original_price": 716,
         "is_sale": false,
         "discount": 0
       }

@@ -73,7 +73,7 @@ def generate_product_list_from_history():
 
 def extract_price(page):
     try:
-        time.sleep(1.5)
+        time.sleep(2.0)
         import re, json as _json
 
         current_price = None

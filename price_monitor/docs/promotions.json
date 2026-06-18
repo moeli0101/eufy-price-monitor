@@ -132,7 +132,7 @@
       "sale_price": 79,
       "discount_percentage": 24.0,
       "save_amount": 25,
-      "duration_days": 27,
+      "duration_days": 29,
       "status": "active"
     },
     {
@@ -147,7 +147,7 @@
       "sale_price": 137,
       "discount_percentage": 18.0,
       "save_amount": 30,
-      "duration_days": 28,
+      "duration_days": 29,
       "status": "active"
     },
     {
@@ -162,7 +162,7 @@
       "sale_price": 186,
       "discount_percentage": 22.8,
       "save_amount": 55,
-      "duration_days": 28,
+      "duration_days": 29,
       "status": "active"
     },
     {
@@ -177,7 +177,7 @@
       "sale_price": 999.0,
       "discount_percentage": 33.4,
       "save_amount": 500.0,
-      "duration_days": 24,
+      "duration_days": 25,
       "status": "active"
     },
     {
@@ -237,7 +237,7 @@
       "sale_price": 299.0,
       "discount_percentage": 25.1,
       "save_amount": 100.0,
-      "duration_days": 24,
+      "duration_days": 25,
       "status": "active"
     },
     {
@@ -252,7 +252,7 @@
       "sale_price": 599,
       "discount_percentage": 25.0,
       "save_amount": 200,
-      "duration_days": 22,
+      "duration_days": 24,
       "status": "active"
     },
     {
@@ -267,7 +267,7 @@
       "sale_price": 17.99,
       "discount_percentage": 28.0,
       "save_amount": 7.01,
-      "duration_days": 22,
+      "duration_days": 24,
       "status": "active"
     },
     {
@@ -297,7 +297,7 @@
       "sale_price": 609,
       "discount_percentage": 47.0,
       "save_amount": 540,
-      "duration_days": 21,
+      "duration_days": 22,
       "status": "active"
     },
     {
@@ -327,7 +327,7 @@
       "sale_price": 289,
       "discount_percentage": 35.6,
       "save_amount": 160,
-      "duration_days": 21,
+      "duration_days": 22,
       "status": "active"
     },
     {
@@ -342,7 +342,7 @@
       "sale_price": 379,
       "discount_percentage": 24.0,
       "save_amount": 120,
-      "duration_days": 21,
+      "duration_days": 22,
       "status": "active"
     },
     {
@@ -357,7 +357,7 @@
       "sale_price": 349.0,
       "discount_percentage": 30.1,
       "save_amount": 150.0,
-      "duration_days": 19,
+      "duration_days": 22,
       "status": "active"
     },
     {
@@ -369,10 +369,10 @@
       "start_date": "2026-05-28",
       "end_date": null,
       "original_price": 799,
-      "sale_price": 639,
-      "discount_percentage": 20.0,
-      "save_amount": 160,
-      "duration_days": 20,
+      "sale_price": 539,
+      "discount_percentage": 32.5,
+      "save_amount": 260,
+      "duration_days": 22,
       "status": "active"
     },
     {
@@ -387,7 +387,7 @@
       "sale_price": 129,
       "discount_percentage": 13.4,
       "save_amount": 20,
-      "duration_days": 20,
+      "duration_days": 21,
       "status": "active"
     },
     {
@@ -402,7 +402,7 @@
       "sale_price": 799.0,
       "discount_percentage": 27.3,
       "save_amount": 300.0,
-      "duration_days": 20,
+      "duration_days": 21,
       "status": "active"
     },
     {
@@ -417,7 +417,7 @@
       "sale_price": 249.0,
       "discount_percentage": 28.7,
       "save_amount": 100.0,
-      "duration_days": 20,
+      "duration_days": 21,
       "status": "active"
     },
     {
@@ -567,7 +567,7 @@
       "sale_price": 199,
       "discount_percentage": 20.1,
       "save_amount": 50,
-      "duration_days": 20,
+      "duration_days": 21,
       "status": "active"
     },
     {
@@ -582,7 +582,7 @@
       "sale_price": 199,
       "discount_percentage": 20.1,
       "save_amount": 50,
-      "duration_days": 20,
+      "duration_days": 21,
       "status": "active"
     },
     {
@@ -627,7 +627,7 @@
       "sale_price": 229.0,
       "discount_percentage": 17.9,
       "save_amount": 50.0,
-      "duration_days": 18,
+      "duration_days": 21,
       "status": "active"
     },
     {
@@ -642,7 +642,7 @@
       "sale_price": 549,
       "discount_percentage": 21.5,
       "save_amount": 150,
-      "duration_days": 18,
+      "duration_days": 21,
       "status": "active"
     },
     {
@@ -657,7 +657,7 @@
       "sale_price": 279,
       "discount_percentage": 20.1,
       "save_amount": 70,
-      "duration_days": 20,
+      "duration_days": 21,
       "status": "active"
     },
     {
@@ -672,7 +672,7 @@
       "sale_price": 279,
       "discount_percentage": 20.1,
       "save_amount": 70,
-      "duration_days": 19,
+      "duration_days": 21,
       "status": "active"
     },
     {
@@ -732,7 +732,7 @@
       "sale_price": 494.0,
       "discount_percentage": 43.2,
       "save_amount": 375.0,
-      "duration_days": 16,
+      "duration_days": 17,
       "status": "active"
     },
     {
@@ -849,10 +849,10 @@
       "start_date": "2026-06-03",
       "end_date": null,
       "original_price": 99,
-      "sale_price": 70,
-      "discount_percentage": 29.3,
-      "save_amount": 29,
-      "duration_days": 15,
+      "sale_price": 74,
+      "discount_percentage": 25.3,
+      "save_amount": 25,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -867,7 +867,7 @@
       "sale_price": 109,
       "discount_percentage": 26.8,
       "save_amount": 40,
-      "duration_days": 15,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -882,7 +882,7 @@
       "sale_price": 154,
       "discount_percentage": 42.8,
       "save_amount": 115,
-      "duration_days": 15,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -894,10 +894,10 @@
       "start_date": "2026-06-03",
       "end_date": null,
       "original_price": 549,
-      "sale_price": 299,
-      "discount_percentage": 45.5,
-      "save_amount": 250,
-      "duration_days": 13,
+      "sale_price": 199,
+      "discount_percentage": 63.8,
+      "save_amount": 350,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -912,7 +912,7 @@
       "sale_price": 199,
       "discount_percentage": 20.1,
       "save_amount": 50,
-      "duration_days": 13,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -927,7 +927,7 @@
       "sale_price": 79,
       "discount_percentage": 27.5,
       "save_amount": 30,
-      "duration_days": 13,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -939,10 +939,10 @@
       "start_date": "2026-06-03",
       "end_date": null,
       "original_price": 139,
-      "sale_price": 105,
-      "discount_percentage": 24.5,
-      "save_amount": 34,
-      "duration_days": 13,
+      "sale_price": 114,
+      "discount_percentage": 18.0,
+      "save_amount": 25,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -957,7 +957,7 @@
       "sale_price": 169,
       "discount_percentage": 26.2,
       "save_amount": 60,
-      "duration_days": 13,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -969,10 +969,10 @@
       "start_date": "2026-06-03",
       "end_date": null,
       "original_price": 299,
-      "sale_price": 200,
-      "discount_percentage": 33.1,
-      "save_amount": 99,
-      "duration_days": 15,
+      "sale_price": 229,
+      "discount_percentage": 23.4,
+      "save_amount": 70,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -987,7 +987,7 @@
       "sale_price": 219,
       "discount_percentage": 21.5,
       "save_amount": 60,
-      "duration_days": 15,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -999,10 +999,10 @@
       "start_date": "2026-06-03",
       "end_date": null,
       "original_price": 119.0,
-      "sale_price": 75.0,
-      "discount_percentage": 37.0,
-      "save_amount": 44.0,
-      "duration_days": 15,
+      "sale_price": 94.0,
+      "discount_percentage": 21.0,
+      "save_amount": 25.0,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -1017,7 +1017,7 @@
       "sale_price": 254.0,
       "discount_percentage": 32.1,
       "save_amount": 120.0,
-      "duration_days": 15,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -1032,7 +1032,7 @@
       "sale_price": 594,
       "discount_percentage": 15.0,
       "save_amount": 105,
-      "duration_days": 15,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -1047,7 +1047,7 @@
       "sale_price": 54,
       "discount_percentage": 21.7,
       "save_amount": 15,
-      "duration_days": 15,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -1062,7 +1062,7 @@
       "sale_price": 209,
       "discount_percentage": 30.1,
       "save_amount": 90,
-      "duration_days": 15,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -1077,7 +1077,7 @@
       "sale_price": 46,
       "discount_percentage": 22.0,
       "save_amount": 13,
-      "duration_days": 15,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -1092,7 +1092,7 @@
       "sale_price": 139.0,
       "discount_percentage": 30.2,
       "save_amount": 60.0,
-      "duration_days": 15,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -1104,10 +1104,10 @@
       "start_date": "2026-06-03",
       "end_date": null,
       "original_price": 219.0,
-      "sale_price": 169.0,
-      "discount_percentage": 22.8,
-      "save_amount": 50.0,
-      "duration_days": 15,
+      "sale_price": 189.0,
+      "discount_percentage": 13.7,
+      "save_amount": 30.0,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -1122,7 +1122,7 @@
       "sale_price": 72,
       "discount_percentage": 19.1,
       "save_amount": 17,
-      "duration_days": 15,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -1134,10 +1134,10 @@
       "start_date": "2026-06-03",
       "end_date": null,
       "original_price": 99,
-      "sale_price": 70,
-      "discount_percentage": 29.3,
-      "save_amount": 29,
-      "duration_days": 15,
+      "sale_price": 74,
+      "discount_percentage": 25.3,
+      "save_amount": 25,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -1152,7 +1152,7 @@
       "sale_price": 199,
       "discount_percentage": 20.1,
       "save_amount": 50,
-      "duration_days": 15,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -1167,7 +1167,7 @@
       "sale_price": 199,
       "discount_percentage": 26.0,
       "save_amount": 70,
-      "duration_days": 15,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -1182,7 +1182,7 @@
       "sale_price": 52,
       "discount_percentage": 24.6,
       "save_amount": 17,
-      "duration_days": 15,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -1194,10 +1194,10 @@
       "start_date": "2026-06-03",
       "end_date": null,
       "original_price": 199,
-      "sale_price": 150,
-      "discount_percentage": 24.6,
-      "save_amount": 49,
-      "duration_days": 14,
+      "sale_price": 159,
+      "discount_percentage": 20.1,
+      "save_amount": 40,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -1212,7 +1212,7 @@
       "sale_price": 189,
       "discount_percentage": 32.3,
       "save_amount": 90,
-      "duration_days": 14,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -1227,7 +1227,7 @@
       "sale_price": 49,
       "discount_percentage": 38.0,
       "save_amount": 30,
-      "duration_days": 15,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -1242,7 +1242,7 @@
       "sale_price": 749,
       "discount_percentage": 25.0,
       "save_amount": 250,
-      "duration_days": 15,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -1257,7 +1257,7 @@
       "sale_price": 614,
       "discount_percentage": 20.2,
       "save_amount": 155,
-      "duration_days": 15,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -1272,7 +1272,7 @@
       "sale_price": 139.0,
       "discount_percentage": 30.2,
       "save_amount": 60.0,
-      "duration_days": 13,
+      "duration_days": 16,
       "status": "active"
     },
     {
@@ -1362,7 +1362,7 @@
       "sale_price": 279,
       "discount_percentage": 37.9,
       "save_amount": 170,
-      "duration_days": 8,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -1377,7 +1377,7 @@
       "sale_price": 599,
       "discount_percentage": 29.4,
       "save_amount": 250,
-      "duration_days": 8,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -1392,7 +1392,7 @@
       "sale_price": 184,
       "discount_percentage": 23.0,
       "save_amount": 55,
-      "duration_days": 6,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -1407,7 +1407,7 @@
       "sale_price": 1189.0,
       "discount_percentage": 30.0,
       "save_amount": 510.0,
-      "duration_days": 6,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -1422,7 +1422,7 @@
       "sale_price": 79,
       "discount_percentage": 38.8,
       "save_amount": 50,
-      "duration_days": 6,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -1437,7 +1437,7 @@
       "sale_price": 140,
       "discount_percentage": 24.3,
       "save_amount": 45,
-      "duration_days": 6,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -1452,7 +1452,7 @@
       "sale_price": 299,
       "discount_percentage": 33.4,
       "save_amount": 150,
-      "duration_days": 8,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -1467,7 +1467,7 @@
       "sale_price": 799,
       "discount_percentage": 42.9,
       "save_amount": 600,
-      "duration_days": 8,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -1482,7 +1482,7 @@
       "sale_price": 79,
       "discount_percentage": 33.6,
       "save_amount": 40,
-      "duration_days": 8,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -1497,7 +1497,7 @@
       "sale_price": 199.0,
       "discount_percentage": 43.0,
       "save_amount": 150.0,
-      "duration_days": 8,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -1512,7 +1512,7 @@
       "sale_price": 64,
       "discount_percentage": 19.0,
       "save_amount": 15,
-      "duration_days": 7,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -1527,7 +1527,7 @@
       "sale_price": 89,
       "discount_percentage": 36.0,
       "save_amount": 50,
-      "duration_days": 7,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -1572,7 +1572,7 @@
       "sale_price": 1199,
       "discount_percentage": 20.0,
       "save_amount": 300,
-      "duration_days": 7,
+      "duration_days": 8,
       "status": "active"
     },
     {
@@ -1602,7 +1602,7 @@
       "sale_price": 179,
       "discount_percentage": 40.1,
       "save_amount": 120,
-      "duration_days": 2,
+      "duration_days": 5,
       "status": "active"
     },
     {
@@ -1617,7 +1617,7 @@
       "sale_price": 279,
       "discount_percentage": 20.1,
       "save_amount": 70,
-      "duration_days": 2,
+      "duration_days": 5,
       "status": "active"
     },
     {
@@ -1632,7 +1632,7 @@
       "sale_price": 1199,
       "discount_percentage": 20.0,
       "save_amount": 300,
-      "duration_days": 4,
+      "duration_days": 5,
       "status": "active"
     },
     {
@@ -1647,7 +1647,7 @@
       "sale_price": 749,
       "discount_percentage": 25.0,
       "save_amount": 250,
-      "duration_days": 3,
+      "duration_days": 5,
       "status": "active"
     },
     {
@@ -1662,7 +1662,7 @@
       "sale_price": 1279.0,
       "discount_percentage": 20.0,
       "save_amount": 320.0,
-      "duration_days": 2,
+      "duration_days": 5,
       "status": "active"
     },
     {
@@ -1722,7 +1722,7 @@
       "sale_price": 399,
       "discount_percentage": 20.0,
       "save_amount": 100,
-      "duration_days": 1,
+      "duration_days": 4,
       "status": "active"
     },
     {
@@ -1737,7 +1737,7 @@
       "sale_price": 149,
       "discount_percentage": 40.2,
       "save_amount": 100,
-      "duration_days": 1,
+      "duration_days": 4,
       "status": "active"
     },
     {
@@ -1752,7 +1752,7 @@
       "sale_price": 329,
       "discount_percentage": 17.5,
       "save_amount": 70,
-      "duration_days": 3,
+      "duration_days": 4,
       "status": "active"
     },
     {
@@ -1767,7 +1767,7 @@
       "sale_price": 779.0,
       "discount_percentage": 40.0,
       "save_amount": 520.0,
-      "duration_days": 3,
+      "duration_days": 4,
       "status": "active"
     },
     {
@@ -1782,7 +1782,7 @@
       "sale_price": 249,
       "discount_percentage": 24.3,
       "save_amount": 80,
-      "duration_days": 3,
+      "duration_days": 4,
       "status": "active"
     },
     {
@@ -1797,7 +1797,7 @@
       "sale_price": 319,
       "discount_percentage": 20.1,
       "save_amount": 80,
-      "duration_days": 3,
+      "duration_days": 4,
       "status": "active"
     },
     {
@@ -1812,7 +1812,7 @@
       "sale_price": 359,
       "discount_percentage": 16.3,
       "save_amount": 70,
-      "duration_days": 3,
+      "duration_days": 4,
       "status": "active"
     },
     {
@@ -1872,7 +1872,7 @@
       "sale_price": 223.0,
       "discount_percentage": 20.1,
       "save_amount": 56.0,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -1887,7 +1887,7 @@
       "sale_price": 384.0,
       "discount_percentage": 30.1,
       "save_amount": 165.0,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -1902,7 +1902,7 @@
       "sale_price": 149,
       "discount_percentage": 25.1,
       "save_amount": 50,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -1992,7 +1992,7 @@
       "sale_price": 699,
       "discount_percentage": 22.2,
       "save_amount": 200,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -2007,7 +2007,7 @@
       "sale_price": 79,
       "discount_percentage": 20.2,
       "save_amount": 20,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -2022,7 +2022,7 @@
       "sale_price": 209.0,
       "discount_percentage": 25.1,
       "save_amount": 70.0,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -2037,7 +2037,7 @@
       "sale_price": 249,
       "discount_percentage": 24.3,
       "save_amount": 80,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -2052,7 +2052,7 @@
       "sale_price": 88,
       "discount_percentage": 40.9,
       "save_amount": 61,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -2067,7 +2067,7 @@
       "sale_price": 69,
       "discount_percentage": 30.3,
       "save_amount": 30,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -2082,7 +2082,7 @@
       "sale_price": 319,
       "discount_percentage": 20.1,
       "save_amount": 80,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -2097,7 +2097,7 @@
       "sale_price": 249,
       "discount_percentage": 24.3,
       "save_amount": 80,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -2112,7 +2112,7 @@
       "sale_price": 69,
       "discount_percentage": 30.3,
       "save_amount": 30,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -2127,7 +2127,7 @@
       "sale_price": 224,
       "discount_percentage": 10.0,
       "save_amount": 25,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -2142,7 +2142,7 @@
       "sale_price": 279,
       "discount_percentage": 20.1,
       "save_amount": 70,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -2157,7 +2157,7 @@
       "sale_price": 359.0,
       "discount_percentage": 20.0,
       "save_amount": 90.0,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -2172,7 +2172,7 @@
       "sale_price": 160.01,
       "discount_percentage": 30.1,
       "save_amount": 68.99,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -2187,7 +2187,7 @@
       "sale_price": 244.01,
       "discount_percentage": 30.1,
       "save_amount": 104.99,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -2202,7 +2202,7 @@
       "sale_price": 359,
       "discount_percentage": 20.0,
       "save_amount": 90,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -2217,7 +2217,7 @@
       "sale_price": 463,
       "discount_percentage": 20.0,
       "save_amount": 116,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -2232,7 +2232,7 @@
       "sale_price": 279,
       "discount_percentage": 20.1,
       "save_amount": 70,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -2247,7 +2247,7 @@
       "sale_price": 194,
       "discount_percentage": 30.5,
       "save_amount": 85,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -2262,7 +2262,7 @@
       "sale_price": 349,
       "discount_percentage": 12.5,
       "save_amount": 50,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -2277,6 +2277,276 @@
       "sale_price": 224,
       "discount_percentage": 10.0,
       "save_amount": 25,
+      "duration_days": 2,
+      "status": "active"
+    },
+    {
+      "product_id": "eufy_eufy_c31_video_doorbell",
+      "product_name": "eufy C31 Video Doorbell",
+      "brand": "eufy",
+      "category": "Video Doorbell",
+      "url": "https://www.jbhifi.com.au/products/eufy-c31-video-doorbell",
+      "start_date": "2026-06-18",
+      "end_date": null,
+      "original_price": 299,
+      "sale_price": 249,
+      "discount_percentage": 16.7,
+      "save_amount": 50,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "eufy_eufy_c30_video_doorbell",
+      "product_name": "eufy C30 Video Doorbell",
+      "brand": "eufy",
+      "category": "Video Doorbell",
+      "url": "https://www.jbhifi.com.au/products/eufy-c30-video-doorbell",
+      "start_date": "2026-06-18",
+      "end_date": null,
+      "original_price": 149,
+      "sale_price": 99,
+      "discount_percentage": 33.6,
+      "save_amount": 50,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "other_oricom_smart_hd_baby_monitor_with_remote",
+      "product_name": "Oricom Smart HD Baby Monitor with Remote",
+      "brand": "Other",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/oricom-smart-hd-baby-monitor-with-remote",
+      "start_date": "2026-06-18",
+      "end_date": null,
+      "original_price": 179,
+      "sale_price": 159,
+      "discount_percentage": 11.2,
+      "save_amount": 20,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "other_oricom_babysense7_breathing_movement_monitor",
+      "product_name": "Oricom BabySense7 Breathing Movement Monitor",
+      "brand": "Other",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/oricom-babysense7-breathing-movement-monitor",
+      "start_date": "2026-06-18",
+      "end_date": null,
+      "original_price": 249,
+      "sale_price": 199,
+      "discount_percentage": 20.1,
+      "save_amount": 50,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "other_oricom_smart_remote_5_pan_tilt_baby_monitor",
+      "product_name": "Oricom Smart Remote 5 Pan & Tilt Baby Monitor",
+      "brand": "Other",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/oricom-smart-remote-5-pan-tilt-baby-monitor",
+      "start_date": "2026-06-18",
+      "end_date": null,
+      "original_price": 329,
+      "sale_price": 279,
+      "discount_percentage": 15.2,
+      "save_amount": 50,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "owlet_owlet_dream_sock_baby_monitor_mint",
+      "product_name": "Owlet Dream Sock Baby Monitor (Mint)",
+      "brand": "Owlet",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/owlet-dream-sock-baby-monitor-mint",
+      "start_date": "2026-06-18",
+      "end_date": null,
+      "original_price": 499,
+      "sale_price": 399,
+      "discount_percentage": 20.0,
+      "save_amount": 100,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "owlet_owlet_dream_sock_baby_monitor_bedtime_blue",
+      "product_name": "Owlet Dream Sock Baby Monitor (Bedtime Blue)",
+      "brand": "Owlet",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/owlet-dream-sock-baby-monitor-bedtime-blue",
+      "start_date": "2026-06-18",
+      "end_date": null,
+      "original_price": 499,
+      "sale_price": 399,
+      "discount_percentage": 20.0,
+      "save_amount": 100,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "philips_philips_avent_manual_breast_pump",
+      "product_name": "Philips Avent Manual Breast Pump",
+      "brand": "Philips",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/philips-avent-manual-breast-pump",
+      "start_date": "2026-06-18",
+      "end_date": null,
+      "original_price": 79,
+      "sale_price": 54,
+      "discount_percentage": 31.6,
+      "save_amount": 25,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "other_freestyle_mini_hands_free_electric_breast_pump_double",
+      "product_name": "Freestyle Mini Hands-free Electric Breast Pump (Double)",
+      "brand": "Other",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/freestyle-mini-hands-free-electric-breast-pump-double",
+      "start_date": "2026-06-18",
+      "end_date": null,
+      "original_price": 299.0,
+      "sale_price": 249.0,
+      "discount_percentage": 16.7,
+      "save_amount": 50.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "other_medela_harmony_manual_breast_pump",
+      "product_name": "Medela Harmony Manual Breast Pump",
+      "brand": "Other",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/medela-harmony-manual-breast-pump",
+      "start_date": "2026-06-18",
+      "end_date": null,
+      "original_price": 74,
+      "sale_price": 59,
+      "discount_percentage": 20.3,
+      "save_amount": 15,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "philips_philips_avent_hands_free_double_electric_breast_pump",
+      "product_name": "Philips Avent Hands-Free Double Electric Breast Pump",
+      "brand": "Philips",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/philips-avent-hands-free-double-electric-breast-pump",
+      "start_date": "2026-06-18",
+      "end_date": null,
+      "original_price": 599,
+      "sale_price": 419,
+      "discount_percentage": 30.1,
+      "save_amount": 180,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "other_freestyle_mini_hands_free_electric_breast_pump_single",
+      "product_name": "Freestyle Mini Hands-free Electric Breast Pump (Single)",
+      "brand": "Other",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/freestyle-mini-hands-free-electric-breast-pump-single",
+      "start_date": "2026-06-18",
+      "end_date": null,
+      "original_price": 189.0,
+      "sale_price": 154.0,
+      "discount_percentage": 18.5,
+      "save_amount": 35.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "other_medela_motion_inbra_wearable_breast_pump_single",
+      "product_name": "Medela Motion InBra Wearable Breast Pump (Single)",
+      "brand": "Other",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/medela-motion-inbra-wearable-breast-pump-single",
+      "start_date": "2026-06-18",
+      "end_date": null,
+      "original_price": 239.0,
+      "sale_price": 199.0,
+      "discount_percentage": 16.7,
+      "save_amount": 40.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "other_medela_motion_inbra_wearable_breast_pump_double",
+      "product_name": "Medela Motion InBra Wearable Breast Pump (Double)",
+      "brand": "Other",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/medela-motion-inbra-wearable-breast-pump-double",
+      "start_date": "2026-06-18",
+      "end_date": null,
+      "original_price": 379.0,
+      "sale_price": 319.0,
+      "discount_percentage": 15.8,
+      "save_amount": 60.0,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "owlet_owlet_dream_sock_baby_monitor_dusty_rose",
+      "product_name": "Owlet Dream Sock Baby Monitor (Dusty Rose)",
+      "brand": "Owlet",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/owlet-dream-sock-baby-monitor-dusty-rose",
+      "start_date": "2026-06-18",
+      "end_date": null,
+      "original_price": 499,
+      "sale_price": 399,
+      "discount_percentage": 20.0,
+      "save_amount": 100,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "other_dream_sight_dream_sock_duo_baby_monitor_mint",
+      "product_name": "Dream Sight & Dream Sock Duo Baby Monitor (Mint)",
+      "brand": "Other",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/dream-sight-dream-sock-duo-baby-monitor-mint",
+      "start_date": "2026-06-18",
+      "end_date": null,
+      "original_price": 699,
+      "sale_price": 559,
+      "discount_percentage": 20.0,
+      "save_amount": 140,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "philips_philips_avent_connected_baby_monitor",
+      "product_name": "Philips Avent Connected Baby Monitor",
+      "brand": "Philips",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/philips-avent-connected-baby-monitor-1",
+      "start_date": "2026-06-18",
+      "end_date": null,
+      "original_price": 189,
+      "sale_price": 129,
+      "discount_percentage": 31.7,
+      "save_amount": 60,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "owlet_owlet_dream_sight_cam_3_baby_monitor",
+      "product_name": "Owlet Dream Sight Cam 3 Baby Monitor",
+      "brand": "Owlet",
+      "category": "Baby",
+      "url": "https://www.jbhifi.com.au/products/owlet-dream-sight-cam-3-baby-monitor",
+      "start_date": "2026-06-18",
+      "end_date": null,
+      "original_price": 249,
+      "sale_price": 199,
+      "discount_percentage": 20.1,
+      "save_amount": 50,
       "duration_days": 1,
       "status": "active"
     }

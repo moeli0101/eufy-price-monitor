@@ -132,7 +132,7 @@
       "sale_price": 79,
       "discount_percentage": 24.0,
       "save_amount": 25,
-      "duration_days": 29,
+      "duration_days": 30,
       "status": "active"
     },
     {
@@ -177,7 +177,7 @@
       "sale_price": 999.0,
       "discount_percentage": 33.4,
       "save_amount": 500.0,
-      "duration_days": 25,
+      "duration_days": 26,
       "status": "active"
     },
     {
@@ -192,7 +192,7 @@
       "sale_price": 349,
       "discount_percentage": 22.3,
       "save_amount": 100,
-      "duration_days": 24,
+      "duration_days": 26,
       "status": "active"
     },
     {
@@ -237,7 +237,7 @@
       "sale_price": 299.0,
       "discount_percentage": 25.1,
       "save_amount": 100.0,
-      "duration_days": 25,
+      "duration_days": 26,
       "status": "active"
     },
     {
@@ -297,7 +297,7 @@
       "sale_price": 609,
       "discount_percentage": 47.0,
       "save_amount": 540,
-      "duration_days": 22,
+      "duration_days": 23,
       "status": "active"
     },
     {
@@ -327,7 +327,7 @@
       "sale_price": 289,
       "discount_percentage": 35.6,
       "save_amount": 160,
-      "duration_days": 22,
+      "duration_days": 23,
       "status": "active"
     },
     {
@@ -342,7 +342,7 @@
       "sale_price": 379,
       "discount_percentage": 24.0,
       "save_amount": 120,
-      "duration_days": 22,
+      "duration_days": 23,
       "status": "active"
     },
     {
@@ -369,10 +369,10 @@
       "start_date": "2026-05-28",
       "end_date": null,
       "original_price": 799,
-      "sale_price": 539,
-      "discount_percentage": 32.5,
-      "save_amount": 260,
-      "duration_days": 22,
+      "sale_price": 299,
+      "discount_percentage": 62.6,
+      "save_amount": 500,
+      "duration_days": 23,
       "status": "active"
     },
     {
@@ -387,7 +387,7 @@
       "sale_price": 129,
       "discount_percentage": 13.4,
       "save_amount": 20,
-      "duration_days": 21,
+      "duration_days": 22,
       "status": "active"
     },
     {
@@ -399,10 +399,10 @@
       "start_date": "2026-05-29",
       "end_date": null,
       "original_price": 1099.0,
-      "sale_price": 799.0,
+      "sale_price": 799,
       "discount_percentage": 27.3,
-      "save_amount": 300.0,
-      "duration_days": 21,
+      "save_amount": 300,
+      "duration_days": 22,
       "status": "active"
     },
     {
@@ -417,7 +417,7 @@
       "sale_price": 249.0,
       "discount_percentage": 28.7,
       "save_amount": 100.0,
-      "duration_days": 21,
+      "duration_days": 22,
       "status": "active"
     },
     {
@@ -567,7 +567,7 @@
       "sale_price": 199,
       "discount_percentage": 20.1,
       "save_amount": 50,
-      "duration_days": 21,
+      "duration_days": 22,
       "status": "active"
     },
     {
@@ -582,7 +582,7 @@
       "sale_price": 199,
       "discount_percentage": 20.1,
       "save_amount": 50,
-      "duration_days": 21,
+      "duration_days": 22,
       "status": "active"
     },
     {
@@ -657,7 +657,7 @@
       "sale_price": 279,
       "discount_percentage": 20.1,
       "save_amount": 70,
-      "duration_days": 21,
+      "duration_days": 22,
       "status": "active"
     },
     {
@@ -672,7 +672,7 @@
       "sale_price": 279,
       "discount_percentage": 20.1,
       "save_amount": 70,
-      "duration_days": 21,
+      "duration_days": 22,
       "status": "active"
     },
     {
@@ -732,7 +732,7 @@
       "sale_price": 494.0,
       "discount_percentage": 43.2,
       "save_amount": 375.0,
-      "duration_days": 17,
+      "duration_days": 18,
       "status": "active"
     },
     {
@@ -867,7 +867,7 @@
       "sale_price": 109,
       "discount_percentage": 26.8,
       "save_amount": 40,
-      "duration_days": 16,
+      "duration_days": 17,
       "status": "active"
     },
     {
@@ -882,7 +882,7 @@
       "sale_price": 154,
       "discount_percentage": 42.8,
       "save_amount": 115,
-      "duration_days": 16,
+      "duration_days": 17,
       "status": "active"
     },
     {
@@ -969,10 +969,10 @@
       "start_date": "2026-06-03",
       "end_date": null,
       "original_price": 299,
-      "sale_price": 229,
-      "discount_percentage": 23.4,
-      "save_amount": 70,
-      "duration_days": 16,
+      "sale_price": 199,
+      "discount_percentage": 33.4,
+      "save_amount": 100,
+      "duration_days": 17,
       "status": "active"
     },
     {
@@ -987,7 +987,7 @@
       "sale_price": 219,
       "discount_percentage": 21.5,
       "save_amount": 60,
-      "duration_days": 16,
+      "duration_days": 17,
       "status": "active"
     },
     {
@@ -999,10 +999,10 @@
       "start_date": "2026-06-03",
       "end_date": null,
       "original_price": 119.0,
-      "sale_price": 94.0,
-      "discount_percentage": 21.0,
-      "save_amount": 25.0,
-      "duration_days": 16,
+      "sale_price": 75.0,
+      "discount_percentage": 37.0,
+      "save_amount": 44.0,
+      "duration_days": 17,
       "status": "active"
     },
     {
@@ -1017,7 +1017,7 @@
       "sale_price": 254.0,
       "discount_percentage": 32.1,
       "save_amount": 120.0,
-      "duration_days": 16,
+      "duration_days": 17,
       "status": "active"
     },
     {
@@ -1032,7 +1032,7 @@
       "sale_price": 594,
       "discount_percentage": 15.0,
       "save_amount": 105,
-      "duration_days": 16,
+      "duration_days": 17,
       "status": "active"
     },
     {
@@ -1047,7 +1047,7 @@
       "sale_price": 54,
       "discount_percentage": 21.7,
       "save_amount": 15,
-      "duration_days": 16,
+      "duration_days": 17,
       "status": "active"
     },
     {
@@ -1062,7 +1062,7 @@
       "sale_price": 209,
       "discount_percentage": 30.1,
       "save_amount": 90,
-      "duration_days": 16,
+      "duration_days": 17,
       "status": "active"
     },
     {
@@ -1077,7 +1077,7 @@
       "sale_price": 46,
       "discount_percentage": 22.0,
       "save_amount": 13,
-      "duration_days": 16,
+      "duration_days": 17,
       "status": "active"
     },
     {
@@ -1092,7 +1092,7 @@
       "sale_price": 139.0,
       "discount_percentage": 30.2,
       "save_amount": 60.0,
-      "duration_days": 16,
+      "duration_days": 17,
       "status": "active"
     },
     {
@@ -1104,10 +1104,10 @@
       "start_date": "2026-06-03",
       "end_date": null,
       "original_price": 219.0,
-      "sale_price": 189.0,
-      "discount_percentage": 13.7,
-      "save_amount": 30.0,
-      "duration_days": 16,
+      "sale_price": 169.0,
+      "discount_percentage": 22.8,
+      "save_amount": 50.0,
+      "duration_days": 17,
       "status": "active"
     },
     {
@@ -1122,7 +1122,7 @@
       "sale_price": 72,
       "discount_percentage": 19.1,
       "save_amount": 17,
-      "duration_days": 16,
+      "duration_days": 17,
       "status": "active"
     },
     {
@@ -1134,10 +1134,10 @@
       "start_date": "2026-06-03",
       "end_date": null,
       "original_price": 99,
-      "sale_price": 74,
-      "discount_percentage": 25.3,
-      "save_amount": 25,
-      "duration_days": 16,
+      "sale_price": 70,
+      "discount_percentage": 29.3,
+      "save_amount": 29,
+      "duration_days": 17,
       "status": "active"
     },
     {
@@ -1152,7 +1152,7 @@
       "sale_price": 199,
       "discount_percentage": 20.1,
       "save_amount": 50,
-      "duration_days": 16,
+      "duration_days": 17,
       "status": "active"
     },
     {
@@ -1167,7 +1167,7 @@
       "sale_price": 199,
       "discount_percentage": 26.0,
       "save_amount": 70,
-      "duration_days": 16,
+      "duration_days": 17,
       "status": "active"
     },
     {
@@ -1182,7 +1182,7 @@
       "sale_price": 52,
       "discount_percentage": 24.6,
       "save_amount": 17,
-      "duration_days": 16,
+      "duration_days": 17,
       "status": "active"
     },
     {
@@ -1194,10 +1194,10 @@
       "start_date": "2026-06-03",
       "end_date": null,
       "original_price": 199,
-      "sale_price": 159,
-      "discount_percentage": 20.1,
-      "save_amount": 40,
-      "duration_days": 16,
+      "sale_price": 150,
+      "discount_percentage": 24.6,
+      "save_amount": 49,
+      "duration_days": 17,
       "status": "active"
     },
     {
@@ -1227,7 +1227,7 @@
       "sale_price": 49,
       "discount_percentage": 38.0,
       "save_amount": 30,
-      "duration_days": 16,
+      "duration_days": 17,
       "status": "active"
     },
     {
@@ -1242,7 +1242,7 @@
       "sale_price": 749,
       "discount_percentage": 25.0,
       "save_amount": 250,
-      "duration_days": 16,
+      "duration_days": 17,
       "status": "active"
     },
     {
@@ -1257,7 +1257,7 @@
       "sale_price": 614,
       "discount_percentage": 20.2,
       "save_amount": 155,
-      "duration_days": 16,
+      "duration_days": 17,
       "status": "active"
     },
     {
@@ -1272,7 +1272,7 @@
       "sale_price": 139.0,
       "discount_percentage": 30.2,
       "save_amount": 60.0,
-      "duration_days": 16,
+      "duration_days": 17,
       "status": "active"
     },
     {
@@ -1362,7 +1362,7 @@
       "sale_price": 279,
       "discount_percentage": 37.9,
       "save_amount": 170,
-      "duration_days": 9,
+      "duration_days": 10,
       "status": "active"
     },
     {
@@ -1377,7 +1377,7 @@
       "sale_price": 599,
       "discount_percentage": 29.4,
       "save_amount": 250,
-      "duration_days": 9,
+      "duration_days": 10,
       "status": "active"
     },
     {
@@ -1452,7 +1452,7 @@
       "sale_price": 299,
       "discount_percentage": 33.4,
       "save_amount": 150,
-      "duration_days": 9,
+      "duration_days": 10,
       "status": "active"
     },
     {
@@ -1467,7 +1467,7 @@
       "sale_price": 799,
       "discount_percentage": 42.9,
       "save_amount": 600,
-      "duration_days": 9,
+      "duration_days": 10,
       "status": "active"
     },
     {
@@ -1482,7 +1482,7 @@
       "sale_price": 79,
       "discount_percentage": 33.6,
       "save_amount": 40,
-      "duration_days": 9,
+      "duration_days": 10,
       "status": "active"
     },
     {
@@ -1512,7 +1512,7 @@
       "sale_price": 64,
       "discount_percentage": 19.0,
       "save_amount": 15,
-      "duration_days": 9,
+      "duration_days": 10,
       "status": "active"
     },
     {
@@ -1557,7 +1557,7 @@
       "sale_price": 52,
       "discount_percentage": 27.8,
       "save_amount": 20,
-      "duration_days": 6,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -1572,7 +1572,7 @@
       "sale_price": 1199,
       "discount_percentage": 20.0,
       "save_amount": 300,
-      "duration_days": 8,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -1632,7 +1632,7 @@
       "sale_price": 1199,
       "discount_percentage": 20.0,
       "save_amount": 300,
-      "duration_days": 5,
+      "duration_days": 6,
       "status": "active"
     },
     {
@@ -1647,7 +1647,7 @@
       "sale_price": 749,
       "discount_percentage": 25.0,
       "save_amount": 250,
-      "duration_days": 5,
+      "duration_days": 6,
       "status": "active"
     },
     {
@@ -1662,7 +1662,7 @@
       "sale_price": 1279.0,
       "discount_percentage": 20.0,
       "save_amount": 320.0,
-      "duration_days": 5,
+      "duration_days": 6,
       "status": "active"
     },
     {
@@ -1752,7 +1752,7 @@
       "sale_price": 329,
       "discount_percentage": 17.5,
       "save_amount": 70,
-      "duration_days": 4,
+      "duration_days": 5,
       "status": "active"
     },
     {
@@ -1767,7 +1767,7 @@
       "sale_price": 779.0,
       "discount_percentage": 40.0,
       "save_amount": 520.0,
-      "duration_days": 4,
+      "duration_days": 5,
       "status": "active"
     },
     {
@@ -1872,7 +1872,7 @@
       "sale_price": 223.0,
       "discount_percentage": 20.1,
       "save_amount": 56.0,
-      "duration_days": 2,
+      "duration_days": 3,
       "status": "active"
     },
     {
@@ -1887,7 +1887,7 @@
       "sale_price": 384.0,
       "discount_percentage": 30.1,
       "save_amount": 165.0,
-      "duration_days": 2,
+      "duration_days": 3,
       "status": "active"
     },
     {
@@ -1902,7 +1902,7 @@
       "sale_price": 149,
       "discount_percentage": 25.1,
       "save_amount": 50,
-      "duration_days": 2,
+      "duration_days": 3,
       "status": "active"
     },
     {
@@ -1992,7 +1992,7 @@
       "sale_price": 699,
       "discount_percentage": 22.2,
       "save_amount": 200,
-      "duration_days": 2,
+      "duration_days": 3,
       "status": "active"
     },
     {
@@ -2007,7 +2007,7 @@
       "sale_price": 79,
       "discount_percentage": 20.2,
       "save_amount": 20,
-      "duration_days": 2,
+      "duration_days": 3,
       "status": "active"
     },
     {
@@ -2022,7 +2022,7 @@
       "sale_price": 209.0,
       "discount_percentage": 25.1,
       "save_amount": 70.0,
-      "duration_days": 2,
+      "duration_days": 3,
       "status": "active"
     },
     {
@@ -2037,7 +2037,7 @@
       "sale_price": 249,
       "discount_percentage": 24.3,
       "save_amount": 80,
-      "duration_days": 2,
+      "duration_days": 3,
       "status": "active"
     },
     {
@@ -2052,7 +2052,7 @@
       "sale_price": 88,
       "discount_percentage": 40.9,
       "save_amount": 61,
-      "duration_days": 2,
+      "duration_days": 3,
       "status": "active"
     },
     {
@@ -2067,7 +2067,7 @@
       "sale_price": 69,
       "discount_percentage": 30.3,
       "save_amount": 30,
-      "duration_days": 2,
+      "duration_days": 3,
       "status": "active"
     },
     {
@@ -2082,7 +2082,7 @@
       "sale_price": 319,
       "discount_percentage": 20.1,
       "save_amount": 80,
-      "duration_days": 2,
+      "duration_days": 3,
       "status": "active"
     },
     {
@@ -2097,7 +2097,7 @@
       "sale_price": 249,
       "discount_percentage": 24.3,
       "save_amount": 80,
-      "duration_days": 2,
+      "duration_days": 3,
       "status": "active"
     },
     {
@@ -2112,7 +2112,7 @@
       "sale_price": 69,
       "discount_percentage": 30.3,
       "save_amount": 30,
-      "duration_days": 2,
+      "duration_days": 3,
       "status": "active"
     },
     {
@@ -2127,7 +2127,7 @@
       "sale_price": 224,
       "discount_percentage": 10.0,
       "save_amount": 25,
-      "duration_days": 2,
+      "duration_days": 3,
       "status": "active"
     },
     {
@@ -2142,7 +2142,7 @@
       "sale_price": 279,
       "discount_percentage": 20.1,
       "save_amount": 70,
-      "duration_days": 2,
+      "duration_days": 3,
       "status": "active"
     },
     {
@@ -2157,7 +2157,7 @@
       "sale_price": 359.0,
       "discount_percentage": 20.0,
       "save_amount": 90.0,
-      "duration_days": 2,
+      "duration_days": 3,
       "status": "active"
     },
     {
@@ -2172,7 +2172,7 @@
       "sale_price": 160.01,
       "discount_percentage": 30.1,
       "save_amount": 68.99,
-      "duration_days": 2,
+      "duration_days": 3,
       "status": "active"
     },
     {
@@ -2187,7 +2187,7 @@
       "sale_price": 244.01,
       "discount_percentage": 30.1,
       "save_amount": 104.99,
-      "duration_days": 2,
+      "duration_days": 3,
       "status": "active"
     },
     {
@@ -2202,7 +2202,7 @@
       "sale_price": 359,
       "discount_percentage": 20.0,
       "save_amount": 90,
-      "duration_days": 2,
+      "duration_days": 3,
       "status": "active"
     },
     {
@@ -2217,7 +2217,7 @@
       "sale_price": 463,
       "discount_percentage": 20.0,
       "save_amount": 116,
-      "duration_days": 2,
+      "duration_days": 3,
       "status": "active"
     },
     {
@@ -2232,7 +2232,7 @@
       "sale_price": 279,
       "discount_percentage": 20.1,
       "save_amount": 70,
-      "duration_days": 2,
+      "duration_days": 3,
       "status": "active"
     },
     {
@@ -2277,7 +2277,7 @@
       "sale_price": 224,
       "discount_percentage": 10.0,
       "save_amount": 25,
-      "duration_days": 2,
+      "duration_days": 3,
       "status": "active"
     },
     {
@@ -2322,7 +2322,7 @@
       "sale_price": 159,
       "discount_percentage": 11.2,
       "save_amount": 20,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -2337,7 +2337,7 @@
       "sale_price": 199,
       "discount_percentage": 20.1,
       "save_amount": 50,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -2352,7 +2352,7 @@
       "sale_price": 279,
       "discount_percentage": 15.2,
       "save_amount": 50,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -2532,7 +2532,7 @@
       "sale_price": 129,
       "discount_percentage": 31.7,
       "save_amount": 60,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     },
     {
@@ -2547,7 +2547,7 @@
       "sale_price": 199,
       "discount_percentage": 20.1,
       "save_amount": 50,
-      "duration_days": 1,
+      "duration_days": 2,
       "status": "active"
     }
   ],

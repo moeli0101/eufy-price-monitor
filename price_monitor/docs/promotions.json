@@ -297,7 +297,7 @@
       "sale_price": 179,
       "discount_percentage": 40.1,
       "save_amount": 120,
-      "duration_days": 18,
+      "duration_days": 19,
       "status": "active"
     },
     {
@@ -312,7 +312,7 @@
       "sale_price": 1279.0,
       "discount_percentage": 20.0,
       "save_amount": 320.0,
-      "duration_days": 18,
+      "duration_days": 19,
       "status": "active"
     },
     {
@@ -327,7 +327,7 @@
       "sale_price": 1599.0,
       "discount_percentage": 20.0,
       "save_amount": 400.0,
-      "duration_days": 18,
+      "duration_days": 19,
       "status": "active"
     },
     {
@@ -342,7 +342,7 @@
       "sale_price": 899.0,
       "discount_percentage": 30.8,
       "save_amount": 400.0,
-      "duration_days": 17,
+      "duration_days": 18,
       "status": "active"
     },
     {
@@ -372,7 +372,7 @@
       "sale_price": 199.0,
       "discount_percentage": 16.7,
       "save_amount": 40.0,
-      "duration_days": 14,
+      "duration_days": 15,
       "status": "active"
     },
     {
@@ -387,22 +387,7 @@
       "sale_price": 319.0,
       "discount_percentage": 15.8,
       "save_amount": 60.0,
-      "duration_days": 14,
-      "status": "active"
-    },
-    {
-      "product_id": "arlo_arlo_essential_security_camera_kit_with_solar_panel_+_6m_sub",
-      "product_name": "Arlo Essential Security Camera Kit with Solar Panel + 6M Subscription (4 Pack)",
-      "brand": "Arlo",
-      "category": "Security Camera",
-      "url": "https://www.jbhifi.com.au/products/arlo-essential-security-camera-kit-with-solar-panel-6m-subscription-4-pack",
-      "start_date": "2026-06-28",
-      "end_date": null,
-      "original_price": 699,
-      "sale_price": 299,
-      "discount_percentage": 57.2,
-      "save_amount": 400,
-      "duration_days": 3,
+      "duration_days": 15,
       "status": "active"
     }
   ],
@@ -11040,6 +11025,36 @@
       "discount_percentage": 15.9,
       "save_amount": 70,
       "duration_days": 7,
+      "status": "ended"
+    },
+    {
+      "product_id": "arlo_arlo_essential_security_camera_kit_with_solar_panel_+_6m_sub",
+      "product_name": "Arlo Essential Security Camera Kit with Solar Panel + 6M Subscription (4 Pack)",
+      "brand": "Arlo",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/arlo-essential-security-camera-kit-with-solar-panel-6m-subscription-4-pack",
+      "start_date": "2026-06-28",
+      "end_date": "2026-07-02",
+      "original_price": 699,
+      "sale_price": 299,
+      "discount_percentage": 57.2,
+      "save_amount": 400,
+      "duration_days": 3,
+      "status": "ended"
+    },
+    {
+      "product_id": "swann_swann_maxtrak_4k_ai_auto_tracking_long_range_security_camera",
+      "product_name": "Swann MaxTrak 4K AI Auto Tracking Long Range Security Camera System (4 Pack)",
+      "brand": "Swann",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/swann-maxtrak-4k-ai-auto-tracking-long-range-security-camera-system-4-pack",
+      "start_date": "2026-07-02",
+      "end_date": "2026-07-02",
+      "original_price": 1499,
+      "sale_price": 1199,
+      "discount_percentage": 20.0,
+      "save_amount": 300,
+      "duration_days": 1,
       "status": "ended"
     }
   ]

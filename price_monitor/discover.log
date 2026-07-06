@@ -1,11 +1,12 @@
-📋 当前监控产品数: 388
+📋 当前监控产品数: 389
 🔍 开始扫描 JB Hi-Fi 新品...
   [Security Camera] "eufy security camera": 发现 0 个新品
   [Security Camera] "arlo security camera": 发现 0 个新品
-  [Security Camera] "ring security camera": 发现 0 个新品
+  ✅ 新品: [Ring] Ring Pan-Tilt Indoor Security Camera (White)
+  ✅ 新品: [Ring] Ring Floodlight Cam Pro(2nd Gen) Wired Security Camera 
+  [Security Camera] "ring security camera": 发现 2 个新品
   [Security Camera] "swann security camera": 发现 0 个新品
-  ✅ 新品: [TP-Link] Tapo Pan and Tilt Home Security Wi-Fi Camera
-  [Security Camera] "tp-link tapo camera": 发现 1 个新品
+  [Security Camera] "tp-link tapo camera": 发现 0 个新品
   [Security Camera] "google nest cam": 发现 0 个新品
   [Video Doorbell] "video doorbell": 发现 0 个新品
   [Smart Lock] "smart lock": 发现 0 个新品
@@ -15,6 +16,6 @@
   [Baby] "nanit baby monitor": 发现 0 个新品
   [Baby] "owlet baby": 发现 0 个新品
 
-🆕 发现 1 个新品，正在添加...
-✅ 已更新 product_list_fixed.json：389 个产品（+1）
+🆕 发现 2 个新品，正在添加...
+✅ 已更新 product_list_fixed.json：391 个产品（+2）
 📄 新品详情已保存到 new_products_found.json

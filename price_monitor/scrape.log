@@ -1,6 +1,6 @@
 ======================================================================
 🤖 每日价格自动刷新（固定产品列表版）
-⏰ 运行时间: 2026-07-07 19:31:23
+⏰ 运行时间: 2026-07-08 19:03:11
 ======================================================================
 📋 加载固定产品列表: 391 个产品
 
@@ -25,58 +25,55 @@
 
 💰 抓取价格 (391 款)...
   进度: 1/391 | 成功:0 失败:0 成功率:0%
-  进度: 10/391 | 成功:9 失败:0 成功率:100%
-  进度: 20/391 | 成功:16 失败:3 成功率:84%
-  进度: 30/391 | 成功:22 失败:7 成功率:76%
-  进度: 40/391 | 成功:31 失败:8 成功率:79%
-  进度: 50/391 | 成功:39 失败:10 成功率:80%
-  进度: 60/391 | 成功:48 失败:11 成功率:81%
-  进度: 70/391 | 成功:57 失败:12 成功率:83%
-  进度: 80/391 | 成功:63 失败:16 成功率:80%
-  进度: 90/391 | 成功:69 失败:20 成功率:78%
-  进度: 100/391 | 成功:76 失败:23 成功率:77%
-  进度: 110/391 | 成功:84 失败:25 成功率:77%
-  进度: 120/391 | 成功:90 失败:29 成功率:76%
-  进度: 130/391 | 成功:98 失败:31 成功率:76%
-  进度: 140/391 | 成功:106 失败:33 成功率:76%
-  进度: 150/391 | 成功:113 失败:36 成功率:76%
-  进度: 160/391 | 成功:122 失败:37 成功率:77%
-  进度: 170/391 | 成功:129 失败:40 成功率:76%
-  进度: 180/391 | 成功:138 失败:41 成功率:77%
-  进度: 190/391 | 成功:147 失败:42 成功率:78%
-  进度: 200/391 | 成功:156 失败:43 成功率:78%
-  进度: 210/391 | 成功:164 失败:45 成功率:78%
-  进度: 220/391 | 成功:171 失败:48 成功率:78%
-  进度: 230/391 | 成功:180 失败:49 成功率:79%
-  进度: 240/391 | 成功:186 失败:53 成功率:78%
-  进度: 250/391 | 成功:194 失败:55 成功率:78%
-  进度: 260/391 | 成功:196 失败:63 成功率:76%
-  进度: 270/391 | 成功:202 失败:67 成功率:75%
-  进度: 280/391 | 成功:205 失败:74 成功率:73%
-  进度: 290/391 | 成功:206 失败:83 成功率:71%
-  进度: 300/391 | 成功:209 失败:90 成功率:70%
-  进度: 310/391 | 成功:215 失败:94 成功率:70%
-  进度: 320/391 | 成功:222 失败:97 成功率:70%
-  进度: 330/391 | 成功:231 失败:98 成功率:70%
-  进度: 340/391 | 成功:238 失败:101 成功率:70%
-  进度: 350/391 | 成功:248 失败:101 成功率:71%
-  进度: 360/391 | 成功:258 失败:101 成功率:72%
-  进度: 370/391 | 成功:268 失败:101 成功率:73%
-  进度: 380/391 | 成功:278 失败:101 成功率:73%
-  进度: 390/391 | 成功:288 失败:101 成功率:74%
+  进度: 10/391 | 成功:8 失败:1 成功率:89%
+  进度: 20/391 | 成功:15 失败:4 成功率:79%
+  进度: 30/391 | 成功:21 失败:8 成功率:72%
+  进度: 40/391 | 成功:30 失败:9 成功率:77%
+  进度: 50/391 | 成功:38 失败:11 成功率:78%
+  进度: 60/391 | 成功:47 失败:12 成功率:80%
+  进度: 70/391 | 成功:56 失败:13 成功率:81%
+  进度: 80/391 | 成功:62 失败:17 成功率:78%
+  进度: 90/391 | 成功:68 失败:21 成功率:76%
+  进度: 100/391 | 成功:75 失败:24 成功率:76%
+  进度: 110/391 | 成功:83 失败:26 成功率:76%
+  进度: 120/391 | 成功:89 失败:30 成功率:75%
+  进度: 130/391 | 成功:97 失败:32 成功率:75%
+  进度: 140/391 | 成功:105 失败:34 成功率:76%
+  进度: 150/391 | 成功:112 失败:37 成功率:75%
+  进度: 160/391 | 成功:121 失败:38 成功率:76%
+  进度: 170/391 | 成功:128 失败:41 成功率:76%
+  进度: 180/391 | 成功:137 失败:42 成功率:77%
+  进度: 190/391 | 成功:146 失败:43 成功率:77%
+  进度: 200/391 | 成功:155 失败:44 成功率:78%
+  进度: 210/391 | 成功:163 失败:46 成功率:78%
+  进度: 220/391 | 成功:170 失败:49 成功率:78%
+  进度: 230/391 | 成功:179 失败:50 成功率:78%
+  进度: 240/391 | 成功:185 失败:54 成功率:77%
+  进度: 250/391 | 成功:193 失败:56 成功率:78%
+  进度: 260/391 | 成功:195 失败:64 成功率:75%
+  进度: 270/391 | 成功:201 失败:68 成功率:75%
+  进度: 280/391 | 成功:204 失败:75 成功率:73%
+  进度: 290/391 | 成功:205 失败:84 成功率:71%
+  进度: 300/391 | 成功:208 失败:91 成功率:70%
+  进度: 310/391 | 成功:214 失败:95 成功率:69%
+  进度: 320/391 | 成功:221 失败:98 成功率:69%
+  进度: 330/391 | 成功:230 失败:99 成功率:70%
+  进度: 340/391 | 成功:237 失败:102 成功率:70%
+  进度: 350/391 | 成功:247 失败:102 成功率:71%
+  进度: 360/391 | 成功:257 失败:102 成功率:72%
+  进度: 370/391 | 成功:267 失败:102 成功率:72%
+  进度: 380/391 | 成功:277 失败:102 成功率:73%
+  进度: 390/391 | 成功:287 失败:102 成功率:74%
 
 📊 更新历史数据和检测促销...
-✅ 加载历史数据: 380 个产品
-✅ 加载促销记录: 58 活跃, 721 历史
+✅ 加载历史数据: 382 个产品
+✅ 加载促销记录: 71 活跃, 723 历史
   ⚠️  异常价格跳过: eufy V2 Advanced Security Camera Kit $1149 (近期中位价 $609)
   ⚠️  异常价格跳过: eufy E40 Essential Security Camera Kit w $1099.0 (近期中位价 $799.0)
   ⚠️  异常价格跳过: eufy E42 Security Camera Kit (4 Pack) $1499.0 (近期中位价 $999.0)
-  ⚠️  异常价格跳过: eufy E30 Indoor Security Camera $199 (近期中位价 $149)
-  ✅ 促销结束: eufy E30 Indoor Security Camera (持续 14 天)
   ⚠️  异常价格跳过: eufy Security Wireless Dual Camera Doorb $349.0 (近期中位价 $249.0)
   ⚠️  异常价格跳过: eufy E40 Essential Security Camera Kit w $599.0 (近期中位价 $449.0)
   ⚠️  异常价格跳过: eufy SoloCam S340 Security Camera $300 (近期中位价 $449)
-  🔥 新促销: eufy SoloCam S340 Security Camera (33.2% OFF)
   ⚠️  异常价格跳过: eufy Security Solocam S220 (1 Pack) $249 (近期中位价 $179)
   ⚠️  异常价格跳过: eufy Security S330 4G/Wi-Fi Camera $599 (近期中位价 $449)
   ⚠️  异常价格跳过: eufy E40 Essential Add On Security Camer $299 (近期中位价 $229)
@@ -92,30 +89,26 @@
   ⚠️  异常价格跳过: Arlo Pro 6 2K Outdoor Solar Security Cam $869.0 (近期中位价 $494.0)
   ⚠️  异常价格跳过: TP-Link Tapo 3K Solar-Powered Pan & Tilt $249 (近期中位价 $149)
   ⚠️  异常价格跳过: TP-LINK Tapo 2K Pan & Tilt Wi-Fi Securit $109 (近期中位价 $69)
-  🔥 新促销: Arlo Essentials 2K Video Doorbell (2nd Generation) (38.8% OFF)
   ⚠️  异常价格跳过: Uniden SOLO X2K Door Bell Plus $185 (近期中位价 $140)
   ⚠️  异常价格跳过: Swann Buddy 4K Video Doorbell with Chime $299 (近期中位价 $179)
   ⚠️  异常价格跳过: Arlo Essentials Outdoor 2K Security Came $119 (近期中位价 $279.0)
-  🔥 新促销: Arlo Ultra 3 4K Outdoor Security Camera (29.4% OFF)
   ⚠️  异常价格跳过: Ring Wired Video Doorbell Pro Plug-In $249 (近期中位价 $399)
   ⚠️  异常价格跳过: eufy Video Doorbell 2K Wireless with Hom $399.0 (近期中位价 $299.0)
   ⚠️  异常价格跳过: Arlo Ultra 3 4K Outdoor Security Camera  $1299.0 (近期中位价 $779.0)
   ⚠️  异常价格跳过: TP-Link Tapo Smart Floodlight Camera 2K  $208 (近期中位价 $299)
+  🔥 新促销: Swann EVO 2K Indoor WiFi Camera (25.4% OFF)
+  ⚠️  异常价格跳过: Arlo Essentials 2K (3rd Gen) Outdoor Sec $88 (近期中位价 $149)
+  🔥 新促销: Arlo Essentials 2K (3rd Gen) Outdoor Security Camera (40.9% OFF)
   ⚠️  异常价格跳过: Ring Outdoor Cam Pro Plug-In Security Ca $329 (近期中位价 $249)
   ⚠️  异常价格跳过: TP-Link Tapo 3K Indoor/Outdoor Home Secu $99 (近期中位价 $70)
   ⚠️  异常价格跳过: Ring Indoor Cam Plus Plug-In Security Ca $49 (近期中位价 $99)
   ⚠️  异常价格跳过: Swann Xtreem4K WirelessCamera with Solar $269 (近期中位价 $199)
-  ⚠️  异常价格跳过: Swann EVO 2K Pan and Tilt Indoor WiFi Ca $69 (近期中位价 $52)
+  🔥 新促销: Swann EVO 2K Pan and Tilt Indoor WiFi Camera (21.7% OFF)
   ⚠️  异常价格跳过: Arlo Essential Pan & Tilt 2K Outdoor Sec $69 (近期中位价 $119)
-  🔥 新促销: Arlo Essential Pan & Tilt 2K Outdoor Security Camera (42.0% OFF)
   ⚠️  异常价格跳过: Swann 4K AdvancedX Series NVR Security S $999 (近期中位价 $749)
   ⚠️  异常价格跳过: Uniden BW2511 2.8" Baby Monitor $104 (近期中位价 $79)
-  🔥 新促销: Momcozy S9 Pro Wearable Breast Pump (Double) (19.6% OFF)
-  🔥 新促销: Momcozy S9 Pro Wearable Breast Pump (Single) (24.2% OFF)
-  🔥 新促销: Momcozy M5 Wearable Breast Pump (Double) (20.1% OFF)
   ⚠️  异常价格跳过: Nanit Pro Baby Monitor with Floor Stand $799 (近期中位价 $599)
   ⚠️  异常价格跳过: TP-Link Tapo C460 4K Solar-Powered Secur $279 (近期中位价 $189)
-  🔥 新促销: Momcozy KleanPal Pro Baby Bottle Washer (28.1% OFF)
   ⚠️  异常价格跳过: Ring Outdoor Cam Pro POE Security Camera $329 (近期中位价 $249)
   ⚠️  异常价格跳过: Swann EVO 2K Solar Outdoor Security Came $349 (近期中位价 $199)
   ⚠️  异常价格跳过: Swann Elite 6K/12 MP NVR Security Camera $1299 (近期中位价 $974)
@@ -123,10 +116,9 @@
   ⚠️  异常价格跳过: Ring Outdoor Security Camera Plus 2K Bat $169.0 (近期中位价 $329.0)
   ⚠️  异常价格跳过: Ring Outdoor Security Camera Plus 2K Bat $249.0 (近期中位价 $479.0)
   ⚠️  异常价格跳过: Ring Outdoor Security Camera [Stick Up C $71 (近期中位价 $149)
-  ⚠️  异常价格跳过: Swann MaxTrak 4K AI Auto Tracking Long R $799 (近期中位价 $1199)
+  ⚠️  异常价格跳过: Swann MaxTrak 4K AI Auto Tracking Long R $799 (近期中位价 $1499)
   ⚠️  异常价格跳过: Ring Wired Video Doorbell 2nd Gen Plug-i $69 (近期中位价 $99)
   ⚠️  异常价格跳过: Uniden App Cam X25 PT Indoor 2k Super HD $72 (近期中位价 $52)
-  🔥 新促销: Momcozy Portable Baby Sound Machine (19.0% OFF)
   ⚠️  异常价格跳过: Nanit Breathing Wear Band 3-12m [Medium] $25 (近期中位价 $17.99)
   ⚠️  跳过错误页面产品: There was a problem loading this website
   🔥 新促销: There was a problem loading this website (33.6% OFF)
@@ -136,24 +128,18 @@
   ⚠️  异常价格跳过: eufy Security eufyCam 2C Pro 2K Wireless $449.0 (近期中位价 $249.0)
   ⚠️  异常价格跳过: eufy Security eufyCam 2C Pro 2K Wireless $629.0 (近期中位价 $249.0)
   ⚠️  异常价格跳过: Reolink 4K PTZ PoE Security Camera with  $349.99 (近期中位价 $499.99)
+  🔥 新促销: Swann 4K MaxRanger Mini Kit [4 Pack] (27.8% OFF)
   ⚠️  异常价格跳过: Swann MaxRanger4K with Long Range Wirele $949 (近期中位价 $598)
   ⚠️  异常价格跳过: Reolink CX810 4K HDR ColorX True Color N $128.99 (近期中位价 $189.99)
-  🔥 新促销: Momcozy Portable Breast Milk & Water Warmer for Travel (20.3% OFF)
-  🔥 新促销: Momcozy Portable Sound Machine with Night Light (20.4% OFF)
-  🔥 新促销: Momcozy Portable Breast Milk Cooler (20.1% OFF)
-  🔥 新促销: Momcozy Breastmilk Bags (50 Pack) (23.5% OFF)
-  新产品: Ring Pan-Tilt Indoor Security Camera (White)
-  🔥 新促销: Ring Pan-Tilt Indoor Security Camera (White) (53.5% OFF)
-  新产品: Ring Floodlight Cam Pro(2nd Gen) Wired Security Camera (Black)
 ✅ 历史数据已保存: 382 个产品
 ✅ 促销记录已保存
   历史记录: 382 个产品
-  促销中: 53 款
+  促销中: 57 款
 
 ======================================================================
 ✅ 完成！
-  成功: 290/391 (74%)
-  失败: 101 款
+  成功: 289/391 (74%)
+  失败: 102 款
   数据已保存到: price_results_latest.json
 ======================================================================
 

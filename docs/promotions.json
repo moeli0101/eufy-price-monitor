@@ -252,7 +252,7 @@
       "sale_price": 199.0,
       "discount_percentage": 16.7,
       "save_amount": 40.0,
-      "duration_days": 26,
+      "duration_days": 27,
       "status": "active"
     },
     {
@@ -267,67 +267,7 @@
       "sale_price": 319.0,
       "discount_percentage": 15.8,
       "save_amount": 60.0,
-      "duration_days": 26,
-      "status": "active"
-    },
-    {
-      "product_id": "ring_ring_indoor_cam_[2nd_gen]_white",
-      "product_name": "Ring Indoor Cam [2nd Gen](White)",
-      "brand": "Ring",
-      "category": "Security Camera",
-      "url": "https://www.jbhifi.com.au/products/ring-indoor-cam-2nd-genwhite",
-      "start_date": "2026-07-06",
-      "end_date": null,
-      "original_price": 79,
-      "sale_price": 37,
-      "discount_percentage": 53.2,
-      "save_amount": 42,
-      "duration_days": 7,
-      "status": "active"
-    },
-    {
-      "product_id": "tp-link_tp_link_tapo_2k_3mp_smart_wire_free_security_system_4_pack",
-      "product_name": "TP-Link Tapo 2K 3MP Smart Wire-Free Security System (4-pack)",
-      "brand": "TP-Link",
-      "category": "Security Camera",
-      "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-3mp-smart-wire-free-security-system-4-pack",
-      "start_date": "2026-07-06",
-      "end_date": null,
-      "original_price": 429.0,
-      "sale_price": 348.0,
-      "discount_percentage": 18.9,
-      "save_amount": 81.0,
-      "duration_days": 7,
-      "status": "active"
-    },
-    {
-      "product_id": "tp-link_tp_link_tapo_2k_smart_video_doorbell_mini",
-      "product_name": "TP-Link Tapo 2K Smart Video Doorbell Mini",
-      "brand": "TP-Link",
-      "category": "Video Doorbell",
-      "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-smart-video-doorbell-mini",
-      "start_date": "2026-07-06",
-      "end_date": null,
-      "original_price": 99,
-      "sale_price": 83,
-      "discount_percentage": 16.2,
-      "save_amount": 16,
-      "duration_days": 7,
-      "status": "active"
-    },
-    {
-      "product_id": "tp-link_tp_link_tapo_2k_smart_video_doorbell",
-      "product_name": "TP-Link Tapo 2K Smart Video Doorbell",
-      "brand": "TP-Link",
-      "category": "Video Doorbell",
-      "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-smart-video-doorbell",
-      "start_date": "2026-07-06",
-      "end_date": null,
-      "original_price": 149,
-      "sale_price": 120,
-      "discount_percentage": 19.5,
-      "save_amount": 29,
-      "duration_days": 7,
+      "duration_days": 27,
       "status": "active"
     },
     {
@@ -342,7 +282,7 @@
       "sale_price": 183,
       "discount_percentage": 20.1,
       "save_amount": 46,
-      "duration_days": 8,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -357,7 +297,7 @@
       "sale_price": 208,
       "discount_percentage": 30.4,
       "save_amount": 91,
-      "duration_days": 8,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -372,7 +312,7 @@
       "sale_price": 158,
       "discount_percentage": 20.6,
       "save_amount": 41,
-      "duration_days": 8,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -387,7 +327,7 @@
       "sale_price": 98,
       "discount_percentage": 17.6,
       "save_amount": 21,
-      "duration_days": 8,
+      "duration_days": 9,
       "status": "active"
     },
     {
@@ -402,7 +342,7 @@
       "sale_price": 44,
       "discount_percentage": 25.4,
       "save_amount": 15,
-      "duration_days": 6,
+      "duration_days": 7,
       "status": "active"
     },
     {
@@ -417,7 +357,7 @@
       "sale_price": 54,
       "discount_percentage": 21.7,
       "save_amount": 15,
-      "duration_days": 6,
+      "duration_days": 7,
       "status": "active"
     },
     {
@@ -432,7 +372,7 @@
       "sale_price": 649.0,
       "discount_percentage": 27.8,
       "save_amount": 250.0,
-      "duration_days": 6,
+      "duration_days": 7,
       "status": "active"
     }
   ],
@@ -12045,6 +11985,66 @@
       "discount_percentage": 53.5,
       "save_amount": 53,
       "duration_days": 6,
+      "status": "ended"
+    },
+    {
+      "product_id": "ring_ring_indoor_cam_[2nd_gen]_white",
+      "product_name": "Ring Indoor Cam [2nd Gen](White)",
+      "brand": "Ring",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/ring-indoor-cam-2nd-genwhite",
+      "start_date": "2026-07-06",
+      "end_date": "2026-07-14",
+      "original_price": 79,
+      "sale_price": 37,
+      "discount_percentage": 53.2,
+      "save_amount": 42,
+      "duration_days": 7,
+      "status": "ended"
+    },
+    {
+      "product_id": "tp-link_tp_link_tapo_2k_3mp_smart_wire_free_security_system_4_pack",
+      "product_name": "TP-Link Tapo 2K 3MP Smart Wire-Free Security System (4-pack)",
+      "brand": "TP-Link",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-3mp-smart-wire-free-security-system-4-pack",
+      "start_date": "2026-07-06",
+      "end_date": "2026-07-14",
+      "original_price": 429.0,
+      "sale_price": 348.0,
+      "discount_percentage": 18.9,
+      "save_amount": 81.0,
+      "duration_days": 7,
+      "status": "ended"
+    },
+    {
+      "product_id": "tp-link_tp_link_tapo_2k_smart_video_doorbell_mini",
+      "product_name": "TP-Link Tapo 2K Smart Video Doorbell Mini",
+      "brand": "TP-Link",
+      "category": "Video Doorbell",
+      "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-smart-video-doorbell-mini",
+      "start_date": "2026-07-06",
+      "end_date": "2026-07-14",
+      "original_price": 99,
+      "sale_price": 83,
+      "discount_percentage": 16.2,
+      "save_amount": 16,
+      "duration_days": 7,
+      "status": "ended"
+    },
+    {
+      "product_id": "tp-link_tp_link_tapo_2k_smart_video_doorbell",
+      "product_name": "TP-Link Tapo 2K Smart Video Doorbell",
+      "brand": "TP-Link",
+      "category": "Video Doorbell",
+      "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-smart-video-doorbell",
+      "start_date": "2026-07-06",
+      "end_date": "2026-07-14",
+      "original_price": 149,
+      "sale_price": 120,
+      "discount_percentage": 19.5,
+      "save_amount": 29,
+      "duration_days": 7,
       "status": "ended"
     }
   ]

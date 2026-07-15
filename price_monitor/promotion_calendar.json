@@ -102,6 +102,13 @@
         "original_price": 279.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 279.0,
+        "original_price": 279.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -314,6 +321,13 @@
         "original_price": 1999.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 1599.0,
+        "original_price": 1999.0,
+        "is_sale": true,
+        "discount": 20
       }
     }
   },
@@ -420,6 +434,13 @@
         "original_price": 1299.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 1099.0,
+        "original_price": 1299.0,
+        "is_sale": true,
+        "discount": 15
       }
     }
   },
@@ -526,6 +547,13 @@
         "original_price": 149,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 129,
+        "original_price": 149,
+        "is_sale": true,
+        "discount": 13
       }
     }
   },
@@ -534,7 +562,15 @@
     "brand": "eufy",
     "category": "Security Camera",
     "url": "https://www.jbhifi.com.au/products/eufy-e40-essential-security-camera-kit-with-homebase-2-4-pack",
-    "days": {}
+    "days": {
+      "15": {
+        "date": "2026-07-15",
+        "price": 699.0,
+        "original_price": 1099.0,
+        "is_sale": true,
+        "discount": 36
+      }
+    }
   },
   "eufy_eufy_e42_security_camera_kit_4_pack": {
     "product_name": "eufy E42 Security Camera Kit (4 Pack)",
@@ -555,14 +591,30 @@
     "brand": "eufy",
     "category": "Video Doorbell",
     "url": "https://www.jbhifi.com.au/products/eufy-security-wireless-dual-camera-doorbell-2k-add-on",
-    "days": {}
+    "days": {
+      "15": {
+        "date": "2026-07-15",
+        "price": 279.0,
+        "original_price": 349.0,
+        "is_sale": true,
+        "discount": 20
+      }
+    }
   },
   "eufy_eufy_e40_essential_security_camera_kit_with_homebase_2_2_pac": {
     "product_name": "eufy E40 Essential Security Camera Kit with Homebase 2 (2 Pack)",
     "brand": "eufy",
     "category": "Security Camera",
     "url": "https://www.jbhifi.com.au/products/eufy-e40-essential-security-camera-kit-with-homebase-2-2-pack",
-    "days": {}
+    "days": {
+      "15": {
+        "date": "2026-07-15",
+        "price": 379.0,
+        "original_price": 449.01,
+        "is_sale": true,
+        "discount": 16
+      }
+    }
   },
   "eufy_eufy_solocam_s340_security_camera": {
     "product_name": "eufy SoloCam S340 Security Camera",
@@ -621,6 +673,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 449,
+        "original_price": 449,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 449,
         "original_price": 449,
         "is_sale": false,
@@ -727,6 +786,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 299,
+        "original_price": 299,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 299,
         "original_price": 299,
         "is_sale": false,
@@ -840,6 +906,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 1899.0,
+        "original_price": 1899.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 1899.0,
         "original_price": 1899.0,
         "is_sale": false,
@@ -964,6 +1037,13 @@
         "original_price": 999.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 999.0,
+        "original_price": 999.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -1070,6 +1150,13 @@
         "original_price": 2499,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 2499,
+        "original_price": 2499,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -1085,7 +1172,15 @@
     "brand": "eufy",
     "category": "Security Camera",
     "url": "https://www.jbhifi.com.au/products/eufy-security-s330-4g-wi-fi-camera",
-    "days": {}
+    "days": {
+      "15": {
+        "date": "2026-07-15",
+        "price": 499,
+        "original_price": 599,
+        "is_sale": true,
+        "discount": 17
+      }
+    }
   },
   "eufy_eufy_security_s350_indoor_camera": {
     "product_name": "eufy Security S350 Indoor Camera",
@@ -1190,6 +1285,13 @@
         "original_price": 279,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 279,
+        "original_price": 279,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -1198,7 +1300,15 @@
     "brand": "eufy",
     "category": "Security Camera",
     "url": "https://www.jbhifi.com.au/products/eufy-e40-essential-add-on-security-camera",
-    "days": {}
+    "days": {
+      "15": {
+        "date": "2026-07-15",
+        "price": 199,
+        "original_price": 229.0,
+        "is_sale": true,
+        "discount": 13
+      }
+    }
   },
   "eufy_eufy_s4_nvr_poe_ptz_add_on_security_camera": {
     "product_name": "eufy S4 NVR POE PTZ Add-on Security Camera",
@@ -1243,6 +1353,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 449,
+        "original_price": 449,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 449,
         "original_price": 449,
         "is_sale": false,
@@ -1360,6 +1477,13 @@
         "original_price": 799.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 799.0,
+        "original_price": 799.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -1466,6 +1590,13 @@
         "original_price": 449,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 409,
+        "original_price": 449,
+        "is_sale": true,
+        "discount": 9
       }
     }
   },
@@ -1579,6 +1710,13 @@
         "original_price": 349,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 349,
+        "original_price": 349,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -1587,7 +1725,15 @@
     "brand": "eufy",
     "category": "Security Camera",
     "url": "https://www.jbhifi.com.au/products/eufy-security-2k-indoor-pan-tilt-camera",
-    "days": {}
+    "days": {
+      "15": {
+        "date": "2026-07-15",
+        "price": 99,
+        "original_price": 139,
+        "is_sale": true,
+        "discount": 29
+      }
+    }
   },
   "eufy_eufy_s340_solocam_security_camera_with_homebase_2_pack": {
     "product_name": "eufy S340 SOLOCAM Security Camera with Homebase (2 Pack)",
@@ -1692,6 +1838,13 @@
         "original_price": 1649,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 1319,
+        "original_price": 1649,
+        "is_sale": true,
+        "discount": 20
       }
     }
   },
@@ -1787,6 +1940,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 699,
+        "original_price": 699.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 699,
         "original_price": 699.0,
         "is_sale": false,
@@ -2095,6 +2255,13 @@
         "original_price": 99.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 99,
+        "original_price": 99.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -2194,6 +2361,13 @@
         "original_price": 399,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 399,
+        "original_price": 399,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -2240,6 +2414,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 79,
+        "original_price": 79.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 79,
         "original_price": 79.0,
         "is_sale": false,
@@ -2350,6 +2531,13 @@
         "original_price": 59,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 59,
+        "original_price": 59,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -2445,6 +2633,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 429.0,
+        "original_price": 429.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 429.0,
         "original_price": 429.0,
         "is_sale": false,
@@ -2555,6 +2750,13 @@
         "original_price": 149,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 149,
+        "original_price": 149,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -2650,6 +2852,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 249.0,
+        "original_price": 249.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 249.0,
         "original_price": 249.0,
         "is_sale": false,
@@ -2760,6 +2969,13 @@
         "original_price": 399,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 399,
+        "original_price": 399,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -2820,6 +3036,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 1299.0,
+        "original_price": 1299.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 1299.0,
         "original_price": 1299.0,
         "is_sale": false,
@@ -2930,6 +3153,13 @@
         "original_price": 199.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 199,
+        "original_price": 199.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -2990,6 +3220,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 99,
+        "original_price": 99,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 99,
         "original_price": 99,
         "is_sale": false,
@@ -3093,6 +3330,13 @@
         "original_price": 189.99,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 189.99,
+        "original_price": 189.99,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -3160,6 +3404,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 149,
+        "original_price": 149,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 149,
         "original_price": 149,
         "is_sale": false,
@@ -3263,6 +3514,13 @@
         "original_price": 149.95,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 149.95,
+        "original_price": 149.95,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -3362,6 +3620,13 @@
         "original_price": 899,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 799,
+        "original_price": 899,
+        "is_sale": true,
+        "discount": 11
       }
     }
   },
@@ -3448,7 +3713,15 @@
     "brand": "Other",
     "category": "Smart Lock",
     "url": "https://www.jbhifi.com.au/products/kaadas-s10-5w-slim-narrow-stile-wifi-smart-lock-black",
-    "days": {}
+    "days": {
+      "15": {
+        "date": "2026-07-15",
+        "price": 299,
+        "original_price": 299.0,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
   },
   "eufy_eufy_c34_smart_lock": {
     "product_name": "eufy C34 Smart Lock",
@@ -3546,6 +3819,13 @@
         "original_price": 249,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 199,
+        "original_price": 249,
+        "is_sale": true,
+        "discount": 20
       }
     }
   },
@@ -3641,6 +3921,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 249,
+        "original_price": 249.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 249,
         "original_price": 249.0,
         "is_sale": false,
@@ -3744,6 +4031,13 @@
         "original_price": 449.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 449,
+        "original_price": 449.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -3839,6 +4133,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 139,
+        "original_price": 179.0,
+        "is_sale": true,
+        "discount": 22
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 139,
         "original_price": 179.0,
         "is_sale": true,
@@ -3942,6 +4243,13 @@
         "original_price": 169.0,
         "is_sale": true,
         "discount": 18
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 139,
+        "original_price": 169.0,
+        "is_sale": true,
+        "discount": 18
       }
     }
   },
@@ -4041,6 +4349,13 @@
         "original_price": 99.95,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 99.95,
+        "original_price": 99.95,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -4136,6 +4451,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 299,
+        "original_price": 299.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 299,
         "original_price": 299.0,
         "is_sale": false,
@@ -4249,6 +4571,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 349,
+        "original_price": 349.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 349,
         "original_price": 349.0,
         "is_sale": false,
@@ -4373,6 +4702,13 @@
         "original_price": 99,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 99,
+        "original_price": 99,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -4416,6 +4752,13 @@
         "original_price": 429.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 429.0,
+        "original_price": 429.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -4438,7 +4781,15 @@
     "brand": "Arlo",
     "category": "Security Camera",
     "url": "https://www.jbhifi.com.au/products/arlo-pro-6-2k-outdoor-solar-security-camera-kit-12m-subscription4-pack",
-    "days": {}
+    "days": {
+      "15": {
+        "date": "2026-07-15",
+        "price": 499.0,
+        "original_price": 869.0,
+        "is_sale": true,
+        "discount": 43
+      }
+    }
   },
   "ring_ring_stick_up_cam_pro_plug_in_white": {
     "product_name": "Ring Stick Up Cam Pro Plug-in (White)",
@@ -4539,6 +4890,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 214,
+        "original_price": 299.0,
+        "is_sale": true,
+        "discount": 28
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 214,
         "original_price": 299.0,
         "is_sale": true,
@@ -4656,6 +5014,13 @@
         "original_price": 239,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 239,
+        "original_price": 239,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -4762,6 +5127,13 @@
         "original_price": 549.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 549,
+        "original_price": 549.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -4852,6 +5224,13 @@
         "date": "2026-07-14",
         "price": 139,
         "original_price": 139,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 149,
+        "original_price": 149,
         "is_sale": false,
         "discount": 0
       }
@@ -5003,6 +5382,13 @@
         "original_price": 1699.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 1349.0,
+        "original_price": 1699.0,
+        "is_sale": true,
+        "discount": 21
       }
     }
   },
@@ -5105,6 +5491,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 39,
+        "original_price": 39.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 39,
         "original_price": 39.0,
         "is_sale": false,
@@ -5215,6 +5608,13 @@
         "original_price": 299,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 249,
+        "original_price": 299,
+        "is_sale": true,
+        "discount": 17
       }
     }
   },
@@ -5268,6 +5668,13 @@
       },
       "12": {
         "date": "2026-07-12",
+        "price": 79,
+        "original_price": 129,
+        "is_sale": true,
+        "discount": 39
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 79,
         "original_price": 129,
         "is_sale": true,
@@ -5378,6 +5785,13 @@
         "original_price": 169.99,
         "is_sale": true,
         "discount": 10
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 152.99,
+        "original_price": 169.99,
+        "is_sale": true,
+        "discount": 10
       }
     }
   },
@@ -5484,6 +5898,13 @@
         "original_price": 169.99,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 169.99,
+        "original_price": 169.99,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -5583,6 +6004,13 @@
         "original_price": 499.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 449.0,
+        "original_price": 499.0,
+        "is_sale": true,
+        "discount": 10
       }
     }
   },
@@ -5689,6 +6117,13 @@
         "original_price": 149,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 129,
+        "original_price": 149,
+        "is_sale": true,
+        "discount": 13
       }
     }
   },
@@ -5791,6 +6226,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 499,
+        "original_price": 499,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 499,
         "original_price": 499,
         "is_sale": false,
@@ -5923,6 +6365,13 @@
         "original_price": 849.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 849,
+        "original_price": 849.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -6029,6 +6478,13 @@
         "original_price": 279.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 279.0,
+        "original_price": 279.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -6110,6 +6566,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 183,
+        "original_price": 189.0,
+        "is_sale": true,
+        "discount": 3
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 183,
         "original_price": 189.0,
         "is_sale": true,
@@ -6263,6 +6726,13 @@
         "original_price": 349,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 349,
+        "original_price": 349,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -6365,6 +6835,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 249,
+        "original_price": 249.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 249,
         "original_price": 249.0,
         "is_sale": false,
@@ -6475,6 +6952,13 @@
         "original_price": 699,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 548,
+        "original_price": 699,
+        "is_sale": true,
+        "discount": 22
       }
     }
   },
@@ -6588,6 +7072,13 @@
         "original_price": 99.95,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 99.95,
+        "original_price": 99.95,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -6596,7 +7087,15 @@
     "brand": "Other",
     "category": "Smart Lock",
     "url": "https://www.jbhifi.com.au/products/kaadas-k9-push-pull-fingerprint-wifi-smart-lock-black",
-    "days": {}
+    "days": {
+      "15": {
+        "date": "2026-07-15",
+        "price": 489,
+        "original_price": 489.0,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
   },
   "other_auslock_g2_wi_fi_smart_lock_gateway": {
     "product_name": "Auslock G2 Wi-Fi Smart Lock Gateway",
@@ -6708,6 +7207,13 @@
         "original_price": 99.95,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 99.95,
+        "original_price": 99.95,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -6810,6 +7316,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 895,
+        "original_price": 895.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 895,
         "original_price": 895.0,
         "is_sale": false,
@@ -6927,6 +7440,13 @@
         "original_price": 99.95,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 99.95,
+        "original_price": 99.95,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -7033,6 +7553,13 @@
         "original_price": 339.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 339,
+        "original_price": 339.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -7135,6 +7662,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 149,
+        "original_price": 149.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 149,
         "original_price": 149.0,
         "is_sale": false,
@@ -7252,6 +7786,13 @@
         "original_price": 479.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 479,
+        "original_price": 479.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -7260,7 +7801,15 @@
     "brand": "Other",
     "category": "Smart Lock",
     "url": "https://www.jbhifi.com.au/products/kaadas-k9-push-pull-fingerprint-wifi-smart-lock-copper",
-    "days": {}
+    "days": {
+      "15": {
+        "date": "2026-07-15",
+        "price": 489,
+        "original_price": 489.0,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
   },
   "other_aqara_smart_door_lock_a100": {
     "product_name": "Aqara Smart Door Lock A100",
@@ -7361,6 +7910,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 399,
+        "original_price": 449.0,
+        "is_sale": true,
+        "discount": 11
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 399,
         "original_price": 449.0,
         "is_sale": true,
@@ -7471,6 +8027,13 @@
         "original_price": 579.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 579,
+        "original_price": 579.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -7573,6 +8136,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 299,
+        "original_price": 299.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 299,
         "original_price": 299.0,
         "is_sale": false,
@@ -7747,6 +8317,13 @@
         "original_price": 179.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 179,
+        "original_price": 179.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -7910,6 +8487,13 @@
         "original_price": 279,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 279,
+        "original_price": 279,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -7977,6 +8561,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 119.0,
+        "original_price": 119.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 119.0,
         "original_price": 119.0,
         "is_sale": false,
@@ -8087,6 +8678,13 @@
         "original_price": 374.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 374.0,
+        "original_price": 374.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -8147,6 +8745,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 399,
+        "original_price": 399,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 399,
         "original_price": 399,
         "is_sale": false,
@@ -8264,6 +8869,13 @@
         "original_price": 149.99,
         "is_sale": true,
         "discount": 10
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 134.99,
+        "original_price": 149.99,
+        "is_sale": true,
+        "discount": 10
       }
     }
   },
@@ -8272,7 +8884,15 @@
     "brand": "Other",
     "category": "Smart Lock",
     "url": "https://www.jbhifi.com.au/products/kaadas-q15-5wk-push-pull-wi-fi-smart-lock-matte-black",
-    "days": {}
+    "days": {
+      "15": {
+        "date": "2026-07-15",
+        "price": 319,
+        "original_price": 319.0,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
   },
   "yale_yale_byyou_pro_smart_mortice_lock": {
     "product_name": "Yale ByYou Pro Smart Mortice Lock",
@@ -8373,6 +8993,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 699,
+        "original_price": 699,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 699,
         "original_price": 699,
         "is_sale": false,
@@ -8483,6 +9110,13 @@
         "original_price": 349,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 279,
+        "original_price": 349,
+        "is_sale": true,
+        "discount": 20
       }
     }
   },
@@ -8491,7 +9125,15 @@
     "brand": "Arlo",
     "category": "Security Camera",
     "url": "https://www.jbhifi.com.au/products/arlo-ultra-3-4k-outdoor-security-camera-kit-12m-subscription-4-pack",
-    "days": {}
+    "days": {
+      "15": {
+        "date": "2026-07-15",
+        "price": 849.0,
+        "original_price": 1299.0,
+        "is_sale": true,
+        "discount": 35
+      }
+    }
   },
   "arlo_arlo_essential_indoor_camera": {
     "product_name": "Arlo Essential Indoor Camera",
@@ -8774,6 +9416,13 @@
         "original_price": 69,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 69,
+        "original_price": 69,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -8930,6 +9579,13 @@
         "original_price": 59,
         "is_sale": true,
         "discount": 25
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 44,
+        "original_price": 59,
+        "is_sale": true,
+        "discount": 25
       }
     }
   },
@@ -9036,6 +9692,13 @@
         "original_price": 598.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 598,
+        "original_price": 598.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -9114,6 +9777,13 @@
         "original_price": 149.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 119,
+        "original_price": 149,
+        "is_sale": true,
+        "discount": 20
       }
     }
   },
@@ -9216,6 +9886,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 199.0,
+        "original_price": 199.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 199.0,
         "original_price": 199.0,
         "is_sale": false,
@@ -9326,6 +10003,13 @@
         "original_price": 99.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 99,
+        "original_price": 99.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -9432,6 +10116,13 @@
         "original_price": 399,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 399,
+        "original_price": 399,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -9534,6 +10225,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 129,
+        "original_price": 129.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 129,
         "original_price": 129.0,
         "is_sale": false,
@@ -9651,6 +10349,13 @@
         "original_price": 219.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 219.0,
+        "original_price": 219.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -9757,6 +10462,13 @@
         "original_price": 89,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 89,
+        "original_price": 89,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -9810,6 +10522,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 129.0,
+        "original_price": 129.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 129.0,
         "original_price": 129.0,
         "is_sale": false,
@@ -9916,6 +10635,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 1499,
+        "original_price": 1499,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 1499,
         "original_price": 1499,
         "is_sale": false,
@@ -10033,6 +10759,13 @@
         "original_price": 249,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 249,
+        "original_price": 249,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -10086,6 +10819,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 99,
+        "original_price": 99.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 99,
         "original_price": 99.0,
         "is_sale": false,
@@ -10203,6 +10943,13 @@
         "original_price": 1499,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 1499,
+        "original_price": 1499,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -10263,6 +11010,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 54,
+        "original_price": 69,
+        "is_sale": true,
+        "discount": 22
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 54,
         "original_price": 69,
         "is_sale": true,
@@ -10380,6 +11134,13 @@
         "original_price": 249,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 249,
+        "original_price": 249,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -10486,6 +11247,13 @@
         "original_price": 349,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 279,
+        "original_price": 349,
+        "is_sale": true,
+        "discount": 20
       }
     }
   },
@@ -10592,6 +11360,13 @@
         "original_price": 449.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 379.0,
+        "original_price": 449.0,
+        "is_sale": true,
+        "discount": 16
       }
     }
   },
@@ -10903,6 +11678,13 @@
         "original_price": 449,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 359,
+        "original_price": 449,
+        "is_sale": true,
+        "discount": 20
       }
     }
   },
@@ -11009,6 +11791,13 @@
         "original_price": 579,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 463,
+        "original_price": 579,
+        "is_sale": true,
+        "discount": 20
       }
     }
   },
@@ -11115,6 +11904,13 @@
         "original_price": 349,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 349,
+        "original_price": 349,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -11175,6 +11971,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 119,
+        "original_price": 119.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 119,
         "original_price": 119.0,
         "is_sale": false,
@@ -11285,6 +12088,13 @@
         "original_price": 129.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 129,
+        "original_price": 129.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -11363,6 +12173,13 @@
         "original_price": 199,
         "is_sale": true,
         "discount": 21
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 158,
+        "original_price": 199,
+        "is_sale": true,
+        "discount": 21
       }
     }
   },
@@ -11371,7 +12188,15 @@
     "brand": "Swann",
     "category": "Security Camera",
     "url": "https://www.jbhifi.com.au/products/swann-4k-advancedx-series-nvr-security-system-6-camera-kit",
-    "days": {}
+    "days": {
+      "15": {
+        "date": "2026-07-15",
+        "price": 799.0,
+        "original_price": 999.0,
+        "is_sale": true,
+        "discount": 20
+      }
+    }
   },
   "other_auslock_h11b_fingerprint_bluetooth_wi_fi_smart_door_locks": {
     "product_name": "Auslock H11B Fingerprint Bluetooth Wi-Fi Smart Door Locks",
@@ -11472,6 +12297,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 449,
+        "original_price": 449.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 449,
         "original_price": 449.0,
         "is_sale": false,
@@ -11582,6 +12414,13 @@
         "original_price": 179,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 179,
+        "original_price": 179,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -11684,6 +12523,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 249,
+        "original_price": 249.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 249,
         "original_price": 249.0,
         "is_sale": false,
@@ -11794,6 +12640,13 @@
         "original_price": 249,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 199,
+        "original_price": 249,
+        "is_sale": true,
+        "discount": 20
       }
     }
   },
@@ -11896,6 +12749,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 99,
+        "original_price": 99.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 99,
         "original_price": 99.0,
         "is_sale": false,
@@ -12020,6 +12880,13 @@
         "original_price": 329,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 279,
+        "original_price": 329,
+        "is_sale": true,
+        "discount": 15
       }
     }
   },
@@ -12122,6 +12989,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 239,
+        "original_price": 239,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 239,
         "original_price": 239,
         "is_sale": false,
@@ -12232,6 +13106,13 @@
         "original_price": 179.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 149,
+        "original_price": 179,
+        "is_sale": true,
+        "discount": 17
       }
     }
   },
@@ -12338,6 +13219,13 @@
         "original_price": 499,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 499,
+        "original_price": 499,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -12440,6 +13328,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 499,
+        "original_price": 499,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 499,
         "original_price": 499,
         "is_sale": false,
@@ -12557,6 +13452,13 @@
         "original_price": 249.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 249,
+        "original_price": 249.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -12663,6 +13565,13 @@
         "original_price": 79.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 79,
+        "original_price": 79.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -12758,6 +13667,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 149,
+        "original_price": 149.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 149,
         "original_price": 149.0,
         "is_sale": false,
@@ -12861,6 +13777,13 @@
         "original_price": 179,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 179,
+        "original_price": 179,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -12956,6 +13879,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 79,
+        "original_price": 79.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 79,
         "original_price": 79.0,
         "is_sale": false,
@@ -13059,6 +13989,13 @@
         "original_price": 299.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 249.0,
+        "original_price": 299.0,
+        "is_sale": true,
+        "discount": 17
       }
     }
   },
@@ -13158,6 +14095,13 @@
         "original_price": 74,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 59,
+        "original_price": 74,
+        "is_sale": true,
+        "discount": 20
       }
     }
   },
@@ -13253,6 +14197,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 599,
+        "original_price": 599.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 599,
         "original_price": 599.0,
         "is_sale": false,
@@ -13441,6 +14392,13 @@
         "original_price": 189.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 155.0,
+        "original_price": 189.0,
+        "is_sale": true,
+        "discount": 18
       }
     }
   },
@@ -13536,6 +14494,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 404,
+        "original_price": 404,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 404,
         "original_price": 404,
         "is_sale": false,
@@ -13653,6 +14618,13 @@
         "original_price": 239.0,
         "is_sale": true,
         "discount": 17
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 239.0,
+        "original_price": 239.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -13748,6 +14720,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 299,
+        "original_price": 299,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 299,
         "original_price": 299,
         "is_sale": false,
@@ -13858,6 +14837,13 @@
         "original_price": 379.0,
         "is_sale": true,
         "discount": 16
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 379.0,
+        "original_price": 379.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -13971,6 +14957,13 @@
         "original_price": 499,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 499,
+        "original_price": 499,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -14070,6 +15063,13 @@
         "original_price": 699,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 699,
+        "original_price": 699,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -14165,6 +15165,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 149,
+        "original_price": 149.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 149,
         "original_price": 149.0,
         "is_sale": false,
@@ -14282,6 +15289,13 @@
         "original_price": 199.0,
         "is_sale": true,
         "discount": 10
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 179,
+        "original_price": 199.0,
+        "is_sale": true,
+        "discount": 10
       }
     }
   },
@@ -14377,6 +15391,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 299,
+        "original_price": 299,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 299,
         "original_price": 299,
         "is_sale": false,
@@ -14572,6 +15593,13 @@
         "original_price": 167,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 144,
+        "original_price": 167,
+        "is_sale": true,
+        "discount": 14
       }
     }
   },
@@ -14671,6 +15699,13 @@
         "original_price": 279.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 279,
+        "original_price": 279.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -14766,6 +15801,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 399,
+        "original_price": 399,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 399,
         "original_price": 399,
         "is_sale": false,
@@ -14876,6 +15918,13 @@
         "original_price": 399,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 349,
+        "original_price": 399,
+        "is_sale": true,
+        "discount": 13
       }
     }
   },
@@ -14982,6 +16031,13 @@
         "original_price": 241,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 192,
+        "original_price": 241,
+        "is_sale": true,
+        "discount": 20
       }
     }
   },
@@ -15180,6 +16236,13 @@
         "original_price": 249,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 249,
+        "original_price": 249,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -15293,6 +16356,13 @@
         "original_price": 79.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 79,
+        "original_price": 79.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -15388,6 +16458,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 319,
+        "original_price": 319.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 319,
         "original_price": 319.0,
         "is_sale": false,
@@ -15498,6 +16575,13 @@
         "original_price": 149.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 149,
+        "original_price": 149.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -15506,7 +16590,15 @@
     "brand": "Swann",
     "category": "Security Camera",
     "url": "https://www.jbhifi.com.au/products/swann-elite-6k-12-mp-nvr-security-camera-system-6-camera-kit",
-    "days": {}
+    "days": {
+      "15": {
+        "date": "2026-07-15",
+        "price": 999,
+        "original_price": 1299,
+        "is_sale": true,
+        "discount": 23
+      }
+    }
   },
   "other_auslock_s31b_slim_series_bluetooth_wi_fi_smart_door_lock_bla": {
     "product_name": "Auslock S31B Slim Series Bluetooth Wi-Fi Smart Door Lock (Black)",
@@ -15618,6 +16710,13 @@
         "original_price": 999,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 999,
+        "original_price": 999,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -15720,6 +16819,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 179,
+        "original_price": 179.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 179,
         "original_price": 179.0,
         "is_sale": false,
@@ -15830,6 +16936,13 @@
         "original_price": 769,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 769,
+        "original_price": 769,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -15932,6 +17045,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 1599.0,
+        "original_price": 1599.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 1599.0,
         "original_price": 1599.0,
         "is_sale": false,
@@ -16049,6 +17169,13 @@
         "original_price": 189.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 189,
+        "original_price": 189.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -16148,6 +17275,13 @@
         "original_price": 249,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 249,
+        "original_price": 249,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -16243,6 +17377,13 @@
       },
       "13": {
         "date": "2026-07-13",
+        "price": 1099,
+        "original_price": 1099.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 1099,
         "original_price": 1099.0,
         "is_sale": false,
@@ -16438,6 +17579,13 @@
         "original_price": 210.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 210,
+        "original_price": 210.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -16586,6 +17734,13 @@
         "original_price": 199.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 199.0,
+        "original_price": 199.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -16671,6 +17826,13 @@
         "original_price": 179.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 179.0,
+        "original_price": 179.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -16717,6 +17879,13 @@
       },
       "13": {
         "date": "2026-07-13",
+        "price": 329.0,
+        "original_price": 329.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 329.0,
         "original_price": 329.0,
         "is_sale": false,
@@ -16771,6 +17940,13 @@
         "original_price": 479.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 479.0,
+        "original_price": 479.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -16817,6 +17993,13 @@
       },
       "13": {
         "date": "2026-07-13",
+        "price": 149,
+        "original_price": 149.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 149,
         "original_price": 149.0,
         "is_sale": false,
@@ -16913,6 +18096,13 @@
         "original_price": 299.0,
         "is_sale": true,
         "discount": 28
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 214,
+        "original_price": 299.0,
+        "is_sale": true,
+        "discount": 28
       }
     }
   },
@@ -17001,6 +18191,13 @@
       },
       "13": {
         "date": "2026-07-13",
+        "price": 104,
+        "original_price": 139.0,
+        "is_sale": true,
+        "discount": 25
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 104,
         "original_price": 139.0,
         "is_sale": true,
@@ -17100,6 +18297,13 @@
       },
       "13": {
         "date": "2026-07-13",
+        "price": 179,
+        "original_price": 179.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 179,
         "original_price": 179.0,
         "is_sale": false,
@@ -17351,6 +18555,13 @@
         "original_price": 1999.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 1999.0,
+        "original_price": 1999.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -17556,6 +18767,13 @@
         "original_price": 369,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 369,
+        "original_price": 369,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -17740,6 +18958,13 @@
         "original_price": 39.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 39,
+        "original_price": 39.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -17793,6 +19018,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 99,
+        "original_price": 99.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 99,
         "original_price": 99.0,
         "is_sale": false,
@@ -17924,6 +19156,13 @@
         "original_price": 349,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 279,
+        "original_price": 349,
+        "is_sale": true,
+        "discount": 20
       }
     }
   },
@@ -18030,6 +19269,13 @@
         "original_price": 79,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 79,
+        "original_price": 79,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -18132,6 +19378,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 79,
+        "original_price": 79.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 79,
         "original_price": 79.0,
         "is_sale": false,
@@ -18249,6 +19502,13 @@
         "original_price": 49.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 39,
+        "original_price": 49,
+        "is_sale": true,
+        "discount": 20
       }
     }
   },
@@ -18351,6 +19611,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 139,
+        "original_price": 139.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 139,
         "original_price": 139.0,
         "is_sale": false,
@@ -18461,6 +19728,13 @@
         "original_price": 89.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 89,
+        "original_price": 89.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -18563,6 +19837,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 42,
+        "original_price": 42,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 42,
         "original_price": 42,
         "is_sale": false,
@@ -18680,6 +19961,13 @@
         "original_price": 699.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 699,
+        "original_price": 699.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -18782,6 +20070,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 249,
+        "original_price": 249.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 249,
         "original_price": 249.0,
         "is_sale": false,
@@ -18892,6 +20187,13 @@
         "original_price": 2249.99,
         "is_sale": true,
         "discount": 6
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 2124.99,
+        "original_price": 2249.99,
+        "is_sale": true,
+        "discount": 6
       }
     }
   },
@@ -18994,6 +20296,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 399,
+        "original_price": 399,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 399,
         "original_price": 399,
         "is_sale": false,
@@ -19104,6 +20413,13 @@
         "original_price": 39.95,
         "is_sale": true,
         "discount": 52
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 19,
+        "original_price": 39.95,
+        "is_sale": true,
+        "discount": 52
       }
     }
   },
@@ -19206,6 +20522,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 59.95,
+        "original_price": 59.95,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 59.95,
         "original_price": 59.95,
         "is_sale": false,
@@ -19316,6 +20639,13 @@
         "original_price": 389,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 389,
+        "original_price": 389,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -19418,6 +20748,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 2379.99,
+        "original_price": 2519.99,
+        "is_sale": true,
+        "discount": 6
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 2379.99,
         "original_price": 2519.99,
         "is_sale": true,
@@ -19528,6 +20865,13 @@
         "original_price": 1599.99,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 1599.99,
+        "original_price": 1599.99,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -19630,6 +20974,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 1899.99,
+        "original_price": 1899.99,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 1899.99,
         "original_price": 1899.99,
         "is_sale": false,
@@ -19740,6 +21091,13 @@
         "original_price": 259,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 259,
+        "original_price": 259,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -19842,6 +21200,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 189,
+        "original_price": 189,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 189,
         "original_price": 189,
         "is_sale": false,
@@ -19959,6 +21324,13 @@
         "original_price": 149,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 149,
+        "original_price": 149,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -19974,7 +21346,15 @@
     "brand": "VTech",
     "category": "Security Camera",
     "url": "https://www.jbhifi.com.au/products/vtech-rm7667hq-7-smart-pan-tilt-video-monitor-with-remote-access",
-    "days": {}
+    "days": {
+      "15": {
+        "date": "2026-07-15",
+        "price": 299,
+        "original_price": 369,
+        "is_sale": true,
+        "discount": 19
+      }
+    }
   },
   "eufy_eufy_security_floodlight_cam_e_2k_white_[wired]": {
     "product_name": "eufy Security Floodlight Cam E 2K (White) [Wired]",
@@ -20086,6 +21466,13 @@
         "original_price": 895,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 895,
+        "original_price": 895,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -20188,6 +21575,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 439,
+        "original_price": 439,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 439,
         "original_price": 439,
         "is_sale": false,
@@ -20298,6 +21692,13 @@
         "original_price": 39,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 39,
+        "original_price": 39,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -20400,6 +21801,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 79,
+        "original_price": 79,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 79,
         "original_price": 79,
         "is_sale": false,
@@ -20595,6 +22003,13 @@
         "original_price": 473,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 473,
+        "original_price": 473,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -20676,6 +22091,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 1099.0,
+        "original_price": 1099.0,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 1099.0,
         "original_price": 1099.0,
         "is_sale": false,
@@ -20765,6 +22187,13 @@
         "original_price": 1799.0,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 1799.0,
+        "original_price": 1799.0,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -20850,6 +22279,13 @@
         "original_price": 449,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 449,
+        "original_price": 449,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -20910,6 +22346,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 499.99,
+        "original_price": 499.99,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 499.99,
         "original_price": 499.99,
         "is_sale": false,
@@ -20999,6 +22442,13 @@
         "original_price": 99,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 79,
+        "original_price": 99,
+        "is_sale": true,
+        "discount": 20
       }
     }
   },
@@ -21080,6 +22530,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 89,
+        "original_price": 89,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 89,
         "original_price": 89,
         "is_sale": false,
@@ -21169,6 +22626,13 @@
         "original_price": 899.0,
         "is_sale": true,
         "discount": 28
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 649.0,
+        "original_price": 899.0,
+        "is_sale": true,
+        "discount": 28
       }
     }
   },
@@ -21250,6 +22714,13 @@
       },
       "14": {
         "date": "2026-07-14",
+        "price": 39,
+        "original_price": 39,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 39,
         "original_price": 39,
         "is_sale": false,
@@ -24284,6 +25755,13 @@
         "original_price": 79,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 79,
+        "original_price": 79,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -24295,6 +25773,13 @@
     "days": {
       "14": {
         "date": "2026-07-14",
+        "price": 199,
+        "original_price": 199,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 199,
         "original_price": 199,
         "is_sale": false,
@@ -24314,6 +25799,13 @@
         "original_price": 349,
         "is_sale": false,
         "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 349,
+        "original_price": 349,
+        "is_sale": false,
+        "discount": 0
       }
     }
   },
@@ -24325,6 +25817,13 @@
     "days": {
       "14": {
         "date": "2026-07-14",
+        "price": 629.99,
+        "original_price": 629.99,
+        "is_sale": false,
+        "discount": 0
+      },
+      "15": {
+        "date": "2026-07-15",
         "price": 629.99,
         "original_price": 629.99,
         "is_sale": false,
@@ -24344,6 +25843,43 @@
         "original_price": 899.0,
         "is_sale": true,
         "discount": 51
+      },
+      "15": {
+        "date": "2026-07-15",
+        "price": 899.0,
+        "original_price": 899.0,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
+  },
+  "other_gainsborough_mode_smart_pull_handle_in_black": {
+    "product_name": "Gainsborough Mode Smart Pull Handle in Black",
+    "brand": "Other",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/gainsborough-mode-smart-pull-handle-in-black",
+    "days": {
+      "15": {
+        "date": "2026-07-15",
+        "price": 529,
+        "original_price": 529,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
+  },
+  "other_pixbee_sleep_smart_nursery_light": {
+    "product_name": "Pixbee Sleep Smart Nursery Light",
+    "brand": "Other",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/pixbee-sleep-smart-nursery-light",
+    "days": {
+      "15": {
+        "date": "2026-07-15",
+        "price": 79,
+        "original_price": 79,
+        "is_sale": false,
+        "discount": 0
       }
     }
   }

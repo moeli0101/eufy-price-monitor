@@ -1,391 +1,297 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-每日价格自动刷新脚本 - 固定产品列表版
-从 product_list_fixed.json 读取固定产品列表，逐一抓取价格
-不再依赖动态搜索，成功率更稳定
+每日价格自动刷新脚本 - HTTP requests 版
+不使用 Playwright，直接 HTTP 请求抓取页面，绕过 Cloudflare 检测
 """
 
-from playwright.sync_api import sync_playwright
 import json
 import time
 import random
+import re
 from datetime import datetime
 from pathlib import Path
+import requests
 from product_classifier import classify_product, is_valid_product, validate_product_data
 from price_history_manager import PriceHistoryManager
 from promotion_detector import PromotionDetector
 from promotion_calendar_generator import PromotionCalendarGenerator
 
-# ─── User-Agent 池（轮换使用，降低被限速概率）─────────────────────────────────
 USER_AGENTS = [
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3 Safari/605.1.15",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0",
-    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3 Safari/605.1.15',
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0',
 ]
+
+HEADERS = {
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 'en-AU,en;q=0.9',
+    'Accept-Encoding': 'gzip, deflate, br',
+    'Connection': 'keep-alive',
+    'Upgrade-Insecure-Requests': '1',
+}
 
 
 def load_product_list():
-    """加载固定产品列表"""
-    list_file = Path("product_list_fixed.json")
+    list_file = Path('product_list_fixed.json')
     if list_file.exists():
-        with open(list_file, "r", encoding="utf-8") as f:
+        with open(list_file, 'r', encoding='utf-8') as f:
             products = json.load(f)
-        print(f"📋 加载固定产品列表: {len(products)} 个产品")
+        print(f'📋 加载固定产品列表: {len(products)} 个产品')
         return products
     else:
-        print("⚠️  product_list_fixed.json 不存在，将从 price_history.json 重新生成...")
-        return generate_product_list_from_history()
-
-
-def generate_product_list_from_history():
-    """从历史数据生成产品列表（备用方案）"""
-    history_file = Path("price_history.json")
-    if not history_file.exists():
-        print("❌ price_history.json 也不存在，无法生成产品列表")
+        print('⚠️  product_list_fixed.json 不存在')
         return []
 
-    with open(history_file, "r", encoding="utf-8") as f:
-        history = json.load(f)
 
-    products = []
-    for key, data in history.items():
-        products.append(
-            {
-                "name": data["product_name"],
-                "brand": data["brand"],
-                "category": data["category"],
-                "url": data["url"],
-                "channel": data.get("channel", "JB Hi-Fi"),
-            }
-        )
+def extract_price_from_html(content):
+    current_price = None
+    was_price = None
 
-    print(f"✅ 从历史数据生成产品列表: {len(products)} 个")
+    is_clearance = 'pdp-banner-tag' in content and 'CLEARANCE' in content[content.index('pdp-banner-tag')-200:content.index('pdp-banner-tag')+200] if 'pdp-banner-tag' in content else False
 
-    # 保存以便下次直接使用
-    with open("product_list_fixed.json", "w", encoding="utf-8") as f:
-        json.dump(products, f, ensure_ascii=False, indent=2)
+    # variant-button
+    m = re.search(r'data-test-id="variant-button"[^>]*class="[^"]*current[^"]*"[^>]*data-price="([\d.]+)"[^>]*data-core-price="([\d.]+)"', content)
+    if not m:
+        m = re.search(r'data-price="([\d.]+)"[^>]*data-core-price="([\d.]+)"[^>]*data-test-id="variant-button"[^>]*class="[^"]*current', content)
+    if m:
+        p = float(m.group(1))
+        c = float(m.group(2))
+        if 1 < p < 50000:
+            current_price = p
+        if current_price and 1 < c < 50000 and c > current_price:
+            was_price = c
 
-    return products
-
-
-def extract_price(page):
-    try:
-        time.sleep(2.0)
-        import re, json as _json
-
-        current_price = None
-        was_price = None
-        content = page.content()
-
-        # 判断是否 Clearance 商品（页面明确标注）
-        is_clearance = False
-        try:
-            banner = page.locator('[data-testid="pdp-banner-tag"]').first
-            if banner.count() > 0 and 'clearance' in banner.inner_text().lower():
-                is_clearance = True
-        except Exception:
-            pass
-
-        # 多SKU产品：variant-button.current
-        try:
-            btn = page.locator('[data-test-id="variant-button"].current').first
-            if btn.count() > 0:
-                p_str = btn.get_attribute('data-price')
-                c_str = btn.get_attribute('data-core-price')
-                if p_str:
-                    p = float(p_str)
-                    if 1 < p < 50000:
-                        current_price = p
-                if not is_clearance and c_str:
-                    c = float(c_str)
-                    if current_price and 1 < c < 50000 and c > current_price:
-                        was_price = c
-        except Exception:
-            pass
-
-        # 单SKU产品：解析 TieredDetails Price 块
-        if current_price is None:
+    # Price JSON block
+    if current_price is None:
+        m = re.search(r'"Price":\{([^}]+)\}', content)
+        if m:
             try:
-                m = re.search(r'"Price":\{([^}]+)\}', content)
-                if m:
-                    price_obj = _json.loads('{' + m.group(1) + '}')
-                    display = price_obj.get('DisplayPriceInc')
-                    display_was = price_obj.get('DisplayWasPrice', False)
-                    save = price_obj.get('SaveAmount', 0)
-                    core = price_obj.get('CoreTicketPrice')
-                    if display and 1 < display < 50000:
-                        current_price = display
-                        if core and core > display:
-                            if is_clearance:
-                                was_price = core if (save < 0 and display_was) else None
-                            else:
-                                was_price = core
+                price_obj = json.loads('{' + m.group(1) + '}')
+                display = price_obj.get('DisplayPriceInc')
+                display_was = price_obj.get('DisplayWasPrice', False)
+                save = price_obj.get('SaveAmount', 0)
+                core = price_obj.get('CoreTicketPrice')
+                if display and 1 < display < 50000:
+                    current_price = display
+                    if core and core > display:
+                        if is_clearance:
+                            was_price = core if (save < 0 and display_was) else None
+                        else:
+                            was_price = core
             except Exception:
                 pass
 
-        # Fallback：ticket-price DOM
-        if current_price is None:
-            try:
-                ticket = page.locator('[data-testid="ticket-price"]').first
-                if ticket.count() > 0:
-                    text = ticket.inner_text().strip().replace(',', '').replace('$', '')
-                    if text:
-                        p = float(text)
-                        if 1 < p < 50000:
-                            current_price = p
-            except Exception:
-                pass
+    # Fallback: ticket-price in HTML
+    if current_price is None:
+        m = re.search(r'data-testid="ticket-price"[^>]*>([\d,]+)<', content)
+        if m:
+            p = float(m.group(1).replace(',', ''))
+            if 1 < p < 50000:
+                current_price = p
 
-        # 最终 fallback：JSON-LD
-        if current_price is None:
-            try:
-                ld_blocks = re.findall(
-                    r'<script[^>]+type=["\']application/ld\+json["\'][^>]*>(.*?)</script>',
-                    content, re.DOTALL | re.IGNORECASE
-                )
-                for block in ld_blocks:
-                    try:
-                        obj = _json.loads(block.strip())
-                        offers = obj.get('offers')
-                        if isinstance(offers, list):
-                            offers = offers[0]
-                        if isinstance(offers, dict) and offers.get('price'):
-                            p = float(str(offers['price']).replace(',', ''))
-                            if 1 < p < 50000:
-                                current_price = p
-                                break
-                    except Exception:
-                        pass
-            except Exception:
-                pass
+    # Fallback: JSON-LD
+    if current_price is None:
+        ld_matches = re.findall(r'"price"\s*:\s*"?([\d.]+)"?', content)
+        for price_str in ld_matches:
+            val = float(price_str)
+            if 1 < val < 50000:
+                current_price = val
+                break
 
-        if current_price is None:
-            return None
-
-        result = {'price': current_price}
-        if was_price:
-            result['was_price'] = was_price
-            result['discount_percent'] = round((was_price - current_price) / was_price * 100)
-        return result
-
-    except Exception:
+    if current_price is None:
         return None
 
-def scrape_single_product(browser, product, max_retries=3):
-    """
-    抓取单个产品价格，带重试机制
-    每次重试使用不同 User-Agent
-    """
-    page = None
+    result = {'price': current_price}
+    if was_price:
+        result['was_price'] = was_price
+        result['discount_percent'] = round((was_price - current_price) / was_price * 100)
+    return result
+
+
+def scrape_single_product(session, product, max_retries=3):
     for attempt in range(max_retries):
         try:
-            ua = random.choice(USER_AGENTS)
-            page = browser.new_page(
-                user_agent=ua, viewport={"width": 1920, "height": 1080}
-            )
+            headers = dict(HEADERS)
+            headers['User-Agent'] = random.choice(USER_AGENTS)
 
-            page.goto(product["url"], wait_until="domcontentloaded", timeout=30000)
-            price_data = extract_price(page)
-            page.close()
-            page = None
+            resp = session.get(product['url'], headers=headers, timeout=25)
 
-            if price_data:
-                return price_data, True
+            if resp.status_code in (429, 503):
+                wait = random.uniform(5, 10) if resp.status_code == 429 else random.uniform(3, 6)
+                if attempt < max_retries - 1:
+                    time.sleep(wait)
+                    continue
+                return None, False
 
-            # 无价格数据，等待后重试
+            if resp.status_code != 200 or len(resp.text) < 5000:
+                if attempt < max_retries - 1:
+                    time.sleep(random.uniform(2, 4))
+                    continue
+                return None, False
+
+            result = extract_price_from_html(resp.text)
+            if result:
+                return result, True
+
             if attempt < max_retries - 1:
                 time.sleep(random.uniform(2, 4))
-
-        except Exception as e:
-            if page:
-                try:
-                    page.close()
-                except Exception:
-                    pass
-                page = None
+        except Exception:
             if attempt < max_retries - 1:
                 time.sleep(random.uniform(2, 5))
 
     return None, False
 
+            result = extract_price_from_html(resp.text)
+            if result:
+                return result, True
+
+            if attempt < max_retries - 1:
+                time.sleep(random.uniform(2, 4))
+        except Exception:
+            if attempt < max_retries - 1:
+                time.sleep(random.uniform(2, 4))
+
+    return None, False
+
 
 def scrape_prices(products):
-    """抓取所有产品价格（固定列表版）"""
     total = len(products)
-    print(f"\n💰 抓取价格 ({total} 款)...")
+    print(f'\n💰 抓取价格 ({total} 款)...')
 
     results = []
+    session = requests.Session()
 
-    with sync_playwright() as p:
-        browser = p.chromium.launch(
-            headless=True,
-            args=[
-                "--disable-blink-features=AutomationControlled",
-                "--no-sandbox",
-                "--disable-dev-shm-usage",
-                "--disable-gpu",
-                "--disable-dev-shm-usage",
-                "--window-size=1920,1080",
-            ],
-        )
-        browser.add_init_script("""
-            Object.defineProperty(navigator, 'webdriver', {get: () => undefined});
-            Object.defineProperty(navigator, 'plugins', {get: () => [1,2,3,4,5]});
-            Object.defineProperty(navigator, 'languages', {get: () => ['en-AU', 'en']});
-            window.chrome = {runtime: {}};
-        """)
+    success_count = 0
+    fail_count = 0
 
-        success_count = 0
-        fail_count = 0
+    for i, product in enumerate(products, 1):
+        if i % 10 == 0 or i == 1:
+            rate = round(success_count / (i - 1) * 100) if i > 1 else 0
+            print(f'  进度: {i}/{total} | 成功:{success_count} 失败:{fail_count} 成功率:{rate}%', flush=True)
 
-        for i, product in enumerate(products, 1):
-            # 进度日志（每10个打印一次，方便调试）
-            if i % 10 == 0 or i == 1:
-                rate = round(success_count / (i - 1) * 100) if i > 1 else 0
-                print(
-                    f"  进度: {i}/{total} | 成功:{success_count} 失败:{fail_count} 成功率:{rate}%"
-                )
+        price_data, success = scrape_single_product(session, product, max_retries=2)
 
-            price_data, success = scrape_single_product(browser, product, max_retries=3)
+        result = {
+            'name': product['name'],
+            'brand': product['brand'],
+            'category': product.get('category', 'Security Camera'),
+            'channel': product.get('channel', 'JB Hi-Fi'),
+            'url': product['url'],
+            'currency': 'AUD',
+            'scraped_at': datetime.now().isoformat(),
+        }
 
-            result = {
-                "name": product["name"],
-                "brand": product["brand"],
-                "category": product.get("category", "Security Camera"),
-                "channel": product.get("channel", "JB Hi-Fi"),
-                "url": product["url"],
-                "currency": "AUD",
-                "scraped_at": datetime.now().isoformat(),
-            }
+        if success and price_data:
+            result['price'] = price_data['price']
+            if 'was_price' in price_data:
+                result['was_price'] = price_data['was_price']
+            if 'discount_percent' in price_data:
+                result['discount_percent'] = price_data['discount_percent']
+            result['status'] = 'success'
+            success_count += 1
+        else:
+            result['price'] = None
+            result['status'] = 'failed'
+            fail_count += 1
 
-            if success and price_data:
-                result["price"] = price_data["price"]
-                if "was_price" in price_data:
-                    result["was_price"] = price_data["was_price"]
-                if "discount_percent" in price_data:
-                    result["discount_percent"] = price_data["discount_percent"]
-                result["status"] = "success"
-                success_count += 1
-            else:
-                result["price"] = None
-                result["status"] = "failed"
-                fail_count += 1
+        results.append(result)
+        time.sleep(random.uniform(0.5, 1.5))
 
-            results.append(result)
-
-            # 随机间隔：1-3秒，防止被限速
-            time.sleep(random.uniform(1.0, 3.0))
-
-        browser.close()
-
+    session.close()
     return results
 
 
 def main():
-    print("=" * 70)
-    print("🤖 每日价格自动刷新（固定产品列表版）")
-    print(f"⏰ 运行时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    print("=" * 70)
+    print('=' * 70)
+    print('🤖 每日价格自动刷新（HTTP requests 版）')
+    print(f'⏰ 运行时间: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}')
+    print('=' * 70)
 
-    # 1. 加载固定产品列表
     products = load_product_list()
-
     if not products:
-        print("❌ 无法加载产品列表，退出")
+        print('❌ 无法加载产品列表，退出')
         return
 
-    # 按品类统计
     from collections import Counter
+    category_stats = Counter(p['category'] for p in products)
+    brand_stats = Counter(p['brand'] for p in products)
 
-    category_stats = Counter(p["category"] for p in products)
-    brand_stats = Counter(p["brand"] for p in products)
-
-    print(f"\n📊 产品列表统计:")
-    print(f"  总计: {len(products)} 款")
-    print(f"\n📂 品类分布:")
+    print(f'\n📊 产品列表统计:')
+    print(f'  总计: {len(products)} 款')
+    print(f'\n📂 品类分布:')
     for cat, count in sorted(category_stats.items()):
-        print(f"  {cat}: {count} 款")
-    print(f"\n🏷️  主要品牌:")
+        print(f'  {cat}: {count} 款')
+    print(f'\n🏷️  主要品牌:')
     for brand, count in sorted(brand_stats.items(), key=lambda x: -x[1])[:8]:
-        print(f"  {brand}: {count} 款")
+        print(f'  {brand}: {count} 款')
 
-    # 2. 抓取价格
     results = scrape_prices(products)
 
-    # 3. 保存最新价格数据
-    with open("price_results_latest.json", "w", encoding="utf-8") as f:
+    with open('price_results_latest.json', 'w', encoding='utf-8') as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
 
-    # 4. 更新历史数据 & 检测促销
-    print(f"\n📊 更新历史数据和检测促销...")
+    print(f'\n📊 更新历史数据和检测促销...')
     history_manager = PriceHistoryManager()
     promotion_detector = PromotionDetector()
 
     promotion_count = 0
     for result in results:
-        if result["status"] != "success" or not result.get("price"):
+        if result['status'] != 'success' or not result.get('price'):
             continue
-
         product_id = history_manager.update_price(result)
-
-        current_price = result["price"]
-        original_price = result.get("was_price", current_price)
-
+        current_price = result['price']
+        original_price = result.get('was_price', current_price)
         promotion_detector.update_promotions(
             product_id=product_id,
-            product_name=result["name"],
-            brand=result["brand"],
-            category=result["category"],
+            product_name=result['name'],
+            brand=result['brand'],
+            category=result['category'],
             current_price=current_price,
             original_price=original_price,
-            url=result.get("url", ""),
+            url=result.get('url', '')
         )
-
-        if result.get("was_price") and result["was_price"] > current_price:
+        if result.get('was_price') and result['was_price'] > current_price:
             promotion_count += 1
 
     history_manager.save_history()
     promotion_detector.save_promotions()
 
-    print(f"  历史记录: {len(history_manager.history)} 个产品")
-    print(f"  促销中: {promotion_count} 款")
+    print(f'  历史记录: {len(history_manager.history)} 个产品')
+    print(f'  促销中: {promotion_count} 款')
 
-    # 5. 统计结果
-    success_count = sum(1 for r in results if r["status"] == "success")
+    success_count = sum(1 for r in results if r['status'] == 'success')
     fail_count = len(results) - success_count
     success_rate = round(success_count / len(results) * 100) if results else 0
 
-    print(f"\n{'=' * 70}")
-    print(f"✅ 完成！")
-    print(f"  成功: {success_count}/{len(results)} ({success_rate}%)")
-    print(f"  失败: {fail_count} 款")
-    print(f"  数据已保存到: price_results_latest.json")
-    print(f"{'=' * 70}")
+    print(f'\n{"=" * 70}')
+    print(f'✅ 完成！')
+    print(f'  成功: {success_count}/{len(results)} ({success_rate}%)')
+    print(f'  失败: {fail_count} 款')
+    print(f'  数据已保存到: price_results_latest.json')
+    print(f'{"=" * 70}')
 
-    # 6. 记录运行日志
-    cameras = sum(1 for r in results if r.get("category") == "Security Camera")
-    doorbells = sum(1 for r in results if r.get("category") == "Video Doorbell")
-    locks = sum(1 for r in results if r.get("category") == "Smart Lock")
-    baby = sum(1 for r in results if r.get("category") == "Baby")
+    cameras = sum(1 for r in results if r.get('category') == 'Security Camera')
+    doorbells = sum(1 for r in results if r.get('category') == 'Video Doorbell')
+    locks = sum(1 for r in results if r.get('category') == 'Smart Lock')
+    baby = sum(1 for r in results if r.get('category') == 'Baby')
 
     log_entry = {
-        "timestamp": datetime.now().isoformat(),
-        "total_products": len(results),
-        "success_count": success_count,
-        "fail_count": fail_count,
-        "success_rate": success_rate,
-        "cameras": cameras,
-        "doorbells": doorbells,
-        "locks": locks,
-        "baby": baby,
-        "eufy_count": sum(1 for r in results if r.get("brand") == "eufy"),
+        'timestamp': datetime.now().isoformat(),
+        'total_products': len(results),
+        'success_count': success_count,
+        'fail_count': fail_count,
+        'success_rate': success_rate,
+        'cameras': cameras,
+        'doorbells': doorbells,
+        'locks': locks,
+        'baby': baby,
+        'eufy_count': sum(1 for r in results if r.get('brand') == 'eufy'),
     }
 
     try:
-        with open("price_refresh_log.json", "r", encoding="utf-8") as f:
+        with open('price_refresh_log.json', 'r', encoding='utf-8') as f:
             logs = json.load(f)
     except Exception:
         logs = []
@@ -394,17 +300,16 @@ def main():
     if len(logs) > 30:
         logs = logs[-30:]
 
-    with open("price_refresh_log.json", "w", encoding="utf-8") as f:
+    with open('price_refresh_log.json', 'w', encoding='utf-8') as f:
         json.dump(logs, f, ensure_ascii=False, indent=2)
 
-    # 7. 生成促销日历
-    print(f"\n📅 生成促销日历...")
+    print(f'\n📅 生成促销日历...')
     calendar_generator = PromotionCalendarGenerator()
     now = datetime.now()
     calendar = calendar_generator.generate_monthly_calendar(now.year, now.month)
     calendar_generator.save_calendar_json(calendar)
-    print(f"  生成了 {len(calendar)} 个产品的日历")
+    print(f'  生成了 {len(calendar)} 个产品的日历')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

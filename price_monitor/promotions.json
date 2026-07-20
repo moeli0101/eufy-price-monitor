@@ -1126,21 +1126,6 @@
       "status": "active"
     },
     {
-      "product_id": "swann_swann_maxtrak_4k_ai_auto_tracking_long_range_security_camera",
-      "product_name": "Swann MaxTrak 4K AI Auto Tracking Long Range Security Camera System (2 Pack)",
-      "brand": "Swann",
-      "category": "Security Camera",
-      "url": "https://www.jbhifi.com.au/products/swann-maxtrak-4k-ai-auto-tracking-long-range-security-camera-system-2-pack",
-      "start_date": "2026-07-20",
-      "end_date": null,
-      "original_price": 799,
-      "sale_price": 629,
-      "discount_percentage": 21.3,
-      "save_amount": 170,
-      "duration_days": 1,
-      "status": "active"
-    },
-    {
       "product_id": "arlo_arlo_wired_video_doorbell",
       "product_name": "Arlo Wired Video Doorbell",
       "brand": "Arlo",
@@ -1182,6 +1167,21 @@
       "sale_price": 19,
       "discount_percentage": 52.4,
       "save_amount": 20.95,
+      "duration_days": 1,
+      "status": "active"
+    },
+    {
+      "product_id": "swann_swann_maxtrak_4k_ai_auto_tracking_long_range_security_camera",
+      "product_name": "Swann MaxTrak 4K AI Auto Tracking Long Range Security Camera System (2 Pack)",
+      "brand": "Swann",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/swann-maxtrak-4k-ai-auto-tracking-long-range-security-camera-system-2-pack",
+      "start_date": "2026-07-20",
+      "end_date": null,
+      "original_price": 799,
+      "sale_price": 629,
+      "discount_percentage": 21.3,
+      "save_amount": 170,
       "duration_days": 1,
       "status": "active"
     }
@@ -12924,6 +12924,21 @@
       "category": "Security Camera",
       "url": "https://www.jbhifi.com.au/products/swann-maxtrak-4k-ai-auto-tracking-long-range-security-camera-system-2-pack",
       "start_date": "2026-07-17",
+      "end_date": "2026-07-20",
+      "original_price": 799,
+      "sale_price": 629,
+      "discount_percentage": 21.3,
+      "save_amount": 170,
+      "duration_days": 1,
+      "status": "ended"
+    },
+    {
+      "product_id": "swann_swann_maxtrak_4k_ai_auto_tracking_long_range_security_camera",
+      "product_name": "Swann MaxTrak 4K AI Auto Tracking Long Range Security Camera System (2 Pack)",
+      "brand": "Swann",
+      "category": "Security Camera",
+      "url": "https://www.jbhifi.com.au/products/swann-maxtrak-4k-ai-auto-tracking-long-range-security-camera-system-2-pack",
+      "start_date": "2026-07-20",
       "end_date": "2026-07-20",
       "original_price": 799,
       "sale_price": 629,

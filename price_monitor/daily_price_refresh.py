@@ -9,9 +9,9 @@ import json
 import time
 import random
 import re
+import subprocess
 from datetime import datetime
 from pathlib import Path
-import requests
 from product_classifier import classify_product, is_valid_product, validate_product_data
 from price_history_manager import PriceHistoryManager
 from promotion_detector import PromotionDetector
@@ -110,30 +110,29 @@ def extract_price_from_html(content):
     return result
 
 
-def scrape_single_product(session, product, max_retries=3):
+def scrape_single_product(product, max_retries=2):
     for attempt in range(max_retries):
         try:
-            headers = dict(HEADERS)
-            headers['User-Agent'] = random.choice(USER_AGENTS)
+            ua = random.choice(USER_AGENTS)
+            result = subprocess.run(
+                ['curl', '-sk', '-A', ua,
+                 '-H', 'Accept: text/html,application/xhtml+xml',
+                 '-H', 'Accept-Language: en-AU,en;q=0.9',
+                 '--max-time', '20',
+                 product['url']],
+                capture_output=True, text=True, timeout=25
+            )
 
-            resp = session.get(product['url'], headers=headers, timeout=25)
-
-            if resp.status_code in (429, 503):
-                wait = random.uniform(5, 10) if resp.status_code == 429 else random.uniform(3, 6)
-                if attempt < max_retries - 1:
-                    time.sleep(wait)
-                    continue
-                return None, False
-
-            if resp.status_code != 200 or len(resp.text) < 5000:
+            content = result.stdout
+            if len(content) < 5000:
                 if attempt < max_retries - 1:
                     time.sleep(random.uniform(2, 4))
                     continue
                 return None, False
 
-            result = extract_price_from_html(resp.text)
-            if result:
-                return result, True
+            price_data = extract_price_from_html(content)
+            if price_data:
+                return price_data, True
 
             if attempt < max_retries - 1:
                 time.sleep(random.uniform(2, 4))
@@ -149,7 +148,6 @@ def scrape_prices(products):
     print(f'\n💰 抓取价格 ({total} 款)...')
 
     results = []
-    session = requests.Session()
 
     success_count = 0
     fail_count = 0
@@ -159,7 +157,7 @@ def scrape_prices(products):
             rate = round(success_count / (i - 1) * 100) if i > 1 else 0
             print(f'  进度: {i}/{total} | 成功:{success_count} 失败:{fail_count} 成功率:{rate}%', flush=True)
 
-        price_data, success = scrape_single_product(session, product, max_retries=2)
+        price_data, success = scrape_single_product(product, max_retries=2)
 
         result = {
             'name': product['name'],
@@ -187,7 +185,6 @@ def scrape_prices(products):
         results.append(result)
         time.sleep(random.uniform(0.5, 1.5))
 
-    session.close()
     return results
 
 

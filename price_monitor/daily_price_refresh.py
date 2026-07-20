@@ -143,18 +143,6 @@ def scrape_single_product(session, product, max_retries=3):
 
     return None, False
 
-            result = extract_price_from_html(resp.text)
-            if result:
-                return result, True
-
-            if attempt < max_retries - 1:
-                time.sleep(random.uniform(2, 4))
-        except Exception:
-            if attempt < max_retries - 1:
-                time.sleep(random.uniform(2, 4))
-
-    return None, False
-
 
 def scrape_prices(products):
     total = len(products)

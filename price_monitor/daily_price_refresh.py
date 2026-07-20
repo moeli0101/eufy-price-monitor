@@ -227,8 +227,16 @@ def scrape_prices(products):
                 "--no-sandbox",
                 "--disable-dev-shm-usage",
                 "--disable-gpu",
+                "--disable-dev-shm-usage",
+                "--window-size=1920,1080",
             ],
         )
+        browser.add_init_script("""
+            Object.defineProperty(navigator, 'webdriver', {get: () => undefined});
+            Object.defineProperty(navigator, 'plugins', {get: () => [1,2,3,4,5]});
+            Object.defineProperty(navigator, 'languages', {get: () => ['en-AU', 'en']});
+            window.chrome = {runtime: {}};
+        """)
 
         success_count = 0
         fail_count = 0

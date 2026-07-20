@@ -1,36 +1,3 @@
-======================================================================
-🤖 每日价格自动刷新（固定产品列表版）
-⏰ 运行时间: 2026-07-20 02:22:04
-======================================================================
-📋 加载固定产品列表: 317 个产品
-
-📊 产品列表统计:
-  总计: 317 款
-
-📂 品类分布:
-  Baby: 50 款
-  Security Camera: 178 款
-  Smart Lock: 48 款
-  Video Doorbell: 41 款
-
-🏷️  主要品牌:
-  eufy: 75 款
-  Other: 60 款
-  Swann: 43 款
-  Ring: 40 款
-  TP-Link: 35 款
-  Arlo: 24 款
-  VTech: 10 款
-  Momcozy: 10 款
-
-💰 抓取价格 (317 款)...
-Traceback (most recent call last):
-  File "/home/runner/work/eufy-price-monitor/eufy-price-monitor/price_monitor/daily_price_refresh.py", line 410, in <module>
-    main()
-  File "/home/runner/work/eufy-price-monitor/eufy-price-monitor/price_monitor/daily_price_refresh.py", line 316, in main
-    results = scrape_prices(products)
-              ^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/work/eufy-price-monitor/eufy-price-monitor/price_monitor/daily_price_refresh.py", line 234, in scrape_prices
-    browser.add_init_script("""
-    ^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: 'Browser' object has no attribute 'add_init_script'
+  File "/home/runner/work/eufy-price-monitor/eufy-price-monitor/price_monitor/daily_price_refresh.py", line 146
+    result = extract_price_from_html(resp.text)
+IndentationError: unexpected indent

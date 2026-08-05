@@ -1,6 +1,6 @@
 ======================================================================
 🤖 每日价格自动刷新（HTTP requests 版）
-⏰ 运行时间: 2026-08-04 19:16:27
+⏰ 运行时间: 2026-08-05 19:10:36
 ======================================================================
 📋 加载固定产品列表: 394 个产品
 
@@ -62,12 +62,12 @@
   进度: 350/394 | 成功:239 失败:110 成功率:68%
   进度: 360/394 | 成功:249 失败:110 成功率:69%
   进度: 370/394 | 成功:258 失败:111 成功率:70%
-  进度: 380/394 | 成功:268 失败:111 成功率:71%
-  进度: 390/394 | 成功:278 失败:111 成功率:71%
+  进度: 380/394 | 成功:267 失败:112 成功率:70%
+  进度: 390/394 | 成功:277 失败:112 成功率:71%
 
 📊 更新历史数据和检测促销...
 ✅ 加载历史数据: 407 个产品
-✅ 加载促销记录: 49 活跃, 841 历史
+✅ 加载促销记录: 49 活跃, 842 历史
   ⚠️  异常价格跳过: eufy V2 Advanced Security Camera Kit $899 (近期中位价 $609)
   ⚠️  异常价格跳过: eufy E40 Essential Security Camera Kit w $1099 (近期中位价 $699)
   ⚠️  异常价格跳过: eufy E42 Security Camera Kit (4 Pack) $1599 (近期中位价 $999.0)
@@ -75,6 +75,8 @@
   ⚠️  异常价格跳过: eufy Security 2k Indoor Pan & Tilt Camer $139 (近期中位价 $99)
   ⚠️  异常价格跳过: eufy S340 SOLOCAM Security Camera with H $1199 (近期中位价 $799)
   ⚠️  异常价格跳过: Google Nest Gen3 Wired Indoor Camera $189 (近期中位价 $144)
+  ⚠️  异常价格跳过: Swann MaxRanger V2 Security Camera Kit ( $1299 (近期中位价 $999)
+  ✅ 促销结束: Swann MaxRanger V2 Security Camera Kit (4 Pack) (持续 14 天)
   ⚠️  异常价格跳过: Aqara Smart Video Doorbell G4 with Chime $99 (近期中位价 $199)
   ⚠️  异常价格跳过: Laser Smart Full HD Video Doorbell (Whit $49 (近期中位价 $149.95)
   ⚠️  异常价格跳过: eufy E31 Smart Lock $449 (近期中位价 $269)
@@ -84,6 +86,9 @@
   ⚠️  异常价格跳过: TP-LINK Tapo 2K Pan & Tilt Wi-Fi Securit $109 (近期中位价 $69)
   ⚠️  异常价格跳过: Arlo Essentials 2K Video Doorbell (2nd G $129 (近期中位价 $79)
   ⚠️  异常价格跳过: Uniden SOLO X2K Door Bell Plus $185 (近期中位价 $140)
+  ⚠️  异常价格跳过: Swann Buddy 4K Video Doorbell with Chime $299 (近期中位价 $199)
+  ✅ 促销结束: Swann Buddy 4K Video Doorbell with Chime (持续 14 天)
+  ✅ 促销结束: Swann MaxRanger4K Long-Range Wireless Video Doorbell (Add-On) (持续 14 天)
   ⚠️  异常价格跳过: Arlo Essentials Outdoor 2K Security Came $119 (近期中位价 $279.0)
   ⚠️  异常价格跳过: Arlo Ultra 3 4K Outdoor Security Camera $279 (近期中位价 $197.0)
   ⚠️  异常价格跳过: TP-Link Tapo 4K Solar-Powered Pan/Tilt S $299 (近期中位价 $228)
@@ -92,7 +97,7 @@
   ⚠️  异常价格跳过: Ring Outdoor Cam Pro Plug-In Security Ca $329 (近期中位价 $209)
   ⚠️  异常价格跳过: Swann EVO 2K Indoor WiFi Camera $59 (近期中位价 $44)
   ⚠️  异常价格跳过: Ring Outdoor Cam Pro Plug-In Security Ca $329 (近期中位价 $249)
-  🔥 新促销: Swann MaxTrak 4K AI Auto Tracking Long Range Security Camera System (4 Pack) (20.0% OFF)
+  ✅ 促销结束: Swann Xtreem4K WirelessCamera with Solar Panel (持续 14 天)
   ⚠️  异常价格跳过: Uniden BW2511 2.8" Baby Monitor $104 (近期中位价 $79)
   ⚠️  异常价格跳过: Momcozy S9 Pro Wearable Breast Pump (Sin $99 (近期中位价 $75)
   ⚠️  异常价格跳过: Nanit Pro Baby Monitor with Floor Stand $799 (近期中位价 $599)
@@ -103,7 +108,6 @@
   ⚠️  异常价格跳过: Ring Floodlight Cam Pro(2nd Gen) Wired S $429 (近期中位价 $329)
   ⚠️  异常价格跳过: Swann Elite 6K/12 MP NVR Security Camera $1299 (近期中位价 $999)
   ⚠️  异常价格跳过: Swann MaxTrak 4K AI Auto Tracking Long R $799 (近期中位价 $1199)
-  ✅ 促销结束: Swann MaxTrak 4K AI Auto Tracking Long Range Security Camera System (2 Pack) (持续 1 天)
   ⚠️  异常价格跳过: Tapo 2K Solar-Powered Dual-Lens Pan/Tilt $399 (近期中位价 $298)
   ⚠️  异常价格跳过: Tapo 2K Solar-Powered Floodlight Pan/Til $269 (近期中位价 $189)
   ⚠️  异常价格跳过: Uniden App Cam X25 PT Indoor 2k Super HD $72 (近期中位价 $52)
@@ -118,12 +122,12 @@
 ✅ 历史数据已保存: 407 个产品
 ✅ 促销记录已保存
   历史记录: 407 个产品
-  促销中: 28 款
+  促销中: 23 款
 
 ======================================================================
 ✅ 完成！
-  成功: 283/394 (72%)
-  失败: 111 款
+  成功: 282/394 (72%)
+  失败: 112 款
   数据已保存到: price_results_latest.json
 ======================================================================
 

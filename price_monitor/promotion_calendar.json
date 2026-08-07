@@ -4497,7 +4497,15 @@
     "brand": "Arlo",
     "category": "Security Camera",
     "url": "https://www.jbhifi.com.au/products/arlo-essential-indoor-camera",
-    "days": {}
+    "days": {
+      "7": {
+        "date": "2026-08-07",
+        "price": 29,
+        "original_price": 29.0,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
   },
   "ring_ring_floodlight_cam_wired_plus_white": {
     "product_name": "Ring Floodlight Cam Wired Plus (White)",
@@ -12002,7 +12010,15 @@
     "brand": "Other",
     "category": "Security Camera",
     "url": "https://www.jbhifi.com.au/products/gainsborough-mode-smart-pull-handle-in-black",
-    "days": {}
+    "days": {
+      "7": {
+        "date": "2026-08-07",
+        "price": 529,
+        "original_price": 529,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
   },
   "other_pixbee_sleep_smart_nursery_light": {
     "product_name": "Pixbee Sleep Smart Nursery Light",

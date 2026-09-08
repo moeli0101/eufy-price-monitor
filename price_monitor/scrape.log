@@ -1,6 +1,6 @@
 ======================================================================
 🤖 每日价格自动刷新（HTTP requests 版）
-⏰ 运行时间: 2026-09-07 20:52:18
+⏰ 运行时间: 2026-09-08 20:25:00
 ======================================================================
 📋 加载固定产品列表: 458 个产品
 
@@ -30,11 +30,11 @@
   进度: 30/458 | 成功:20 失败:9 成功率:69%
   进度: 40/458 | 成功:28 失败:11 成功率:72%
   进度: 50/458 | 成功:35 失败:14 成功率:71%
-  进度: 60/458 | 成功:42 失败:17 成功率:71%
-  进度: 70/458 | 成功:51 失败:18 成功率:74%
-  进度: 80/458 | 成功:58 失败:21 成功率:73%
-  进度: 90/458 | 成功:65 失败:24 成功率:73%
-  进度: 100/458 | 成功:71 失败:28 成功率:72%
+  进度: 60/458 | 成功:43 失败:16 成功率:73%
+  进度: 70/458 | 成功:52 失败:17 成功率:75%
+  进度: 80/458 | 成功:59 失败:20 成功率:75%
+  进度: 90/458 | 成功:66 失败:23 成功率:74%
+  进度: 100/458 | 成功:72 失败:27 成功率:73%
   进度: 110/458 | 成功:79 失败:30 成功率:72%
   进度: 120/458 | 成功:84 失败:35 成功率:71%
   进度: 130/458 | 成功:92 失败:37 成功率:71%
@@ -73,13 +73,10 @@
 
 📊 更新历史数据和检测促销...
 ✅ 加载历史数据: 454 个产品
-✅ 加载促销记录: 186 活跃, 918 历史
+✅ 加载促销记录: 189 活跃, 920 历史
   ⚠️  异常价格跳过: eufy V2 Advanced Security Camera Kit $899 (近期中位价 $609)
-  🔥 新促销: eufy E42 Security Camera Kit (4 Pack) (20.0% OFF)
-  🔥 新促销: eufy E42 Security Camera Kit (2 Pack) (20.0% OFF)
   ⚠️  异常价格跳过: eufy Security Solocam S220 (1 Pack) $249 (近期中位价 $179)
   ⚠️  异常价格跳过: eufy E41 NVR POE 24/7 Security System [4 $1299 (近期中位价 $999)
-  🔥 新促销: eufy Security E340 Dual Camera Video Doorbell (19.8% OFF)
   ⚠️  异常价格跳过: eufy Security 2k Indoor Pan & Tilt Camer $139 (近期中位价 $99)
   ⚠️  异常价格跳过: Arlo Essentials 2K (3rd Gen) Outdoor Sol $399 (近期中位价 $699)
   ⚠️  异常价格跳过: Arlo Essentials (Gen 3) 2K Pan & Tilt In $49 (近期中位价 $79)
@@ -95,12 +92,10 @@
   ⚠️  异常价格跳过: Arlo Essential Security Camera Kit with  $699 (近期中位价 $299)
   ⚠️  异常价格跳过: Arlo Pro 6 2K Outdoor Solar Security Cam $869 (近期中位价 $499)
   ⚠️  异常价格跳过: TP-Link Tapo 3K Solar-Powered Pan & Tilt $249 (近期中位价 $189)
-  🔥 新促销: TP-Link Tapo 2K Indoor/Outdoor Dual Lens Pan/Tilt Security Camera (12.8% OFF)
   ⚠️  异常价格跳过: Ring Wired Video Doorbell Pro POE $349 (近期中位价 $499)
   ⚠️  异常价格跳过: Uniden SOLO X2K Door Bell Plus $185 (近期中位价 $140)
   ⚠️  异常价格跳过: Ring Wired Video Doorbell Plus DIN Rail $174 (近期中位价 $249)
   ⚠️  异常价格跳过: Ring Outdoor Security Camera Plus 2K Plu $107 (近期中位价 $179)
-  🔥 新促销: TP-Link Tapo 2K Solar-Powered Pan/Tilt 4G LTE Security Camera Kit (10.4% OFF)
   ⚠️  异常价格跳过: TP-Link Tapo 2K 3MP Smart Wire-Free Secu $119 (近期中位价 $89)
   ⚠️  异常价格跳过: Swann 6K Pro Series NVR Securtiy Camera  $839 (近期中位价 $599)
   ⚠️  异常价格跳过: Ring Wired Video Doorbell Pro Plug-In $279 (近期中位价 $399)
@@ -120,7 +115,7 @@
   ⚠️  异常价格跳过: Ring Outdoor Security Camera Plus 2K Bat $197 (近期中位价 $329)
   ⚠️  异常价格跳过: Ring Outdoor Security Camera Plus 2K Bat $287 (近期中位价 $479)
   ⚠️  异常价格跳过: Ring Outdoor Security Camera [Stick Up C $104 (近期中位价 $149)
-  ⚠️  异常价格跳过: Swann MaxTrak 4K AI Auto Tracking Long R $799 (近期中位价 $1179)
+  ⚠️  异常价格跳过: Swann MaxTrak 4K AI Auto Tracking Long R $799 (近期中位价 $1499)
   ⚠️  异常价格跳过: Uniden App Cam X25 PT Indoor 2k Super HD $72 (近期中位价 $52)
   ⚠️  异常价格跳过: Ring Wired Video Doorbell Plus Plug-In $174 (近期中位价 $249)
   ⚠️  异常价格跳过: Ring Wired Video Doorbell Pro DIN Rail $279 (近期中位价 $399)
@@ -134,17 +129,17 @@
   ⚠️  异常价格跳过: Garmin Dash Cam Mini 3 $149 (近期中位价 $249)
   ⚠️  异常价格跳过: Ring Wired Video Doorbell 2K Plug-in (Sp $69 (近期中位价 $99)
   ⚠️  异常价格跳过: eufy Security eufyCam 2C Pro 2K Wireless $449 (近期中位价 $249.0)
-  ✅ 促销结束: Segway Passcode Lock (持续 15 天)
   ⚠️  异常价格跳过: Smart Remote View Pan & Tilt Baby Camera $179 (近期中位价 $129)
   ⚠️  异常价格跳过: Reolink 4K PT Wireless Security System S $1099.99 (近期中位价 $629.99)
   ⚠️  异常价格跳过: Ring Pan-Tilt Indoor Security Camera (Wh $69 (近期中位价 $46)
   ⚠️  异常价格跳过: Ring Floodlight Cam Pro(2nd Gen) Wired S $300 (近期中位价 $429)
   ⚠️  异常价格跳过: Your connection needs to be verified bef $279 (近期中位价 $899.0)
+  🔥 新促销: Your connection needs to be verified before you can proceed (30.1% OFF)
   ⚠️  异常价格跳过: Your connection needs to be verified bef $55 (近期中位价 $899.0)
   ⚠️  异常价格跳过: Your connection needs to be verified bef $90 (近期中位价 $899.0)
   ⚠️  异常价格跳过: Your connection needs to be verified bef $230 (近期中位价 $899.0)
   ⚠️  异常价格跳过: Your connection needs to be verified bef $329 (近期中位价 $899.0)
-  ✅ 促销结束: Your connection needs to be verified before you can proceed (持续 3 天)
+  ✅ 促销结束: Your connection needs to be verified before you can proceed (持续 1 天)
   ⚠️  异常价格跳过: Your connection needs to be verified bef $233.99 (近期中位价 $899.0)
 ✅ 历史数据已保存: 454 个产品
 ✅ 促销记录已保存

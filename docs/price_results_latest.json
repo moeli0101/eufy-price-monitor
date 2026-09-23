@@ -6,7 +6,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-baby-e21-4k-standalone-baby-monitor-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:35:56.483378",
+    "scraped_at": "2026-09-23T20:46:30.509748",
     "price": null,
     "status": "failed"
   },
@@ -17,8 +17,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-v2-advanced-security-camera-kit",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:35:57.718582",
-    "price": 1149,
+    "scraped_at": "2026-09-23T20:46:31.634979",
+    "price": 899,
+    "was_price": 1149,
+    "discount_percent": 22,
     "status": "success"
   },
   {
@@ -28,7 +30,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-baby-s340-smart-sock-baby-monitor-with-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:36:01.539829",
+    "scraped_at": "2026-09-23T20:46:35.411486",
     "price": null,
     "status": "failed"
   },
@@ -39,7 +41,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-s3-pro-security-camera-kit-4-pack-1",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:36:03.385857",
+    "scraped_at": "2026-09-23T20:46:36.656331",
     "price": 1999,
     "status": "success"
   },
@@ -50,7 +52,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-s3-pro-security-camera-kit-2-pack-1",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:36:05.353050",
+    "scraped_at": "2026-09-23T20:46:37.505552",
     "price": 1299,
     "status": "success"
   },
@@ -61,7 +63,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-c210-2k-solocam",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:36:10.400532",
+    "scraped_at": "2026-09-23T20:46:41.627666",
     "price": null,
     "status": "failed"
   },
@@ -72,7 +74,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-e40-essential-security-camera-kit-with-homebase-2-4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:36:13.771695",
+    "scraped_at": "2026-09-23T20:46:45.339050",
     "price": null,
     "status": "failed"
   },
@@ -83,10 +85,8 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-e42-security-camera-kit-4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:36:15.603759",
-    "price": 1279,
-    "was_price": 1599,
-    "discount_percent": 20,
+    "scraped_at": "2026-09-23T20:46:46.599657",
+    "price": 1599,
     "status": "success"
   },
   {
@@ -96,7 +96,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-e30-indoor-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:36:17.430548",
+    "scraped_at": "2026-09-23T20:46:48.095364",
     "price": 199,
     "status": "success"
   },
@@ -107,8 +107,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-wireless-dual-camera-doorbell-2k-add-on",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:36:18.598424",
-    "price": 349,
+    "scraped_at": "2026-09-23T20:46:49.644523",
+    "price": 279,
+    "was_price": 349,
+    "discount_percent": 20,
     "status": "success"
   },
   {
@@ -118,7 +120,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-e40-essential-security-camera-kit-with-homebase-2-2-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:36:23.232649",
+    "scraped_at": "2026-09-23T20:46:53.970460",
     "price": null,
     "status": "failed"
   },
@@ -129,7 +131,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-solocam-s340-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:36:24.415293",
+    "scraped_at": "2026-09-23T20:46:55.600653",
     "price": 449,
     "status": "success"
   },
@@ -140,10 +142,8 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-e30-floodlight-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:36:25.637090",
-    "price": 279,
-    "was_price": 299,
-    "discount_percent": 7,
+    "scraped_at": "2026-09-23T20:46:56.989869",
+    "price": 299,
     "status": "success"
   },
   {
@@ -153,7 +153,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-e40-nvr-poe-bullet-add-on-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:36:29.223314",
+    "scraped_at": "2026-09-23T20:47:01.699450",
     "price": null,
     "status": "failed"
   },
@@ -164,7 +164,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-eufycam-s4-security-camera-2-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:36:30.818282",
+    "scraped_at": "2026-09-23T20:47:03.070474",
     "price": 1899,
     "status": "success"
   },
@@ -175,7 +175,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-eufycam-e330-4k-home-security-system-with-homebase-3-4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:36:35.637601",
+    "scraped_at": "2026-09-23T20:47:07.008256",
     "price": null,
     "status": "failed"
   },
@@ -186,7 +186,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-eufycam-solo-s40-spotlight-2k-solar-wireless",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:36:40.206907",
+    "scraped_at": "2026-09-23T20:47:10.712005",
     "price": null,
     "status": "failed"
   },
@@ -197,10 +197,8 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-e42-security-camera-kit-2-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:36:41.244983",
-    "price": 799,
-    "was_price": 999,
-    "discount_percent": 20,
+    "scraped_at": "2026-09-23T20:47:11.858439",
+    "price": 999,
     "status": "success"
   },
   {
@@ -210,8 +208,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-s4-max-nvr-poe-24-7-security-camera-system-4-ptz-cameras",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:36:42.342048",
-    "price": 2499,
+    "scraped_at": "2026-09-23T20:47:13.497973",
+    "price": 2099,
+    "was_price": 2499,
+    "discount_percent": 16,
     "status": "success"
   },
   {
@@ -221,7 +221,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-solocam-s220-1-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:36:43.843295",
+    "scraped_at": "2026-09-23T20:47:14.818747",
     "price": 249,
     "status": "success"
   },
@@ -232,10 +232,8 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-s330-4g-wi-fi-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:36:44.991173",
-    "price": 499,
-    "was_price": 599,
-    "discount_percent": 17,
+    "scraped_at": "2026-09-23T20:47:15.980711",
+    "price": 599,
     "status": "success"
   },
   {
@@ -245,7 +243,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-s350-indoor-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:36:46.299981",
+    "scraped_at": "2026-09-23T20:47:17.743654",
     "price": 279,
     "status": "success"
   },
@@ -256,7 +254,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-e40-essential-add-on-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:36:50.689064",
+    "scraped_at": "2026-09-23T20:47:23.151373",
     "price": null,
     "status": "failed"
   },
@@ -267,7 +265,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-s4-nvr-poe-ptz-add-on-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:36:55.900432",
+    "scraped_at": "2026-09-23T20:47:26.540778",
     "price": null,
     "status": "failed"
   },
@@ -278,10 +276,8 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-e41-nvr-poe-24-7-security-system-4-x-turret-cameras",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:36:57.155957",
-    "price": 999,
-    "was_price": 1299,
-    "discount_percent": 23,
+    "scraped_at": "2026-09-23T20:47:27.973648",
+    "price": 1299,
     "status": "success"
   },
   {
@@ -291,7 +287,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-eufycam-s4-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:36:58.732415",
+    "scraped_at": "2026-09-23T20:47:28.920960",
     "price": 799,
     "status": "success"
   },
@@ -302,7 +298,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-e340-floodlight-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:36:59.768013",
+    "scraped_at": "2026-09-23T20:47:30.468336",
     "price": 449,
     "status": "success"
   },
@@ -313,7 +309,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-eufycam-2c-pro-2k-wireless-home-security-system-addon-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:37:04.937482",
+    "scraped_at": "2026-09-23T20:47:33.760397",
     "price": null,
     "status": "failed"
   },
@@ -324,7 +320,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-eufycam-e330-4k-24-7-security-camera-add-on",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:37:08.548455",
+    "scraped_at": "2026-09-23T20:47:38.101557",
     "price": null,
     "status": "failed"
   },
@@ -335,7 +331,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-e340-dual-camera-video-doorbell",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:37:10.336188",
+    "scraped_at": "2026-09-23T20:47:39.792751",
     "price": 280,
     "was_price": 349,
     "discount_percent": 20,
@@ -348,7 +344,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-2k-indoor-pan-tilt-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:37:11.921091",
+    "scraped_at": "2026-09-23T20:47:40.918316",
     "price": 99,
     "was_price": 139,
     "discount_percent": 29,
@@ -361,7 +357,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-s340-solocam-security-camera-with-homebase-2-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:37:13.221619",
+    "scraped_at": "2026-09-23T20:47:41.711543",
     "price": 1199,
     "status": "success"
   },
@@ -372,8 +368,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-s4-nvr-poe-24-7-security-system-2-x-ptz-2-x-turret-cameras",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:37:14.501257",
-    "price": 1649,
+    "scraped_at": "2026-09-23T20:47:42.579223",
+    "price": 1319,
+    "was_price": 1649,
+    "discount_percent": 20,
     "status": "success"
   },
   {
@@ -383,8 +381,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/arlo-essentials-2k-3rd-gen-outdoor-solar-security-camera-kit-6m-subscription-4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:37:16.486714",
-    "price": 699,
+    "scraped_at": "2026-09-23T20:47:44.393695",
+    "price": 399,
+    "was_price": 699,
+    "discount_percent": 43,
     "status": "success"
   },
   {
@@ -394,7 +394,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/arlo-ultra-2-4k-uhd-wire-free-security-spotlight-camera-system-2-cameras-smart-hub",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:37:21.232821",
+    "scraped_at": "2026-09-23T20:47:47.808713",
     "price": null,
     "status": "failed"
   },
@@ -405,7 +405,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/arlo-essentials-gen-3-2k-pan-tilt-indoor-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:37:22.906974",
+    "scraped_at": "2026-09-23T20:47:48.826628",
     "price": 79,
     "status": "success"
   },
@@ -416,8 +416,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/arlo-go-2-4g-wi-fi-mobile-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:37:24.234461",
-    "price": 429,
+    "scraped_at": "2026-09-23T20:47:49.863804",
+    "price": 249,
+    "was_price": 429,
+    "discount_percent": 42,
     "status": "success"
   },
   {
@@ -427,7 +429,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-pan-tilt-indoor-security-camera-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:37:25.931349",
+    "scraped_at": "2026-09-23T20:47:50.900138",
     "price": 49,
     "was_price": 99,
     "discount_percent": 51,
@@ -440,7 +442,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-spotlight-cam-pro-plug-in-security-camera-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:37:30.774548",
+    "scraped_at": "2026-09-23T20:47:55.253407",
     "price": null,
     "status": "failed"
   },
@@ -451,7 +453,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-indoor-cam-2nd-genwhite",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:37:36.498025",
+    "scraped_at": "2026-09-23T20:47:59.714256",
     "price": null,
     "status": "failed"
   },
@@ -462,7 +464,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/google-nest-gen3-wired-indoor-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:37:38.330908",
+    "scraped_at": "2026-09-23T20:48:00.976927",
     "price": 189,
     "status": "success"
   },
@@ -473,7 +475,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-indoor-outdoor-home-wi-fi-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:37:41.585085",
+    "scraped_at": "2026-09-23T20:48:02.267533",
     "price": 59,
     "status": "success"
   },
@@ -484,7 +486,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-3mp-smart-wire-free-security-system-4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:37:42.910014",
+    "scraped_at": "2026-09-23T20:48:03.634541",
     "price": 249,
     "was_price": 429,
     "discount_percent": 42,
@@ -497,7 +499,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-outdoor-security-wi-fi-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:37:47.763529",
+    "scraped_at": "2026-09-23T20:48:08.543563",
     "price": null,
     "status": "failed"
   },
@@ -508,8 +510,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-4k-pan-tilt-ai-home-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:37:48.941546",
-    "price": 149,
+    "scraped_at": "2026-09-23T20:48:09.663733",
+    "price": 119,
+    "was_price": 149,
+    "discount_percent": 20,
     "status": "success"
   },
   {
@@ -519,7 +523,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-4k-maxranger-mini-security-camera-add-on",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:37:50.138553",
+    "scraped_at": "2026-09-23T20:48:10.555872",
     "price": 249,
     "status": "success"
   },
@@ -530,7 +534,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-evo-2k-solar-outdoor-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:37:53.443534",
+    "scraped_at": "2026-09-23T20:48:14.032372",
     "price": null,
     "status": "failed"
   },
@@ -541,7 +545,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-maxtrak-4k-ai-auto-tracking-long-range-add-on-security-camera-w-solar",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:37:55.326081",
+    "scraped_at": "2026-09-23T20:48:15.107657",
     "price": 399,
     "status": "success"
   },
@@ -552,8 +556,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-maxranger-v2-security-camera-kit-4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:37:56.364189",
-    "price": 1299,
+    "scraped_at": "2026-09-23T20:48:16.933208",
+    "price": 999,
+    "was_price": 1299,
+    "discount_percent": 23,
     "status": "success"
   },
   {
@@ -563,7 +569,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-4k-floodlight-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:00.169662",
+    "scraped_at": "2026-09-23T20:48:21.345019",
     "price": null,
     "status": "failed"
   },
@@ -574,7 +580,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/aqara-smart-video-doorbell-g4-with-chime-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:01.246887",
+    "scraped_at": "2026-09-23T20:48:23.193470",
     "price": 199,
     "status": "success"
   },
@@ -585,8 +591,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-smart-video-doorbell-mini",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:03.260226",
-    "price": 99,
+    "scraped_at": "2026-09-23T20:48:24.654706",
+    "price": 79,
+    "was_price": 99,
+    "discount_percent": 20,
     "status": "success"
   },
   {
@@ -596,7 +604,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-wired-smart-wifi-2k-video-doorbell-outdoor-security-camera-package",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:05.108655",
+    "scraped_at": "2026-09-23T20:48:26.018671",
     "price": 189.99,
     "status": "success"
   },
@@ -607,7 +615,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/laser-smart-full-hd-video-doorbell-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:07.033415",
+    "scraped_at": "2026-09-23T20:48:27.135606",
     "price": 49,
     "status": "success"
   },
@@ -618,8 +626,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-smart-video-doorbell",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:08.252265",
-    "price": 149,
+    "scraped_at": "2026-09-23T20:48:28.365974",
+    "price": 109,
+    "was_price": 149,
+    "discount_percent": 27,
     "status": "success"
   },
   {
@@ -629,7 +639,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/laser-smart-full-hd-video-doorbell-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:10.147269",
+    "scraped_at": "2026-09-23T20:48:30.111434",
     "price": 149.95,
     "status": "success"
   },
@@ -640,7 +650,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-familock-s3-max-video-smart-lock",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:11.453816",
+    "scraped_at": "2026-09-23T20:48:31.559687",
     "price": 698,
     "was_price": 899,
     "discount_percent": 22,
@@ -653,7 +663,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-wi-fi-smart-lock",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:12.578098",
+    "scraped_at": "2026-09-23T20:48:33.519011",
     "price": 249,
     "status": "success"
   },
@@ -664,9 +674,9 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-e31-smart-lock",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:16.618614",
-    "price": null,
-    "status": "failed"
+    "scraped_at": "2026-09-23T20:48:35.071207",
+    "price": 449,
+    "status": "success"
   },
   {
     "name": "Kaadas S10-5W Slim Narrow Stile WiFi Smart Lock (Black)",
@@ -675,7 +685,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/kaadas-s10-5w-slim-narrow-stile-wifi-smart-lock-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:18.041828",
+    "scraped_at": "2026-09-23T20:48:36.662582",
     "price": 299,
     "status": "success"
   },
@@ -686,7 +696,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-c34-smart-lock",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:19.930389",
+    "scraped_at": "2026-09-23T20:48:37.710664",
     "price": 249,
     "status": "success"
   },
@@ -697,7 +707,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/kaadas-s110-5w-lever-smart-door-lock-wifi-copper",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:23.637543",
+    "scraped_at": "2026-09-23T20:48:42.776313",
     "price": null,
     "status": "failed"
   },
@@ -708,7 +718,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/aqara-u100-with-m100-smart-lock-hub-kit",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:25.393650",
+    "scraped_at": "2026-09-23T20:48:44.196165",
     "price": 449,
     "status": "success"
   },
@@ -719,7 +729,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/laser-smart-deadbolt-lock-with-apple-home-integration",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:27.293672",
+    "scraped_at": "2026-09-23T20:48:45.663220",
     "price": 139,
     "status": "success"
   },
@@ -730,7 +740,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/laser-smart-home-keyless-smart-deadbolt-lock-with-app-control-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:28.469219",
+    "scraped_at": "2026-09-23T20:48:47.215011",
     "price": 139,
     "status": "success"
   },
@@ -741,7 +751,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/mec-digital-motorised-smart-lock",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:30.178354",
+    "scraped_at": "2026-09-23T20:48:48.480719",
     "price": 95,
     "status": "success"
   },
@@ -752,7 +762,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/kaadas-s500-5w-lever-smart-door-lock-wifi-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:31.866800",
+    "scraped_at": "2026-09-23T20:48:49.486611",
     "price": 299,
     "status": "success"
   },
@@ -763,7 +773,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/aqara-smart-door-lock-d100",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:33.349231",
+    "scraped_at": "2026-09-23T20:48:51.250707",
     "price": 849,
     "status": "success"
   },
@@ -774,7 +784,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/auslock-h11a-bluetooth-wi-fi-smart-door-locks",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:35.042204",
+    "scraped_at": "2026-09-23T20:48:52.666840",
     "price": 319,
     "status": "success"
   },
@@ -785,7 +795,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-wi-fi-smart-lock-touch",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:36.151359",
+    "scraped_at": "2026-09-23T20:48:53.872352",
     "price": 499,
     "status": "success"
   },
@@ -796,7 +806,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/auslock-h06-wi-fi-smart-lock-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:39.579412",
+    "scraped_at": "2026-09-23T20:48:58.566647",
     "price": null,
     "status": "failed"
   },
@@ -807,7 +817,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-c220-v2-indoor-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:40.921764",
+    "scraped_at": "2026-09-23T20:49:00.600657",
     "price": 99,
     "status": "success"
   },
@@ -818,7 +828,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-eufycam-3-4k-add-on-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:42.605675",
+    "scraped_at": "2026-09-23T20:49:02.114208",
     "price": 429,
     "status": "success"
   },
@@ -829,7 +839,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/arlo-pro-3-wireless-2k-floodlight-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:44.445125",
+    "scraped_at": "2026-09-23T20:49:03.549796",
     "price": 269,
     "status": "success"
   },
@@ -840,7 +850,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/arlo-essential-security-camera-kit-with-solar-panel-6m-subscription-4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:45.801092",
+    "scraped_at": "2026-09-23T20:49:04.747819",
     "price": 699,
     "status": "success"
   },
@@ -851,8 +861,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/arlo-pro-6-2k-outdoor-solar-security-camera-kit-12m-subscription4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:46.965471",
-    "price": 869,
+    "scraped_at": "2026-09-23T20:49:06.371744",
+    "price": 569,
+    "was_price": 869,
+    "discount_percent": 35,
     "status": "success"
   },
   {
@@ -862,7 +874,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-stick-up-cam-pro-plug-in-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:48.625202",
+    "scraped_at": "2026-09-23T20:49:08.214898",
     "price": 214,
     "was_price": 299,
     "discount_percent": 28,
@@ -875,7 +887,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-outdoor-security-camera-plus-poe-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:54.379260",
+    "scraped_at": "2026-09-23T20:49:13.314132",
     "price": null,
     "status": "failed"
   },
@@ -886,7 +898,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/google-nest-gen2-wired-outdoor-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:55.434929",
+    "scraped_at": "2026-09-23T20:49:14.202406",
     "price": 239,
     "status": "success"
   },
@@ -897,7 +909,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/google-nest-cam-with-floodlight-wired",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:56.573922",
+    "scraped_at": "2026-09-23T20:49:15.774117",
     "price": 549,
     "status": "success"
   },
@@ -908,10 +920,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-3k-solar-powered-pan-tilt-security-camera-kit",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:58.031294",
-    "price": 199,
+    "scraped_at": "2026-09-23T20:49:16.861445",
+    "price": 179,
     "was_price": 249,
-    "discount_percent": 20,
+    "discount_percent": 28,
     "status": "success"
   },
   {
@@ -921,8 +933,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-pan-tilt-wi-fi-security-camera-2-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:38:59.150019",
-    "price": 109,
+    "scraped_at": "2026-09-23T20:49:17.916307",
+    "price": 79,
+    "was_price": 109,
+    "discount_percent": 28,
     "status": "success"
   },
   {
@@ -932,7 +946,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-smart-wire-free-security-camera-4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:39:03.523201",
+    "scraped_at": "2026-09-23T20:49:23.087399",
     "price": null,
     "status": "failed"
   },
@@ -943,7 +957,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-indoor-outdoor-dual-lens-pan-tilt-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:39:04.910367",
+    "scraped_at": "2026-09-23T20:49:24.532640",
     "price": 119,
     "was_price": 149,
     "discount_percent": 20,
@@ -956,7 +970,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-2k-home-wired-dvr-security-camera-kit-4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:39:05.951869",
+    "scraped_at": "2026-09-23T20:49:26.100708",
     "price": 389,
     "was_price": 599,
     "discount_percent": 35,
@@ -969,7 +983,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-allsecure650-2k-wireless-add-on-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:39:10.259270",
+    "scraped_at": "2026-09-23T20:49:30.828972",
     "price": null,
     "status": "failed"
   },
@@ -980,7 +994,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-swannforce-1080p-dvr-65gb-security-camera-4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:39:15.969034",
+    "scraped_at": "2026-09-23T20:49:34.019340",
     "price": null,
     "status": "failed"
   },
@@ -991,8 +1005,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-maxranger-v2-security-camera-kit-6-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:39:17.212183",
-    "price": 1699,
+    "scraped_at": "2026-09-23T20:49:35.430198",
+    "price": 1249,
+    "was_price": 1699,
+    "discount_percent": 26,
     "status": "success"
   },
   {
@@ -1002,7 +1018,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-video-doorbell-wired",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:39:18.836824",
+    "scraped_at": "2026-09-23T20:49:37.270208",
     "price": 39,
     "status": "success"
   },
@@ -1013,8 +1029,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-c31-video-doorbell",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:39:20.425525",
-    "price": 299,
+    "scraped_at": "2026-09-23T20:49:39.103161",
+    "price": 249,
+    "was_price": 299,
+    "discount_percent": 17,
     "status": "success"
   },
   {
@@ -1024,7 +1042,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-slim-1080p-wireless-doorbell-with-homebase-mini-repeater",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:39:24.878278",
+    "scraped_at": "2026-09-23T20:49:42.478217",
     "price": null,
     "status": "failed"
   },
@@ -1035,7 +1053,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/arlo-essentials-2k-video-doorbell-2nd-generation",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:39:25.990908",
+    "scraped_at": "2026-09-23T20:49:44.249566",
     "price": 129,
     "status": "success"
   },
@@ -1046,7 +1064,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-5mp-wi-fi-video-doorbell-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:39:28.005099",
+    "scraped_at": "2026-09-23T20:49:45.801532",
     "price": 161.49,
     "status": "success"
   },
@@ -1057,7 +1075,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-video-doorbell-poe-camera-5mp-outdoor-security-camera-with-chime",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:39:29.335052",
+    "scraped_at": "2026-09-23T20:49:47.115633",
     "price": 169.99,
     "status": "success"
   },
@@ -1068,7 +1086,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-video-doorbell-plus-with-chime",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:39:33.034791",
+    "scraped_at": "2026-09-23T20:49:52.030180",
     "price": null,
     "status": "failed"
   },
@@ -1079,7 +1097,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-dual-cam-wireless-2k-video-doorbell",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:39:37.666256",
+    "scraped_at": "2026-09-23T20:49:56.864898",
     "price": null,
     "status": "failed"
   },
@@ -1090,8 +1108,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-c30-video-doorbell",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:39:39.005926",
-    "price": 149,
+    "scraped_at": "2026-09-23T20:49:58.158012",
+    "price": 129,
+    "was_price": 149,
+    "discount_percent": 13,
     "status": "success"
   },
   {
@@ -1101,7 +1121,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-wired-video-doorbell-pro-poe",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:39:40.303909",
+    "scraped_at": "2026-09-23T20:49:59.123985",
     "price": 299,
     "was_price": 499,
     "discount_percent": 40,
@@ -1114,7 +1134,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/uniden-app-cam-solo-x2k-wirefree-video-door-bell",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:39:45.398550",
+    "scraped_at": "2026-09-23T20:50:03.100306",
     "price": null,
     "status": "failed"
   },
@@ -1125,7 +1145,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/kaadas-k20-pro-max-3d-face-recognition-wi-fi-lock-with-camera-copper",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:39:47.311082",
+    "scraped_at": "2026-09-23T20:50:04.778635",
     "price": 849,
     "status": "success"
   },
@@ -1136,10 +1156,8 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-wireless-video-doorbell-2k-addon",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:39:49.073323",
-    "price": 229,
-    "was_price": 279,
-    "discount_percent": 18,
+    "scraped_at": "2026-09-23T20:50:06.244022",
+    "price": 279,
     "status": "success"
   },
   {
@@ -1149,7 +1167,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-video-doorbell-2k-wired",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:39:53.224934",
+    "scraped_at": "2026-09-23T20:50:09.942867",
     "price": null,
     "status": "failed"
   },
@@ -1160,7 +1178,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/uniden-solo-x2k-door-bell-plus",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:39:54.726839",
+    "scraped_at": "2026-09-23T20:50:11.581743",
     "price": 149,
     "was_price": 185,
     "discount_percent": 19,
@@ -1173,7 +1191,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-wireless-video-doorbell-with-hub",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:39:56.035883",
+    "scraped_at": "2026-09-23T20:50:13.324471",
     "price": 229,
     "status": "success"
   },
@@ -1184,7 +1202,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-buddy-4k-video-doorbell-with-chime",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:39:57.160886",
+    "scraped_at": "2026-09-23T20:50:14.379883",
     "price": 299,
     "status": "success"
   },
@@ -1195,7 +1213,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-maxranger4k-long-range-wireless-video-doorbell-add-on",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:39:58.145309",
+    "scraped_at": "2026-09-23T20:50:15.913237",
     "price": 299,
     "was_price": 349,
     "discount_percent": 14,
@@ -1208,7 +1226,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-wired-video-doorbell-plus-din-rail",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:39:59.995272",
+    "scraped_at": "2026-09-23T20:50:16.838259",
     "price": 119,
     "was_price": 249,
     "discount_percent": 52,
@@ -1221,7 +1239,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-e35-smart-lock",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:40:01.699472",
+    "scraped_at": "2026-09-23T20:50:18.310375",
     "price": 699,
     "status": "success"
   },
@@ -1232,7 +1250,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-e330-video-smart-lock",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:40:06.898573",
+    "scraped_at": "2026-09-23T20:50:22.260975",
     "price": null,
     "status": "failed"
   },
@@ -1243,7 +1261,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/mec-digital-fingerprint-smart-auto-lock-with-one-touch-verification",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:40:08.768664",
+    "scraped_at": "2026-09-23T20:50:23.660456",
     "price": 95,
     "status": "success"
   },
@@ -1254,7 +1272,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/kaadas-k9-push-pull-fingerprint-wifi-smart-lock-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:40:13.083072",
+    "scraped_at": "2026-09-23T20:50:27.771230",
     "price": null,
     "status": "failed"
   },
@@ -1265,7 +1283,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/auslock-g2-wi-fi-smart-lock-gateway",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:40:16.335513",
+    "scraped_at": "2026-09-23T20:50:31.551350",
     "price": null,
     "status": "failed"
   },
@@ -1276,7 +1294,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/mec-digital-motorised-smart-lock-matte-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:40:21.710006",
+    "scraped_at": "2026-09-23T20:50:36.520537",
     "price": null,
     "status": "failed"
   },
@@ -1287,7 +1305,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/auslock-h05-keyless-entry-smart-door-lock-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:40:25.994611",
+    "scraped_at": "2026-09-23T20:50:41.475851",
     "price": null,
     "status": "failed"
   },
@@ -1298,7 +1316,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/mec-digital-motorised-smart-lock-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:40:27.329576",
+    "scraped_at": "2026-09-23T20:50:43.000273",
     "price": 95,
     "status": "success"
   },
@@ -1309,7 +1327,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/auslock-novo-series-n31b-door-handle-smart-lock-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:40:29.146720",
+    "scraped_at": "2026-09-23T20:50:44.212723",
     "price": 339,
     "status": "success"
   },
@@ -1320,7 +1338,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/kaadas-rx-c-deadbolt-smart-lock-satin-nickel",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:40:30.643422",
+    "scraped_at": "2026-09-23T20:50:45.286491",
     "price": 149,
     "status": "success"
   },
@@ -1331,7 +1349,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-video-smart-lock",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:40:34.776089",
+    "scraped_at": "2026-09-23T20:50:49.538545",
     "price": null,
     "status": "failed"
   },
@@ -1342,7 +1360,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/auslock-slim-series-smart-lock-s3-gold",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:40:39.393388",
+    "scraped_at": "2026-09-23T20:50:53.386512",
     "price": null,
     "status": "failed"
   },
@@ -1353,7 +1371,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/kaadas-k9-push-pull-fingerprint-wifi-smart-lock-copper",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:40:44.468943",
+    "scraped_at": "2026-09-23T20:50:58.055141",
     "price": null,
     "status": "failed"
   },
@@ -1364,7 +1382,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/aqara-smart-door-lock-a100",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:40:46.261641",
+    "scraped_at": "2026-09-23T20:50:59.860967",
     "price": 399,
     "status": "success"
   },
@@ -1375,7 +1393,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/auslock-s31b-slim-series-bluetooth-wi-fi-smart-door-lock-silver",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:40:48.196050",
+    "scraped_at": "2026-09-23T20:51:01.283349",
     "price": 549,
     "status": "success"
   },
@@ -1386,7 +1404,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/kaadas-s500-5w-lever-smart-door-lock-wifi-copper",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:40:50.092321",
+    "scraped_at": "2026-09-23T20:51:02.552493",
     "price": 299,
     "status": "success"
   },
@@ -1397,7 +1415,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/auslock-novo-series-n25-door-handle-smart-lock-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:40:55.247124",
+    "scraped_at": "2026-09-23T20:51:07.320766",
     "price": null,
     "status": "failed"
   },
@@ -1408,7 +1426,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/arlo-essentials-outdoor-2k-security-camera-2nd-generation2-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:41:00.236303",
+    "scraped_at": "2026-09-23T20:51:11.110813",
     "price": null,
     "status": "failed"
   },
@@ -1419,8 +1437,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/arlo-ultra-3-4k-outdoor-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:41:02.003378",
-    "price": 279,
+    "scraped_at": "2026-09-23T20:51:12.581117",
+    "price": 229,
+    "was_price": 279,
+    "discount_percent": 18,
     "status": "success"
   },
   {
@@ -1430,7 +1450,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-outdoor-security-camera-plus-2k-plug-in-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:41:03.595398",
+    "scraped_at": "2026-09-23T20:51:13.503523",
     "price": 89,
     "was_price": 179,
     "discount_percent": 50,
@@ -1443,10 +1463,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-4k-solar-powered-pan-tilt-security-camera-kit",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:41:05.502276",
-    "price": 249,
+    "scraped_at": "2026-09-23T20:51:14.370151",
+    "price": 229,
     "was_price": 299,
-    "discount_percent": 17,
+    "discount_percent": 23,
     "status": "success"
   },
   {
@@ -1456,10 +1476,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-solar-powered-pan-tilt-4g-lte-security-camera-kit",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:41:06.709321",
-    "price": 199,
+    "scraped_at": "2026-09-23T20:51:15.398222",
+    "price": 219,
     "was_price": 279,
-    "discount_percent": 29,
+    "discount_percent": 22,
     "status": "success"
   },
   {
@@ -1469,7 +1489,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-3mp-smart-wire-free-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:41:08.566620",
+    "scraped_at": "2026-09-23T20:51:16.907930",
     "price": 119,
     "status": "success"
   },
@@ -1480,8 +1500,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-maxranger-v2-add-on-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:41:10.508763",
-    "price": 374,
+    "scraped_at": "2026-09-23T20:51:18.192201",
+    "price": 279,
+    "was_price": 374,
+    "discount_percent": 25,
     "status": "success"
   },
   {
@@ -1491,8 +1513,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-6k-pro-series-nvr-securtiy-camera-system-4-cameras",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:41:12.354218",
-    "price": 1399,
+    "scraped_at": "2026-09-23T20:51:19.249167",
+    "price": 999,
+    "was_price": 1399,
+    "discount_percent": 29,
     "status": "success"
   },
   {
@@ -1502,7 +1526,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-wired-video-doorbell-pro-plug-in",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:41:13.645041",
+    "scraped_at": "2026-09-23T20:51:20.535200",
     "price": 249,
     "was_price": 399,
     "discount_percent": 38,
@@ -1515,10 +1539,8 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-video-doorbell-2k-wireless-with-homebase-2",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:41:15.592688",
-    "price": 319,
-    "was_price": 399,
-    "discount_percent": 20,
+    "scraped_at": "2026-09-23T20:51:21.675579",
+    "price": 399,
     "status": "success"
   },
   {
@@ -1528,7 +1550,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-5mp-poe-camera-video-doorbell-with-chime-person-detection",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:41:16.551047",
+    "scraped_at": "2026-09-23T20:51:23.055811",
     "price": 144.49,
     "status": "success"
   },
@@ -1539,7 +1561,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/kaadas-q15-5wk-push-pull-wi-fi-smart-lock-matte-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:41:17.536898",
+    "scraped_at": "2026-09-23T20:51:23.944750",
     "price": 319,
     "status": "success"
   },
@@ -1550,7 +1572,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/yale-byyou-pro-smart-mortice-lock",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:41:19.023937",
+    "scraped_at": "2026-09-23T20:51:25.050553",
     "price": 699,
     "status": "success"
   },
@@ -1561,7 +1583,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-smart-lever-lock-c33-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:41:20.618569",
+    "scraped_at": "2026-09-23T20:51:26.176753",
     "price": 349,
     "status": "success"
   },
@@ -1572,8 +1594,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/arlo-ultra-3-4k-outdoor-security-camera-kit-12m-subscription-4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:41:21.709356",
-    "price": 1299,
+    "scraped_at": "2026-09-23T20:51:27.222778",
+    "price": 799,
+    "was_price": 1299,
+    "discount_percent": 38,
     "status": "success"
   },
   {
@@ -1583,7 +1607,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/arlo-essential-indoor-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:41:25.456760",
+    "scraped_at": "2026-09-23T20:51:31.409839",
     "price": null,
     "status": "failed"
   },
@@ -1594,9 +1618,11 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-floodlight-cam-wired-plus-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:41:30.649496",
-    "price": null,
-    "status": "failed"
+    "scraped_at": "2026-09-23T20:51:32.453867",
+    "price": 89,
+    "was_price": 149,
+    "discount_percent": 40,
+    "status": "success"
   },
   {
     "name": "Ring Outdoor Cam Pro Plug-In Security Camera (White)",
@@ -1605,7 +1631,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-outdoor-cam-pro-plug-in-security-camera-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:41:36.290008",
+    "scraped_at": "2026-09-23T20:51:37.423638",
     "price": null,
     "status": "failed"
   },
@@ -1616,10 +1642,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-pan-tilt-ai-home-security-wi-fi-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:41:37.580397",
-    "price": 55,
+    "scraped_at": "2026-09-23T20:51:38.534624",
+    "price": 49,
     "was_price": 69,
-    "discount_percent": 20,
+    "discount_percent": 29,
     "status": "success"
   },
   {
@@ -1629,7 +1655,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-smart-floodlight-camera-2k-wired",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:41:38.644826",
+    "scraped_at": "2026-09-23T20:51:39.956738",
     "price": 299,
     "status": "success"
   },
@@ -1640,7 +1666,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-4k-advancedx-series-nvr-security-system-8-camera-kit",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:41:43.945080",
+    "scraped_at": "2026-09-23T20:51:44.302673",
     "price": null,
     "status": "failed"
   },
@@ -1651,8 +1677,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-evo-2k-indoor-wifi-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:41:45.767789",
-    "price": 59,
+    "scraped_at": "2026-09-23T20:51:45.813771",
+    "price": 47,
+    "was_price": 59,
+    "discount_percent": 20,
     "status": "success"
   },
   {
@@ -1662,7 +1690,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-s340-3k-solocam",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:41:50.599550",
+    "scraped_at": "2026-09-23T20:51:50.011989",
     "price": null,
     "status": "failed"
   },
@@ -1673,7 +1701,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/arlo-essentials-2k-3rd-gen-outdoor-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:41:51.977782",
+    "scraped_at": "2026-09-23T20:51:50.860438",
     "price": 149,
     "status": "success"
   },
@@ -1684,7 +1712,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/arlo-pro-6-2k-outdoor-add-on-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:41:55.800173",
+    "scraped_at": "2026-09-23T20:51:55.303295",
     "price": null,
     "status": "failed"
   },
@@ -1695,7 +1723,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-indoor-cam-plus-plug-in-security-camera-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:42:00.434808",
+    "scraped_at": "2026-09-23T20:51:58.510509",
     "price": null,
     "status": "failed"
   },
@@ -1706,7 +1734,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-spotlight-cam-pro-wired-security-camera-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:42:04.743801",
+    "scraped_at": "2026-09-23T20:52:02.586061",
     "price": null,
     "status": "failed"
   },
@@ -1717,7 +1745,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-indoor-cam-2-pack-2nd-genwhite",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:42:08.070879",
+    "scraped_at": "2026-09-23T20:52:05.990286",
     "price": null,
     "status": "failed"
   },
@@ -1728,7 +1756,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-outdoor-cam-pro-plug-in-security-camera-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:42:12.366663",
+    "scraped_at": "2026-09-23T20:52:10.588109",
     "price": null,
     "status": "failed"
   },
@@ -1739,7 +1767,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-3mp-smart-wire-free-security-system-2-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:42:13.742974",
+    "scraped_at": "2026-09-23T20:52:12.392786",
     "price": 219,
     "status": "success"
   },
@@ -1750,7 +1778,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-outdoor-pan-tilt-wifi-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:42:15.308085",
+    "scraped_at": "2026-09-23T20:52:13.240712",
     "price": 89,
     "status": "success"
   },
@@ -1761,10 +1789,8 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-3k-indoor-outdoor-home-security-wi-fi-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:42:17.105357",
-    "price": 79,
-    "was_price": 99,
-    "discount_percent": 20,
+    "scraped_at": "2026-09-23T20:52:14.781946",
+    "price": 99,
     "status": "success"
   },
   {
@@ -1774,7 +1800,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-4k-advancedx-series-add-on-bullet-camera-for-nvr-1-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:42:19.076651",
+    "scraped_at": "2026-09-23T20:52:15.779103",
     "price": 129,
     "status": "success"
   },
@@ -1785,7 +1811,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-advancedx-4k-16-channel-bullet-security-camera-kit-8-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:42:23.157053",
+    "scraped_at": "2026-09-23T20:52:19.250250",
     "price": null,
     "status": "failed"
   },
@@ -1796,7 +1822,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-advancedx-4k-16-channel-dome-security-camera-kit-8-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:42:27.057148",
+    "scraped_at": "2026-09-23T20:52:24.047366",
     "price": null,
     "status": "failed"
   },
@@ -1807,10 +1833,8 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-5mp-smart-video-doorbell",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:42:28.127668",
-    "price": 199,
-    "was_price": 249,
-    "discount_percent": 20,
+    "scraped_at": "2026-09-23T20:52:25.464409",
+    "price": 249,
     "status": "success"
   },
   {
@@ -1820,7 +1844,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-indoor-cam-plus-plug-in-security-camera-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:42:32.827737",
+    "scraped_at": "2026-09-23T20:52:29.874786",
     "price": null,
     "status": "failed"
   },
@@ -1831,7 +1855,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-floodlight-cam-wired-pro-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:42:37.665804",
+    "scraped_at": "2026-09-23T20:52:33.944484",
     "price": null,
     "status": "failed"
   },
@@ -1842,7 +1866,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-maxtrak-4k-ai-auto-tracking-long-range-security-camera-system-4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:42:39.256696",
+    "scraped_at": "2026-09-23T20:52:35.540400",
     "price": 1499,
     "status": "success"
   },
@@ -1853,7 +1877,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-xtreem4k-wirelesscamera-with-solar-panel",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:42:40.235552",
+    "scraped_at": "2026-09-23T20:52:36.694315",
     "price": 269,
     "status": "success"
   },
@@ -1864,8 +1888,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-evo-2k-pan-and-tilt-indoor-wifi-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:42:41.641090",
-    "price": 69,
+    "scraped_at": "2026-09-23T20:52:38.152708",
+    "price": 55,
+    "was_price": 69,
+    "discount_percent": 20,
     "status": "success"
   },
   {
@@ -1875,7 +1901,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-evo-wireless-video-doorbell-chime-with-swannshield-ai-voice-assistant",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:42:47.188154",
+    "scraped_at": "2026-09-23T20:52:41.654711",
     "price": null,
     "status": "failed"
   },
@@ -1886,7 +1912,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-baby-monitor-c10",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:42:52.079220",
+    "scraped_at": "2026-09-23T20:52:47.147810",
     "price": null,
     "status": "failed"
   },
@@ -1897,7 +1923,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-e20-2k-baby-monitor",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:42:53.993270",
+    "scraped_at": "2026-09-23T20:52:48.318692",
     "price": 349,
     "status": "success"
   },
@@ -1908,7 +1934,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-e21-4k-baby-monitor",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:42:55.258192",
+    "scraped_at": "2026-09-23T20:52:49.915075",
     "price": 449,
     "status": "success"
   },
@@ -1919,7 +1945,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-baby-wi-fi-2k-baby-monitor",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:42:56.718751",
+    "scraped_at": "2026-09-23T20:52:51.469041",
     "price": 229,
     "status": "success"
   },
@@ -1930,7 +1956,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-baby-s320-smart-sock-baby-monitor",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:43:01.210089",
+    "scraped_at": "2026-09-23T20:52:55.536995",
     "price": null,
     "status": "failed"
   },
@@ -1941,7 +1967,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-s1-wearable-breast-pump",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:43:02.384781",
+    "scraped_at": "2026-09-23T20:52:57.176509",
     "price": 449,
     "status": "success"
   },
@@ -1952,7 +1978,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-s1-pro-wearable-breast-pump",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:43:03.791573",
+    "scraped_at": "2026-09-23T20:52:58.197853",
     "price": 579,
     "status": "success"
   },
@@ -1963,7 +1989,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-e20-wearable-breast-pump",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:43:05.096013",
+    "scraped_at": "2026-09-23T20:52:59.488108",
     "price": 349,
     "status": "success"
   },
@@ -1974,7 +2000,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/arlo-essential-pan-tilt-2k-outdoor-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:43:06.416292",
+    "scraped_at": "2026-09-23T20:53:01.200460",
     "price": 119,
     "status": "success"
   },
@@ -1985,7 +2011,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-spotlight-security-camera-pro-2k-plug-in-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:43:09.607909",
+    "scraped_at": "2026-09-23T20:53:05.703327",
     "price": null,
     "status": "failed"
   },
@@ -1996,7 +2022,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-spotlight-cam-plus-plug-in-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:43:14.651611",
+    "scraped_at": "2026-09-23T20:53:10.017455",
     "price": null,
     "status": "failed"
   },
@@ -2007,8 +2033,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-solar-powered-pan-tilt-security-camera-kit",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:43:16.344962",
-    "price": 199,
+    "scraped_at": "2026-09-23T20:53:11.028324",
+    "price": 139,
+    "was_price": 199,
+    "discount_percent": 30,
     "status": "success"
   },
   {
@@ -2018,7 +2046,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-4k-advancedx-series-nvr-security-system-6-camera-kit",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:43:17.541668",
+    "scraped_at": "2026-09-23T20:53:12.224944",
     "price": 799,
     "was_price": 999,
     "discount_percent": 20,
@@ -2031,7 +2059,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/auslock-h11b-fingerprint-bluetooth-wi-fi-smart-door-locks",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:43:19.389131",
+    "scraped_at": "2026-09-23T20:53:13.543000",
     "price": 449,
     "status": "success"
   },
@@ -2042,7 +2070,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/oricom-smart-hd-baby-monitor-with-remote",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:43:20.532303",
+    "scraped_at": "2026-09-23T20:53:14.455135",
     "price": 179,
     "status": "success"
   },
@@ -2053,8 +2081,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/oricom-babysense7-breathing-movement-monitor",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:43:21.975000",
-    "price": 249,
+    "scraped_at": "2026-09-23T20:53:15.652874",
+    "price": 199,
+    "was_price": 249,
+    "discount_percent": 20,
     "status": "success"
   },
   {
@@ -2064,7 +2094,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/vtech-rm9751-smart-wi-fi-hd-baby-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:43:23.325799",
+    "scraped_at": "2026-09-23T20:53:17.110334",
     "price": 89,
     "status": "success"
   },
@@ -2075,7 +2105,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/oricom-sc340-3-2-video-baby-monitor-with-lcd-display-and-digital-pan-zoom",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:43:27.634142",
+    "scraped_at": "2026-09-23T20:53:20.679489",
     "price": null,
     "status": "failed"
   },
@@ -2086,10 +2116,8 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/uniden-bw2511-2-8-baby-monitor",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:43:29.371590",
-    "price": 84,
-    "was_price": 104,
-    "discount_percent": 19,
+    "scraped_at": "2026-09-23T20:53:22.302384",
+    "price": 104,
     "status": "success"
   },
   {
@@ -2099,8 +2127,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/oricom-smart-remote-5-pan-tilt-baby-monitor",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:43:31.266904",
-    "price": 329,
+    "scraped_at": "2026-09-23T20:53:23.596153",
+    "price": 279,
+    "was_price": 329,
+    "discount_percent": 15,
     "status": "success"
   },
   {
@@ -2110,8 +2140,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/vtech-bm5250n-5-full-colour-video-audio-baby-monitor",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:43:32.412533",
-    "price": 169,
+    "scraped_at": "2026-09-23T20:53:24.670287",
+    "price": 149,
+    "was_price": 169,
+    "discount_percent": 12,
     "status": "success"
   },
   {
@@ -2121,7 +2153,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/owlet-dream-sock-baby-monitor-mint",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:43:33.978490",
+    "scraped_at": "2026-09-23T20:53:25.736222",
     "price": 499,
     "status": "success"
   },
@@ -2132,7 +2164,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/owlet-dream-sock-baby-monitor-bedtime-blue",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:43:35.027366",
+    "scraped_at": "2026-09-23T20:53:27.581136",
     "price": 499,
     "status": "success"
   },
@@ -2143,7 +2175,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/vtech-bm5250n-5-full-colour-video-audio-baby-monitor-2-cam",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:43:40.224864",
+    "scraped_at": "2026-09-23T20:53:32.154489",
     "price": null,
     "status": "failed"
   },
@@ -2154,7 +2186,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/oricom-5-smart-obh36t-hd-touchscreen-nursery-pal-premium-baby-monitor",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:43:45.449818",
+    "scraped_at": "2026-09-23T20:53:36.134948",
     "price": null,
     "status": "failed"
   },
@@ -2165,7 +2197,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/vtech-bm2800-2-4-video-and-audio-baby-monitor",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:43:49.210649",
+    "scraped_at": "2026-09-23T20:53:39.963839",
     "price": null,
     "status": "failed"
   },
@@ -2176,7 +2208,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/oricom-obhdual-smart-baby-video-hd-dual-camera-monitor-with-motorised-pan-tilt",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:43:54.028850",
+    "scraped_at": "2026-09-23T20:53:43.659977",
     "price": null,
     "status": "failed"
   },
@@ -2187,7 +2219,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/momcozy-s9-pro-wearable-breast-pump-double",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:43:55.113361",
+    "scraped_at": "2026-09-23T20:53:45.507341",
     "price": 179,
     "status": "success"
   },
@@ -2198,8 +2230,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/philips-avent-manual-breast-pump",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:43:56.757812",
-    "price": 79,
+    "scraped_at": "2026-09-23T20:53:47.245789",
+    "price": 55,
+    "was_price": 79,
+    "discount_percent": 30,
     "status": "success"
   },
   {
@@ -2209,8 +2243,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/philips-avent-hands-free-double-electric-breast-pump",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:43:58.784634",
-    "price": 599,
+    "scraped_at": "2026-09-23T20:53:48.513375",
+    "price": 419,
+    "was_price": 599,
+    "discount_percent": 30,
     "status": "success"
   },
   {
@@ -2220,7 +2256,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/momcozy-s9-pro-wearable-breast-pump-single",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:44:00.657628",
+    "scraped_at": "2026-09-23T20:53:49.535346",
     "price": 99,
     "status": "success"
   },
@@ -2231,7 +2267,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/momcozy-m9-hands-free-breast-pump-red-double",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:44:02.283818",
+    "scraped_at": "2026-09-23T20:53:51.315300",
     "price": 404,
     "status": "success"
   },
@@ -2242,7 +2278,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/philips-avent-double-electric-breast-pump",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:44:06.488999",
+    "scraped_at": "2026-09-23T20:53:54.971981",
     "price": null,
     "status": "failed"
   },
@@ -2253,7 +2289,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/momcozy-s12-pro-wearable-breast-pump-single",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:44:10.221208",
+    "scraped_at": "2026-09-23T20:53:58.539424",
     "price": null,
     "status": "failed"
   },
@@ -2264,7 +2300,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/momcozy-m5-wearable-breast-pump-double",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:44:11.407741",
+    "scraped_at": "2026-09-23T20:53:59.566268",
     "price": 299,
     "status": "success"
   },
@@ -2275,7 +2311,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/momcozy-s12-pro-wearable-breast-pump-double",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:44:15.686701",
+    "scraped_at": "2026-09-23T20:54:04.213347",
     "price": null,
     "status": "failed"
   },
@@ -2286,7 +2322,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/momcozy-large-capacity-baby-wipe-warmer",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:44:17.359572",
+    "scraped_at": "2026-09-23T20:54:05.991778",
     "price": 59,
     "status": "success"
   },
@@ -2297,8 +2333,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/nanit-pro-baby-monitor-with-floor-stand",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:44:18.757480",
-    "price": 799,
+    "scraped_at": "2026-09-23T20:54:07.368613",
+    "price": 599,
+    "was_price": 799,
+    "discount_percent": 25,
     "status": "success"
   },
   {
@@ -2308,7 +2346,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/owlet-dream-sock-baby-monitor-dusty-rose",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:44:19.780351",
+    "scraped_at": "2026-09-23T20:54:08.703181",
     "price": 499,
     "status": "success"
   },
@@ -2319,7 +2357,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-floodlight-cam-wired-plus-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:44:21.061143",
+    "scraped_at": "2026-09-23T20:54:09.742319",
     "price": 89,
     "was_price": 149,
     "discount_percent": 40,
@@ -2332,7 +2370,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-floodlight-security-camera-pro-2k-wired-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:44:26.299277",
+    "scraped_at": "2026-09-23T20:54:13.393218",
     "price": null,
     "status": "failed"
   },
@@ -2343,10 +2381,8 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-c460-4k-solar-powered-security-camera-kit",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:44:27.740750",
-    "price": 199,
-    "was_price": 279,
-    "discount_percent": 29,
+    "scraped_at": "2026-09-23T20:54:14.937206",
+    "price": 279,
     "status": "success"
   },
   {
@@ -2356,7 +2392,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/oricom-sc640-6-video-baby-monitor",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:44:29.255660",
+    "scraped_at": "2026-09-23T20:54:16.670597",
     "price": 199,
     "status": "success"
   },
@@ -2367,7 +2403,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/momcozy-v1-pro-hospital-grade-wearable-breast-pump",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:44:30.883829",
+    "scraped_at": "2026-09-23T20:54:18.189427",
     "price": 299,
     "status": "success"
   },
@@ -2378,7 +2414,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/momcozy-kleanpal-pro-baby-bottle-washer",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:44:32.669754",
+    "scraped_at": "2026-09-23T20:54:19.827259",
     "price": 549,
     "status": "success"
   },
@@ -2389,7 +2425,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-outdoor-cam-pro-poe-security-camera-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:44:36.190365",
+    "scraped_at": "2026-09-23T20:54:24.705469",
     "price": null,
     "status": "failed"
   },
@@ -2400,10 +2436,8 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/uniden-bw3531-4-3-baby-monito-with-pan-tilt-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:44:37.389354",
-    "price": 142,
-    "was_price": 167,
-    "discount_percent": 15,
+    "scraped_at": "2026-09-23T20:54:26.296365",
+    "price": 167,
     "status": "success"
   },
   {
@@ -2413,8 +2447,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/philips-avent-single-electric-breast-pump",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:44:39.120114",
-    "price": 279,
+    "scraped_at": "2026-09-23T20:54:27.294589",
+    "price": 195,
+    "was_price": 279,
+    "discount_percent": 30,
     "status": "success"
   },
   {
@@ -2424,7 +2460,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-spotlight-cam-pro-poe-security-camera-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:44:43.011106",
+    "scraped_at": "2026-09-23T20:54:32.369885",
     "price": null,
     "status": "failed"
   },
@@ -2435,7 +2471,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-evo-2k-solar-outdoor-security-camera-2-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:44:44.252633",
+    "scraped_at": "2026-09-23T20:54:33.289417",
     "price": 249,
     "was_price": 349,
     "discount_percent": 29,
@@ -2448,8 +2484,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/oricom-5-smart-hd-baby-monitor-with-stand",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:44:45.853160",
-    "price": 399,
+    "scraped_at": "2026-09-23T20:54:34.786916",
+    "price": 349,
+    "was_price": 399,
+    "discount_percent": 13,
     "status": "success"
   },
   {
@@ -2459,7 +2497,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/aqara-smart-door-lock-u100-with-e1-hub-kit-silver",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:44:50.002840",
+    "scraped_at": "2026-09-23T20:54:38.932473",
     "price": null,
     "status": "failed"
   },
@@ -2470,8 +2508,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/uniden-bw4501-4-3-full-hd-baby-monitor-and-clamp-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:44:51.444818",
-    "price": 241,
+    "scraped_at": "2026-09-23T20:54:40.741137",
+    "price": 189,
+    "was_price": 241,
+    "discount_percent": 22,
     "status": "success"
   },
   {
@@ -2481,7 +2521,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-2k-indoor-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:44:55.052485",
+    "scraped_at": "2026-09-23T20:54:46.212299",
     "price": null,
     "status": "failed"
   },
@@ -2492,7 +2532,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-floodlight-cam-pro2nd-gen-wired-security-camera-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:44:59.699255",
+    "scraped_at": "2026-09-23T20:54:50.183704",
     "price": null,
     "status": "failed"
   },
@@ -2503,7 +2543,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-securealert-4-camera-4-channel-4k-ultra-hd-wi-fi-nvr-security-system",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:45:03.850467",
+    "scraped_at": "2026-09-23T20:54:53.947267",
     "price": null,
     "status": "failed"
   },
@@ -2514,7 +2554,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-c10-2k-baby-monitor",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:45:05.685340",
+    "scraped_at": "2026-09-23T20:54:55.548150",
     "price": 249,
     "status": "success"
   },
@@ -2525,7 +2565,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/google-nest-cam-indoor-wired",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:45:09.334669",
+    "scraped_at": "2026-09-23T20:54:59.329532",
     "price": null,
     "status": "failed"
   },
@@ -2536,7 +2576,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-smart-2k-wire-free-security-camera-system-2-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:45:13.262365",
+    "scraped_at": "2026-09-23T20:55:02.797340",
     "price": null,
     "status": "failed"
   },
@@ -2547,7 +2587,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-evo-wireless-video-doorbell-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:45:15.297590",
+    "scraped_at": "2026-09-23T20:55:04.425334",
     "price": 49,
     "was_price": 79,
     "discount_percent": 38,
@@ -2560,7 +2600,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/oricom-obhdual-smart-baby-video-hd-dual-camera-with-motorised-pan-tilt",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:45:19.884474",
+    "scraped_at": "2026-09-23T20:55:09.459123",
     "price": null,
     "status": "failed"
   },
@@ -2571,8 +2611,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-elite-6k-12-mp-nvr-security-camera-system-6-camera-kit",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:45:21.639257",
-    "price": 1299,
+    "scraped_at": "2026-09-23T20:55:10.679636",
+    "price": 999,
+    "was_price": 1299,
+    "discount_percent": 23,
     "status": "success"
   },
   {
@@ -2582,7 +2624,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/auslock-s31b-slim-series-bluetooth-wi-fi-smart-door-lock-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:45:26.513605",
+    "scraped_at": "2026-09-23T20:55:14.423266",
     "price": null,
     "status": "failed"
   },
@@ -2593,7 +2635,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/yale-luna-pro-smart-push-pull-mortice-lock-with-yale-home-module-champagne-gold",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:45:28.293389",
+    "scraped_at": "2026-09-23T20:55:15.875635",
     "price": 999,
     "status": "success"
   },
@@ -2604,7 +2646,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/kaadas-r8-5-smart-rim-digital-lock-matte-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:45:30.297831",
+    "scraped_at": "2026-09-23T20:55:17.571991",
     "price": 179,
     "status": "success"
   },
@@ -2615,7 +2657,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/yale-kyra-pro-smart-push-pull-mortice-lock-with-yale-home-module-matt-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:45:31.812366",
+    "scraped_at": "2026-09-23T20:55:19.297176",
     "price": 769,
     "status": "success"
   },
@@ -2626,7 +2668,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-maxranger4k-pro-security-system-camera-kit-4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:45:33.334393",
+    "scraped_at": "2026-09-23T20:55:20.354521",
     "price": 1599,
     "status": "success"
   },
@@ -2637,7 +2679,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-elitex-wired-6k-12mp-dome-add-on-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:45:36.969750",
+    "scraped_at": "2026-09-23T20:55:25.597953",
     "price": null,
     "status": "failed"
   },
@@ -2648,8 +2690,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/philips-avent-connected-baby-monitor-1",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:45:38.910796",
-    "price": 189,
+    "scraped_at": "2026-09-23T20:55:27.295258",
+    "price": 132,
+    "was_price": 189,
+    "discount_percent": 30,
     "status": "success"
   },
   {
@@ -2659,7 +2703,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/owlet-dream-sight-cam-3-baby-monitor",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:45:40.676091",
+    "scraped_at": "2026-09-23T20:55:28.724087",
     "price": 249,
     "status": "success"
   },
@@ -2670,7 +2714,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/kaadas-k70-se-smart-lock-3d-face-id-fingerprint-wi-fi-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:45:42.275695",
+    "scraped_at": "2026-09-23T20:55:30.487046",
     "price": 1099,
     "status": "success"
   },
@@ -2681,7 +2725,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/kaadas-m5-smart-lock-biometric-fingerprint-and-app-control-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:45:47.785439",
+    "scraped_at": "2026-09-23T20:55:35.356259",
     "price": null,
     "status": "failed"
   },
@@ -2692,7 +2736,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/kaadas-m7-w-lever-smart-door-lock-wi-fi-fingerprint-and-pin-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:45:49.642465",
+    "scraped_at": "2026-09-23T20:55:36.410305",
     "price": 210,
     "status": "success"
   },
@@ -2703,7 +2747,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-eufycam-3c-4k-add-on-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:45:54.288394",
+    "scraped_at": "2026-09-23T20:55:40.844885",
     "price": null,
     "status": "failed"
   },
@@ -2714,7 +2758,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-c220-indoor-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:45:58.163781",
+    "scraped_at": "2026-09-23T20:55:44.831697",
     "price": null,
     "status": "failed"
   },
@@ -2725,7 +2769,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-4g-starlight-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:46:03.300377",
+    "scraped_at": "2026-09-23T20:55:50.095847",
     "price": null,
     "status": "failed"
   },
@@ -2736,7 +2780,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-solocam-s220-with-homebase-4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:46:07.930043",
+    "scraped_at": "2026-09-23T20:55:54.874180",
     "price": null,
     "status": "failed"
   },
@@ -2747,7 +2791,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-s3-pro-security-camera-kit-4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:46:13.056807",
+    "scraped_at": "2026-09-23T20:55:58.102986",
     "price": null,
     "status": "failed"
   },
@@ -2758,7 +2802,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-s3-pro-security-camera-kit-2-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:46:17.412627",
+    "scraped_at": "2026-09-23T20:56:02.283722",
     "price": null,
     "status": "failed"
   },
@@ -2769,7 +2813,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-cam3-4k-security-camera-3-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:46:21.560200",
+    "scraped_at": "2026-09-23T20:56:06.840304",
     "price": null,
     "status": "failed"
   },
@@ -2780,7 +2824,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/arlo-pro-6-2k-outdoor-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:46:23.033497",
+    "scraped_at": "2026-09-23T20:56:08.285255",
     "price": 199,
     "status": "success"
   },
@@ -2791,7 +2835,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/arlo-pro-5-2k-spotlight-security-camera-2-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:46:27.908618",
+    "scraped_at": "2026-09-23T20:56:12.201720",
     "price": null,
     "status": "failed"
   },
@@ -2802,7 +2846,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/arlo-pro-5-2k-spotlight-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:46:32.375904",
+    "scraped_at": "2026-09-23T20:56:15.993049",
     "price": null,
     "status": "failed"
   },
@@ -2813,7 +2857,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/arlo-essential-indoor-2k-camera-2nd-generation",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:46:36.567527",
+    "scraped_at": "2026-09-23T20:56:20.637176",
     "price": null,
     "status": "failed"
   },
@@ -2824,7 +2868,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-spotlight-cam-plus-battery-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:46:41.020442",
+    "scraped_at": "2026-09-23T20:56:25.798588",
     "price": null,
     "status": "failed"
   },
@@ -2835,7 +2879,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-2-pack-outdoor-security-camera-stick-up-cam-battery-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:46:44.307831",
+    "scraped_at": "2026-09-23T20:56:30.219310",
     "price": null,
     "status": "failed"
   },
@@ -2846,7 +2890,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-outdoor-security-camera-plus-2k-battery-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:46:45.409507",
+    "scraped_at": "2026-09-23T20:56:31.280931",
     "price": 89,
     "was_price": 179,
     "discount_percent": 50,
@@ -2859,7 +2903,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-outdoor-security-camera-plus-2k-battery-white-2-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:46:46.849853",
+    "scraped_at": "2026-09-23T20:56:33.069125",
     "price": 139,
     "was_price": 329,
     "discount_percent": 58,
@@ -2872,7 +2916,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-outdoor-security-camera-plus-2k-battery-white-3-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:46:48.879218",
+    "scraped_at": "2026-09-23T20:56:34.749686",
     "price": 199,
     "was_price": 479,
     "discount_percent": 58,
@@ -2885,7 +2929,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-outdoor-security-camera-stick-up-cam-battery-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:46:50.410579",
+    "scraped_at": "2026-09-23T20:56:36.127047",
     "price": 75,
     "was_price": 149,
     "discount_percent": 50,
@@ -2898,7 +2942,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-stick-up-cam-pro-battery-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:46:51.514491",
+    "scraped_at": "2026-09-23T20:56:37.832953",
     "price": 214,
     "was_price": 299,
     "discount_percent": 28,
@@ -2911,7 +2955,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-stick-up-cam-battery-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:46:52.750972",
+    "scraped_at": "2026-09-23T20:56:39.656038",
     "price": 104,
     "was_price": 179,
     "discount_percent": 42,
@@ -2924,7 +2968,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-stick-up-cam-battery-4-pack-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:46:56.883418",
+    "scraped_at": "2026-09-23T20:56:44.655799",
     "price": null,
     "status": "failed"
   },
@@ -2935,7 +2979,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-spotlight-security-camera-pro-2k-battery-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:47:02.999847",
+    "scraped_at": "2026-09-23T20:56:49.198996",
     "price": null,
     "status": "failed"
   },
@@ -2946,7 +2990,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-maxranger4k-mini-long-range-wireless-solar-security-system-4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:47:04.627429",
+    "scraped_at": "2026-09-23T20:56:50.867576",
     "price": 749,
     "was_price": 999,
     "discount_percent": 25,
@@ -2959,7 +3003,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/arlo-ultra-2-4k-uhd-wire-free-security-spotlight-camera-addon",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:47:08.691418",
+    "scraped_at": "2026-09-23T20:56:55.146099",
     "price": null,
     "status": "failed"
   },
@@ -2970,7 +3014,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/arlo-ultra-2-4k-uhd-wire-free-security-spotlight-camera-system-3-cameras-smart-hub",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:47:14.070273",
+    "scraped_at": "2026-09-23T20:56:58.924241",
     "price": null,
     "status": "failed"
   },
@@ -2981,8 +3025,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-maxtrak-4k-ai-auto-tracking-long-range-security-camera-system-2-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:47:15.782181",
-    "price": 799,
+    "scraped_at": "2026-09-23T20:57:00.406534",
+    "price": 649,
+    "was_price": 799,
+    "discount_percent": 19,
     "status": "success"
   },
   {
@@ -2992,7 +3038,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-evo-2k-indoor-pan-tilt-wifi-camera-2-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:47:19.709838",
+    "scraped_at": "2026-09-23T20:57:03.514704",
     "price": null,
     "status": "failed"
   },
@@ -3003,7 +3049,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-2k-indoor-wi-fi-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:47:23.760656",
+    "scraped_at": "2026-09-23T20:57:08.665853",
     "price": null,
     "status": "failed"
   },
@@ -3014,7 +3060,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-xtreem4k-wireless-security-camera-with-32gb-micro-sd-cloud-storage-single",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:47:28.300876",
+    "scraped_at": "2026-09-23T20:57:14.323736",
     "price": null,
     "status": "failed"
   },
@@ -3025,7 +3071,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-enforcer-1080p-full-hd-dvr-security-system-8-ch-6-cameras",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:47:32.472724",
+    "scraped_at": "2026-09-23T20:57:18.914351",
     "price": null,
     "status": "failed"
   },
@@ -3036,7 +3082,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-6k-nvr-2tb-security-camera-4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:47:38.125724",
+    "scraped_at": "2026-09-23T20:57:22.816951",
     "price": null,
     "status": "failed"
   },
@@ -3047,7 +3093,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-allsecure4k-wireless-camera-add-on",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:47:42.530210",
+    "scraped_at": "2026-09-23T20:57:26.776421",
     "price": null,
     "status": "failed"
   },
@@ -3058,7 +3104,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-xtreem-1080p-wireless-security-camera-2-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:47:46.264226",
+    "scraped_at": "2026-09-23T20:57:30.625770",
     "price": null,
     "status": "failed"
   },
@@ -3069,7 +3115,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-4k-master-series-nvr-security-camera-kit-4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:47:51.197439",
+    "scraped_at": "2026-09-23T20:57:35.210497",
     "price": null,
     "status": "failed"
   },
@@ -3080,7 +3126,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-xtreem-1080p-wireless-security-camera-single",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:47:56.027607",
+    "scraped_at": "2026-09-23T20:57:39.999872",
     "price": null,
     "status": "failed"
   },
@@ -3091,7 +3137,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-full-hd-thermal-sensing-dome-security-camera-add-on-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:48:01.123793",
+    "scraped_at": "2026-09-23T20:57:43.680637",
     "price": null,
     "status": "failed"
   },
@@ -3102,7 +3148,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-4-camera-4-channel-4k-ultra-hd-1tb-dvr-security-system",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:48:05.240082",
+    "scraped_at": "2026-09-23T20:57:48.538160",
     "price": null,
     "status": "failed"
   },
@@ -3113,7 +3159,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-wi-fi-pan-tilt-indoor-camera-with-32gb-sd-card",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:48:10.809935",
+    "scraped_at": "2026-09-23T20:57:52.788413",
     "price": null,
     "status": "failed"
   },
@@ -3124,7 +3170,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-outdoor-security-wi-fi-camera-1",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:48:15.187326",
+    "scraped_at": "2026-09-23T20:57:58.497501",
     "price": null,
     "status": "failed"
   },
@@ -3135,7 +3181,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-smart-wire-free-security-camera-2-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:48:20.276130",
+    "scraped_at": "2026-09-23T20:58:02.510087",
     "price": null,
     "status": "failed"
   },
@@ -3146,7 +3192,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-smart-2k-wire-free-security-camera-system-4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:48:23.668220",
+    "scraped_at": "2026-09-23T20:58:05.681501",
     "price": null,
     "status": "failed"
   },
@@ -3157,10 +3203,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tapo-2k-solar-powered-dual-lens-pan-tilt-security-camera-kit",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:48:24.693436",
-    "price": 299,
+    "scraped_at": "2026-09-23T20:58:06.602501",
+    "price": 279,
     "was_price": 399,
-    "discount_percent": 25,
+    "discount_percent": 30,
     "status": "success"
   },
   {
@@ -3170,7 +3216,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-pan-tilt-wi-fi-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:48:28.755612",
+    "scraped_at": "2026-09-23T20:58:11.661654",
     "price": null,
     "status": "failed"
   },
@@ -3181,7 +3227,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-smart-wire-free-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:48:32.422425",
+    "scraped_at": "2026-09-23T20:58:15.481099",
     "price": null,
     "status": "failed"
   },
@@ -3192,7 +3238,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tapo-dual-lens-smart-baby-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:48:34.254490",
+    "scraped_at": "2026-09-23T20:58:17.096363",
     "price": 369,
     "status": "success"
   },
@@ -3203,8 +3249,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tapo-2k-solar-powered-floodlight-pan-tilt-security-camera-kit",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:48:35.972793",
-    "price": 269,
+    "scraped_at": "2026-09-23T20:58:18.574176",
+    "price": 199,
+    "was_price": 269,
+    "discount_percent": 26,
     "status": "success"
   },
   {
@@ -3214,7 +3262,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-outdoor-pan-tilt-security-wi-fi-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:48:39.868897",
+    "scraped_at": "2026-09-23T20:58:22.934838",
     "price": null,
     "status": "failed"
   },
@@ -3225,7 +3273,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-3mp-outdoor-wired-security-wi-fi-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:48:44.789813",
+    "scraped_at": "2026-09-23T20:58:28.331250",
     "price": null,
     "status": "failed"
   },
@@ -3236,7 +3284,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-2k-indoor-outdoor-wi-fi-home-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:48:48.648105",
+    "scraped_at": "2026-09-23T20:58:32.051636",
     "price": null,
     "status": "failed"
   },
@@ -3247,7 +3295,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-tapo-2k-wi-fi-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:48:53.610269",
+    "scraped_at": "2026-09-23T20:58:35.274847",
     "price": null,
     "status": "failed"
   },
@@ -3258,7 +3306,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-video-doorbell-elite",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:48:59.059432",
+    "scraped_at": "2026-09-23T20:58:38.802011",
     "price": null,
     "status": "failed"
   },
@@ -3269,7 +3317,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/arlo-wired-video-doorbell",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:49:00.312654",
+    "scraped_at": "2026-09-23T20:58:40.451624",
     "price": 39,
     "was_price": 289,
     "discount_percent": 87,
@@ -3282,7 +3330,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-wired-video-doorbell-2nd-gen-plug-in-speckled-grey",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:49:04.389632",
+    "scraped_at": "2026-09-23T20:58:44.691893",
     "price": null,
     "status": "failed"
   },
@@ -3293,7 +3341,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/uniden-app-cam-x25-pt-indoor-2k-super-hd-motion-tracking-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:49:05.585411",
+    "scraped_at": "2026-09-23T20:58:46.465850",
     "price": 72,
     "status": "success"
   },
@@ -3304,7 +3352,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/yale-ydm-7220-smart-door-lock",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:49:10.458753",
+    "scraped_at": "2026-09-23T20:58:51.352409",
     "price": null,
     "status": "failed"
   },
@@ -3315,7 +3363,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/yale-ydm-3109a-smart-door-lock",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:49:15.536506",
+    "scraped_at": "2026-09-23T20:58:55.954357",
     "price": null,
     "status": "failed"
   },
@@ -3326,7 +3374,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-smart-lever-lock-c33-nickel",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:49:16.756112",
+    "scraped_at": "2026-09-23T20:58:57.539505",
     "price": 349,
     "status": "success"
   },
@@ -3337,8 +3385,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/vtech-v-go-in-car-baby-monitor",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:49:18.597319",
-    "price": 79,
+    "scraped_at": "2026-09-23T20:58:59.251267",
+    "price": 69,
+    "was_price": 79,
+    "discount_percent": 13,
     "status": "success"
   },
   {
@@ -3348,8 +3398,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/vtech-bm2150-digital-audio-baby-monitor",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:49:20.787863",
-    "price": 49,
+    "scraped_at": "2026-09-23T20:59:00.438900",
+    "price": 39,
+    "was_price": 49,
+    "discount_percent": 20,
     "status": "success"
   },
   {
@@ -3359,8 +3411,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/vtech-bm3650n-3-5-video-monitor",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:49:22.073760",
-    "price": 129,
+    "scraped_at": "2026-09-23T20:59:02.197856",
+    "price": 99,
+    "was_price": 129,
+    "discount_percent": 23,
     "status": "success"
   },
   {
@@ -3370,7 +3424,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/momcozy-portable-baby-sound-machine",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:49:23.965257",
+    "scraped_at": "2026-09-23T20:59:03.490547",
     "price": 42,
     "status": "success"
   },
@@ -3381,8 +3435,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/nanit-breathing-wear-band-3-12m-medium",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:49:25.318313",
-    "price": 25,
+    "scraped_at": "2026-09-23T20:59:05.363289",
+    "price": 17,
+    "was_price": 25,
+    "discount_percent": 32,
     "status": "success"
   },
   {
@@ -3392,7 +3448,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-e41-nvr-poe-turret-add-on-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:49:30.275818",
+    "scraped_at": "2026-09-23T20:59:09.765588",
     "price": null,
     "status": "failed"
   },
@@ -3403,7 +3459,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-s120-solar-wall-light-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:49:35.208244",
+    "scraped_at": "2026-09-23T20:59:13.949435",
     "price": null,
     "status": "failed"
   },
@@ -3414,7 +3470,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-s3-pro-add-on-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:49:39.656980",
+    "scraped_at": "2026-09-23T20:59:17.117816",
     "price": null,
     "status": "failed"
   },
@@ -3425,7 +3481,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-wired-video-doorbell-plus-plug-in",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:49:40.816489",
+    "scraped_at": "2026-09-23T20:59:18.929882",
     "price": 119,
     "was_price": 249,
     "discount_percent": 52,
@@ -3438,7 +3494,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-12mp-poe-security-system-cctv-16-channel-nvr-with-2-poe-video-doorbell",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:49:42.197275",
+    "scraped_at": "2026-09-23T20:59:20.799398",
     "price": 2294.99,
     "status": "success"
   },
@@ -3449,7 +3505,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-wired-video-doorbell-pro-din-rail",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:49:45.150430",
+    "scraped_at": "2026-09-23T20:59:21.890994",
     "price": 249,
     "was_price": 399,
     "discount_percent": 38,
@@ -3462,7 +3518,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/vtech-rm7764hdv2-7-smart-hd-pan-tilt-video-monitor-with-remote-access",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:49:46.970387",
+    "scraped_at": "2026-09-23T20:59:22.936891",
     "price": 389,
     "status": "success"
   },
@@ -3473,7 +3529,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-12mp-poe-security-system-cctv-16-channel-nvr-with-4-poe-video-doorbell",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:49:48.521681",
+    "scraped_at": "2026-09-23T20:59:24.886815",
     "price": 2564.99,
     "status": "success"
   },
@@ -3484,7 +3540,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-4k-zoom-camera-2video-doorbell-poe-home-security-camera-system",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:49:49.599605",
+    "scraped_at": "2026-09-23T20:59:25.933561",
     "price": 1439.99,
     "status": "success"
   },
@@ -3495,7 +3551,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-4k-zoom-camera-4video-doorbell-poe-home-security-camera-system",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:49:50.779346",
+    "scraped_at": "2026-09-23T20:59:27.570111",
     "price": 1709.99,
     "status": "success"
   },
@@ -3506,7 +3562,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/vtech-bm5650n-5-pan-tilt-video-monitor-1-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:49:52.023018",
+    "scraped_at": "2026-09-23T20:59:28.514023",
     "price": 259,
     "status": "success"
   },
@@ -3517,7 +3573,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-eufycam-solo-l40-spotlight-2k-pro-wireless",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:49:53.920926",
+    "scraped_at": "2026-09-23T20:59:29.614265",
     "price": 189,
     "was_price": 229,
     "discount_percent": 17,
@@ -3530,7 +3586,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/arlo-essentials-outdoor-2k-security-camera-2nd-generation",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:49:57.630104",
+    "scraped_at": "2026-09-23T20:59:34.138784",
     "price": null,
     "status": "failed"
   },
@@ -3541,7 +3597,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/arlo-essentials-outdoor-2k-security-camera-2nd-generation4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:50:01.510535",
+    "scraped_at": "2026-09-23T20:59:39.219015",
     "price": null,
     "status": "failed"
   },
@@ -3552,7 +3608,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/oricom-obhdual-smart-baby-video-hd-dual-camera-motorised-pan-tilt",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:50:04.960779",
+    "scraped_at": "2026-09-23T20:59:43.305763",
     "price": null,
     "status": "failed"
   },
@@ -3563,8 +3619,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/vtech-rm7667hq-7-smart-pan-tilt-video-monitor-with-remote-access",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:50:06.692620",
-    "price": 369,
+    "scraped_at": "2026-09-23T20:59:44.313396",
+    "price": 329,
+    "was_price": 369,
+    "discount_percent": 11,
     "status": "success"
   },
   {
@@ -3574,7 +3632,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-floodlight-cam-e-2k-white-wired",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:50:10.891619",
+    "scraped_at": "2026-09-23T20:59:48.989010",
     "price": null,
     "status": "failed"
   },
@@ -3585,7 +3643,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufycam-c37-solo-2k-pan-tilt-zoom-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:50:12.644503",
+    "scraped_at": "2026-09-23T20:59:50.617139",
     "price": 249,
     "status": "success"
   },
@@ -3596,8 +3654,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/maxranger4k-pro-security-system-camera-kit-6-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:50:14.018005",
-    "price": 1999,
+    "scraped_at": "2026-09-23T20:59:52.151969",
+    "price": 1549,
+    "was_price": 1999,
+    "discount_percent": 23,
     "status": "success"
   },
   {
@@ -3607,7 +3667,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tapo-pan-and-tilt-home-security-wi-fi-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:50:15.454651",
+    "scraped_at": "2026-09-23T20:59:53.037744",
     "price": 44,
     "status": "success"
   },
@@ -3618,7 +3678,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/zigbang-previously-samsung-shp-r80-smart-lock",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:50:19.081859",
+    "scraped_at": "2026-09-23T20:59:57.410464",
     "price": null,
     "status": "failed"
   },
@@ -3629,7 +3689,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/kensington-ld5400t-thunderbolt-3-dual-4k-docking-station-dock-smart-lock",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:50:23.099859",
+    "scraped_at": "2026-09-23T21:00:01.887055",
     "price": null,
     "status": "failed"
   },
@@ -3640,7 +3700,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/gecko-tsa-smart-lock-bluetooth-tracker",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:50:27.290836",
+    "scraped_at": "2026-09-23T21:00:06.149210",
     "price": null,
     "status": "failed"
   },
@@ -3651,7 +3711,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/faleemi-fs1-wireless-security-baby-monitor-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:50:32.241983",
+    "scraped_at": "2026-09-23T21:00:09.261856",
     "price": null,
     "status": "failed"
   },
@@ -3662,7 +3722,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/leapfrog-lf2911-high-definition-wi-fi-camera-pan-and-tilt-baby-monitor",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:50:34.056967",
+    "scraped_at": "2026-09-23T21:00:10.361304",
     "price": 79,
     "status": "success"
   },
@@ -3673,7 +3733,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/vava-va-ih006-5-hd-display-baby-monitor",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:50:36.129636",
+    "scraped_at": "2026-09-23T21:00:11.521355",
     "price": 238,
     "status": "success"
   },
@@ -3684,8 +3744,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/vtech-bm7800n-7-pan-tilt-video-monitor-1-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:50:37.411164",
-    "price": 299,
+    "scraped_at": "2026-09-23T21:00:12.622339",
+    "price": 199,
+    "was_price": 299,
+    "discount_percent": 33,
     "status": "success"
   },
   {
@@ -3695,7 +3757,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/leapfrog-lf1911-high-definition-wi-fi-camera-pan-and-tilt-baby-monitor",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:50:38.936614",
+    "scraped_at": "2026-09-23T21:00:14.092202",
     "price": 89,
     "status": "success"
   },
@@ -3706,7 +3768,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/peekyboo-5-baby-monitor-2k-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:50:43.883035",
+    "scraped_at": "2026-09-23T21:00:17.860977",
     "price": null,
     "status": "failed"
   },
@@ -3717,8 +3779,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/dream-sight-dream-sock-duo-baby-monitor-mint",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:50:45.144380",
-    "price": 649,
+    "scraped_at": "2026-09-23T21:00:19.832215",
+    "price": 519,
+    "was_price": 649,
+    "discount_percent": 20,
     "status": "success"
   },
   {
@@ -3728,7 +3792,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-built-in-water-softener-for-baby-bottle-washer",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:50:46.890761",
+    "scraped_at": "2026-09-23T21:00:21.003890",
     "price": 79,
     "status": "success"
   },
@@ -3739,7 +3803,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-detergent-tablets-for-baby-bottle-washer-60-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:50:49.694972",
+    "scraped_at": "2026-09-23T21:00:22.062583",
     "price": 39,
     "status": "success"
   },
@@ -3750,7 +3814,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/vinyl-tyler-the-creator-dont-tap-the-glass-1-year-anniversary-clear-vinyl-lp-colour-may-vary",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:50:51.439226",
+    "scraped_at": "2026-09-23T21:00:24.027734",
     "price": 84.99,
     "status": "success"
   },
@@ -3761,7 +3825,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ezviz-dl04-pro-smart-lock",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:50:52.572648",
+    "scraped_at": "2026-09-23T21:00:25.158407",
     "price": 199,
     "was_price": 249,
     "discount_percent": 20,
@@ -3774,10 +3838,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-smart-wi-fi-deadbolt-door-lock",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:50:53.970609",
-    "price": 229,
+    "scraped_at": "2026-09-23T21:00:26.106749",
+    "price": 219,
     "was_price": 299,
-    "discount_percent": 23,
+    "discount_percent": 27,
     "status": "success"
   },
   {
@@ -3787,7 +3851,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/pixbee-sleep-smart-nursery-light",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:50:55.628983",
+    "scraped_at": "2026-09-23T21:00:27.170391",
     "price": 79,
     "status": "success"
   },
@@ -3798,8 +3862,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/vtech-v-care-2-5-smart-non-contact-well-being-baby-monitor-with-remote-access",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:50:57.280674",
-    "price": 379,
+    "scraped_at": "2026-09-23T21:00:28.788500",
+    "price": 329,
+    "was_price": 379,
+    "discount_percent": 13,
     "status": "success"
   },
   {
@@ -3809,7 +3875,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-eufycam-3-4k-wireless-home-security-system-2-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:50:59.075438",
+    "scraped_at": "2026-09-23T21:00:30.548977",
     "price": 1099,
     "status": "success"
   },
@@ -3820,7 +3886,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufycam-c37-2k-pan-tilt-zoom-security-system-2-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:00.284182",
+    "scraped_at": "2026-09-23T21:00:32.258575",
     "price": 499,
     "status": "success"
   },
@@ -3831,7 +3897,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufycam-c37-2k-pan-tilt-zoom-security-system-4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:01.699312",
+    "scraped_at": "2026-09-23T21:00:33.326939",
     "price": 699,
     "was_price": 799,
     "discount_percent": 13,
@@ -3844,10 +3910,8 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-eufycam-2c-pro-2k-wireless-home-security-system-2-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:03.628345",
-    "price": 349,
-    "was_price": 449,
-    "discount_percent": 22,
+    "scraped_at": "2026-09-23T21:00:34.948248",
+    "price": 449,
     "status": "success"
   },
   {
@@ -3857,7 +3921,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-eufycam-3-4k-wireless-home-security-system-4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:05.201832",
+    "scraped_at": "2026-09-23T21:00:36.410936",
     "price": 1799,
     "status": "success"
   },
@@ -3868,7 +3932,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-homebase-3",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:06.217603",
+    "scraped_at": "2026-09-23T21:00:37.962236",
     "price": 449,
     "status": "success"
   },
@@ -3879,7 +3943,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-e10-all-in-one-smart-display",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:09.388047",
+    "scraped_at": "2026-09-23T21:00:41.400751",
     "price": null,
     "status": "failed"
   },
@@ -3890,7 +3954,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-4k-ptz-poe-security-camera-with-16x-optical-zoom-rlc-823s2",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:11.500882",
+    "scraped_at": "2026-09-23T21:00:42.680698",
     "price": 499.99,
     "status": "success"
   },
@@ -3901,7 +3965,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/arlo-smarthub",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:13.188966",
+    "scraped_at": "2026-09-23T21:00:43.917392",
     "price": 99,
     "status": "success"
   },
@@ -3912,7 +3976,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-4k-maxranger-mini-kit-4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:14.903119",
+    "scraped_at": "2026-09-23T21:00:45.007314",
     "price": 899,
     "status": "success"
   },
@@ -3923,7 +3987,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-maxranger4k-with-long-range-wireless-solar-security-system-2-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:16.252637",
+    "scraped_at": "2026-09-23T21:00:46.656363",
     "price": 949,
     "status": "success"
   },
@@ -3934,7 +3998,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-wireless-home-doorway-alert-kit",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:17.851918",
+    "scraped_at": "2026-09-23T21:00:47.575428",
     "price": 79,
     "status": "success"
   },
@@ -3945,7 +4009,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-wi-fi-pir-motion-sensor-alarm",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:18.974624",
+    "scraped_at": "2026-09-23T21:00:48.749950",
     "price": 49.95,
     "status": "success"
   },
@@ -3956,7 +4020,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-activeresponse-personal-alarm-graphite",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:20.560120",
+    "scraped_at": "2026-09-23T21:00:50.278240",
     "price": 39,
     "status": "success"
   },
@@ -3967,7 +4031,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-smart-wi-fi-multicolour-bulb-e27-2-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:21.894891",
+    "scraped_at": "2026-09-23T21:00:51.709366",
     "price": 34,
     "status": "success"
   },
@@ -3978,7 +4042,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-smart-wi-fi-light-strip-5m",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:22.980015",
+    "scraped_at": "2026-09-23T21:00:52.600870",
     "price": 39,
     "status": "success"
   },
@@ -3989,8 +4053,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-smart-hub",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:24.759720",
-    "price": 79,
+    "scraped_at": "2026-09-23T21:00:53.634253",
+    "price": 69,
+    "was_price": 79,
+    "discount_percent": 13,
     "status": "success"
   },
   {
@@ -4000,8 +4066,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-smart-temperature-humidity-monitor",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:25.827434",
-    "price": 34,
+    "scraped_at": "2026-09-23T21:00:54.580260",
+    "price": 29,
+    "was_price": 34,
+    "discount_percent": 15,
     "status": "success"
   },
   {
@@ -4011,7 +4079,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-gu10-white-smart-downlight-4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:26.982042",
+    "scraped_at": "2026-09-23T21:00:56.456648",
     "price": 49,
     "was_price": 85,
     "discount_percent": 42,
@@ -4024,8 +4092,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-smart-homebase",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:28.226318",
-    "price": 299,
+    "scraped_at": "2026-09-23T21:00:58.087467",
+    "price": 249,
+    "was_price": 299,
+    "discount_percent": 17,
     "status": "success"
   },
   {
@@ -4035,8 +4105,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-smart-motion-sensor",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:29.288607",
-    "price": 34,
+    "scraped_at": "2026-09-23T21:00:59.613312",
+    "price": 29,
+    "was_price": 34,
+    "discount_percent": 15,
     "status": "success"
   },
   {
@@ -4046,7 +4118,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-smart-sensor-starter-kit",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:30.425705",
+    "scraped_at": "2026-09-23T21:01:01.296930",
     "price": 119,
     "status": "success"
   },
@@ -4057,8 +4129,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-smart-contact-sensor",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:32.330453",
-    "price": 29,
+    "scraped_at": "2026-09-23T21:01:02.980231",
+    "price": 22,
+    "was_price": 29,
+    "discount_percent": 24,
     "status": "success"
   },
   {
@@ -4068,7 +4142,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-4k-pt-wireless-security-system-solar-wi-fi-camera-home-hub-2-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:33.933936",
+    "scraped_at": "2026-09-23T21:01:04.673394",
     "price": 629.99,
     "status": "success"
   },
@@ -4079,7 +4153,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/google-home-speaker-porcelain",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:35.709751",
+    "scraped_at": "2026-09-23T21:01:06.239511",
     "price": 199,
     "status": "success"
   },
@@ -4090,7 +4164,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/aqara-security-camera-hub-g5-pro-wi-fi",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:37.018409",
+    "scraped_at": "2026-09-23T21:01:07.665290",
     "price": 349,
     "status": "success"
   },
@@ -4101,7 +4175,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/amazon-echo-dot-smart-speaker-alexa-5th-gen-glacier-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:38.184392",
+    "scraped_at": "2026-09-23T21:01:08.957406",
     "price": 129,
     "status": "success"
   },
@@ -4112,7 +4186,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-cx810-4k-hdr-colorx-true-color-night-vision-poe-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:39.783537",
+    "scraped_at": "2026-09-23T21:01:10.038281",
     "price": 189.99,
     "status": "success"
   },
@@ -4123,7 +4197,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-4k-ptz-wifi-outdoor-security-camera-with-dual-lens-trackmix-wifi",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:41.907888",
+    "scraped_at": "2026-09-23T21:01:11.701023",
     "price": 289.99,
     "status": "success"
   },
@@ -4134,7 +4208,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/google-tv-streamer-4k",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:43.519955",
+    "scraped_at": "2026-09-23T21:01:13.342430",
     "price": 159,
     "status": "success"
   },
@@ -4145,7 +4219,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/garmin-dash-cam-mini-3",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:44.570928",
+    "scraped_at": "2026-09-23T21:01:14.312493",
     "price": 249,
     "status": "success"
   },
@@ -4156,7 +4230,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-solor-panel-usb-cwhite",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:45.913532",
+    "scraped_at": "2026-09-23T21:01:16.039128",
     "price": 89,
     "status": "success"
   },
@@ -4167,7 +4241,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/yale-libi-keyed-digital-deadbolt-matt-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:47.672569",
+    "scraped_at": "2026-09-23T21:01:17.681301",
     "price": 189,
     "status": "success"
   },
@@ -4178,7 +4252,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/auslock-a519-smart-push-pull-space-alloy-gold",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:49.114508",
+    "scraped_at": "2026-09-23T21:01:19.525308",
     "price": 1299,
     "status": "success"
   },
@@ -4189,7 +4263,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/yale-assure-lock-sl-with-yale-home-matte-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:50.352121",
+    "scraped_at": "2026-09-23T21:01:20.872187",
     "price": 439,
     "status": "success"
   },
@@ -4200,7 +4274,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/kaadas-p30-pro-max-dual-camera-face-recognition-wi-fi-smark-lock",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:52.279666",
+    "scraped_at": "2026-09-23T21:01:22.368159",
     "price": 649,
     "status": "success"
   },
@@ -4211,7 +4285,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/kaadas-ka342-wi-fi-bluetooth-fingerprint-door-lock-matte-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:53.397990",
+    "scraped_at": "2026-09-23T21:01:23.503024",
     "price": 119,
     "status": "success"
   },
@@ -4222,7 +4296,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/zigbang-previously-samsung-shp-h60fbxs-ze",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:57.971718",
+    "scraped_at": "2026-09-23T21:01:27.771971",
     "price": null,
     "status": "failed"
   },
@@ -4233,7 +4307,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/lockwood-001-touch-plus-smart-deadlatch",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:51:59.566276",
+    "scraped_at": "2026-09-23T21:01:29.697417",
     "price": 439,
     "status": "success"
   },
@@ -4244,7 +4318,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/zigbang-previously-samsung-shp-dp609",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:52:04.251662",
+    "scraped_at": "2026-09-23T21:01:33.126003",
     "price": null,
     "status": "failed"
   },
@@ -4255,7 +4329,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/gainsborough-freestyle-wifi-entrance-trilock-matte-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:52:06.182981",
+    "scraped_at": "2026-09-23T21:01:34.411383",
     "price": 495,
     "status": "success"
   },
@@ -4266,7 +4340,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/yale-assure-lock-keyed-with-yale-home-matte-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:52:07.202635",
+    "scraped_at": "2026-09-23T21:01:35.946227",
     "price": 439,
     "status": "success"
   },
@@ -4277,7 +4351,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/gainsborough-haven-electronic-lock-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:52:09.004764",
+    "scraped_at": "2026-09-23T21:01:37.745418",
     "price": 249,
     "status": "success"
   },
@@ -4288,7 +4362,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/gainsborough-mode-smart-entrance-lever-matte-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:52:10.036423",
+    "scraped_at": "2026-09-23T21:01:38.593969",
     "price": 359,
     "status": "success"
   },
@@ -4299,7 +4373,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/leapfrog-lf815hd-5-wifi-high-definition-video-monitor",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:52:11.010754",
+    "scraped_at": "2026-09-23T21:01:39.525966",
     "price": 179,
     "status": "success"
   },
@@ -4310,7 +4384,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/lollipop-smart-baby-camera-cotton-candy",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:52:12.398704",
+    "scraped_at": "2026-09-23T21:01:41.347797",
     "price": 319,
     "status": "success"
   },
@@ -4321,7 +4395,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/enabot-ebo-interactive-pet-family-companion",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:52:14.118708",
+    "scraped_at": "2026-09-23T21:01:43.126937",
     "price": 199,
     "status": "success"
   },
@@ -4332,7 +4406,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-c20-smart-scale-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:52:18.879569",
+    "scraped_at": "2026-09-23T21:01:47.343738",
     "price": null,
     "status": "failed"
   },
@@ -4343,7 +4417,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-rv-boundary-strips-35c-g15-g20-g20-hybrid-l70-g40-hyb",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:52:23.922165",
+    "scraped_at": "2026-09-23T21:01:51.689832",
     "price": null,
     "status": "failed"
   },
@@ -4354,7 +4428,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-6-month-maintenance-kit-for-eufy-bottle-washer",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:52:25.366133",
+    "scraped_at": "2026-09-23T21:01:53.099048",
     "price": 199,
     "status": "success"
   },
@@ -4365,7 +4439,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-bottle-washer-s1-pro",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:52:27.179215",
+    "scraped_at": "2026-09-23T21:01:54.916243",
     "price": 669,
     "status": "success"
   },
@@ -4376,7 +4450,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-hybrid-cleaning-tool-for-robovac-l70",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:52:31.567537",
+    "scraped_at": "2026-09-23T21:01:58.817869",
     "price": null,
     "status": "failed"
   },
@@ -4387,7 +4461,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/momcozy-portable-breast-milk-water-warmer-for-travel",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:52:32.872640",
+    "scraped_at": "2026-09-23T21:02:00.551819",
     "price": 128,
     "status": "success"
   },
@@ -4398,7 +4472,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/momcozy-breastmilk-bags-50-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:52:34.572089",
+    "scraped_at": "2026-09-23T21:02:02.319013",
     "price": 17,
     "status": "success"
   },
@@ -4409,7 +4483,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/momcozy-portable-sound-machine-with-night-light",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:52:36.302030",
+    "scraped_at": "2026-09-23T21:02:03.400225",
     "price": 49,
     "status": "success"
   },
@@ -4420,7 +4494,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/momcozy-portable-breast-milk-cooler",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:52:38.354395",
+    "scraped_at": "2026-09-23T21:02:04.300340",
     "price": 139,
     "status": "success"
   },
@@ -4431,8 +4505,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/nanit-sound-light-machine",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:52:40.353075",
-    "price": 219,
+    "scraped_at": "2026-09-23T21:02:05.455047",
+    "price": 159,
+    "was_price": 219,
+    "discount_percent": 27,
     "status": "success"
   },
   {
@@ -4442,7 +4518,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/gainsborough-mode-smart-pull-handle-in-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:52:41.888995",
+    "scraped_at": "2026-09-23T21:02:06.398191",
     "price": 529,
     "status": "success"
   },
@@ -4453,7 +4529,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-wired-video-doorbell-2k-plug-in-speckled-grey",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:52:43.815328",
+    "scraped_at": "2026-09-23T21:02:07.649111",
     "price": 49,
     "was_price": 99,
     "discount_percent": 51,
@@ -4466,7 +4542,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-6k-pro-series-nvr-securtiy-camera-system-4-cameras-unbranded-packaging",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:52:47.604588",
+    "scraped_at": "2026-09-23T21:02:12.120654",
     "price": null,
     "status": "failed"
   },
@@ -4477,7 +4553,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/philips-ddl-709-fvp-7hws-smart-door-lock-easykey-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:52:53.071235",
+    "scraped_at": "2026-09-23T21:02:16.266474",
     "price": null,
     "status": "failed"
   },
@@ -4488,7 +4564,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/philips-7300-5hb-smart-handle-lock-easykey-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:52:54.926765",
+    "scraped_at": "2026-09-23T21:02:17.876311",
     "price": 399,
     "status": "success"
   },
@@ -4499,10 +4575,8 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-eufycam-2c-pro-2k-wireless-home-security-system-3-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:52:55.926173",
-    "price": 449,
-    "was_price": 629,
-    "discount_percent": 29,
+    "scraped_at": "2026-09-23T21:02:19.747590",
+    "price": 629,
     "status": "success"
   },
   {
@@ -4512,7 +4586,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-eufycam-2c-pro-2k-wireless-home-security-system-4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:00.676680",
+    "scraped_at": "2026-09-23T21:02:25.081462",
     "price": null,
     "status": "failed"
   },
@@ -4523,7 +4597,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-2k-spotlight-wireless-security-camera-2-way-audio-2-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:02.456113",
+    "scraped_at": "2026-09-23T21:02:25.959984",
     "price": 250.18,
     "status": "success"
   },
@@ -4534,7 +4608,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-argus-solar-4-cameras-home-hub-mini-kit-security-cameras-wireless-outdoor",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:07.457205",
+    "scraped_at": "2026-09-23T21:02:29.516318",
     "price": null,
     "status": "failed"
   },
@@ -4545,7 +4619,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-outdoor-security-camera-4k-poe-ip-system-for-home-rlc-811awhite",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:08.711519",
+    "scraped_at": "2026-09-23T21:02:30.503087",
     "price": 209.99,
     "status": "success"
   },
@@ -4556,7 +4630,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-argus-3-pro-wireless-outdoor-security-camera-2-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:09.931903",
+    "scraped_at": "2026-09-23T21:02:31.952187",
     "price": 298.79,
     "status": "success"
   },
@@ -4567,7 +4641,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-argus-solar-2-cameras-home-hub-mini-kit-security-cameras-wireless-outdoor",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:14.140019",
+    "scraped_at": "2026-09-23T21:02:36.868352",
     "price": null,
     "status": "failed"
   },
@@ -4578,7 +4652,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-poe-5mp-security-camera-with-detection",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:16.002602",
+    "scraped_at": "2026-09-23T21:02:37.972964",
     "price": 89.99,
     "status": "success"
   },
@@ -4589,7 +4663,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-smart-wi-fi-multicolour-bulb-b22",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:17.248942",
+    "scraped_at": "2026-09-23T21:02:39.639239",
     "price": 19,
     "status": "success"
   },
@@ -4600,7 +4674,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-smart-wi-fi-multicolour-bulb-e27",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:19.041139",
+    "scraped_at": "2026-09-23T21:02:40.866496",
     "price": 19,
     "status": "success"
   },
@@ -4611,7 +4685,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/google-nest-hub-2nd-gen-smart-home-display-charcoal",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:23.442130",
+    "scraped_at": "2026-09-23T21:02:45.699569",
     "price": null,
     "status": "failed"
   },
@@ -4622,7 +4696,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/segway-passcode-lock",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:25.140494",
+    "scraped_at": "2026-09-23T21:02:47.174375",
     "price": 49,
     "status": "success"
   },
@@ -4633,7 +4707,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/philips-ddl230x-1hwp",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:26.448958",
+    "scraped_at": "2026-09-23T21:02:48.524102",
     "price": 349,
     "status": "success"
   },
@@ -4644,7 +4718,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/gainsborough-freestyle-wifi-entrance-trilock-brushed-satin-chrome",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:28.089463",
+    "scraped_at": "2026-09-23T21:02:49.422897",
     "price": 495,
     "status": "success"
   },
@@ -4655,7 +4729,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/gainsborough-mode-smart-pull-handle-in-graphite",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:29.774525",
+    "scraped_at": "2026-09-23T21:02:51.268553",
     "price": 529,
     "status": "success"
   },
@@ -4666,7 +4740,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/oricom-obhssoo-eclipse-smart-sound-baby-soother",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:30.853942",
+    "scraped_at": "2026-09-23T21:02:52.627076",
     "price": 39.95,
     "status": "success"
   },
@@ -4677,7 +4751,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/lollipop-smart-baby-camera-turquiose",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:31.920991",
+    "scraped_at": "2026-09-23T21:02:54.130977",
     "price": 319,
     "status": "success"
   },
@@ -4688,8 +4762,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/smart-remote-view-pan-tilt-baby-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:33.326941",
-    "price": 179,
+    "scraped_at": "2026-09-23T21:02:55.984601",
+    "price": 159,
+    "was_price": 179,
+    "discount_percent": 11,
     "status": "success"
   },
   {
@@ -4699,7 +4775,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-e20-3-in-1-robot-vacuum",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:35.165219",
+    "scraped_at": "2026-09-23T21:02:57.234372",
     "price": 643,
     "was_price": 999,
     "discount_percent": 36,
@@ -4712,7 +4788,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/momcozy-s12-pro-wearable-breats-pump-single",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:36.901912",
+    "scraped_at": "2026-09-23T21:02:58.963877",
     "price": 119,
     "status": "success"
   },
@@ -4723,7 +4799,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/momcozy-milk-storage-bags-120-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:37.984701",
+    "scraped_at": "2026-09-23T21:03:00.023980",
     "price": 34,
     "status": "success"
   },
@@ -4734,7 +4810,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-4k-pt-wireless-security-system-solar-wi-fi-camera-home-hub-4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:39.017226",
+    "scraped_at": "2026-09-23T21:03:01.004616",
     "price": 1099.99,
     "status": "success"
   },
@@ -4745,7 +4821,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/uniden-app-cam-solo-x2k-outdoor-wirefree-security-camera-4-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:41.024718",
+    "scraped_at": "2026-09-23T21:03:02.309160",
     "price": 289,
     "was_price": 569,
     "discount_percent": 49,
@@ -4758,7 +4834,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-home-hub-kit-2-pack-altas-pt-ultra-4k-360-pan-and-tilt-solar-battery-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:42.069003",
+    "scraped_at": "2026-09-23T21:03:03.605402",
     "price": 869.99,
     "status": "success"
   },
@@ -4769,7 +4845,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-rlc-823s1w-4k-360-wi-fi-6-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:43.750041",
+    "scraped_at": "2026-09-23T21:03:05.068719",
     "price": 404.99,
     "status": "success"
   },
@@ -4780,7 +4856,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/gainsborough-mode-smart-entrance-deadbolt-matte-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:45.053776",
+    "scraped_at": "2026-09-23T21:03:06.781408",
     "price": 349,
     "status": "success"
   },
@@ -4791,7 +4867,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/parkmate-rvk43-4-3-reverse-monitor-and-camera-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:46.749879",
+    "scraped_at": "2026-09-23T21:03:07.745566",
     "price": 98,
     "status": "success"
   },
@@ -4802,7 +4878,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-indoor-cam-2nd-genblack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:52.249876",
+    "scraped_at": "2026-09-23T21:03:11.975316",
     "price": null,
     "status": "failed"
   },
@@ -4813,7 +4889,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/eufy-security-motion-sensor-add-on",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:53.835278",
+    "scraped_at": "2026-09-23T21:03:13.828474",
     "price": 49,
     "status": "success"
   },
@@ -4824,7 +4900,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-pan-tilt-indoor-security-camera-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:55.314818",
+    "scraped_at": "2026-09-23T21:03:15.505520",
     "price": 49,
     "was_price": 99,
     "discount_percent": 51,
@@ -4837,7 +4913,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-outdoor-security-camera-plus-2k-plug-in-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:56.509762",
+    "scraped_at": "2026-09-23T21:03:16.572511",
     "price": 89,
     "was_price": 179,
     "discount_percent": 50,
@@ -4850,7 +4926,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/gainsborough-mode-smart-lever-graphite",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:57.585985",
+    "scraped_at": "2026-09-23T21:03:17.830249",
     "price": 249,
     "status": "success"
   },
@@ -4861,7 +4937,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/tp-link-tapo-smart-desktop-temperature-humidity-monitor",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:53:58.615487",
+    "scraped_at": "2026-09-23T21:03:18.705821",
     "price": 59,
     "status": "success"
   },
@@ -4872,8 +4948,10 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/philips-avent-digital-bath-bedroom-thermometer",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:00.421974",
-    "price": 42,
+    "scraped_at": "2026-09-23T21:03:20.037272",
+    "price": 30,
+    "was_price": 42,
+    "discount_percent": 29,
     "status": "success"
   },
   {
@@ -4883,7 +4961,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-maxranger4k-entrance-video-doorbell-and-basestation-unbranded-packaging",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:04.949882",
+    "scraped_at": "2026-09-23T21:03:23.873810",
     "price": null,
     "status": "failed"
   },
@@ -4894,7 +4972,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/yale-unity-entrance-lock-matte-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:06.331335",
+    "scraped_at": "2026-09-23T21:03:25.395199",
     "price": 583,
     "status": "success"
   },
@@ -4905,7 +4983,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-duo-floodlight-poe-4k-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:07.846017",
+    "scraped_at": "2026-09-23T21:03:26.819376",
     "price": 269.99,
     "status": "success"
   },
@@ -4916,7 +4994,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/yale-unity-security-screen-door-lock",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:12.229632",
+    "scraped_at": "2026-09-23T21:03:30.612541",
     "price": null,
     "status": "failed"
   },
@@ -4927,7 +5005,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-floodlight-cam-pro2nd-gen-wired-security-camera-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:13.269626",
+    "scraped_at": "2026-09-23T21:03:32.051633",
     "price": 329,
     "was_price": 429,
     "discount_percent": 23,
@@ -4940,7 +5018,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/auslock-a519-smart-push-pull-space-alloy-silver",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:14.963817",
+    "scraped_at": "2026-09-23T21:03:32.983817",
     "price": 1299,
     "status": "success"
   },
@@ -4951,7 +5029,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-home-hub-kit-4-pack-altas-pt-ultra-4k-360-pan-and-tilt-solar-battery-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:16.567030",
+    "scraped_at": "2026-09-23T21:03:34.632372",
     "price": 1147.99,
     "status": "success"
   },
@@ -4962,7 +5040,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/laser-fhd-outdoor-pan-tilt-camera-solar-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:17.765308",
+    "scraped_at": "2026-09-23T21:03:36.108289",
     "price": 79.95,
     "status": "success"
   },
@@ -4973,7 +5051,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/kaadas-k20-pro-max-3d-face-recognition-wi-fi-lock-with-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:19.397793",
+    "scraped_at": "2026-09-23T21:03:37.408571",
     "price": 849,
     "status": "success"
   },
@@ -4984,7 +5062,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/vtech-st1000-safe-sound-portable-soother",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:20.562257",
+    "scraped_at": "2026-09-23T21:03:40.387606",
     "price": 39,
     "status": "success"
   },
@@ -4995,7 +5073,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-floodlight-camera-4k-pro-wired-security-camera-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:21.926894",
+    "scraped_at": "2026-09-23T21:03:41.333173",
     "price": 329,
     "was_price": 429,
     "discount_percent": 23,
@@ -5008,7 +5086,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-outdoor-camera-4k-pro-poe-security-camera-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:23.289985",
+    "scraped_at": "2026-09-23T21:03:42.471593",
     "price": 199,
     "was_price": 329,
     "discount_percent": 40,
@@ -5021,7 +5099,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-indoor-camera-wired-security-camera-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:25.208524",
+    "scraped_at": "2026-09-23T21:03:44.016100",
     "price": 39,
     "was_price": 79,
     "discount_percent": 51,
@@ -5034,7 +5112,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-indoor-camera-2k-plus-plug-in-security-camera-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:26.672068",
+    "scraped_at": "2026-09-23T21:03:45.319864",
     "price": 49,
     "was_price": 99,
     "discount_percent": 51,
@@ -5047,7 +5125,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-indoor-camera-2k-plus-plug-in-security-camera-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:27.952299",
+    "scraped_at": "2026-09-23T21:03:47.047999",
     "price": 49,
     "was_price": 99,
     "discount_percent": 51,
@@ -5060,7 +5138,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-spotlight-4k-pro-poe-security-camera-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:29.981688",
+    "scraped_at": "2026-09-23T21:03:48.430782",
     "price": 279,
     "was_price": 399,
     "discount_percent": 30,
@@ -5073,7 +5151,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-spotlight-4k-pro-wired-security-camera-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:31.041812",
+    "scraped_at": "2026-09-23T21:03:49.812687",
     "price": 279,
     "was_price": 399,
     "discount_percent": 30,
@@ -5086,7 +5164,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-indoor-camera-wired-security-camera-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:32.870438",
+    "scraped_at": "2026-09-23T21:03:51.095698",
     "price": 39,
     "was_price": 79,
     "discount_percent": 51,
@@ -5099,7 +5177,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-indoor-camera-wired-security-camera-white-2-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:34.339993",
+    "scraped_at": "2026-09-23T21:03:52.457957",
     "price": 69,
     "was_price": 129,
     "discount_percent": 47,
@@ -5112,7 +5190,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-outdoor-camera-4k-pro-plug-in-security-camera-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:36.030297",
+    "scraped_at": "2026-09-23T21:03:53.944788",
     "price": 199,
     "was_price": 329,
     "discount_percent": 40,
@@ -5125,7 +5203,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-spotlight-4k-pro-plug-in-security-camera-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:37.281145",
+    "scraped_at": "2026-09-23T21:03:55.667712",
     "price": 279,
     "was_price": 399,
     "discount_percent": 30,
@@ -5138,7 +5216,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/swann-maxranger4k-entrance-video-doorbell-and-basestation",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:39.219790",
+    "scraped_at": "2026-09-23T21:03:57.466673",
     "price": 499,
     "status": "success"
   },
@@ -5149,7 +5227,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/philips-ddl-709-fvp-7hws-smart-door-lock-easykey-copper",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:43.001050",
+    "scraped_at": "2026-09-23T21:04:02.857463",
     "price": null,
     "status": "failed"
   },
@@ -5160,7 +5238,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/google-nest-outdoor-indoor-battery-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:44.294040",
+    "scraped_at": "2026-09-23T21:04:04.642348",
     "price": 329,
     "status": "success"
   },
@@ -5171,7 +5249,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-argus-pt-ultra-4k-pan-tilt-wireless-automatic-tracking-battery-security-camera-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:46.168661",
+    "scraped_at": "2026-09-23T21:04:05.807132",
     "price": 233.99,
     "status": "success"
   },
@@ -5182,7 +5260,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/kaadas-q9-fvp-3d-face-finger-vein-recognition-wi-fi-lock-with-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:47.172433",
+    "scraped_at": "2026-09-23T21:04:06.901337",
     "price": 579,
     "status": "success"
   },
@@ -5193,7 +5271,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-outdoor-camera-4k-pro-plug-in-security-camera-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:48.327425",
+    "scraped_at": "2026-09-23T21:04:07.943361",
     "price": 199,
     "was_price": 329,
     "discount_percent": 40,
@@ -5206,7 +5284,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-5mp-poe-ip-outdoor-security-camera-for-home-rlc-520a",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:49.846145",
+    "scraped_at": "2026-09-23T21:04:08.827824",
     "price": 99.99,
     "status": "success"
   },
@@ -5217,7 +5295,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/samsung-shp-a30-smart-wi-fi-biometric-deadbolt-door-lock",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:53.068894",
+    "scraped_at": "2026-09-23T21:04:13.306100",
     "price": null,
     "status": "failed"
   },
@@ -5228,7 +5306,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-gen2-2k-security-camera-with-floodlight-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:54.643622",
+    "scraped_at": "2026-09-23T21:04:14.150688",
     "price": 199,
     "was_price": 329,
     "discount_percent": 40,
@@ -5241,7 +5319,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/ring-spotlight-cam-2k-2nd-gen-plug-in-white",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:56.076635",
+    "scraped_at": "2026-09-23T21:04:15.053556",
     "price": 169,
     "was_price": 279,
     "discount_percent": 39,
@@ -5254,7 +5332,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/mec-electronic-50-code-smart-lock-matte-black",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:57.248637",
+    "scraped_at": "2026-09-23T21:04:16.782641",
     "price": 95,
     "status": "success"
   },
@@ -5265,7 +5343,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/yale-smart-safe",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:58.715001",
+    "scraped_at": "2026-09-23T21:04:17.783834",
     "price": 473,
     "status": "success"
   },
@@ -5276,7 +5354,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/my-little-morphee-portable-baby-kids-sound-therapy-relaxation-sleeper-green",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:54:59.731114",
+    "scraped_at": "2026-09-23T21:04:19.461745",
     "price": 60.76,
     "status": "success"
   },
@@ -5287,7 +5365,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-argus-lite-3mp-wireless-pan-tilt-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:55:01.059915",
+    "scraped_at": "2026-09-23T21:04:20.915996",
     "price": 199,
     "status": "success"
   },
@@ -5298,7 +5376,7 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-outdoor-security-camera-4k-poe-ip-system-rlc-810a-2-pack",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:55:02.432462",
+    "scraped_at": "2026-09-23T21:04:22.317618",
     "price": 289.99,
     "status": "success"
   },
@@ -5309,8 +5387,19 @@
     "channel": "JB Hi-Fi",
     "url": "https://www.jbhifi.com.au/products/reolink-go-2k-pan-tilt-solar-4g-wireless-security-camera",
     "currency": "AUD",
-    "scraped_at": "2026-09-22T20:55:04.037108",
+    "scraped_at": "2026-09-23T21:04:23.708853",
     "price": 359,
+    "status": "success"
+  },
+  {
+    "name": "eufy Security Entry Sensor V2 (Addon)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "channel": "JB Hi-Fi",
+    "url": "https://www.jbhifi.com.au/products/eufy-security-entry-sensor-v2-addon",
+    "currency": "AUD",
+    "scraped_at": "2026-09-23T21:04:24.960508",
+    "price": 49,
     "status": "success"
   }
 ]

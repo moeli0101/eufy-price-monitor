@@ -24530,5 +24530,95 @@
         "discount": 50
       }
     }
+  },
+  "other_connect_smarthome_1080p_wi_fi_video_doorbell_black": {
+    "product_name": "Connect SmartHome 1080p Wi-Fi Video Doorbell (Black)",
+    "brand": "Other",
+    "category": "Video Doorbell",
+    "url": "https://www.jbhifi.com.au/products/connect-smarthome-1080p-wi-fi-video-doorbell-black",
+    "days": {
+      "13": {
+        "date": "2026-10-13",
+        "price": 98,
+        "original_price": 98,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
+  },
+  "other_connect_smarthome_full_hd_video_doorbell_white": {
+    "product_name": "Connect SmartHome Full HD Video Doorbell (White)",
+    "brand": "Other",
+    "category": "Video Doorbell",
+    "url": "https://www.jbhifi.com.au/products/connect-smarthome-full-hd-video-doorbell-white",
+    "days": {
+      "13": {
+        "date": "2026-10-13",
+        "price": 89,
+        "original_price": 89,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
+  },
+  "other_connect_smarthome_smart_deadbolt_lock_with_apple_home_key": {
+    "product_name": "Connect SmartHome Smart Deadbolt Lock with Apple Home Key",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "url": "https://www.jbhifi.com.au/products/connect-smarthome-smart-deadbolt-lock-with-apple-home-key",
+    "days": {
+      "13": {
+        "date": "2026-10-13",
+        "price": 139,
+        "original_price": 139,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
+  },
+  "other_connect_smarthome_fingerprint_smart_internal_door_lock_black": {
+    "product_name": "Connect SmartHome Fingerprint Smart Internal Door Lock (Black)",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "url": "https://www.jbhifi.com.au/products/connect-smarthome-fingerprint-smart-internal-door-lock-black",
+    "days": {
+      "13": {
+        "date": "2026-10-13",
+        "price": 89.95,
+        "original_price": 89.95,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
+  },
+  "other_connect_smarthome_fingerprint_smart_deadbolt_lock_black": {
+    "product_name": "Connect SmartHome Fingerprint Smart Deadbolt Lock (Black)",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "url": "https://www.jbhifi.com.au/products/connect-smarthome-fingerprint-smart-deadbolt-lock-black",
+    "days": {
+      "13": {
+        "date": "2026-10-13",
+        "price": 149,
+        "original_price": 149,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
+  },
+  "other_connect_smarthome_smart_deadbolt_lock_with_palm_recognition": {
+    "product_name": "Connect SmartHome Smart Deadbolt Lock with Palm Recognition",
+    "brand": "Other",
+    "category": "Smart Lock",
+    "url": "https://www.jbhifi.com.au/products/connect-smarthome-smart-deadbolt-lock-with-palm-recognition",
+    "days": {
+      "13": {
+        "date": "2026-10-13",
+        "price": 169,
+        "original_price": 169,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
   }
 }

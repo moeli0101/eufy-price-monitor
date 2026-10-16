@@ -1,17 +1,5 @@
 [
   {
-    "timestamp": "2026-09-16T20:52:57.544270",
-    "total_products": 467,
-    "success_count": 314,
-    "fail_count": 153,
-    "success_rate": 67,
-    "cameras": 277,
-    "doorbells": 44,
-    "locks": 75,
-    "baby": 71,
-    "eufy_count": 94
-  },
-  {
     "timestamp": "2026-09-17T20:59:49.084423",
     "total_products": 467,
     "success_count": 314,
@@ -355,6 +343,18 @@
     "success_rate": 66,
     "cameras": 295,
     "doorbells": 48,
+    "locks": 83,
+    "baby": 71,
+    "eufy_count": 96
+  },
+  {
+    "timestamp": "2026-10-16T20:31:57.744946",
+    "total_products": 504,
+    "success_count": 335,
+    "fail_count": 169,
+    "success_rate": 66,
+    "cameras": 301,
+    "doorbells": 49,
     "locks": 83,
     "baby": 71,
     "eufy_count": 96

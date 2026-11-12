@@ -20555,5 +20555,170 @@
         "discount": 20
       }
     }
+  },
+  "eufy_eufy_eufycam_e50_security_camera_solo": {
+    "product_name": "eufy eufyCam E50 Security Camera Solo",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/eufy-eufycam-e50-security-camera-solo",
+    "days": {
+      "12": {
+        "date": "2026-11-12",
+        "price": 549,
+        "original_price": 549,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
+  },
+  "eufy_eufy_nvr_security_system_e50_with_2tb_hard_drive": {
+    "product_name": "eufy NVR Security System E50 with 2TB Hard Drive",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/eufy-nvr-security-system-e50-with-2tb-hard-drive",
+    "days": {
+      "12": {
+        "date": "2026-11-12",
+        "price": 1999,
+        "original_price": 1999,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
+  },
+  "eufy_eufy_eufycam_s4_security_camera_4_pack_+_homebase_pro": {
+    "product_name": "eufy eufyCam S4 Security Camera (4 Pack) + Homebase Pro",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/eufy-eufycam-s4-security-camera-4-pack-homebase-pro",
+    "days": {
+      "12": {
+        "date": "2026-11-12",
+        "price": 3299,
+        "original_price": 3299,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
+  },
+  "eufy_eufy_e42_security_camera_kit_6_pack": {
+    "product_name": "eufy E42 Security Camera Kit (6 Pack)",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/eufy-e42-security-camera-kit-6-pack",
+    "days": {
+      "12": {
+        "date": "2026-11-12",
+        "price": 2199,
+        "original_price": 2199,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
+  },
+  "eufy_eufy_4_nvr_poe_ptz_add_on_security_camera": {
+    "product_name": "eufy 4 NVR POE PTZ Add-on Security Camera",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/eufy-4-nvr-poe-ptz-add-on-security-camera",
+    "days": {
+      "12": {
+        "date": "2026-11-12",
+        "price": 499,
+        "original_price": 499,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
+  },
+  "eufy_eufy_poe_bullet_ptz_security_camera_e50": {
+    "product_name": "eufy PoE Bullet-PTZ Security Camera E50",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/eufy-poe-bullet-ptz-security-camera-e50",
+    "days": {
+      "12": {
+        "date": "2026-11-12",
+        "price": 399,
+        "original_price": 399,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
+  },
+  "other_blink_mini_2k+_security_camera_white_[2_pack]": {
+    "product_name": "Blink Mini 2K+ Security Camera (White) [2 Pack]",
+    "brand": "Other",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/blink-mini-2k-security-camera-white-2-pack",
+    "days": {
+      "12": {
+        "date": "2026-11-12",
+        "price": 89,
+        "original_price": 89,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
+  },
+  "other_blink_outdoor_4_security_camera_black_[5_pack]": {
+    "product_name": "Blink Outdoor 4 Security Camera (Black) [5 Pack]",
+    "brand": "Other",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/blink-outdoor-4-security-camera-black-5-pack",
+    "days": {
+      "12": {
+        "date": "2026-11-12",
+        "price": 95,
+        "original_price": 379,
+        "is_sale": true,
+        "discount": 75
+      }
+    }
+  },
+  "other_ezviz_cb8_lite_3k_twin_pack_with_hp8_video_doorbell": {
+    "product_name": "EZVIZ CB8 Lite 3K Twin Pack With HP8 Video Doorbell",
+    "brand": "Other",
+    "category": "Video Doorbell",
+    "url": "https://www.jbhifi.com.au/products/ezviz-cb8-lite-3k-twin-pack-with-hp8-video-doorbell",
+    "days": {
+      "12": {
+        "date": "2026-11-12",
+        "price": 697,
+        "original_price": 697,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
+  },
+  "eufy_eufy_smart_lock_c32": {
+    "product_name": "eufy Smart Lock C32",
+    "brand": "eufy",
+    "category": "Smart Lock",
+    "url": "https://www.jbhifi.com.au/products/eufy-smart-lock-c32",
+    "days": {
+      "12": {
+        "date": "2026-11-12",
+        "price": 179,
+        "original_price": 179,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
+  },
+  "eufy_eufy_motion_sensor_e20": {
+    "product_name": "eufy Motion Sensor E20",
+    "brand": "eufy",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/eufy-motion-sensor-e20",
+    "days": {
+      "12": {
+        "date": "2026-11-12",
+        "price": 79,
+        "original_price": 79,
+        "is_sale": false,
+        "discount": 0
+      }
+    }
   }
 }

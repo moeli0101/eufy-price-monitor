@@ -4591,10 +4591,10 @@
       },
       {
         "date": "2026-11-20",
-        "price": 1479,
+        "price": 1347,
         "original_price": 1999,
         "is_on_sale": true,
-        "discount_percentage": 26,
+        "discount_percentage": 33,
         "status": "success"
       }
     ]
@@ -19879,10 +19879,10 @@
       },
       {
         "date": "2026-11-20",
-        "price": 1419,
+        "price": 1175,
         "original_price": 1899,
         "is_on_sale": true,
-        "discount_percentage": 25,
+        "discount_percentage": 38,
         "status": "success"
       }
     ]
@@ -49807,10 +49807,10 @@
       },
       {
         "date": "2026-11-20",
-        "price": 128,
+        "price": 97,
         "original_price": 189,
         "is_on_sale": true,
-        "discount_percentage": 32,
+        "discount_percentage": 49,
         "status": "success"
       }
     ]
@@ -95831,10 +95831,10 @@
       },
       {
         "date": "2026-11-20",
-        "price": 239,
+        "price": 197,
         "original_price": 239,
-        "is_on_sale": false,
-        "discount_percentage": 0,
+        "is_on_sale": true,
+        "discount_percentage": 18,
         "status": "success"
       }
     ]
@@ -327290,10 +327290,10 @@
       },
       {
         "date": "2026-11-20",
-        "price": 799,
+        "price": 688,
         "original_price": 1099,
         "is_on_sale": true,
-        "discount_percentage": 27,
+        "discount_percentage": 37,
         "status": "success"
       }
     ]
@@ -327947,10 +327947,10 @@
       },
       {
         "date": "2026-11-20",
-        "price": 1079,
+        "price": 998,
         "original_price": 1799,
         "is_on_sale": true,
-        "discount_percentage": 40,
+        "discount_percentage": 45,
         "status": "success"
       }
     ]
@@ -359975,10 +359975,10 @@
       },
       {
         "date": "2026-11-20",
-        "price": 176,
+        "price": 157,
         "original_price": 249,
         "is_on_sale": true,
-        "discount_percentage": 29,
+        "discount_percentage": 37,
         "status": "success"
       }
     ]
@@ -367564,10 +367564,10 @@
       },
       {
         "date": "2026-11-20",
-        "price": 499,
+        "price": 395,
         "original_price": 699,
         "is_on_sale": true,
-        "discount_percentage": 29,
+        "discount_percentage": 43,
         "status": "success"
       }
     ]
@@ -414447,6 +414447,23 @@
         "original_price": 249,
         "is_on_sale": true,
         "discount_percentage": 40,
+        "status": "success"
+      }
+    ]
+  },
+  "other_onyx_boox_go_7_epaper_reader_white": {
+    "product_name": "ONYX BOOX Go 7 ePaper Reader - White",
+    "brand": "Other",
+    "category": "Security Camera",
+    "url": "https://www.jbhifi.com.au/products/onyx-boox-go-7-epaper-reader-white",
+    "channel": "JB Hi-Fi",
+    "price_history": [
+      {
+        "date": "2026-11-20",
+        "price": 359,
+        "original_price": 359,
+        "is_on_sale": false,
+        "discount_percentage": 0,
         "status": "success"
       }
     ]
